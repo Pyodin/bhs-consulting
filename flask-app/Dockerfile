@@ -2,6 +2,7 @@ FROM python:alpine3.10
 
 COPY . /app
 
-RUN pip install -r requirements.install
+WORKDIR /app
+RUN pip install -r requirements.in
 
-CMD [ "gunicorn",  "main::app" ]
+CMD [ "gunicorn",  "main:app", "--bind=0.0.0.0:5000"]
