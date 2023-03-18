@@ -47,9 +47,8 @@ stages:
     steps:
     - script: |
         source .venv/bin/activate
-        cd project
         pytest
-      workingDirectory: $(projectRoot)
+      workingDirectory: $(projectRoot)/project
       displayName: "Run tests"
 
 
