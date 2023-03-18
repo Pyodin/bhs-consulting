@@ -1,3 +1,10 @@
+# My Flask Application
+
+This is a simple Flask application that uses Gunicorn to run in a Docker container.
+
+## Project Tree
+
+```
 project/
 │
 ├── app/
@@ -19,3 +26,18 @@ project/
 ├── requirements.txt   # File that lists all the required packages for the application
 ├── Dockerfile         # Dockerfile for the appliation
 └── run.py             # Runs the Flask application
+```
+
+## Running the Application
+
+To run the Flask application in a Docker container:
+
+1. Build the Docker image: `docker build -t myapp .`
+2. Run the Docker container: `docker run -p 8000:8000 myapp`
+
+The application will be available at `http://localhost:8000`.
+
+## Run tests 
+1. Make sure that pytest is installed. You can install it by running `pip install pytest` in your terminal.
+2. Navigate to the `project` directory.
+3. Run the command `pytest` to run all tests.
