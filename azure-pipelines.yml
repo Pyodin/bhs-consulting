@@ -7,6 +7,9 @@ trigger:
 - main
 - tmp
 
+pool:
+  name: Default
+
 variables:
   # Azure Resource Manager connection created during pipeline creation
   azureServiceConnectionId: 'e01246d3-3c28-458c-b230-fb2f88abdde3'
@@ -28,9 +31,7 @@ stages:
 - stage: Build
   displayName: Build stage
   jobs:
-  - job: BuildEnv
-    pool:
-      name: Default
+  - job: RunTests
     steps:
     - script: |
         ls
@@ -41,12 +42,9 @@ stages:
       workingDirectory: $(projectRoot)/project
       displayName: "Install requirements"
 
-  - job: RunTests
-    pool:
-      name: Default
-    steps:
     - script: |
         source .venv/bin/activate
+        python3 -m pip install pytest
         pytest
       workingDirectory: $(projectRoot)/project
       displayName: "Run tests"
