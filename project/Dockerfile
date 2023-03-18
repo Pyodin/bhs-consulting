@@ -1,11 +1,11 @@
 FROM python:3.9-slim-buster
 
-WORKDIR /app
+WORKDIR /workdir
 
 COPY requirements.in .
 RUN pip install -r requirements.in
 
-COPY app/ .
+COPY app/ app/
 
 # Expose port 8000 for the Gunicorn server
 EXPOSE 8000
