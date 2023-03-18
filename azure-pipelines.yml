@@ -15,7 +15,7 @@ variables:
   webAppName: ''
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  # vmImageName: 'ubuntu-latest'
 
   # Environment name
   environmentName: 'tmp'
@@ -28,36 +28,29 @@ stages:
 - stage: Build
   displayName: Build stage
   jobs:
-  - job: BuildJob
+  - job: BuildEnv
     pool:
-      vmImage: $(vmImageName)
+      name: Default
     steps:
-    - task: UsePythonVersion@0
-      inputs:
-        versionSpec: '$(pythonVersion)'
-      displayName: 'Use Python $(pythonVersion)'
-
     - script: |
         python -m venv .venv
         source .venv/bin/activate
         python -m pip install --upgrade pip
-        pip install setup
         pip install -r requirements.in
       workingDirectory: $(projectRoot)
       displayName: "Install requirements"
 
-    - task: ArchiveFiles@2
-      displayName: 'Archive files'
-      inputs:
-        rootFolderOrFile: '$(projectRoot)'
-        includeRootFolder: false
-        archiveType: zip
-        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-        replaceExistingArchive: true
+  - job: RunTests
+    pool:
+      name: Default
+    steps:
+    - script: |
+        source .venv/bin/activate
+        cd project
+        pytest
+      workingDirectory: $(projectRoot)
+      displayName: "Run tests"
 
-    - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
-      displayName: 'Upload package'
-      artifact: drop
 
 # - stage: Deploy
 #   displayName: 'Deploy Web App'
