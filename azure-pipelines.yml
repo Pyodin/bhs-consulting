@@ -33,11 +33,12 @@ stages:
       name: Default
     steps:
     - script: |
+        ls
         python3 -m venv .venv
         source .venv/bin/activate
         python3 -m pip install --upgrade pip
         pip install -r requirements.in
-      workingDirectory: $(projectRoot)
+      workingDirectory: $(projectRoot)/project
       displayName: "Install requirements"
 
   - job: RunTests
