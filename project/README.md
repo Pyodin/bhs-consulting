@@ -28,7 +28,7 @@ project/
 └── run.py             # Runs the Flask application
 ```
 
-## Running the Application
+## Running the Application with Docker 
 
 To run the Flask application in a Docker container:
 
@@ -36,6 +36,22 @@ To run the Flask application in a Docker container:
 2. Run the Docker container: `docker run -p 8000:8000 myapp`
 
 The application will be available at `http://localhost:8000`.
+
+## Running the Application locally
+
+To run the Flask application on your own machine:
+
+1. Install the required dependencies.
+```
+pip install -r requirements.in
+```
+
+2. To run the application, use the following command:
+```
+cd project
+python3 run.py
+```
+The application will be available at `http://localhost:5000`.
 
 ## Run tests 
 1. Make sure that pytest is installed. You can install it by running `pip install pytest` in your terminal.
