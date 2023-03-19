@@ -5,20 +5,29 @@ TODO: Give a short introduction of your project. Let this section explain the ob
 This is a test 
 ```
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Installation
+```
+git clone https://github.com/your-username/project-name.git
+cd project-name
+```
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Azure
+This application will be deployed on Azure using the following technologies:
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+    Azure DevOps
+    Azure App Service
+    Azure Container Registry
+
+
+## Contributing
+Contributions are welcome! To contribute to this project, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Submit a pull request.
+
+
+## License
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
