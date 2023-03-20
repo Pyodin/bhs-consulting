@@ -28,17 +28,3 @@ steps:
 
 - task: DockerInstaller@0
   displayName: 'Install Docker 17.09.0-ce'
-
-- task: Docker@2
-  displayName: buildAndPush
-  inputs:
-    containerRegistry: 'docker hub connection'
-    repository: 'paulbhs/website-portfolio'
-    Dockerfile: project/Dockerfile
-    buildContext: project
-
-- script: |
-    git push --prune https://github.com/Pyodin/website-portfolio.git \
-        +refs/remotes/origin/*:refs/heads/* +refs/tags/*:refs/tags/*
-  displayName: 'Copy to Github'
-  condition: eq(variables['Build.SourceBranch'], 'refs/heads/main')
