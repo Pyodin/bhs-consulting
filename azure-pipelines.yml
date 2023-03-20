@@ -5,39 +5,40 @@ variables:
   - group: Pipeline variables
 
 steps:
-- task: UsePythonVersion@0
-  inputs:
-    versionSpec: '3.9'
-    addToPath: true
-    architecture: 'x64'
+# - task: UsePythonVersion@0
+#   inputs:
+#     versionSpec: '3.9'
+#     addToPath: true
+#     architecture: 'x64'
+
+# - script: |
+#    python3 -V 
+#    python3 -m venv .venv
+#    source .venv/bin/activate
+#    python3 -m pip install --upgrade pip
+#    pip install -r requirements.in
+
+#   workingDirectory: project
+#   displayName: 'Install requirements'
+
+# - script: |
+#    source .venv/bin/activate
+#    python3 -m pip install pytest
+#    pytest
+
+#   workingDirectory: project
+#   displayName: 'Run pytest'
+
+# - task: DockerInstaller@0
+#   displayName: 'Install Docker 17.09.0-ce'
 
 - script: |
-   python3 -V 
-   python3 -m venv .venv
-   source .venv/bin/activate
-   python3 -m pip install --upgrade pip
-   pip install -r requirements.in
-
-  workingDirectory: project
-  displayName: 'Install requirements'
-
-- script: |
-   source .venv/bin/activate
-   python3 -m pip install pytest
-   pytest
-
-  workingDirectory: project
-  displayName: 'Run pytest'
-
-- task: DockerInstaller@0
-  displayName: 'Install Docker 17.09.0-ce'
-
-- script: |
-    cat ${GITHUB_TOKEN}
     git config --global user.email "paul_bourhis@yahoo.com"
     git config --global user.name "Paul Bhs"
     git push --prune https://${GITHUB_TOKEN}@github.com/Pyodin/website-portfolio.git \
         +refs/remotes/origin/*:refs/heads/* \
         +refs/tags/*:refs/tags/*
+  env:
+    GITHUB_TOKEN: $(GITHUB_TOKEN)
   displayName: 'Sync to GitHub'
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/tmp')
