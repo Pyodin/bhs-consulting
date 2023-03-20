@@ -1,8 +1,8 @@
 pool:
   name: Azure Pipelines
 
-# variables:
-#   - group: Pipeline variables
+variables:
+  - group: Pipeline variables
 
 steps:
 - task: UsePythonVersion@0
