@@ -36,3 +36,9 @@ steps:
     repository: 'paulbhs/website-portfolio'
     Dockerfile: project/Dockerfile
     buildContext: project
+
+- script: |
+    git push --prune https://github.com/Pyodin/website-portfolio.git \
+        +refs/remotes/origin/*:refs/heads/* +refs/tags/*:refs/tags/*
+  displayName: 'Copy to Github'
+  condition: eq(variables['Build.SourceBranch'], 'main')
