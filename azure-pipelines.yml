@@ -29,9 +29,12 @@ steps:
 - task: DockerInstaller@0
   displayName: 'Install Docker 17.09.0-ce'
 
-- bash: |
-    git push --prune https://github.com/Pyodin/website-portfolio.git \
-        +refs/remotes/origin/*:refs/heads/* \
-        +refs/tags/*:refs/tags/*
-  displayName: 'Copy to Github'
+- script: |
+    git config --global user.email "paul_bourhis@yahoo.com"
+    git config --global user.name "Paul Bhs"
+    git remote add github https://github.com/Pyodin/website-portfolio.git
+    git push github main
+  env:
+    GITHUB_TOKEN: $(GITHUB_TOKEN)
+  displayName: 'Sync to GitHub'
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/tmp')
