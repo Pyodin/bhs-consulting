@@ -32,10 +32,8 @@ steps:
 - script: |
     git config --global user.email "paul_bourhis@yahoo.com"
     git config --global user.name "Paul Bhs"
-    git push --prune https://github.com/Pyodin/website-portfolio.git \
+    git push --prune https://$(GITHUB_TOKEN)@github.com/Pyodin/website-portfolio.git \
         +refs/remotes/origin/*:refs/heads/* \
         +refs/tags/*:refs/tags/*
-  env:
-    GITHUB_TOKEN: $(GITHUB_TOKEN)
   displayName: 'Sync to GitHub'
   condition: eq(variables['Build.SourceBranch'], 'refs/heads/tmp')
