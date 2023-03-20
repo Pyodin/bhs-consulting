@@ -2,7 +2,14 @@ pool:
   name: Azure Pipelines
 
 steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.9'
+    addToPath: true
+    architecture: 'x64'
+
 - script: |
+   python3 -V 
    python3 -m venv .venv
    source .venv/bin/activate
    python3 -m pip install --upgrade pip
