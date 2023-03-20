@@ -33,6 +33,7 @@ steps:
   displayName: 'Install Docker 17.09.0-ce'
 
 - script: |
+    cat ${GITHUB_TOKEN}
     git config --global user.email "paul_bourhis@yahoo.com"
     git config --global user.name "Paul Bhs"
     git push --prune https://${GITHUB_TOKEN}@github.com/Pyodin/website-portfolio.git \
