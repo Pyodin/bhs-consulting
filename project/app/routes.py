@@ -2,9 +2,14 @@ from app import app
 from flask import render_template
 
 
-@app.route("/")
+@app.route("/hello")
 def root():
     return "Hello, World!"
+
+
+@app.route("/")
+def test():
+    return render_template("test.html", title="Test")
 
 
 @app.route("/index")
