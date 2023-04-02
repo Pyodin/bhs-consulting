@@ -9,7 +9,7 @@ def root():
 
 @app.route("/")
 def test():
-    return render_template("test.html", title="Test")
+    return render_template("index.html", title="Test")
 
 
 @app.route("/index")
