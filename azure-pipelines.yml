@@ -39,3 +39,6 @@ steps:
     repository: 'paulbhs/website-portfolio'
     Dockerfile: project/Dockerfile
     buildContext: project
+    tags: |
+      $(Build.BuildId)
+      latest
