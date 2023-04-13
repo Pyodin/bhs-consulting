@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css"
+        />
+        <link rel="stylesheet" href="./static/css/style.css" />
+        <title>My portfolio</title>
+    </head>
+    <body>
+        <!--nav bar  -->
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">My portfolio</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link" href="/about/">About me</a>
+                        <a class="nav-link disabled" href="/projects"
+                            >Projects</a
+                        >
+                        <a class="nav-link disabled" href="/experiences"
+                            >Experiences</a
+                        >
+                        <a class="nav-link disabled" href="/contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main content -->
+        <div class="container mt-5">
+            <!-- About Me Section -->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-8">
+                    <h2 class="mt-5">About Me</h2>
+                    <hr />
+
+                    <p class="lead">
+                        I am a dedicated DevOps with a strong foundation in
+                        software development and extensive experience across
+                        various industries, including finance and defense. My
+                        background in both development and operations allows me
+                        to offer perspective and a wealth of experience to my
+                        clients. My expertise lies in ensuring the reliability,
+                        availability, and scalability of complex software
+                        systems.
+                    </p>
+                    <p class="lead">
+                        I pride myself on continuously learning and adapting to
+                        new technologies, ensuring that I can provide the best
+                        solutions and services to meet your ever-evolving needs.
+                    </p>
+                    <p class="lead">
+                        With a proven track record in developing and optimizing
+                        continuous integration and delivery (CI/CD) pipelines,
+                        automating build and deployment processes, and working
+                        with microservices architectures, I am committed to
+                        making a positive impact and delivering results that
+                        exceed expectations.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img
+                        src="../../static/images/photo2.jpeg"
+                        alt="Paul BOURHIS"
+                        class="img-fluid rounded-circle"
+                        style="width: 80%"
+                    />
+                </div>
+            </div>
+
+            <!-- Skills & Expertise Section -->
+            <div class="row justify-content-center align-items-center mt-5">
+                <h2 class="mt-5">Skills & Expertise</h2>
+                <hr />
+
+                <p class="lead">
+                    My skills and expertise encompass a broad range of technical
+                    and managerial aspects, empowering me to excel in software
+                    development and DevOps engineering roles.
+                </p>
+
+                <div class="accordion" id="accordionPanelsStayOpen">
+                    <!-- Software Development -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne"
+                                aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne"
+                            >
+                                <i class="fa-solid fa-code me-4"></i>
+                                Software Development
+                            </button>
+                        </h2>
+                        <div
+                            id="panelsStayOpen-collapseOne"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionPanelsStayOpen"
+                        >
+                            <div class="accordion-body">
+                                <p class="lead">
+                                    I am proficient in software development,
+                                    with a deep understanding of various
+                                    programming languages, including
+                                    <b> Python </b> and
+                                    <b> C/C++ </b>
+                                    . My expertise in multithreading and
+                                    multiprocessing enables me to design and
+                                    build efficient and high-performance
+                                    applications. Furthermore, I have experience
+                                    creating graphical user interfaces using the
+                                    Qt framework and working with data science
+                                    tools like pandas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Platforms -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo"
+                                aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo"
+                            >
+                                <i class="fa-solid fa-cloud me-4"></i>
+                                Cloud Platforms
+                            </button>
+                        </h2>
+                        <div
+                            id="panelsStayOpen-collapseTwo"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionPanelsStayOpen"
+                        >
+                            <div class="accordion-body">
+                                <p class="lead">
+                                    As a skilled cloud professional, I hold
+                                    Azure certifications
+                                    <b>
+                                        AZ-900, AZ-104, and the AZ-400 Expert
+                                        DevOps </b
+                                    >, showcasing my expertise in cloud
+                                    platforms like Azure and AWS. I am adept at
+                                    managing cloud resources, ensuring optimal
+                                    utilization, and maximizing efficiency. My
+                                    experience in designing and implementing
+                                    cloud infrastructure and services, such as
+                                    virtual machines, storage, and databases,
+                                    enables me to create reliable, scalable, and
+                                    secure solutions for my clients.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DevOps Engineering -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseThree"
+                                aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseThree"
+                            >
+                                <i
+                                    class="fa-solid fa-screwdriver-wrench me-4"
+                                ></i>
+                                DevOps & Automation
+                            </button>
+                        </h2>
+                        <div
+                            id="panelsStayOpen-collapseThree"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionPanelsStayOpen"
+                        >
+                            <div class="accordion-body">
+                                <p class="lead">
+                                    I emphasize DevOps practices in my work,
+                                    focusing on collaboration, communication,
+                                    and integration between development and
+                                    operations teams. By creating and optimizing
+                                    continuous integration and continuous
+                                    delivery (CI/CD) pipelines, I enable rapid
+                                    software release cycles. My experience with
+                                    automation tools, such as Ansible and
+                                    Jenkins, streamlines build and deployment
+                                    processes.
+                                </p>
+                                <p class="lead">
+                                    I also utilize Infrastructure as Code (IaC)
+                                    tools like Terraform and Azure Resource
+                                    Manager (ARM) templates to consistently and
+                                    reliably provision infrastructure, improving
+                                    system reliability and overall efficiency.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Monitoring & Alerting -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseFour"
+                                aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseFour"
+                            >
+                                <i class="fa-solid fa-bell me-4"></i>
+                                Monitoring & Alerting
+                            </button>
+                        </h2>
+                        <div
+                            id="panelsStayOpen-collapseFour"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionPanelsStayOpen"
+                        >
+                            <div class="accordion-body">
+                                <p class="lead">
+                                    I am highly proficient in using monitoring
+                                    and alerting systems like Prometheus or the
+                                    Logstash and Elasticsearch stack, both
+                                    combined with Grafana for visualization.
+                                    These tools enable me to identify and
+                                    resolve potential issues in applications and
+                                    infrastructure. By leveraging these
+                                    monitoring stacks, I can create custom
+                                    dashboards to visualize critical data,
+                                    monitor performance metrics, and analyze
+                                    logs.
+                                </p>
+                                <p class="lead">
+                                    Furthermore, my experience in implementing
+                                    post-mortem analysis allows me to learn from
+                                    past incidents and improve overall system
+                                    resilience. With my expertise in these
+                                    tools, I can maintain high standards of
+                                    reliability and availability for my clients'
+                                    applications and infrastructure while
+                                    minimizing downtime.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseFive"
+                                aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseFive"
+                            >
+                                <i class="fa-brands fa-chrome me-4"></i>
+                                Web Development
+                            </button>
+                        </h2>
+                        <div
+                            id="panelsStayOpen-collapseFive"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionPanelsStayOpen"
+                        >
+                            <div class="accordion-body">
+                                <p class="lead">
+                                    Combining my knowledge of front-end and
+                                    back-end technologies, I ensure that the web
+                                    applications I develop are robust, scalable,
+                                    and easy to maintain. With expertise in
+                                    Python and Flask for back-end development, I
+                                    am able to create powerful and efficient web
+                                    applications.
+                                </p>
+                                <p class="lead">
+                                    My understanding of web development enables
+                                    me to offer a comprehensive range of
+                                    services, helping businesses create a strong
+                                    online presence and streamline their digital
+                                    operations.
+                                </p>
+                                <p class="lead">
+                                    Whether it's building back-end web
+                                    applications or crafting static websites
+                                    with HTML, CSS, and Bootstrap 5, I am able
+                                    to provide clients with tailored solutions
+                                    to meet their specific needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testing & Integration -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseSix"
+                                aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseSix"
+                            >
+                                <i class="fa-solid fa-list-check me-4"></i>
+                                Testing & Integration
+                            </button>
+                        </h2>
+                        <div
+                            id="panelsStayOpen-collapseSix"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionPanelsStayOpen"
+                        >
+                            <div class="accordion-body">
+                                <p class="lead">
+                                    With a strong focus on quality assurance, I
+                                    am well-versed in various testing and
+                                    integration techniques that guarantee the
+                                    reliability and performance of software
+                                    systems. My experience includes designing
+                                    and implementing unit, integration,
+                                    functional, and performance tests, ensuring
+                                    that applications meet the highest standards
+                                    of quality and functionality. I excel at
+                                    integrating these testing methodologies into
+                                    the development process, facilitating
+                                    seamless collaboration between development
+                                    and operations teams.
+                                </p>
+                                <p class="lead">
+                                    Furthermore, my expertise extends to test
+                                    automation, which allows for efficient and
+                                    consistent testing, reducing the time and
+                                    effort required for manual testing. By
+                                    incorporating continuous integration and
+                                    delivery (CI/CD) practices, I ensure that
+                                    code changes are validated and integrated
+                                    into the software system with minimal
+                                    disruption, streamlining the development
+                                    process and significantly reducing the risk
+                                    of errors. In summary, my skills in testing
+                                    and integration contribute to the
+                                    development of stable, high-quality software
+                                    solutions tailored to clients' needs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Agile Methodologie -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseSeven"
+                                aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseSeven"
+                            >
+                                <i
+                                    class="fa-solid fa-arrow-rotate-left me-4"
+                                ></i>
+                                Agile Methodologie
+                            </button>
+                        </h2>
+                        <div
+                            id="panelsStayOpen-collapseSeven"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#accordionPanelsStayOpen"
+                        >
+                            <div class="accordion-body">
+                                <p class="lead">
+                                    As a seasoned professional, I have extensive
+                                    experience working with Agile methodologies,
+                                    including Scrum, Kanban, and SAFe, which
+                                    emphasize iterative and incremental
+                                    development, collaboration, and continuous
+                                    improvement. I understand the importance of
+                                    aligning software development with business
+                                    objectives and delivering value to end-users
+                                    in the most efficient manner possible.
+                                </p>
+                                <p class="lead">
+                                    My experience with Agile methodologies
+                                    enables me to effectively collaborate with
+                                    cross-functional teams, manage rapidly
+                                    changing requirements, and ensure timely
+                                    delivery of high-quality software products.
+                                    I am well-versed in using Agile tools such
+                                    as Jira for project management, tracking
+                                    progress, and maintaining transparency in
+                                    the development process.
+                                </p>
+                                <p class="lead">
+                                    By implementing Agile principles and best
+                                    practices, I strive to create an adaptive
+                                    and productive development environment that
+                                    fosters innovation, improves team
+                                    performance, and ultimately leads to the
+                                    successful delivery of projects that meet or
+                                    exceed client expectations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="row justify-content-center align-items-center mt-2">
+                <h2 class="mt-5">Education</h2>
+                <hr />
+
+                <!-- Ensea -->
+                <div class="row justify-content-start align-items-center mt-3">
+                    <p class="fs-4">
+                        Master's Degree in Applied Mathematics and Computer
+                        Science
+                    </p>
+                    <div class="col">
+                        <img
+                            src="static/images/ensea.png"
+                            alt="ENSEA"
+                            class="img-fluid"
+                            style="width: 85px"
+                        />
+                    </div>
+                    <div class="col-md-11">
+                        <!-- italic text -->
+                        <p class="fs-4">ENSEA</p>
+                        <p class="fs-5">2016 - 2019</p>
+                        <p class="lead">
+                            I graduated from
+                            <em
+                                >École Nationale Supérieure de l'Électronique et
+                                de ses Applications (ENSEA)
+                            </em>
+                            in 2019 with a degree in Applied Mathematics,
+                            Computer science and Electronic. My third-year
+                            studies concentrated on embedded systems and IT,
+                            while my second year explored automation and the
+                            Internet of Things. My participation in
+                            extracurricular activities at ENSEA contributed to
+                            the development of my leadership and organizational
+                            skills.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Classe preparatoire -->
+                <div class="row justify-content-start align-items-center mt-3">
+                    <p class="fs-4">
+                        Intensive Preparatory Course for French Grandes Écoles
+                    </p>
+                    <div class="col">
+                        <img
+                            src="https://fetelemur.com/wp-content/uploads/2021/11/Logo-ville-de-Vannes-Patch-blanc.png"
+                            alt="ENSEA"
+                            class="img-fluid"
+                        />
+                    </div>
+                    <div class="col-md-11">
+                        <p class="fs-4">Lycée A.R-Lessage</p>
+                        <p class="fs-5">2013 - 2016</p>
+                        <p class="lead">
+                            I completed a rigorous three-year preparatory course
+                            (PTSI-PT) at <em>Lycée A.R-Lessage</em>, which
+                            provided an intensive foundation in Physics,
+                            Mathematics, and Computer Science. This program was
+                            designed to prepare students for the competitive
+                            entrance examinations to France's top-tier Grandes
+                            Écoles, ensuring a strong foundation in science
+                            subjects.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hobbies & Interests Section -->
+            <div class="row justify-content-center align-items-center mt-2">
+                <h2 class="mt-5">Hobbies & Interests</h2>
+                <hr />
+
+                <div
+                    class="row justify-content-center align-items-center m-2 g-2"
+                >
+                    <div class="col-md-10">
+                        <p class="lead">
+                            Outside of my professional life, I have a diverse
+                            range of hobbies that contribute to a well-rounded
+                            and fulfilling lifestyle. Sports play a significant
+                            role in my leisure time, with grappling being a
+                            particular favorite. Practicing grappling not only
+                            keeps me physically active but also helps develop
+                            mental resilience and strategic thinking.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <!-- rounded img -->
+                        <img
+                            src="https://contents.mediadecathlon.com/b71403/k$1bd9420f24387634786c6b2b39f31f67/1800x0/600pt400/983xcr737/PHOTO_INT_BOXES_article_grappling.jpg?format=auto"
+                            alt="Grappling"
+                            class="img-fluid rounded-circle"
+                        />
+                    </div>
+                </div>
+
+                <div
+                    class="row justify-content-center align-items-center m-3 g-2"
+                >
+                    <div class="col">
+                        <img
+                            src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_e0760a96c15fae1be3755e9fd95971f2/codingame-for-work.png"
+                            alt="Codingame"
+                            class="img-fluid rounded-circle"
+                            style="width: 300px"
+                        />
+                    </div>
+                    <div class="col-md-10">
+                        <p class="lead">
+                            Moreover, I enjoy indulging in Python coding games,
+                            which provide a fun and engaging way to improve my
+                            programming skills and stay up-to-date with the
+                            latest technologies. These coding challenges allow
+                            me to flex my creative muscles while honing my
+                            problem-solving abilities. (Follow me on Codingame:
+                            <a
+                                href="https://www.codingame.com/profile/4b5773cbdde094de9f6a53d1d6bf74688903853"
+                                >paul_bhs</a
+                            >
+                            )
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="row justify-content-center align-items-center m-3 g-2"
+                >
+                    <p class="lead">
+                        In addition to these hobbies, I am deeply committed to
+                        working on personal development projects. By investing
+                        my time and effort into these projects, I can explore
+                        new ideas, learn new technologies, and refine my skills
+                        in software development and engineering. These personal
+                        endeavors enable me to continuously grow, both
+                        personally and professionally, and stay at the forefront
+                        of the ever-evolving tech industry. You can find a few
+                        of my projects on my Github:
+                        <a href="https://github.com/Pyodin">Pyodin</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-light pt-1">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 align-self-center">
+                        <h5>Contact</h5>
+                        <p>
+                            <i class="fas fa-envelope me-2"></i
+                            >paul_bourhis@yahoo.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone-alt me-2"></i>+33 6 99 29 45
+                            22
+                        </p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Paris</p>
+                    </div>
+
+                    <div class="col-md-6 align-self-center">
+                        <h5>Social Media</h5>
+                        <!-- Linkedin -->
+                        <a
+                            class="btn text-white btn-floating m-1"
+                            style="background-color: #0082ca"
+                            href="https://www.linkedin.com/in/paul-bourhis-375557153/"
+                            role="button"
+                            ><i class="fab fa-linkedin-in"></i
+                        ></a>
+
+                        <!-- Github -->
+                        <a
+                            class="btn text-white btn-floating m-1"
+                            style="background-color: #333333"
+                            href="https://github.com/Pyodin"
+                            role="button"
+                            ><i class="fab fa-github"></i
+                        ></a>
+
+                        <!-- Instagram -->
+                        <a
+                            class="btn text-white btn-floating m-1"
+                            style="background-color: #af36af"
+                            href="https://www.instagram.com/paulbhs/"
+                            role="button"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center bg-secondary">
+                © Built on my own. Find the source code
+                <a
+                    class="text-white"
+                    href="https://github.com/Pyodin/website-portfolio"
+                    >here</a
+                >
+            </div>
+        </footer>
+
+        <!-- Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

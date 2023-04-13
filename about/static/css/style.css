@@ -1,0 +1,11 @@
+
+/* add shadow to accordion-item when hoovering*/
+
+.accordion-item:hover {
+    box-shadow: 0 4px 8px 0 rgba(216, 150, 8, 0.2);
+}
+
+.accordion-item{
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
