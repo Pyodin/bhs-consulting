@@ -12,3 +12,12 @@
 .list-group-item:hover {
     box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
 }
+
+/* header background gradient */
+/* header {
+    background: linear-gradient(90deg, #61636e 0%, #0c41f1 100%);
+}
+
+nav {
+    background: linear-gradient(90deg, #61636e 0%, #0c41f1 100%);
+} */
