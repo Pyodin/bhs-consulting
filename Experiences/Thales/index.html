@@ -14,12 +14,12 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css"
         />
-        <link rel="stylesheet" href="/static/css/style.css" />
+        <link rel="stylesheet" href="../../static/css/style.css" />
         <title>My portfolio</title>
     </head>
     <body>
-         <!--nav bar  -->
-         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <!--nav bar  -->
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container">
                 <a class="navbar-brand" href="/">My portfolio</a>
                 <button
@@ -36,12 +36,12 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/about">About me</a>
+                            <a class="nav-link" href="/About">About me</a>
                         </li>
 
                         <li class="nav-item dropdown">
                             <a
-                                class="nav-link dropdown-toggle"
+                                class="nav-link dropdown-toggle active"
                                 href="#"
                                 role="button"
                                 data-bs-toggle="dropdown"
@@ -51,10 +51,18 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="#">Murex</a>
+                                    <a
+                                        class="dropdown-item"
+                                        href="/Experiences/Murex/"
+                                        >Murex</a
+                                    >
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Thales</a>
+                                    <a
+                                        class="dropdown-item active"
+                                        href="/Experiences/Thales/"
+                                        >Thales</a
+                                    >
                                 </li>
                             </ul>
                         </li>
@@ -71,6 +79,301 @@
             </div>
         </nav>
 
+        <h2 class="m-5">From 02/2019 to 02/2021</h2>
+
+        <!-- image -->
+        <div class="container mt-5">
+            <div class="row justify-content-center align-items-center g-2">
+                <img
+                    src="https://logos-marques.com/wp-content/uploads/2020/01/Thales-logo.png"
+                    alt="murex logo"
+                    style="height: h100; width: 600px"
+                />
+            </div>
+        </div>
+
+        <!-- main container -->
+        <div class="container mt-5">
+            <!-- Introduction -->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md">
+                    <h2 class="mt-5">Introduction</h2>
+                    <hr />
+                    <p class="lead">
+                        At Thales, a renowned global technology company
+                        specializing in aerospace, defense, transportation, and
+                        security solutions, I had the opportunity to work as a
+                        software engineer on the ambitious SCORPION project.
+                        This project aimed at modernizing the French army's
+                        fleet of military vehicles, presenting unique challenges
+                        and opportunities for professional growth.
+                    </p>
+                    <p class="lead">
+                        As a contributor to this project, I enhanced my skills
+                        in software development, automation testing, and
+                        seamless integration of software into complex systems
+                    </p>
+                </div>
+            </div>
+
+            <!-- Technologies and Tools -->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md">
+                    <h2 class="mt-5">Technologies and Tools</h2>
+                    <hr />
+                    <p class="lead">
+                        I had the opportunity to employ a diverse array of
+                        technologies, tools, and software, which played a
+                        crucial role in the successful execution of my tasks.
+                    </p>
+
+                    <div class="row justify-content-center align-items-top">
+                        <!-- Development -->
+                        <div class="col-md">
+                            <h3 class="text-center">Development</h3>
+                            <div class="list-group">
+                                <li
+                                    class="list-group-item list-group-item-warning text-black"
+                                >
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+                                        alt="C++"
+                                        class="skill-logo"
+                                    />C++
+                                </li>
+
+                                <li
+                                    class="list-group-item list-group-item-warning text-black"
+                                >
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                                        alt="Python"
+                                        class="skill-logo"
+                                    />Python
+                                </li>
+
+                                <li
+                                    class="list-group-item list-group-item-warning text-black"
+                                >
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Cmake.svg/1200px-Cmake.svg.png"
+                                        alt="Cmake"
+                                        class="skill-logo"
+                                    />Cmake
+                                </li>
+
+                                <li
+                                    class="list-group-item list-group-item-warning text-black"
+                                >
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qt_logo_2016.svg/1280px-Qt_logo_2016.svg.png"
+                                        alt="Qt"
+                                        class="skill-logo"
+                                    />Qt
+                                </li>
+                            </div>
+                        </div>
+
+                        <!-- Testing & Automation -->
+                        <div class="col-md">
+                            <h3 class="text-center">Testing & Automation</h3>
+                            <div class="list-group">
+                                <li
+                                    class="list-group-item list-group-item-warning text-black"
+                                >
+                                    <img
+                                        src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg"
+                                        alt="Jenkins"
+                                        class="skill-logo"
+                                    />Jenkins
+                                </li>
+                                <li
+                                    class="list-group-item list-group-item-warning text-black"
+                                >
+                                    <img
+                                        src="https://banner2.cleanpng.com/20180705/vzs/kisspng-software-testing-logo-web-browser-behavior-driven-loon-5b3e18c523f255.4509958015307962291472.jpg"
+                                        alt="Docker"
+                                        class="skill-logo"
+                                    />CPPUnit and Pytest
+                                </li>
+                            </div>
+                        </div>
+
+                        <!-- Environment -->
+                        <div class="col-md">
+                            <h3 class="text-center">Environment</h3>
+                            <div class="list-group">
+                                <li
+                                    class="list-group-item list-group-item-warning text-black"
+                                >
+                                    <img
+                                        src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png"
+                                        alt="Linux"
+                                        class="skill-logo"
+                                    />Linux
+                                </li>
+
+                                <li
+                                    class="list-group-item list-group-item-warning text-black"
+                                >
+                                    <img
+                                        src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+                                        alt="Git"
+                                        class="skill-logo"
+                                    />Git
+                                </li>
+                                <li
+                                    class="list-group-item list-group-item-warning text-black"
+                                >
+                                    <img
+                                        src="https://logos-world.net/wp-content/uploads/2021/02/Jira-Emblem.png"
+                                        alt="Nexus repository"
+                                        class="skill-logo"
+                                    />Jira
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Overview -->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md">
+                    <h2 class="mt-5">Project Overview</h2>
+                    <hr />
+                    <p class="lead">
+                        The SCORPION project at Thales is a major defense
+                        initiative aimed at modernizing the French army's fleet
+                        of military vehicles. The project encompasses a wide
+                        range of vehicles, including armored fighting vehicles,
+                        reconnaissance vehicles, and logistic support vehicles,
+                        all of which are being equipped with state-of-the-art
+                        technologies to enhance their operational capabilities.
+                    </p>
+                    <p class="lead">
+                        As a software engineer on the project, my primary focus
+                        was on developing and integrating embedded software
+                        solutions for these advanced systems. The complexity of
+                        the project required close collaboration with
+                        cross-functional teams, including hardware engineers,
+                        system architects, and integration engineers.
+                    </p>
+                    <p class="lead">
+                        Throughout the project, I was involved in various stages
+                        of the software development lifecycle, from initial
+                        design and implementation to testing and validation.
+                        This project presented unique challenges due to the
+                        stringent requirements of military systems, including
+                        high reliability, low-latency communication, and robust
+                        security measures.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Responsabilities -->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md">
+                    <h2 class="mt-5">Responsabilities</h2>
+                    <hr />
+                    <p class="lead">
+                        As the DevOps engineer of my team, I was responsible for
+                        several critical tasks, including:
+                    </p>
+                    <ul class="lead">
+                        <!-- Dev -->
+                        <li>
+                            <b>Software Implementation </b>
+                            <p class="lead">
+                                In my role as a software engineer, I was
+                                responsible for developing C++ software
+                                components, known as bridges, which served as
+                                the critical link between the vehicle's
+                                vetronics (vehicle electronics) and its military
+                                equipment.
+                            </p>
+                        </li>
+
+                        <!-- Testing and Validation -->
+                        <li>
+                            <b>Testing and Validation </b>
+                            <p class="lead">
+                                My responsibility involved designing and
+                                implementing test cases for the software
+                                components I developed, ensuring they functioned
+                                correctly and met system requirements. This
+                                process was crucial for maintaining the
+                                reliability and performance of the integrated
+                                military vehicle systems.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Key Achievements: -->
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md">
+                    <h2 class="mt-5">Key Achievements</h2>
+                    <hr />
+                    <p class="lead">
+                        During my time at Murex, I successfully accomplished
+                        several critical tasks and milestones:
+                    </p>
+                    <ul class="lead">
+                        <!-- dev -->
+                        <li>
+                            <b>SCORPION Project Contribution </b>
+                            <p class="lead">
+                                Developed and integrated critical embedded
+                                software components, contributing to the
+                                modernization of the French army's fleet of
+                                military vehicles.
+                            </p>
+                        </li>
+
+                        <!-- Test -->
+                        <li>
+                            <b>Building a Custom Test Platform</b>
+                            <p class="lead">
+                                Taking the initiative, I developed a custom test
+                                platform that virtualized the software
+                                components of the vehicle, allowing developers
+                                to easily test their work on x86. This
+                                streamlined the validation process, leading to
+                                increased efficiency, timely delivery, and
+                                higher quality results, which ultimately
+                                contributed to the project's overall success.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Challenges -->
+            <div class="row justify-content-center align-items-center mb-5">
+                <div class="col-md">
+                    <h2 class="mt-5">Challenges</h2>
+                    <hr />
+                    <p class="lead">
+                        One of the challenges I encountered during my time at
+                        Thales was the rigid processes in place that prioritized
+                        delivery over sustainability. This mindset occasionally
+                        led to short-term solutions, which made it difficult to
+                        implement long-lasting, sustainable improvements.
+                    </p>
+                    <p class="lead">
+                        Adapting to this environment required me to balance the
+                        need for timely deliveries with the importance of
+                        maintaining high-quality, sustainable software
+                        solutions. This experience allowed me to develop
+                        resilience and problem-solving skills, as I navigated
+                        the complex dynamics between delivery timelines and
+                        software sustainability.
+                    </p>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer class="bg-light pt-1">

@@ -36,12 +36,14 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/about">About me</a>
+                            <a class="nav-link" href="/About"
+                                >About me</a
+                            >
                         </li>
 
                         <li class="nav-item dropdown">
                             <a
-                                class="nav-link dropdown-toggle"
+                                class="nav-link dropdown-toggle active"
                                 href="#"
                                 role="button"
                                 data-bs-toggle="dropdown"
@@ -51,10 +53,18 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                    <a class="dropdown-item" href="#">Murex</a>
+                                    <a
+                                        class="dropdown-item active"
+                                        href="/Experiences/Murex/"
+                                        >Murex</a
+                                    >
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">Thales</a>
+                                    <a
+                                        class="dropdown-item"
+                                        href="/Experiences/Thales/"
+                                        >Thales</a
+                                    >
                                 </li>
                             </ul>
                         </li>
@@ -71,6 +81,8 @@
             </div>
         </nav>
 
+        <h2 class="m-5">From 02/2021</h2>
+
         <!-- image -->
         <div class="container mt-5">
             <div class="row justify-content-center align-items-center g-2">
@@ -84,13 +96,7 @@
 
         <!-- main container -->
         <div class="container mt-5">
-            <!-- fOLLOWING ROWS
-                Introduction
-                Technologies and Tools
-                Project Overview
-                Responsibilities
-                Results and Impact
-             -->
+            <!-- Introduction -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
                     <h2 class="mt-5">Introduction</h2>
@@ -103,14 +109,14 @@
                         systems.
                     </p>
                     <p class="lead">
-                        From developing a Python microservice architecture
-                        application to establishing robust monitoring and
-                        alerting systems, my experience at Murex proved to be an
-                        invaluable opportunity to grow as a professional in the
-                        field. Join me as I delve into the details of this
-                        experience, discussing the projects I undertook, the
-                        challenges I faced, the technologies I employed, and the
-                        valuable lessons I learned along the way.
+                        My experience at Murex involved developing a Python
+                        microservice architecture application, implementing
+                        robust monitoring and alerting systems, and enhancing
+                        continuous integration and continuous delivery (CI/CD)
+                        processes. In this section, I will share insights into
+                        the projects I worked on, the challenges I encountered,
+                        the technologies I utilized, and the invaluable lessons
+                        I learned throughout my journey.
                     </p>
                 </div>
             </div>
@@ -121,10 +127,10 @@
                     <h2 class="mt-5">Technologies and Tools</h2>
                     <hr />
                     <p class="lead">
-                        In the course of my work at Murex, I leveraged a wide
-                        array of technologies and tools to streamline processes
-                        and ensure the optimal functioning of the systems I
-                        contributed to. These technologies and tools included:
+                        In the course of my work, I leveraged a wide array of
+                        technologies and tools to streamline processes and
+                        ensure the optimal functioning of the systems I
+                        contributed to.
                     </p>
 
                     <div class="row justify-content-center align-items-top">
@@ -301,11 +307,11 @@
                         </div>
                     </div>
 
-                    <p class="lead">
+                    <p class="lead mt-3">
                         This diverse and comprehensive toolset allowed me to
-                        excel in my role as a DevOps engineer at Murex, driving
-                        success in my projects and contributing to the company's
-                        mission to deliver state-of-the-art software solutions.
+                        excel in my role as a DevOps engineer, driving success
+                        in my projects and contributing to the company's mission
+                        to deliver state-of-the-art software solutions.
                     </p>
                 </div>
             </div>
@@ -318,11 +324,12 @@
                     <p class="lead">
                         At Murex, I worked on an innovative project aimed at
                         enhancing the performance and reliability of the
-                        company's financial library. Written in C++, and
-                        configured with CMake, the library aims at giving the
-                        price of a financial product according to a lot of
-                        market input. As such, I am responsible for ensuring its
-                        continuous integration, delivery, and deployment.
+                        company's financial product calculations library.
+                        Written in C++, and configured with CMake, the library
+                        aims at giving the price of a financial product
+                        according to a lot of market input. As such, I am
+                        responsible for ensuring its integration and
+                        accessibility for the end users.
                     </p>
                     <p class="lead">
                         To facilitate the querying of the library, this project
@@ -345,56 +352,76 @@
                         several critical tasks, including:
                     </p>
                     <ul class="lead">
+                        <!-- Dev -->
                         <li>
-                            Designing and developing the Python microservice
-                            architecture application
+                            <b>
+                                Designing and developing the Python microservice
+                                architecture application
+                            </b>
                             <p class="lead">
-                                I collaborated with a team of developers to
-                                create a modular, scalable, and maintainable
-                                solution that streamlined the organization's
-                                processes and reduced costs.
+                                This applications consists of a set of
+                                microservices that communicate with each other
+                                through HTTP.
                             </p>
                         </li>
+
+                        <!-- CI/CD -->
                         <li>
-                            Implementing continuous integration, continuous
-                            delivery, and deployment processes
+                            <b>
+                                Implementing continuous integration, continuous
+                                delivery, and deployment processes
+                            </b>
                             <p class="lead">
                                 I ensured faster releases and increased
                                 stability in the production environment by
                                 setting up and fine-tuning continuous
-                                integration and continuous delivery pipelines.
+                                integration and delivery Jenkins pipelines .
                             </p>
                         </li>
+
+                        <!-- linux cluster -->
                         <li>
-                            Implementing robust monitoring and alerting systems
+                            <b>
+                                Assuring the stability of a linux cluster server
+                            </b>
+                            <p class="lead">
+                                I had under my responsibility the health of a
+                                dozen of linux servers. One of my roles were to
+                                keep them up to date and ready to host
+                                applications or any other developer's project.
+                            </p>
                         </li>
+
+                        <!-- monitoring -->
                         <li>
-                            Ensuring the continuous integration, delivery, and
-                            deployment of the financial library
+                            <b>
+                                Implementing robust monitoring and alerting
+                                systems
+                            </b>
+                            <p class="lead">
+                                I had to set up a monitoring system that would
+                                allow me to monitor the health of the
+                                microservices application and the linux cluster
+                                server.
+                            </p>
                         </li>
+
+                        <!-- technical support -->
                         <li>
-                            Optimizing the performance and reliability of the
-                            financial library
-                        </li>
-                        <li>Ensuring the security of the financial library</li>
-                        <li>
-                            Ensuring the stability of the production environment
-                        </li>
-                        <li>
-                            Ensuring the availability of the financial library
-                        </li>
-                        <li>
-                            Ensuring all developers have the necessary tools to
-                            work efficiently
-                        </li>
-                        <li>
-                            Ensuring the smooth operation of the development
-                            environment
-                        </li>
-                        <li>
-                            Provided technical support and guidance to team
-                            members, fostering a culture of knowledge sharing
-                            and collaboration
+                            <b>
+                                Provided technical support and guidance to team
+                                members
+                            </b>
+                            <p class="lead">
+                                I was responsible for providing technical
+                                support to the team members, helping them
+                                troubleshoot issues and resolve problems.
+                            </p>
+                            <p class="lead">
+                                I had to ensure all developers have the
+                                necessary tools to work efficiently, and that
+                                they are following the best practices.
+                            </p>
                         </li>
                     </ul>
                 </div>
@@ -403,66 +430,92 @@
             <!-- Key Achievements: -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
-                    <h2 class="mt-5">Key Achievements:</h2>
+                    <h2 class="mt-5">Key Achievements</h2>
                     <hr />
                     <p class="lead">
                         During my time at Murex, I successfully accomplished
                         several critical tasks and milestones:
                     </p>
                     <ul class="lead">
+                        <!-- dev -->
                         <li>
-                            Development of a Python microservice architecture
-                            application
+                            <b>
+                                Development of a Python microservice
+                                architecture application
+                            </b>
                             <p class="lead">
-                                By building a modular and scalable application,
-                                I helped the organization streamline its
-                                processes, reduce costs, and enhance overall
-                                performance.
+                                I enforced myself to create modular, scalable,
+                                and maintainable solutions by following the best
+                                development practices. By doing so, I was able
+                                to sharpen my software architecture skills.
                             </p>
                         </li>
 
+                        <!-- Automation -->
                         <li>
-                            Implementation of CI/CD pipelines
+                            <b> Automations of redundant tasks</b>
                             <p class="lead">
-                                I played a pivotal role in setting up and
-                                optimizing continuous integration and continuous
-                                delivery pipelines, which led to faster releases
-                                and increased stability in the production
-                                environment.
+                                I automated the deployment of the application
+                                and the management of users using Jenkins
+                                pipelines and Ansible Playbooks. This allowed me
+                                to deploy/update the application in less of
+                                minutes.
                             </p>
                         </li>
+
+                        <!-- monitoring -->
                         <li>
-                            Integration of robust monitoring and alerting
-                            systems
+                            <b>
+                                Integration of robust monitoring and alerting
+                                systems
+                            </b>
                             <p class="lead">
-                                By deploying Prometheus and Grafana, I ensured
-                                system reliability and proactively addressed
-                                potential issues, resulting in minimal downtime
-                                and a better user experience.
+                                By deploying Prometheus and Grafana, along with
+                                Logstash and Elasticsearch, I ensured
+                                application and system reliability. I was able
+                                to proactively addressed potential issues,
+                                resulting in minimal downtime and a better user
+                                experience.
                             </p>
                         </li>
+
+                        <!-- secrity -->
                         <li>
-                            Implementation of a robust security system
+                            <b> Implementation of a robust security system </b>
                             <p class="lead">
-                                I implemented a security system that ensured the
-                                confidentiality, integrity, and availability of
-                                the financial library.
+                                I implemented HTTPS and JWT authentication to
+                                ensure the security of the microservices.
                             </p>
                         </li>
+
+                        <!-- Database -->
                         <li>
-                            Update the database technology
+                            <b> Update the database technology </b>
                             <p class="lead">
-                                I moved the database from a custom http
-                                key-value pair system to redis, which improved
-                                the performance of 30% on several tests cases.
+                                I moved the database from a custom HTTP
+                                key-value pair system to Redis, which improved
+                                the performance of 30% on several test cases.
                             </p>
                         </li>
+
+                        <!-- docker -->
                         <li>
-                            Update the deployment technology using docker
+                            <b>Update the deployment technology </b>
                             <p class="lead">
                                 I moved the deployment from custom bash scripts
-                                to docker, which improved the maintainability of
-                                the deployment.
+                                to docker, which improved the maintainability,
+                                scalability, and reliability of the deployment.
+                            </p>
+                        </li>
+
+                        <!-- Vscode -->
+                        <li>
+                            <b>Providing development tools</b>
+                            <p class="lead">
+                                I provided the team with a set of development
+                                tools, including VSCode extensions, Jenkins
+                                delivery pipeliens, or Ansible Playbooks that
+                                improved the productivity of the team.
                             </p>
                         </li>
                     </ul>
@@ -470,14 +523,10 @@
             </div>
 
             <!-- Challenges -->
-            <div class="row justify-content-center align-items-center">
+            <div class="row justify-content-center align-items-center mb-5">
                 <div class="col-md">
                     <h2 class="mt-5">Challenges</h2>
                     <hr />
-                    <p class="lead">
-                        During my time at Murex, I faced several challenges,
-                        including:
-                    </p>
                     <p class="lead">
                         During my time at Murex, one of the main challenges I
                         faced was the team's initial lack of familiarity with
@@ -489,11 +538,12 @@
                         prioritization skills.
                     </p>
                     <p class="lead">
-                        Dealing with the presence of legacy code and past
-                        architectural decisions posed a challenge. To overcome
-                        this, I focused on sharpening my architecture skills,
-                        understanding the intricacies of the financial domain,
-                        and addressing the complexities of the software systems.
+                        Besides, dealing with the presence of legacy code and
+                        past architectural decisions posed a challenge. To
+                        overcome this, I focused on sharpening my architecture
+                        skills, understanding the intricacies of the financial
+                        domain, and addressing the complexities of the software
+                        systems.
                     </p>
                 </div>
             </div>
