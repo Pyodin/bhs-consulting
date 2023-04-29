@@ -13,11 +13,27 @@
     box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
 }
 
-/* header background gradient */
 /* header {
-    background: linear-gradient(90deg, #61636e 0%, #0c41f1 100%);
-}
-
-nav {
-    background: linear-gradient(90deg, #61636e 0%, #0c41f1 100%);
+    background: linear-gradient(90deg, #151516 0%, #0c82f1cb 100%);
 } */
+
+/* header {
+    background: linear-gradient(90deg, #151516 0%, #0c82f1cb 100%);
+    height: 25vh;
+    padding-top: 10px;
+    background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YmFja2dyb3VuZCUyMGJhY2tncm91bmQlMjB3b3JsZHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
+/* nav {
+    background: linear-gradient(90deg, #151516 0%, #0c82f1cb 100%);
+} */
+
+header i {
+    color: rgb(173, 18, 38);
+}
+header i:hover {
+    color: rgb(173, 132, 18);
+}
