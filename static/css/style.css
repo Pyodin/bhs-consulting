@@ -11,7 +11,7 @@
  
 
 .carousel-item img{
-    height: 50vh;
+    height: 48vh;
     min-height: 300px;
     background: no-repeat center center scroll;
     background-size: cover;
@@ -29,7 +29,6 @@
     font-weight: normal; /* Adjust as needed */
 }
 
-
 .skill-logo {
     width: 40px;
     height: h100;
@@ -45,6 +44,7 @@
     box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
 }
 
+
 header i {
     color: rgb(173, 18, 38);
 }
@@ -52,3 +52,4 @@ header i {
 header i:hover {
     color: rgb(173, 132, 18);
 }
+
