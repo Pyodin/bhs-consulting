@@ -53,3 +53,19 @@ header i:hover {
     color: rgb(173, 132, 18);
 }
 
+/* For the switch language */
+
+.fade-from-right {
+    animation: fadeFromRight 1s ease-in-out;
+}
+
+@keyframes fadeFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
