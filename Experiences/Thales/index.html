@@ -14,14 +14,16 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css"
         />
-        <link rel="stylesheet" href="../../static/css/style.css" />
+        <link rel="stylesheet" href="../style.css" />
         <title>My portfolio</title>
     </head>
     <body>
         <!--nav bar  -->
-        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
             <div class="container">
-                <a class="navbar-brand text-warning" href="/">My portfolio</a>
+                <a id="navbarBrand" class="navbar-brand text-warning" href="/"
+                    >My portfolio</a
+                >
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -34,14 +36,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/about">About me</a>
+                            <a id="aboutMeLink" class="nav-link" href="/about"
+                                >About me</a
+                            >
                         </li>
 
                         <li class="nav-item dropdown">
                             <a
-                                class="nav-link dropdown-toggle active"
+                                id="experiencesLink"
+                                class="nav-link dropdown-toggle"
                                 href="#"
                                 role="button"
                                 data-bs-toggle="dropdown"
@@ -52,6 +57,7 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a
+                                        id="murexLink"
                                         class="dropdown-item"
                                         href="/Experiences/Murex/"
                                         >Murex</a
@@ -59,7 +65,8 @@
                                 </li>
                                 <li>
                                     <a
-                                        class="dropdown-item active"
+                                        id="thalesLink"
+                                        class="dropdown-item"
                                         href="/Experiences/Thales/"
                                         >Thales</a
                                     >
@@ -68,9 +75,26 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Projects</a>
+                            <a
+                                id="projectsLink"
+                                class="nav-link disabled"
+                                href="#"
+                                >Projects</a
+                            >
                         </li>
                     </ul>
+
+                    <!-- english and franch flags as button -->
+                    <div class="d-flex align-items-center">
+                        <a
+                            class="btn btn-outline-light btn-sm me-2"
+                            id="btnEnglish"
+                            >English</a
+                        >
+                        <a class="btn btn-outline-light btn-sm" id="btnFrench"
+                            >Français</a
+                        >
+                    </div>
                 </div>
             </div>
         </nav>
@@ -92,9 +116,9 @@
             <!-- Introduction -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
-                    <h2 class="mt-5">Introduction</h2>
+                    <h2 class="mt-5" id="introduction_title">Introduction</h2>
                     <hr />
-                    <p class="lead">
+                    <p class="lead" id="introduction_description_1">
                         At Thales, a renowned global technology company
                         specializing in aerospace, defense, transportation, and
                         security solutions, I had the opportunity to work as a
@@ -103,7 +127,7 @@
                         fleet of military vehicles, presenting unique challenges
                         and opportunities for professional growth.
                     </p>
-                    <p class="lead">
+                    <p class="lead" id="introduction_description_2">
                         As a contributor to this project, I enhanced my skills
                         in software development, automation testing, and
                         seamless integration of software into complex systems
@@ -114,9 +138,11 @@
             <!-- Technologies and Tools -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
-                    <h2 class="mt-5">Technologies and Tools</h2>
+                    <h2 class="mt-5" id="technologies_and_tools_title">
+                        Technologies and Tools
+                    </h2>
                     <hr />
-                    <p class="lead">
+                    <p class="lead" id="technologies_and_tools_description">
                         I had the opportunity to employ a diverse array of
                         technologies, tools, and software, which played a
                         crucial role in the successful execution of my tasks.
@@ -125,7 +151,9 @@
                     <div class="row justify-content-center align-items-top">
                         <!-- Development -->
                         <div class="col-md">
-                            <h3 class="text-center">Development</h3>
+                            <h3 class="text-center" id="development_title">
+                                Development
+                            </h3>
                             <div class="list-group">
                                 <li
                                     class="list-group-item list-group-item-warning text-black"
@@ -171,7 +199,12 @@
 
                         <!-- Testing & Automation -->
                         <div class="col-md">
-                            <h3 class="text-center">Testing & Automation</h3>
+                            <h3
+                                class="text-center"
+                                id="testing_and_automation_title"
+                            >
+                                Testing & Automation
+                            </h3>
                             <div class="list-group">
                                 <li
                                     class="list-group-item list-group-item-warning text-black"
@@ -196,7 +229,9 @@
 
                         <!-- Environment -->
                         <div class="col-md">
-                            <h3 class="text-center">Environment</h3>
+                            <h3 class="text-center" id="environment_title">
+                                Environment
+                            </h3>
                             <div class="list-group">
                                 <li
                                     class="list-group-item list-group-item-warning text-black"
@@ -235,9 +270,11 @@
             <!-- Project Overview -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
-                    <h2 class="mt-5">Project Overview</h2>
+                    <h2 class="mt-5" id="project_overview_title">
+                        Project Overview
+                    </h2>
                     <hr />
-                    <p class="lead">
+                    <p class="lead" id="project_overview_description_1">
                         The SCORPION project at Thales is a major defense
                         initiative aimed at modernizing the French army's fleet
                         of military vehicles. The project encompasses a wide
@@ -246,7 +283,7 @@
                         all of which are being equipped with state-of-the-art
                         technologies to enhance their operational capabilities.
                     </p>
-                    <p class="lead">
+                    <p class="lead" id="project_overview_description_2">
                         As a software engineer on the project, my primary focus
                         was on developing and integrating embedded software
                         solutions for these advanced systems. The complexity of
@@ -254,7 +291,7 @@
                         cross-functional teams, including hardware engineers,
                         system architects, and integration engineers.
                     </p>
-                    <p class="lead">
+                    <p class="lead" id="project_overview_description_3">
                         Throughout the project, I was involved in various stages
                         of the software development lifecycle, from initial
                         design and implementation to testing and validation.
@@ -269,17 +306,24 @@
             <!-- Responsabilities -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
-                    <h2 class="mt-5">Responsabilities</h2>
+                    <h2 class="mt-5" id="responsibilities_title">
+                        Responsabilities
+                    </h2>
                     <hr />
-                    <p class="lead">
+                    <p class="lead" id="responsibilities_description">
                         As the DevOps engineer of my team, I was responsible for
                         several critical tasks, including:
                     </p>
                     <ul class="lead">
                         <!-- Dev -->
                         <li>
-                            <b>Software Implementation </b>
-                            <p class="lead">
+                            <b id="software_implementation_title"
+                                >Software Implementation
+                            </b>
+                            <p
+                                class="lead"
+                                id="software_implementation_description"
+                            >
                                 In my role as a software engineer, I was
                                 responsible for developing C++ software
                                 components, known as bridges, which served as
@@ -291,8 +335,13 @@
 
                         <!-- Testing and Validation -->
                         <li>
-                            <b>Testing and Validation </b>
-                            <p class="lead">
+                            <b id="testing_and_validation_title"
+                                >Testing and Validation
+                            </b>
+                            <p
+                                class="lead"
+                                id="testing_and_validation_description"
+                            >
                                 My responsibility involved designing and
                                 implementing test cases for the software
                                 components I developed, ensuring they functioned
@@ -309,17 +358,24 @@
             <!-- Key Achievements: -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
-                    <h2 class="mt-5">Key Achievements</h2>
+                    <h2 class="mt-5" id="key_achievements_title">
+                        Key Achievements
+                    </h2>
                     <hr />
-                    <p class="lead">
+                    <p class="lead" id="key_achievements_description">
                         During my time at Murex, I successfully accomplished
                         several critical tasks and milestones:
                     </p>
                     <ul class="lead">
                         <!-- dev -->
                         <li>
-                            <b>SCORPION Project Contribution </b>
-                            <p class="lead">
+                            <b id="scorpion_project_contribution_title"
+                                >SCORPION Project Contribution
+                            </b>
+                            <p
+                                class="lead"
+                                id="scorpion_project_contribution_description"
+                            >
                                 Developed and integrated critical embedded
                                 software components, contributing to the
                                 modernization of the French army's fleet of
@@ -329,8 +385,13 @@
 
                         <!-- Test -->
                         <li>
-                            <b>Building a Custom Test Platform</b>
-                            <p class="lead">
+                            <b id="building_custom_test_platform_title"
+                                >Building a Custom Test Platform</b
+                            >
+                            <p
+                                class="lead"
+                                id="building_custom_test_platform_description"
+                            >
                                 Taking the initiative, I developed a custom test
                                 platform that virtualized the software
                                 components of the vehicle, allowing developers
@@ -348,16 +409,16 @@
             <!-- Challenges -->
             <div class="row justify-content-center align-items-center mb-5">
                 <div class="col-md">
-                    <h2 class="mt-5">Challenges</h2>
+                    <h2 class="mt-5" id="challenges_title">Challenges</h2>
                     <hr />
-                    <p class="lead">
+                    <p class="lead" id="challenges_description_1">
                         One of the challenges I encountered during my time at
                         Thales was the rigid processes in place that prioritized
                         delivery over sustainability. This mindset occasionally
                         led to short-term solutions, which made it difficult to
                         implement long-lasting, sustainable improvements.
                     </p>
-                    <p class="lead">
+                    <p class="lead" id="challenges_description_2">
                         Adapting to this environment required me to balance the
                         need for timely deliveries with the importance of
                         maintaining high-quality, sustainable software
@@ -428,6 +489,7 @@
                 >
             </div>
         </footer>
+        <script src="../../switchLanguage.js"></script>
 
         <!-- Bootstrap Bundle with Popper -->
         <script
