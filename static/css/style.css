@@ -2,13 +2,12 @@
 
 .navbar {
     background-color: transparent !important;
-    transition: background-color 0.5s ease;
 }
 
 .navbar-scrolled {
     background: linear-gradient(90deg, #200c55 0%, #1b5bd3cb 100%);
+    transition: background-color 0.5s ease;
 }
- 
 
 .carousel-item img{
     height: 48vh;
@@ -43,7 +42,6 @@
 .list-group-item:hover {
     box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
 }
-
 
 header i {
     color: rgb(173, 18, 38);
