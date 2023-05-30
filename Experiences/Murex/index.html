@@ -14,14 +14,16 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css"
         />
-        <link rel="stylesheet" href="../../static/css/style.css" />
+        <link rel="stylesheet" href="style.css" />
         <title>My portfolio</title>
     </head>
     <body>
-        <!--nav bar  -->
-        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
             <div class="container">
-                <a class="navbar-brand text-warning" href="/">My portfolio</a>
+                <a id="navbarBrand" class="navbar-brand text-warning" href="/"
+                    >My portfolio</a
+                >
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -34,14 +36,17 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/about">About me</a>
+                            <a id="aboutMeLink" class="nav-link" href="/about"
+                                >About me</a
+                            >
                         </li>
 
                         <li class="nav-item dropdown">
                             <a
-                                class="nav-link dropdown-toggle active"
+                                id="experiencesLink"
+                                class="nav-link dropdown-toggle"
                                 href="#"
                                 role="button"
                                 data-bs-toggle="dropdown"
@@ -52,15 +57,17 @@
                             <ul class="dropdown-menu">
                                 <li>
                                     <a
-                                        class="dropdown-item active"
-                                        href="/Experiences/Murex/"
+                                        id="murexLink"
+                                        class="dropdown-item"
+                                        href="Experiences/Murex/"
                                         >Murex</a
                                     >
                                 </li>
                                 <li>
                                     <a
+                                        id="thalesLink"
                                         class="dropdown-item"
-                                        href="/Experiences/Thales/"
+                                        href="Experiences/Thales/"
                                         >Thales</a
                                     >
                                 </li>
@@ -68,12 +75,31 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Projects</a>
+                            <a
+                                id="projectsLink"
+                                class="nav-link disabled"
+                                href="#"
+                                >Projects</a
+                            >
                         </li>
                     </ul>
+
+                    <!-- english and franch flags as button -->
+                    <div class="d-flex align-items-center">
+                        <a
+                            class="btn btn-outline-light btn-sm me-2"
+                            id="btnEnglish"
+                            >English</a
+                        >
+                        <a class="btn btn-outline-light btn-sm" id="btnFrench"
+                            >Français</a
+                        >
+                    </div>
                 </div>
             </div>
         </nav>
+
+        <div class="row mt-5"></div>
 
         <!-- image -->
         <div class="container mt-5 text-end">
@@ -84,7 +110,7 @@
                     style="height: h100; width: 800px"
                 />
             </div>
-            <h2 class="m-5">From 02/2021</h2>
+            <h2 class="m-5" id="date">From 02/2021</h2>
         </div>
 
         <!-- main container -->
@@ -92,16 +118,16 @@
             <!-- Introduction -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
-                    <h2 class="mt-5">Introduction</h2>
+                    <h2 class="mt-5" id="introduction_title">Introduction</h2>
                     <hr />
-                    <p class="lead">
+                    <p class="lead" id="introduction_description_1">
                         During my time at Murex, a leading global software
                         provider for the financial industry, I embraced the
                         challenges of working as a DevOps engineer and honed my
                         skills in the creation and optimization of complex
                         systems.
                     </p>
-                    <p class="lead">
+                    <p class="lead" id="introduction_description_2">
                         My experience at Murex involved developing a Python
                         microservice architecture application, implementing
                         robust monitoring and alerting systems, and enhancing
@@ -117,19 +143,20 @@
             <!-- Technologies and Tools -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
-                    <h2 class="mt-5">Technologies and Tools</h2>
+                    <h2 class="mt-5" id="technologies_tools_title">
+                        Technologies and Tools
+                    </h2>
                     <hr />
-                    <p class="lead">
+                    <p class="lead" id="technologies_tools_description">
                         In the course of my work, I leveraged a wide array of
                         technologies and tools to streamline processes and
                         ensure the optimal functioning of the systems I
                         contributed to.
                     </p>
-
                     <div class="row justify-content-center align-items-top">
                         <!-- Cloud -->
                         <div class="col-md">
-                            <h3 class="text-center">Cloud</h3>
+                            <h3 class="text-center" id="cloud_title">Cloud</h3>
                             <div class="list-group">
                                 <li
                                     class="list-group-item list-group-item-warning text-black"
@@ -154,7 +181,9 @@
 
                         <!-- Monitoring -->
                         <div class="col-md">
-                            <h3 class="text-center">Monitoring</h3>
+                            <h3 class="text-center" id="monitoring_title">
+                                Monitoring
+                            </h3>
                             <div class="list-group">
                                 <li
                                     class="list-group-item list-group-item-warning text-black"
@@ -197,7 +226,9 @@
 
                         <!-- Development -->
                         <div class="col-md">
-                            <h3 class="text-center">Development</h3>
+                            <h3 class="text-center" id="development_title">
+                                Development
+                            </h3>
                             <div class="list-group">
                                 <li
                                     class="list-group-item list-group-item-warning text-black"
@@ -240,13 +271,15 @@
 
                         <!-- Environment -->
                         <div class="col-md">
-                            <h3 class="text-center">Environment</h3>
+                            <h3 class="text-center" id="environment_title">
+                                Environment
+                            </h3>
                             <div class="list-group">
                                 <li
                                     class="list-group-item list-group-item-warning text-black"
                                 >
                                     <img
-                                        src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg"
                                         alt="Linux"
                                         class="skill-logo"
                                     />Linux
@@ -299,8 +332,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <p class="lead mt-3">
+                    <p class="lead mt-3" id="technologies_tools_description_2">
                         This diverse and comprehensive toolset allowed me to
                         excel in my role as a DevOps engineer, driving success
                         in my projects and contributing to the company's mission
@@ -312,9 +344,11 @@
             <!-- Project Overview -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
-                    <h2 class="mt-5">Project Overview</h2>
+                    <h2 class="mt-5" id="project_overview_title">
+                        Project Overview
+                    </h2>
                     <hr />
-                    <p class="lead">
+                    <p class="lead" id="project_overview_description_1">
                         At Murex, I worked on an innovative project aimed at
                         enhancing the performance and reliability of the
                         company's financial product calculations library.
@@ -324,7 +358,7 @@
                         responsible for ensuring its integration and
                         accessibility for the end users.
                     </p>
-                    <p class="lead">
+                    <p class="lead" id="project_overview_description_2">
                         To facilitate the querying of the library, this project
                         involved the development of a Python microservice
                         architecture application and the implementation of
@@ -335,23 +369,28 @@
                 </div>
             </div>
 
-            <!-- Responsabilities -->
+            <!-- Responsibilities -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
-                    <h2 class="mt-5">Responsabilities</h2>
+                    <h2 class="mt-5" id="responsibilities_title">
+                        Responsabilities
+                    </h2>
                     <hr />
-                    <p class="lead">
+                    <p class="lead" id="responsibilities_description">
                         As the DevOps engineer of my team, I was responsible for
                         several critical tasks, including:
                     </p>
                     <ul class="lead">
                         <!-- Dev -->
                         <li>
-                            <b>
+                            <b id="responsibilities_dev_title">
                                 Designing and developing the Python microservice
                                 architecture application
                             </b>
-                            <p class="lead">
+                            <p
+                                class="lead"
+                                id="responsibilities_dev_description"
+                            >
                                 This applications consists of a set of
                                 microservices that communicate with each other
                                 through HTTP.
@@ -360,57 +399,72 @@
 
                         <!-- CI/CD -->
                         <li>
-                            <b>
+                            <b id="responsibilities_ci_cd_title">
                                 Implementing continuous integration, continuous
                                 delivery, and deployment processes
                             </b>
-                            <p class="lead">
+                            <p
+                                class="lead"
+                                id="responsibilities_ci_cd_description"
+                            >
                                 I ensured faster releases and increased
                                 stability in the production environment by
                                 setting up and fine-tuning continuous
-                                integration and delivery Jenkins pipelines .
+                                integration and delivery Jenkins pipelines.
                             </p>
                         </li>
 
-                        <!-- linux cluster -->
+                        <!-- Linux cluster -->
                         <li>
-                            <b>
-                                Assuring the stability of a linux cluster server
+                            <b id="responsibilities_linux_title">
+                                Assuring the stability of a Linux cluster server
                             </b>
-                            <p class="lead">
+                            <p
+                                class="lead"
+                                id="responsibilities_linux_description"
+                            >
                                 I had under my responsibility the health of a
-                                dozen of linux servers. One of my roles were to
+                                dozen of Linux servers. One of my roles were to
                                 keep them up to date and ready to host
                                 applications or any other developer's project.
                             </p>
                         </li>
 
-                        <!-- monitoring -->
+                        <!-- Monitoring -->
                         <li>
-                            <b>
+                            <b id="responsibilities_monitoring_title">
                                 Implementing robust monitoring and alerting
                                 systems
                             </b>
-                            <p class="lead">
+                            <p
+                                class="lead"
+                                id="responsibilities_monitoring_description"
+                            >
                                 I had to set up a monitoring system that would
                                 allow me to monitor the health of the
-                                microservices application and the linux cluster
+                                microservices application and the Linux cluster
                                 server.
                             </p>
                         </li>
 
-                        <!-- technical support -->
+                        <!-- Technical support -->
                         <li>
-                            <b>
+                            <b id="responsibilities_support_title">
                                 Provided technical support and guidance to team
                                 members
                             </b>
-                            <p class="lead">
+                            <p
+                                class="lead"
+                                id="responsibilities_support_description_1"
+                            >
                                 I was responsible for providing technical
                                 support to the team members, helping them
                                 troubleshoot issues and resolve problems.
                             </p>
-                            <p class="lead">
+                            <p
+                                class="lead"
+                                id="responsibilities_support_description_2"
+                            >
                                 I had to ensure all developers have the
                                 necessary tools to work efficiently, and that
                                 they are following the best practices.
@@ -420,23 +474,25 @@
                 </div>
             </div>
 
-            <!-- Key Achievements: -->
+            <!-- Key Achievements -->
             <div class="row justify-content-center align-items-center">
                 <div class="col-md">
-                    <h2 class="mt-5">Key Achievements</h2>
+                    <h2 class="mt-5" id="achievements_title">
+                        Key Achievements
+                    </h2>
                     <hr />
-                    <p class="lead">
+                    <p class="lead" id="achievements_description">
                         During my time at Murex, I successfully accomplished
                         several critical tasks and milestones:
                     </p>
                     <ul class="lead">
-                        <!-- dev -->
+                        <!-- Dev -->
                         <li>
-                            <b>
+                            <b id="achievements_dev_title">
                                 Development of a Python microservice
                                 architecture application
                             </b>
-                            <p class="lead">
+                            <p class="lead" id="achievements_dev_description">
                                 I enforced myself to create modular, scalable,
                                 and maintainable solutions by following the best
                                 development practices. By doing so, I was able
@@ -446,23 +502,31 @@
 
                         <!-- Automation -->
                         <li>
-                            <b> Automations of redundant tasks</b>
-                            <p class="lead">
+                            <b id="achievements_automation_title"
+                                >Automations of redundant tasks</b
+                            >
+                            <p
+                                class="lead"
+                                id="achievements_automation_description"
+                            >
                                 I automated the deployment of the application
                                 and the management of users using Jenkins
                                 pipelines and Ansible Playbooks. This allowed me
-                                to deploy/update the application in less of
+                                to deploy/update the application in less than
                                 minutes.
                             </p>
                         </li>
 
-                        <!-- monitoring -->
+                        <!-- Monitoring -->
                         <li>
-                            <b>
+                            <b id="achievements_monitoring_title">
                                 Integration of robust monitoring and alerting
                                 systems
                             </b>
-                            <p class="lead">
+                            <p
+                                class="lead"
+                                id="achievements_monitoring_description"
+                            >
                                 By deploying Prometheus and Grafana, along with
                                 Logstash and Elasticsearch, I ensured
                                 application and system reliability. I was able
@@ -472,10 +536,15 @@
                             </p>
                         </li>
 
-                        <!-- secrity -->
+                        <!-- Security -->
                         <li>
-                            <b> Implementation of a robust security system </b>
-                            <p class="lead">
+                            <b id="achievements_security_title"
+                                >Implementation of a robust security system</b
+                            >
+                            <p
+                                class="lead"
+                                id="achievements_security_description"
+                            >
                                 I implemented HTTPS and JWT authentication to
                                 ensure the security of the microservices.
                             </p>
@@ -483,18 +552,28 @@
 
                         <!-- Database -->
                         <li>
-                            <b> Update the database technology </b>
-                            <p class="lead">
+                            <b id="achievements_database_title"
+                                >Update the database technology</b
+                            >
+                            <p
+                                class="lead"
+                                id="achievements_database_description"
+                            >
                                 I moved the database from a custom HTTP
                                 key-value pair system to Redis, which improved
                                 the performance of 30% on several test cases.
                             </p>
                         </li>
 
-                        <!-- docker -->
+                        <!-- Docker -->
                         <li>
-                            <b>Update the deployment technology </b>
-                            <p class="lead">
+                            <b id="achievements_deployment_title"
+                                >Update the deployment technology</b
+                            >
+                            <p
+                                class="lead"
+                                id="achievements_deployment_description"
+                            >
                                 I moved the deployment from custom bash scripts
                                 to docker, which improved the maintainability,
                                 scalability, and reliability of the deployment.
@@ -503,11 +582,13 @@
 
                         <!-- Vscode -->
                         <li>
-                            <b>Providing development tools</b>
-                            <p class="lead">
+                            <b id="achievements_tools_title"
+                                >Providing development tools</b
+                            >
+                            <p class="lead" id="achievements_tools_description">
                                 I provided the team with a set of development
                                 tools, including VSCode extensions, Jenkins
-                                delivery pipeliens, or Ansible Playbooks that
+                                delivery pipelines, or Ansible Playbooks that
                                 improved the productivity of the team.
                             </p>
                         </li>
@@ -518,26 +599,10 @@
             <!-- Challenges -->
             <div class="row justify-content-center align-items-center mb-5">
                 <div class="col-md">
-                    <h2 class="mt-5">Challenges</h2>
+                    <h2 class="mt-5" id="challenges_title">Challenges</h2>
                     <hr />
-                    <p class="lead">
-                        During my time at Murex, one of the main challenges I
-                        faced was the team's initial lack of familiarity with
-                        DevOps practices. This barrier made the efficient
-                        implementation of new processes and methodologies
-                        difficult. In addition, I was practically on my own when
-                        it came to managing DevOps tasks, which required a high
-                        level of self-reliance, time management, and
-                        prioritization skills.
-                    </p>
-                    <p class="lead">
-                        Besides, dealing with the presence of legacy code and
-                        past architectural decisions posed a challenge. To
-                        overcome this, I focused on sharpening my architecture
-                        skills, understanding the intricacies of the financial
-                        domain, and addressing the complexities of the software
-                        systems.
-                    </p>
+                    <p class="lead" id="challenges_description_1"></p>
+                    <p class="lead" id="challenges_description_2"></p>
                 </div>
             </div>
         </div>
@@ -600,7 +665,7 @@
                 >
             </div>
         </footer>
-
+        <script src="../../switchLanguage.js"></script>
         <!-- Bootstrap Bundle with Popper -->
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

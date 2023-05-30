@@ -1,0 +1,29 @@
+.navbar {
+    background: linear-gradient(90deg, #200c55 0%, #1b5bd3cb 100%);
+}
+
+.fade-from-right {
+    animation: fadeFromRight 1s ease-in-out;
+}
+
+@keyframes fadeFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.skill-logo {
+    width: 40px;
+    height: h100;
+    margin-right: 10px;
+}
+
+.list-group-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
+}
+
