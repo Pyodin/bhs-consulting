@@ -1,0 +1,32 @@
+.navbar {
+    background-color: transparent !important;
+}
+
+.navbar-scrolled {
+    background: linear-gradient(90deg, #200c55 0%, #1b5bd3cb 100%);
+    transition: background-color 0.5s ease;
+}
+
+a {
+    color: black;
+}
+
+/* .masthead {
+    background-image: "../static/images/banner-infraestructura.webp";
+    height: 48vh;
+    min-height: 300px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+    object-fit: cover;
+    object-position: center;
+} */
+
+.masthead h1 {
+    font-size: 4rem; 
+    font-weight: bold; 
+}
+
+.masthead .lead {
+    font-size: 2rem; 
+    font-weight: normal; 
+}

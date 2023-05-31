@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css"
+        />
+        <link rel="stylesheet" href="./static/css/style.css" />
+        <title>My portfolio</title>
+    </head>
+
+    <body>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+            <div class="container">
+                <a id="navbarBrand" class="navbar-brand text-warning" href="/"
+                    >My portfolio</a
+                >
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a id="aboutMeLink" class="nav-link" href="/about"
+                                >About me</a
+                            >
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a
+                                id="experiencesLink"
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Experiences
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a
+                                        id="murexLink"
+                                        class="dropdown-item"
+                                        href="/Experiences/Murex/"
+                                        >Murex</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        id="thalesLink"
+                                        class="dropdown-item"
+                                        href="/Experiences/Thales/"
+                                        >Thales</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a
+                                id="projectsLink"
+                                class="nav-link disabled"
+                                href="#"
+                                >Projects</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a id="projectsLink" class="nav-link" href="/Blog/"
+                                >Blog</a
+                            >
+                        </li>
+                    </ul>
+
+                    <!-- english and franch flags as button -->
+                    <div class="d-flex align-items-center">
+                        <a
+                            class="btn btn-outline-light btn-sm me-2"
+                            id="btnEnglish"
+                            >English</a
+                        >
+                        <a class="btn btn-outline-light btn-sm" id="btnFrench"
+                            >Français</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header
+            class="masthead"
+            style="
+                background-image: url('../static/images/banner-keyboard.webp');
+                height: 48vh;
+            "
+        >
+            <div class="container">
+                <div class="row justify-content-end align-items-center g-2">
+                    <div
+                        class="row justify-content-center align-items-center g-2 m-5"
+                    ></div>
+                    <h1 class="text-center text-white mt-5">
+                        Welcome to my blog
+                    </h1>
+                    <p class="text-center text-white">
+                        Here you will find articles about my experiences with
+                        different technologies
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Blog articles -->
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center mt-5">Blog articles</h2>
+                    <hr />
+
+                    <!-- Post preview-->
+                    <div
+                        class="row justify-content-center align-items-center g-2"
+                    >
+                        <div class="col-md-2">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                                class="card-img-top"
+                                alt="azure logo"
+                            />
+                        </div>
+                        <div class="col">
+                            <a href="post.html">
+                                <h2>
+                                    Man must explore, and this is exploration at
+                                    its greatest
+                                </h2>
+                            </a>
+                            <p class="lead">
+                                This is a lead paragraph. It stands out from
+                                regular paragraphs.
+                            </p>
+                            <p class="post-meta">
+                                Posted by
+                                <a href="/">Paul Bourhis</a>
+                                on June 01, 2023
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+
+                    <!-- Post preview-->
+                    <div
+                        class="row justify-content-center align-items-center g-2"
+                    >
+                        <div class="col-md-2">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                                class="card-img-top"
+                                alt="azure logo"
+                            />
+                        </div>
+                        <div class="col">
+                            <a href="post.html">
+                                <h2>
+                                    Man must explore, and this is exploration at
+                                    its greatest
+                                </h2>
+                            </a>
+                            <p class="lead">
+                                This is a lead paragraph. It stands out from
+                                regular paragraphs.
+                            </p>
+                            <p class="post-meta">
+                                Posted by
+                                <a href="/">Paul Bourhis</a>
+                                on June 01, 2023
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-light pt-1">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-md-6 align-self-center">
+                        <h5>Contact</h5>
+                        <p>
+                            <i class="fas fa-envelope me-2"></i
+                            >paul_bourhis@yahoo.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone-alt me-2"></i>+33 6 99 29 45
+                            22
+                        </p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Paris</p>
+                    </div>
+
+                    <div class="col-md-6 align-self-center">
+                        <h5>Social Media</h5>
+                        <!-- Linkedin -->
+                        <a
+                            class="btn text-white btn-floating m-1"
+                            style="background-color: #0082ca"
+                            href="https://www.linkedin.com/in/paul-bourhis-375557153/"
+                            role="button"
+                            ><i class="fab fa-linkedin-in"></i
+                        ></a>
+
+                        <!-- Github -->
+                        <a
+                            class="btn text-white btn-floating m-1"
+                            style="background-color: #333333"
+                            href="https://github.com/Pyodin"
+                            role="button"
+                            ><i class="fab fa-github"></i
+                        ></a>
+
+                        <!-- Instagram -->
+                        <a
+                            class="btn text-white btn-floating m-1"
+                            style="background-color: #af36af"
+                            href="https://www.instagram.com/paulbhs/"
+                            role="button"
+                            ><i class="fab fa-instagram"></i
+                        ></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center bg-secondary">
+                © Built on my own. Find the source code
+                <a
+                    class="text-white"
+                    href="https://github.com/Pyodin/website-portfolio"
+                    >here</a
+                >
+            </div>
+        </footer>
+
+        <script src="../main.js"></script>
+        <!-- Bootstrap Bundle with Popper -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
