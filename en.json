@@ -3,6 +3,7 @@
     "aboutMeLink": "About me",
     "experiencesLink": "Experiences",
     "projectsLink": "Projects",
+    "blogLink": "Blog",
     "carouselCaption1Title": "Freelance DevOps Engineer",
     "carouselCaption2Availability": "Available from september 2023",
     "welcomeHeader": "Welcome!",
@@ -30,5 +31,5 @@
     "thalesDescription": "As a software engineer at Thales, I contributed to the SCORPION project, modernizing the French army's vehicle fleet. I worked on software development, automation testing, and seamless integration, connecting development and operations teams.",
     "projectsHeader": "Projects",
     "portfolioTitle": "My portfolio",
-    "portfolioDescription": "I developed this portfolio website with Python, HTML, and Flask, highlighting my ever-evolving skillset and showcasing my expertise in DevOps and deployment."
+    "portfolioDescription": "I developed this portfolio website with Bootstrap 5 and Azure technology, highlighting my ever-evolving skillset and showcasing my expertise in DevOps and deployment."
 }

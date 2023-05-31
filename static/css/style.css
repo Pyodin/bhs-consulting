@@ -28,8 +28,9 @@
 
 .skill-logo {
     width: 40px;
-    height: h100;
+    height: 40px;
     margin-right: 10px;
+    object-fit: contain ;
 }
 
 
@@ -53,7 +54,7 @@ header i:hover {
 /* For the switch language */
 
 .fade-from-right {
-    animation: fadeFromRight 1s ease-in-out;
+    animation: fadeFromRight 0.5s ease-in-out forwards;
 }
 
 @keyframes fadeFromRight {
@@ -66,3 +67,19 @@ header i:hover {
         transform: translateX(0);
     }
 }
+
+.fade-to-left {
+    animation: fadeToLeft 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeToLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+

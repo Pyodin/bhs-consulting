@@ -3,11 +3,12 @@
     "aboutMeLink": "À propos de moi",
     "experiencesLink": "Expériences",
     "projectsLink": "Projets",
+    "blogLink": "Blog",
     "carouselCaption1Title": "Ingénieur DevOps indépendant",
     "carouselCaption2Availability": "Disponible à partir de septembre 2023",
     "welcomeHeader": "Bienvenue!",
-    "introParagraph1": "En tant qu'ingénieur DevOps indépendant, j'excelle dans le développement logiciel dans divers secteurs, spécialisé dans les pipelines CI/CD pour une livraison rapide de logiciels. Compétent en automatisation, surveillance et infrastructure haute performance, j'ai de l'expérience avec les microservices, Docker et les plateformes cloud comme Azure et AWS.",
-    "introParagraph2": "Motivé par une passion pour l'exploitation de la technologie pour résoudre des problèmes et apporter de la valeur, je suis désireux de faire un impact positif dans l'industrie du développement logiciel.",
+    "introParagraph1": "En tant qu'ingénieur DevOps freelance, j'excelle à créer des solutions logicielles innovantes pour diverses industries, avec une expertise particulière dans les pipelines CI/CD pour des livraisons de logiciels efficaces et rapides. Ma maîtrise de l'automatisation, de la surveillance et des infrastructures haute performance, combinée à mon expérience approfondie avec les microservices, Docker, et des plateformes cloud comme Azure et AWS, me permet d'apporter des solutions solides et adaptées à tous les défis.",
+    "introParagraph2": "Animé par une véritable passion pour la technologie comme moyen de résoudre des problèmes et de créer de la valeur, je suis toujours prêt à faire une différence significative dans l'univers du développement logiciel.",
     "resumeButton": "Télécharger mon CV",
     "mainSkillsHeader": "Compétences principales",
     "devopsHeader": "DevOPS",
@@ -30,5 +31,5 @@
     "thalesDescription": "En tant qu'ingénieur logiciel chez Thales, j'ai contribué au projet SCORPION, modernisant la flotte de véhicules de l'armée française. J'ai travaillé sur le développement logiciel, les tests d'automatisation et l'intégration transparente, connectant les équipes de développement et d'opérations.",
     "projectsHeader": "Projets",
     "portfolioTitle": "Mon portfolio",
-    "portfolioDescription": "J'ai développé ce site portfolio avec Python, HTML et Flask, mettant en valeur mes compétences en constante évolution et démontrant mon expertise en DevOps et déploiement."
+    "portfolioDescription": "J'ai développé ce site portfolio avec Bootstrap 5 et les technologies Azure, mettant en valeur mes compétences en constante évolution et démontrant mon expertise en DevOps et déploiement."
 }
