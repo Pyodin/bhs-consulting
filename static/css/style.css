@@ -1,7 +1,9 @@
 .navbar {
     background-color: transparent !important;
+    
 }
 
+/* transition smooth */
 .navbar-scrolled {
     background: linear-gradient(90deg, #200c55 0%, #1b5bd3cb 100%);
     transition: background-color 0.5s ease;

@@ -19,8 +19,9 @@
 
 .skill-logo {
     width: 40px;
-    height: h100;
+    height: 40px;
     margin-right: 10px;
+    object-fit: contain ;
 }
 
 .list-group-item:hover {
