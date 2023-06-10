@@ -1,692 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-            crossorigin="anonymous"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css"
-        />
-        <link rel="stylesheet" href="/static/css/style.css" />
-        <title>My portfolio</title>
-    </head>
 
-    <body>
-        <!-- Navigation bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
-            <div class="container">
-                <a id="navbarBrand" class="navbar-brand text-warning" href="/"
-                    >My portfolio</a
-                >
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a id="aboutMeLink" class="nav-link" href="/about"
-                                >About me</a
-                            >
-                        </li>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/animation.css" />
+    <link rel="stylesheet" href="/static/css/navbar.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/static/favicon/site.webmanifest">
+    <title>Paul Bourhis</title>
+</head>
 
-                        <li class="nav-item dropdown">
-                            <a
-                                id="experiencesLink"
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                Experiences
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a
-                                        id="murexLink"
-                                        class="dropdown-item"
-                                        href="/Experiences/Murex/"
-                                        >Murex</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        id="thalesLink"
-                                        class="dropdown-item"
-                                        href="/Experiences/Thales/"
-                                        >Thales</a
-                                    >
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item">
-                            <a
-                                id="projectsLink"
-                                class="nav-link disabled"
-                                href="#"
-                                >Projects</a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a id="blogLink" class="nav-link" href="/Blog/"
-                                >Blog</a
-                            >
-                        </li>
-                    </ul>
-
-                    <!-- english and franch flags as button -->
-                    <div class="d-flex align-items-center">
-                        <a
-                            class="btn btn-outline-light btn-sm me-2"
-                            id="btnEnglish"
-                            >English</a
-                        >
-                        <a class="btn btn-outline-light btn-sm" id="btnFrench"
-                            >Français</a
-                        >
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Header -->
-        <div
-            id="carouselExampleIndicators"
-            class="carousel slide"
-            data-bs-ride="carousel"
-        >
-            <div class="carousel-indicators">
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                ></button>
-                <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                ></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="6500">
-                    <img
-                        src="static/images/slider2.jpg"
-                        class="d-block w-100"
-                        alt="..."
-                    />
-                    <div
-                        class="carousel-caption d-none d-md-block text-start py-5"
-                    >
-                        <h1>Paul BOURHIS</h1>
-                        <p class="lead" id="carouselCaption1Title">
-                            Freelance DevOps Engineer
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item" data-bs-interval="6500">
-                    <img
-                        src="static/images/slider-tl2.jpg"
-                        class="d-block w-100"
-                        alt="..."
-                    />
-                    <div class="carousel-caption">
-                        <p class="lead my-5" id="carouselCaption2Availability">
-                            Available from september 2023
-                        </p>
-
-                        <div class="row justify-content-end align-items-center">
-                            <!-- location -->
-                            <div class="col-md-2">
-                                <i
-                                    class="fas fa-map-marker-alt fa-2x text-black"
-                                ></i>
-                                <p>Paris</p>
-                            </div>
-
-                            <!-- phone -->
-                            <div class="col-md-2">
-                                <i class="fas fa-phone fa-2x text-black"></i>
-                                <p>+33 6 99 29 45 22</p>
-                            </div>
-
-                            <!-- mail -->
-                            <div class="col-md-2">
-                                <i class="fas fa-envelope fa-2x text-black"></i>
-                                <p>
-                                    <a
-                                        href="mailto:paul_bourhis@yahoo.com"
-                                        class="text-white"
-                                        >paul_bourhis@yahoo.com</a
-                                    >
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-end align-items-start">
-                            <!-- linkedin -->
-                            <div class="col-md-2">
-                                <i
-                                    class="fab fa-linkedin-in fa-2x text-black"
-                                ></i>
-                                <p>
-                                    <a
-                                        href="https://www.linkedin.com/in/paul-bourhis-375557153/"
-                                        class="text-white"
-                                        target="_blank"
-                                        >LinkedIn</a
-                                    >
-                                </p>
-                            </div>
-
-                            <!-- github -->
-                            <div class="col-md-2">
-                                <i class="fab fa-github fa-2x text-black"></i>
-                                <p>
-                                    <a
-                                        href="https://github.com/Pyodin"
-                                        class="text-white"
-                                        target="_blank"
-                                        >GitHub</a
-                                    >
-                                </p>
-                            </div>
-
-                            <!-- instagram -->
-                            <div class="col-md-2">
-                                <i
-                                    class="fab fa-instagram fa-2x text-black"
-                                ></i>
-                                <p>
-                                    <a
-                                        href="https://www.instagram.com/paulbhs/"
-                                        class="text-white"
-                                        target="_blank"
-                                        >Instagram</a
-                                    >
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev"
-            >
-                <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <div class="container">
+            <a id="navbarBrand" class="navbar-brand text-warning" href="/">My
+                portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-            <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next"
-            >
-                <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a id="aboutMeLink" class="nav-link" href="/about">About
+                            me</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a id="experiencesLink" class="nav-link dropdown-toggle" href="#"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Experiences
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a id="murexLink" class="dropdown-item"
+                                    href="/Experiences/Murex/">Murex</a>
+                            </li>
+                            <li>
+                                <a id="thalesLink" class="dropdown-item"
+                                    href="/Experiences/Thales/">Thales</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="projectsLink" class="nav-link disabled" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
+                    </li>
+                </ul>
+
+                <!-- english and franch flags as button -->
+                <div class="d-flex align-items-center">
+                    <a class="btn btn-outline-light btn-sm me-2" id="btnEnglish">English</a>
+                    <a class="btn btn-outline-light btn-sm" id="btnFrench">Français</a>
+                </div>
+            </div>
         </div>
+    </nav>
 
-        <!-- Main container -->
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-4">
-                    <img
-                        src="/static/images/photo.jpeg"
-                        alt="Profile Picture"
-                        class="img-fluid rounded-circle shadow-lg mb-3"
-                        style="width: 300px; height: auto"
-                    />
-                </div>
-                <div class="col-md-8 text-center my-auto">
-                    <p id="welcomeHeader" class="fs-1">Welcome!</p>
-                    <p id="introParagraph1" class="lead">
-                        As a Freelance DevOps engineer, I excel in software
-                        development across various industries, specializing in
-                        CI/CD pipelines for rapid software delivery. Skilled in
-                        automation, monitoring, and high-performance
-                        infrastructure, I have experience with microservices,
-                        Docker, and cloud platforms like Azure and AWS.
+    <!-- Header -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="6500">
+                <img src="static/images/slider2.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption d-none d-md-block text-start py-5">
+                    <h1>Paul BOURHIS</h1>
+                    <p class="lead" id="carouselCaption1Title">
+                        Freelance DevOps Engineer
                     </p>
-                    <p id="introParagraph2" class="lead">
-                        Driven by a passion for leveraging technology to solve
-                        problems and deliver value, I'm eager to make a positive
-                        impact in the software development industry.
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="6500">
+                <img src="static/images/slider-tl2.jpg" class="d-block w-100" alt="..." />
+                <div class="carousel-caption">
+                    <p class="lead my-5" id="carouselCaption2Availability">
+                        Available from september 2023
                     </p>
 
-                    <p class="fs-4 text-end">Paul BOURHIS</p>
-                    <hr />
-                    <a
-                        href="/static/doc/Resume_Paul_Bourhis.pdf"
-                        class="btn btn-primary btn-lg mt-3"
-                        target="_blank"
-                        id="resumeButton"
-                        >Download my CV</a
-                    >
-                </div>
-            </div>
-        </div>
-
-        <!-- Skills -->
-        <div class="container mt-5">
-            <div class="row justify-content-center align-items-start">
-                <div class="col-md-8">
-                    <div class="row justify-content-center align-items-start">
-                        <!-- add a logo worker next to "main skills" -->
-                        <h2 class="mt-5">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Tools_clipart.png"
-                                alt="Tool logo"
-                                class="skill-logo"
-                            /><span id="mainSkillsHeader">Main skills</span>
-                        </h2>
-                        <hr />
-
-                        <!-- Devops -->
-                        <div class="col-md-4">
-                            <h4 class="text-center">
-                                <span id="devopsHeader">DevOPS</span>
-                            </h4>
-                            <div class="list-group">
-                                <li
-                                    class="list-group-item list-group-item-warning text-black"
-                                >
-                                    <img
-                                        src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                                        alt="Azure"
-                                        class="skill-logo"
-                                    /><span id="azureCert"
-                                        >Certified Azure DevOps</span
-                                    >
-                                </li>
-                                <li
-                                    class="list-group-item list-group-item-warning text-black"
-                                >
-                                    <img
-                                        src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
-                                        alt="Docker"
-                                        class="skill-logo"
-                                    /><span id="containersSkill"
-                                        >Containers</span
-                                    >
-                                </li>
-                                <li
-                                    class="list-group-item list-group-item-warning text-black"
-                                >
-                                    <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
-                                        alt="Grafana"
-                                        class="skill-logo"
-                                    /><span id="monitoringSkill"
-                                        >Monitoring</span
-                                    >
-                                </li>
-                            </div>
+                    <div class="row justify-content-end align-items-center">
+                        <!-- location -->
+                        <div class="col-md-2">
+                            <i class="fas fa-map-marker-alt fa-2x text-black"></i>
+                            <p>Paris</p>
                         </div>
 
-                        <!-- Development -->
-                        <div class="col-md-4">
-                            <h4 class="text-center">
-                                <span id="developmentHeader">Development</span>
-                            </h4>
-                            <div class="list-group">
-                                <li
-                                    class="list-group-item list-group-item-warning text-black"
-                                >
-                                    <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
-                                        alt="Python"
-                                        class="skill-logo"
-                                    /><span id="pythonSkill">Python</span>
-                                </li>
-                                <li
-                                    class="list-group-item list-group-item-warning text-black"
-                                >
-                                    <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
-                                        alt="C++"
-                                        class="skill-logo"
-                                    /><span id="cppSkill">C++</span>
-                                </li>
-                                <li
-                                    class="list-group-item list-group-item-warning text-black"
-                                >
-                                    <img
-                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Cmake.svg/1200px-Cmake.svg.png"
-                                        alt="Cmake"
-                                        class="skill-logo"
-                                    /><span id="cmakeSkill">Cmake</span>
-                                </li>
-                            </div>
+                        <!-- phone -->
+                        <div class="col-md-2">
+                            <i class="fas fa-phone fa-2x text-black"></i>
+                            <p>+33 6 99 29 45 22</p>
                         </div>
 
-                        <!-- Others -->
-                        <div class="col-md-4">
-                            <h4 class="text-center">
-                                <span id="otherSkillsHeader">Others</span>
-                            </h4>
-                            <div class="list-group">
-                                <li
-                                    class="list-group-item list-group-item-warning text-black"
-                                >
-                                    <img
-                                        src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png"
-                                        alt="Linux"
-                                        class="skill-logo"
-                                    /><span id="linuxSkill">Linux</span>
-                                </li>
-                                <li
-                                    class="list-group-item list-group-item-warning text-black"
-                                >
-                                    <img
-                                        src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-                                        alt="Git"
-                                        class="skill-logo"
-                                    /><span id="gitSkill">Git</span>
-                                </li>
-                            </div>
+                        <!-- mail -->
+                        <div class="col-md-2">
+                            <i class="fas fa-envelope fa-2x text-black"></i>
+                            <p>
+                                <a href="mailto:paul_bourhis@yahoo.com"
+                                    class="text-white">paul_bourhis@yahoo.com</a>
+                            </p>
                         </div>
                     </div>
-                </div>
 
-                <!-- Certifications -->
-                <div class="col-md-4">
-                    <div class="row justify-content-center align-items-start">
-                        <h2 class="mt-5">
-                            <img
-                                src="static/images/gbadge.png"
-                                alt="Badge logo"
-                                class="skill-logo"
-                            /><span id="certificationsHeader"
-                                >Certifications</span
-                            >
-                        </h2>
-                        <hr />
+                    <div class="row justify-content-end align-items-start">
+                        <!-- linkedin -->
+                        <div class="col-md-2">
+                            <i class="fab fa-linkedin-in fa-2x text-black"></i>
+                            <p>
+                                <a href="https://www.linkedin.com/in/paul-bourhis-375557153/"
+                                    class="text-white" target="_blank">LinkedIn</a>
+                            </p>
+                        </div>
 
-                        <div class="col">
-                            <div class="list-group">
-                                <li
-                                    class="list-group-item list-group-item-primary text-black mb-2"
-                                >
-                                    <img
-                                        src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                                        alt="Azure"
-                                        class="skill-logo"
-                                    /><span id="az400Cert"
-                                        >AZ-400: DevOps Engineer Expert</span
-                                    >
-                                </li>
-                                <li
-                                    class="list-group-item list-group-item-primary text-black mb-2"
-                                >
-                                    <img
-                                        src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                                        alt="Azure"
-                                        class="skill-logo"
-                                    /><span id="az104Cert"
-                                        >AZ-104: Microsoft Azure
-                                        Administrator</span
-                                    >
-                                </li>
-                                <li
-                                    class="list-group-item list-group-item-primary text-black mb-2"
-                                >
-                                    <img
-                                        src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                                        alt="Azure"
-                                        class="skill-logo"
-                                    /><span id="az900Cert"
-                                        >AZ-900: Microsoft Azure
-                                        Fundamentals</span
-                                    >
-                                </li>
-                            </div>
+                        <!-- github -->
+                        <div class="col-md-2">
+                            <i class="fab fa-github fa-2x text-black"></i>
+                            <p>
+                                <a href="https://github.com/Pyodin" class="text-white"
+                                    target="_blank">GitHub</a>
+                            </p>
+                        </div>
+
+                        <!-- instagram -->
+                        <div class="col-md-2">
+                            <i class="fab fa-instagram fa-2x text-black"></i>
+                            <p>
+                                <a href="https://www.instagram.com/paulbhs/" class="text-white"
+                                    target="_blank">Instagram</a>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <button class="carousel-control-prev" type="button"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
-        <!-- Experiences -->
-        <div class="container mt-3">
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center mt-5">
-                        <img
-                            src="static/images/experience.png"
-                            alt="Exp logo"
-                            class="skill-logo"
-                        /><span id="experiencesHeader">Experiences</span>
+    <!-- Main container -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/static/images/photo.jpeg" alt="Profile Picture"
+                    class="img-fluid rounded-circle shadow-lg mb-3"
+                    style="width: 300px; height: auto" />
+            </div>
+            <div class="col-md-8 text-center my-auto">
+                <p id="welcomeHeader" class="fs-1">Welcome!</p>
+                <p id="introParagraph1" class="lead">
+                    As a Freelance DevOps engineer, I excel in software
+                    development across various industries, specializing in
+                    CI/CD pipelines for rapid software delivery. Skilled in
+                    automation, monitoring, and high-performance
+                    infrastructure, I have experience with microservices,
+                    Docker, and cloud platforms like Azure and AWS.
+                </p>
+                <p id="introParagraph2" class="lead">
+                    Driven by a passion for leveraging technology to solve
+                    problems and deliver value, I'm eager to make a positive
+                    impact in the software development industry.
+                </p>
+
+                <p class="fs-4 text-end">Paul BOURHIS</p>
+                <hr />
+                <a href="/static/doc/Resume_Paul_Bourhis.pdf" class="btn btn-primary btn-lg mt-3"
+                    target="_blank" id="resumeButton">Download my CV</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="container mt-5">
+        <div class="row justify-content-center align-items-start">
+            <div class="col-md-8">
+                <div class="row justify-content-center align-items-start">
+                    <!-- add a logo worker next to "main skills" -->
+                    <h2 class="mt-5">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Tools_clipart.png"
+                            alt="Tool logo" class="skill-logo" /><span id="mainSkillsHeader">Main
+                            skills</span>
                     </h2>
                     <hr />
 
-                    <div class="row g-5">
-                        <div class="col-md-4">
-                            <div class="card h-100">
-                                <img
-                                    src="/static/images/murex.png"
-                                    class="card-img-top"
-                                    alt="Murex logo"
-                                />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <span id="murexTitle">Murex</span>
-                                    </h5>
-                                    <p class="card-text">
-                                        <span id="murexDescription"
-                                            >As a DevOps engineer at Murex, I
-                                            developed a Python microservice
-                                            application, ensuring continuous
-                                            integration, delivery, and robust
-                                            monitoring/alerting systems.</span
-                                        >
-                                    </p>
-                                    <a
-                                        href="/Experiences/Murex/"
-                                        class="btn btn-primary"
-                                        ><span id="readMoreBtn"
-                                            >Read more</span
-                                        ></a
-                                    >
-                                </div>
-                            </div>
+                    <!-- Devops -->
+                    <div class="col-md-4">
+                        <h4 class="text-center">
+                            <span id="devopsHeader">DevOPS</span>
+                        </h4>
+                        <div class="list-group">
+                            <li class="list-group-item list-group-item-warning text-black">
+                                <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                                    alt="Azure" class="skill-logo" /><span id="azureCert">Certified
+                                    Azure DevOps</span>
+                            </li>
+                            <li class="list-group-item list-group-item-warning text-black">
+                                <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
+                                    alt="Docker" class="skill-logo" /><span
+                                    id="containersSkill">Containers</span>
+                            </li>
+                            <li class="list-group-item list-group-item-warning text-black">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
+                                    alt="Grafana" class="skill-logo" /><span
+                                    id="monitoringSkill">Monitoring</span>
+                            </li>
+                            <li class="list-group-item list-group-item-warning text-black">
+                                <img src="https://logos-download.com/wp-content/uploads/2016/10/Ansible_logo.png"
+                                    alt="Ansible" class="skill-logo" /><span
+                                    id="monitoringSkill">Ansible</span>
+                            </li>
                         </div>
+                    </div>
 
-                        <div class="col-md-4">
-                            <div class="card h-100">
-                                <img
-                                    src="https://new.afsin.org/wp-content/uploads/2009/07/Logo-Thales-Couleur.jpg"
-                                    class="card-img-top"
-                                    alt="Thales logo"
-                                />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <span id="thalesTitle">Thales</span>
-                                    </h5>
-                                    <p class="card-text">
-                                        <span id="thalesDescription"
-                                            >As a software engineer at Thales, I
-                                            contributed to the SCORPION project,
-                                            modernizing the French army's
-                                            vehicle fleet. I worked on software
-                                            development, automation testing, and
-                                            seamless integration, connecting
-                                            development and operations
-                                            teams.</span
-                                        >
-                                    </p>
-                                    <a
-                                        href="/Experiences/Thales/"
-                                        class="btn btn-primary"
-                                        ><span id="readMoreBtn"
-                                            >Read more</span
-                                        ></a
-                                    >
-                                </div>
-                            </div>
+                    <!-- Development -->
+                    <div class="col-md-4">
+                        <h4 class="text-center">
+                            <span id="developmentHeader">Development</span>
+                        </h4>
+                        <div class="list-group">
+                            <li class="list-group-item list-group-item-warning text-black">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                                    alt="Python" class="skill-logo" /><span
+                                    id="pythonSkill">Python</span>
+                            </li>
+                            <li class="list-group-item list-group-item-warning text-black">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+                                    alt="C++" class="skill-logo" /><span id="cppSkill">C++</span>
+                            </li>
+                            <li class="list-group-item list-group-item-warning text-black">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Cmake.svg/1200px-Cmake.svg.png"
+                                    alt="Cmake" class="skill-logo" /><span
+                                    id="cmakeSkill">Cmake</span>
+                            </li>
+                        </div>
+                    </div>
+
+                    <!-- Others -->
+                    <div class="col-md-4">
+                        <h4 class="text-center">
+                            <span id="otherSkillsHeader">Others</span>
+                        </h4>
+                        <div class="list-group">
+                            <li class="list-group-item list-group-item-warning text-black">
+                                <img src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png"
+                                    alt="Linux" class="skill-logo" /><span
+                                    id="linuxSkill">Linux</span>
+                            </li>
+                            <li class="list-group-item list-group-item-warning text-black">
+                                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+                                    alt="Git" class="skill-logo" /><span id="gitSkill">Git</span>
+                            </li>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Projects -->
-        <div class="container mt-5">
-            <div class="row -5">
-                <div class="col-md-12">
-                    <h2 class="text-center mt-5">
-                        <img
-                            src="https://www.vippng.com/png/full/367-3673273_process-icon-service-worker-logo.png"
-                            alt="Work logo"
-                            class="skill-logo"
-                        /><span id="projectsHeader">Projects</span>
+            <!-- Certifications -->
+            <div class="col-md-4">
+                <div class="row justify-content-center align-items-start">
+                    <h2 class="mt-5">
+                        <img src="static/images/gbadge.png" alt="Badge logo"
+                            class="skill-logo" /><span
+                            id="certificationsHeader">Certifications</span>
                     </h2>
                     <hr />
 
-                    <div class="row m-5">
-                        <div class="col-md-4">
-                            <div class="card h-100">
-                                <img
-                                    src="/static/images/project.png"
-                                    class="card-img-top"
-                                    alt="Custom logo"
-                                />
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <span id="portfolioTitle"
-                                            >My portfolio</span
-                                        >
-                                    </h5>
-                                    <p class="card-text">
-                                        <span id="portfolioDescription"
-                                            >I developed this portfolio website
-                                            with Bootstrap 5 and azure
-                                            technology, highlighting my
-                                            ever-evolving skillset and
-                                            showcasing my expertise in DevOps
-                                            and deployment.</span
-                                        >
-                                    </p>
-                                    <a href="#" class="btn btn-primary"
-                                        ><span id="readMoreBtn"
-                                            >Read more</span
-                                        ></a
-                                    >
-                                    <a
-                                        class="btn text-white btn-floating m-1"
-                                        style="background-color: #333333"
-                                        href="https://github.com/Pyodin"
-                                        role="button"
-                                        ><i class="fab fa-github"></i>
-                                        <span id="codeLink">Code</span></a
-                                    >
-                                </div>
+                    <div class="col">
+                        <div class="list-group">
+                            <li class="list-group-item list-group-item-primary text-black mb-2">
+                                <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                                    alt="Azure" class="skill-logo" /><span id="az400Cert">AZ-400:
+                                    DevOps Engineer
+                                    Expert</span>
+                            </li>
+                            <li class="list-group-item list-group-item-primary text-black mb-2">
+                                <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                                    alt="Azure" class="skill-logo" /><span id="az104Cert">AZ-104:
+                                    Microsoft Azure
+                                    Administrator</span>
+                            </li>
+                            <li class="list-group-item list-group-item-primary text-black mb-2">
+                                <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                                    alt="Azure" class="skill-logo" /><span id="az900Cert">AZ-900:
+                                    Microsoft Azure
+                                    Fundamentals</span>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experiences -->
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center mt-5">
+                    <img src="static/images/experience.png" alt="Exp logo"
+                        class="skill-logo" /><span id="experiencesHeader">Experiences</span>
+                </h2>
+                <hr />
+
+                <div class="row g-5">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="/static/images/murex.png" class="card-img-top"
+                                alt="Murex logo" />
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <span id="murexTitle">Murex</span>
+                                </h5>
+                                <p class="card-text">
+                                    <span id="murexDescription">As a DevOps
+                                        engineer at Murex, I
+                                        developed a Python microservice
+                                        application, ensuring continuous
+                                        integration, delivery, and robust
+                                        monitoring/alerting systems.</span>
+                                </p>
+                                <a href="/Experiences/Murex/" class="btn btn-primary"><span
+                                        id="readMoreBtn">Read
+                                        more</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="https://new.afsin.org/wp-content/uploads/2009/07/Logo-Thales-Couleur.jpg"
+                                class="card-img-top" alt="Thales logo" />
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <span id="thalesTitle">Thales</span>
+                                </h5>
+                                <p class="card-text">
+                                    <span id="thalesDescription">As a software
+                                        engineer at Thales, I
+                                        contributed to the SCORPION project,
+                                        modernizing the French army's
+                                        vehicle fleet. I worked on software
+                                        development, automation testing, and
+                                        seamless integration, connecting
+                                        development and operations
+                                        teams.</span>
+                                </p>
+                                <a href="/Experiences/Thales/" class="btn btn-primary"><span
+                                        id="readMoreBtn">Read
+                                        more</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Footer -->
-        <footer class="bg-dark-subtle">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>About me</h3>
-                        <p class="lead">
-                            I'm a DevOps engineer with a passion for leveraging
-                            technology to solve problems and deliver value.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Contact me</h3>
-                        <p>
-                            <i class="fas fa-envelope me-2"></i>
-                            paul_bourhis@yahoo.com
-                        </p>
-                        <p>
-                            <i class="fas fa-phone-alt me-2"></i>+33 6 99 29 45
-                            22
-                        </p>
-                        <p><i class="fas fa-map-marker-alt me-2"></i>Paris</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Follow me</h3>
-                        <!-- LinkedIn -->
-                        <a
-                            class="btn text-white btn-floating m-1"
-                            style="background-color: #0082ca"
-                            href="https://www.linkedin.com/in/paul-bourhis-375557153/"
-                            role="button"
-                            ><i class="fab fa-linkedin-in"></i
-                        ></a>
+    <!-- Projects -->
+    <div class="container mt-5">
+        <div class="row -5">
+            <div class="col-md-12">
+                <h2 class="text-center mt-5">
+                    <img src="https://www.vippng.com/png/full/367-3673273_process-icon-service-worker-logo.png"
+                        alt="Work logo" class="skill-logo" /><span
+                        id="projectsHeader">Projects</span>
+                </h2>
+                <hr />
 
-                        <!-- GitHub -->
-                        <a
-                            class="btn text-white btn-floating m-1"
-                            style="background-color: #333333"
-                            href="https://github.com/Pyodin"
-                            role="button"
-                            ><i class="fab fa-github"></i
-                        ></a>
-
-                        <!-- Instagram -->
-                        <a
-                            class="btn text-white btn-floating m-1"
-                            style="background-color: #af36af"
-                            href="https://www.instagram.com/paulbhs/"
-                            role="button"
-                            ><i class="fab fa-instagram"></i
-                        ></a>
+                <div class="row m-5">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <img src="/static/images/project.png" class="card-img-top"
+                                alt="Custom logo" />
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <span id="portfolioTitle">My
+                                        portfolio</span>
+                                </h5>
+                                <p class="card-text">
+                                    <span id="portfolioDescription">I developed
+                                        this portfolio website
+                                        with Bootstrap 5 and azure
+                                        technology, highlighting my
+                                        ever-evolving skillset and
+                                        showcasing my expertise in DevOps
+                                        and deployment.</span>
+                                </p>
+                                <a href="#" class="btn btn-primary"><span id="readMoreBtn">Read
+                                        more</span></a>
+                                <a class="btn text-white btn-floating m-1"
+                                    style="background-color: #333333"
+                                    href="https://github.com/Pyodin" role="button"><i
+                                        class="fab fa-github"></i>
+                                    <span id="codeLink">Code</span></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="lead text-center bg-secondary">
-                © Built on my own. Find the source code
-                <a
-                    class="text-white"
-                    href="https://github.com/Pyodin/website-portfolio"
-                    >here</a
-                >
-            </div>
-        </footer>
+        </div>
+    </div>
 
-        <script src="/js/navbar.js"></script>
-        <script src="/js/switchLanguage.js"></script>
-        <!-- Bootstrap Bundle with Popper -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+    <!-- Footer -->
+    <footer class="bg-dark-subtle">
+        <div class="container lh-1">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About me</h3>
+                    <p class="lead">
+                        I'm a DevOps engineer with a passion for leveraging
+                        technology to solve problems and deliver value.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact me</h3>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Paris</p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i>
+                        paul_bourhis@yahoo.com
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt me-2"></i>+33 6 99 29 45
+                        22
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow me</h3>
+                    <!-- LinkedIn -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #0082ca"
+                        href="https://www.linkedin.com/in/paul-bourhis-375557153/" role="button"><i
+                            class="fab fa-linkedin-in"></i></a>
+
+                    <!-- GitHub -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #333333"
+                        href="https://github.com/Pyodin" role="button"><i
+                            class="fab fa-github"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #af36af"
+                        href="https://www.instagram.com/paulbhs/" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center bg-secondary">
+            © Built on my own. Find the source code
+            <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a>
+        </div>
+    </footer>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/switchLanguage.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

@@ -1,292 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-            crossorigin="anonymous"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css"
-        />
-        <link rel="stylesheet" href="/static/css/style.css" />
-        <title>My portfolio</title>
-    </head>
 
-    <body>
-        <!-- Navigation bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
-            <div class="container">
-                <a id="navbarBrand" class="navbar-brand text-warning" href="/"
-                    >My portfolio</a
-                >
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a id="aboutMeLink" class="nav-link" href="/about"
-                                >About me</a
-                            >
-                        </li>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" />
+    <link rel="stylesheet" href="/static/css/common.css" />
+    <link rel="stylesheet" href="/Blog/style.css" />
+    <title>DailyDevTalk: Azure</title>
+</head>
 
-                        <li class="nav-item dropdown">
-                            <a
-                                id="experiencesLink"
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                Experiences
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a
-                                        id="murexLink"
-                                        class="dropdown-item"
-                                        href="/Experiences/Murex/"
-                                        >Murex</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        id="thalesLink"
-                                        class="dropdown-item"
-                                        href="/Experiences/Thales/"
-                                        >Thales</a
-                                    >
-                                </li>
-                            </ul>
-                        </li>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <div class="container">
+            <a id="navbarBrand" class="navbar-brand text-warning" href="/">My portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a id="aboutMeLink" class="nav-link" href="/about">About me</a>
+                    </li>
 
-                        <li class="nav-item">
-                            <a
-                                id="projectsLink"
-                                class="nav-link disabled"
-                                href="#"
-                                >Projects</a
-                            >
-                        </li>
-                        <li class="nav-item">
-                            <a id="projectsLink" class="nav-link" href="/Blog/"
-                                >Blog</a
-                            >
-                        </li>
-                    </ul>
+                    <li class="nav-item dropdown">
+                        <a id="experiencesLink" class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Experiences
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a id="murexLink" class="dropdown-item" href="/Experiences/Murex/">Murex</a>
+                            </li>
+                            <li>
+                                <a id="thalesLink" class="dropdown-item" href="/Experiences/Thales/">Thales</a>
+                            </li>
+                        </ul>
+                    </li>
 
-                    <!-- english and franch flags as button -->
-                    <div class="d-flex align-items-center">
-                        <a
-                            class="btn btn-outline-light btn-sm me-2"
-                            id="btnEnglish"
-                            >English</a
-                        >
-                        <a class="btn btn-outline-light btn-sm" id="btnFrench"
-                            >Français</a
-                        >
-                    </div>
+                    <li class="nav-item">
+                        <a id="projectsLink" class="nav-link disabled" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="projectsLink" class="nav-link" href="/Blog/">Blog</a>
+                    </li>
+                </ul>
+
+                <!-- english and franch flags as button -->
+                <div class="d-flex align-items-center">
+                    <a class="btn btn-outline-light btn-sm me-2" id="btnEnglish">English</a>
+                    <a class="btn btn-outline-light btn-sm" id="btnFrench">Français</a>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <!-- Header -->
-        <header
-            class="masthead"
-            style="
-                background-image: url('../../static/images/banner-keyboard.webp');
-                height: 48vh;
-            "
-        >
-            <div class="container">
-                <div
-                    class="row justify-content-end align-items-center text-white g-2"
-                >
-                    <div
-                        class="row justify-content-center align-items-center g-2 m-5"
-                    ></div>
-                    <div
-                        class="row justify-content-center align-items-center g-2 m-5"
-                    ></div>
-                    <h1 class="text-center mt-5">
-                        Microsoft Azure: Pioneering the Future for DevOps and
-                        Developers
-                    </h1>
-                    <p class="lead fst-italic">
-                        Posted by Paul Bourhis on June 01, 2023
-                    </p>
-                    <!-- make the text in italic -->
-                    <p class="lead fst-italic">Updated on June 01, 2023</p>
-                </div>
+    <!-- Header -->
+    <header class="masthead">
+        <div class="h-100 d-flex flex-column justify-content-center align-items-center">
+            <h2 >
+                Microsoft Azure: Pioneering the Future for DevOps and
+                Developers
+            </h2>
+            <p class="lead fst-italic">Posted by Paul Bourhis on June 01, 2023</p>
+        </div>
+    </header>
+
+    <!-- Blog article -->
+    <main class="container">
+        <div class="row justify-content-center align-items-center g-2 m-5">
+            <div class="col-md-8">
+                <h2>Introduction</h2>
+                <p class="lead">
+                    As a DevOps engineer and Python developer who has
+                    navigated the intricate world of cloud computing, I've
+                    had the opportunity to work with multiple cloud service
+                    providers. Among them, Microsoft Azure stands out. Not
+                    only have I chosen Azure as my cloud computing platform,
+                    but I've also successfully passed the Azure DevOps
+                    certifications. With its comprehensive suite of services
+                    and Microsoft's continued heavy investment in
+                    technology, I firmly believe that Azure is poised to
+                    become the industry leader in the near future.
+                </p>
+
+                <h2>Azure for DevOps and Developers</h2>
+                <p class="lead">
+                    Microsoft Azure, with its vast array of cloud services,
+                    caters effectively to the unique challenges faced by
+                    businesses globally. For DevOps engineers and
+                    developers, Azure presents an assortment of tools that
+                    streamline every phase of the software development
+                    lifecycle.
+                </p>
+                <p class="lead">
+                    As a certified Azure DevOps engineer, I've come to
+                    appreciate the service Azure DevOps for its holistic
+                    approach to the DevOps lifecycle. It offers a complete
+                    DevOps toolchain, including Azure Pipelines, a CI/CD
+                    platform compatible with any language, platform, or
+                    cloud. This suite of services makes it possible to
+                    automate deployments and receive continuous feedback,
+                    simplifying the management aspect of DevOps immensely.
+                </p>
+                <p class="lead">
+                    Azure is equally beneficial for developers. Services
+                    like Azure Functions, which offer serverless computing
+                    capabilities, let developers concentrate on writing code
+                    without the distraction of managing the infrastructure.
+                    The seamless integration with Microsoft's extensive
+                    portfolio, including the widely-used GitHub, Visual
+                    Studio, and the Office Suite, further enhances Azure's
+                    appeal to developers.
+                </p>
+
+                <h2>Microsoft's Investment and Azure's Future</h2>
+                <p class="lead">
+                    Microsoft's significant technological investments,
+                    strategic acquisitions, and partnerships provide Azure
+                    with a clear edge for the future of cloud computing.
+                    Companies like GitHub and organizations such as OpenAI
+                    are part of Microsoft's extensive resource pool, which
+                    fosters an ecosystem conducive to technological
+                    advancement.
+                </p>
+
+                <p class="lead">
+                    Azure's growing footprint, bolstered by Microsoft's
+                    expansive resources and technology-focused vision,
+                    points towards a future where Azure may indeed lead the
+                    cloud computing market. The integration of popular
+                    Microsoft products and the ever-evolving Azure service
+                    range, supported by my personal experience as a
+                    certified Azure DevOps engineer, firmly place Azure at
+                    the forefront of cloud technologies.
+                </p>
+
+                <h2>Conclusion</h2>
+                <p class="lead">
+                    In a world where cloud technology is no longer an option
+                    but a necessity, choosing the right service provider is
+                    a critical decision for any digital business. From the
+                    perspective of a DevOps engineer and developer, Azure
+                    offers a compelling blend of comprehensive services,
+                    integrations, and forward-thinking technological
+                    development. Given Microsoft's broad spectrum of
+                    resources and heavy investment in cutting-edge
+                    technologies, I am confident that Azure is set to emerge
+                    as the leading cloud provider in the years to come.
+                </p>
             </div>
-        </header>
+        </div>
+    </main>
 
-        <!-- Blog article -->
-        <main class="container">
-            <div class="row justify-content-center align-items-center g-2 m-5">
-                <div class="col-md-8">
-                    <h2>Introduction</h2>
+    <!-- Footer -->
+    <footer class="bg-dark-subtle">
+        <div class="container lh-1">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About me</h3>
                     <p class="lead">
-                        As a DevOps engineer and Python developer who has
-                        navigated the intricate world of cloud computing, I've
-                        had the opportunity to work with multiple cloud service
-                        providers. Among them, Microsoft Azure stands out. Not
-                        only have I chosen Azure as my cloud computing platform,
-                        but I've also successfully passed the Azure DevOps
-                        certifications. With its comprehensive suite of services
-                        and Microsoft's continued heavy investment in
-                        technology, I firmly believe that Azure is poised to
-                        become the industry leader in the near future.
-                    </p>
-
-                    <h2>Azure for DevOps and Developers</h2>
-                    <p class="lead">
-                        Microsoft Azure, with its vast array of cloud services,
-                        caters effectively to the unique challenges faced by
-                        businesses globally. For DevOps engineers and
-                        developers, Azure presents an assortment of tools that
-                        streamline every phase of the software development
-                        lifecycle.
-                    </p>
-                    <p class="lead">
-                        As a certified Azure DevOps engineer, I've come to
-                        appreciate the service Azure DevOps for its holistic
-                        approach to the DevOps lifecycle. It offers a complete
-                        DevOps toolchain, including Azure Pipelines, a CI/CD
-                        platform compatible with any language, platform, or
-                        cloud. This suite of services makes it possible to
-                        automate deployments and receive continuous feedback,
-                        simplifying the management aspect of DevOps immensely.
-                    </p>
-                    <p class="lead">
-                        Azure is equally beneficial for developers. Services
-                        like Azure Functions, which offer serverless computing
-                        capabilities, let developers concentrate on writing code
-                        without the distraction of managing the infrastructure.
-                        The seamless integration with Microsoft's extensive
-                        portfolio, including the widely-used GitHub, Visual
-                        Studio, and the Office Suite, further enhances Azure's
-                        appeal to developers.
-                    </p>
-
-                    <h2>Microsoft's Investment and Azure's Future</h2>
-                    <p class="lead">
-                        Microsoft's significant technological investments,
-                        strategic acquisitions, and partnerships provide Azure
-                        with a clear edge for the future of cloud computing.
-                        Companies like GitHub and organizations such as OpenAI
-                        are part of Microsoft's extensive resource pool, which
-                        fosters an ecosystem conducive to technological
-                        advancement.
-                    </p>
-
-                    <p class="lead">
-                        Azure's growing footprint, bolstered by Microsoft's
-                        expansive resources and technology-focused vision,
-                        points towards a future where Azure may indeed lead the
-                        cloud computing market. The integration of popular
-                        Microsoft products and the ever-evolving Azure service
-                        range, supported by my personal experience as a
-                        certified Azure DevOps engineer, firmly place Azure at
-                        the forefront of cloud technologies.
-                    </p>
-
-                    <h2>Conclusion</h2>
-                    <p class="lead">
-                        In a world where cloud technology is no longer an option
-                        but a necessity, choosing the right service provider is
-                        a critical decision for any digital business. From the
-                        perspective of a DevOps engineer and developer, Azure
-                        offers a compelling blend of comprehensive services,
-                        integrations, and forward-thinking technological
-                        development. Given Microsoft's broad spectrum of
-                        resources and heavy investment in cutting-edge
-                        technologies, I am confident that Azure is set to emerge
-                        as the leading cloud provider in the years to come.
+                        I'm a DevOps engineer with a passion for leveraging
+                        technology to solve problems and deliver value.
                     </p>
                 </div>
-            </div>
-        </main>
+                <div class="col-md-4">
+                    <h3>Contact me</h3>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Paris</p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i>
+                        paul_bourhis@yahoo.com
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt me-2"></i>+33 6 99 29 45
+                        22
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow me</h3>
+                    <!-- LinkedIn -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #0082ca"
+                        href="https://www.linkedin.com/in/paul-bourhis-375557153/" role="button"><i
+                            class="fab fa-linkedin-in"></i></a>
 
-        <!-- Footer -->
-        <footer class="bg-light pt-1">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-md-6 align-self-center">
-                        <h5>Contact</h5>
-                        <p>
-                            <i class="fas fa-envelope me-2"></i
-                            >paul_bourhis@yahoo.com
-                        </p>
-                        <p>
-                            <i class="fas fa-phone-alt me-2"></i>+33 6 99 29 45
-                            22
-                        </p>
-                        <p><i class="fas fa-map-marker-alt me-2"></i>Paris</p>
-                    </div>
+                    <!-- GitHub -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #333333"
+                        href="https://github.com/Pyodin" role="button"><i class="fab fa-github"></i></a>
 
-                    <div class="col-md-6 align-self-center">
-                        <h5>Social Media</h5>
-                        <!-- Linkedin -->
-                        <a
-                            class="btn text-white btn-floating m-1"
-                            style="background-color: #0082ca"
-                            href="https://www.linkedin.com/in/paul-bourhis-375557153/"
-                            role="button"
-                            ><i class="fab fa-linkedin-in"></i
-                        ></a>
-
-                        <!-- Github -->
-                        <a
-                            class="btn text-white btn-floating m-1"
-                            style="background-color: #333333"
-                            href="https://github.com/Pyodin"
-                            role="button"
-                            ><i class="fab fa-github"></i
-                        ></a>
-
-                        <!-- Instagram -->
-                        <a
-                            class="btn text-white btn-floating m-1"
-                            style="background-color: #af36af"
-                            href="https://www.instagram.com/paulbhs/"
-                            role="button"
-                            ><i class="fab fa-instagram"></i
-                        ></a>
-                    </div>
+                    <!-- Instagram -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #af36af"
+                        href="https://www.instagram.com/paulbhs/" role="button"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-            <div class="text-center bg-secondary">
-                © Built on my own. Find the source code
-                <a
-                    class="text-white"
-                    href="https://github.com/Pyodin/website-portfolio"
-                    >here</a
-                >
-            </div>
-        </footer>
+        </div>
+        <div class="text-center bg-secondary">
+            © Built on my own. Find the source code
+            <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a>
+        </div>
+    </footer>
+    <script src="/js/navbar.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
 
-        <script src="../../main.js"></script>
-        <!-- Bootstrap Bundle with Popper -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"
-        ></script>
-    </body>
 </html>

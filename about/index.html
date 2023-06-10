@@ -1,617 +1,428 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-            crossorigin="anonymous"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css"
-        />
-        <link rel="stylesheet" href="/About/style.css" />
-        <title>My portfolio</title>
-    </head>
-    <body>
-        <!-- Navigation bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
-            <div class="container">
-                <a id="navbarBrand" class="navbar-brand text-warning" href="/"
-                    >My portfolio</a
-                >
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a id="aboutMeLink" class="nav-link" href="/about"
-                                >About me</a
-                            >
-                        </li>
 
-                        <li class="nav-item dropdown">
-                            <a
-                                id="experiencesLink"
-                                class="nav-link dropdown-toggle"
-                                href="#"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                Experiences
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a
-                                        id="murexLink"
-                                        class="dropdown-item"
-                                        href="/Experiences/Murex/"
-                                        >Murex</a
-                                    >
-                                </li>
-                                <li>
-                                    <a
-                                        id="thalesLink"
-                                        class="dropdown-item"
-                                        href="/Experiences/Thales/"
-                                        >Thales</a
-                                    >
-                                </li>
-                            </ul>
-                        </li>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" />
+    <link rel="stylesheet" href="/static/css/animation.css" />
+    <link rel="stylesheet" href="/About/style.css" />
+    <title>Paul Bourhis: About me</title>
+</head>
 
-                        <li class="nav-item">
-                            <a
-                                id="projectsLink"
-                                class="nav-link disabled"
-                                href="#"
-                                >Projects</a
-                            >
-                        </li>
-                    </ul>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <div class="container">
+            <a id="navbarBrand" class="navbar-brand text-warning" href="/">My
+                portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a id="aboutMeLink" class="nav-link" href="/about">About
+                            me</a>
+                    </li>
 
-                    <!-- english and franch flags as button -->
-                    <div class="d-flex align-items-center">
-                        <a
-                            class="btn btn-outline-light btn-sm me-2"
-                            id="btnEnglish"
-                            >English</a
-                        >
-                        <a class="btn btn-outline-light btn-sm" id="btnFrench"
-                            >Français</a
-                        >
-                    </div>
+                    <li class="nav-item dropdown">
+                        <a id="experiencesLink" class="nav-link dropdown-toggle" href="#"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Experiences
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a id="murexLink" class="dropdown-item"
+                                    href="/Experiences/Murex/">Murex</a>
+                            </li>
+                            <li>
+                                <a id="thalesLink" class="dropdown-item"
+                                    href="/Experiences/Thales/">Thales</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="projectsLink" class="nav-link disabled" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
+                    </li>
+                </ul>
+
+                <!-- english and franch flags as button -->
+                <div class="d-flex align-items-center">
+                    <a class="btn btn-outline-light btn-sm me-2" id="btnEnglish">English</a>
+                    <a class="btn btn-outline-light btn-sm" id="btnFrench">Français</a>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <div class="row mt-5"></div>
+    <div class="row mt-5"></div>
 
-        <!-- Main content -->
-        <div class="container mt-5">
-            <!-- About Me Section -->
-            <div class="row justify-content-center align-items-center">
-                <div class="col-md-8">
-                    <h2 class="mt-5" id="aboutMeHeader">About Me</h2>
-                    <hr />
-
-                    <p class="lead" id="aboutMeText1">
-                        I am a dedicated DevOps with a strong foundation in
-                        software development and extensive experience across
-                        various industries, including finance and defense. My
-                        background in both development and operations allows me
-                        to offer perspective and a wealth of experience to my
-                        clients. My expertise lies in ensuring the reliability,
-                        availability, and scalability of complex software
-                        systems.
-                    </p>
-                    <p class="lead" id="aboutMeText2">
-                        I pride myself on continuously learning and adapting to
-                        new technologies, ensuring that I can provide the best
-                        solutions and services to meet your ever-evolving needs.
-                    </p>
-                    <p class="lead" id="aboutMeText3">
-                        With a proven track record in developing and optimizing
-                        continuous integration and delivery (CI/CD) pipelines,
-                        automating build and deployment processes, and working
-                        with microservices architectures, I am committed to
-                        making a positive impact and delivering results that
-                        exceed expectations.
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <img
-                        src="/static/images/photo2.jpeg"
-                        alt="Paul BOURHIS"
-                        class="img-fluid rounded-circle"
-                        style="width: 80%"
-                    />
-                </div>
-            </div>
-
-            <!-- Skills & Expertise Section -->
-            <div class="row justify-content-center align-items-center mt-5">
-                <h2 class="mt-5" id="skills_expertise_title">
-                    Skills & Expertise
-                </h2>
+    <!-- Main content -->
+    <div class="container mt-5">
+        <!-- About Me Section -->
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-8">
+                <h2 class="mt-5" id="aboutMeHeader">About Me</h2>
                 <hr />
 
-                <p class="lead" id="skills_expertise_description">
-                    My skills and expertise encompass a broad range of technical
-                    and managerial aspects, empowering me to excel in software
-                    development and DevOps engineering roles.
+                <p class="lead" id="aboutMeText1">
+                    I am a dedicated DevOps with a strong foundation in
+                    software development and extensive experience across
+                    various industries, including finance and defense. My
+                    background in both development and operations allows me
+                    to offer perspective and a wealth of experience to my
+                    clients. My expertise lies in ensuring the reliability,
+                    availability, and scalability of complex software
+                    systems.
                 </p>
-
-                <div class="accordion" id="accordionPanelsStayOpen">
-                    <!-- Software Development -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button
-                                class="accordion-button"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseOne"
-                                aria-expanded="true"
-                                aria-controls="panelsStayOpen-collapseOne"
-                            >
-                                <i class="fa-solid fa-code me-4"></i>
-                                <span id="software_development_title"
-                                    >Software Development</span
-                                >
-                            </button>
-                        </h2>
-                        <div
-                            id="panelsStayOpen-collapseOne"
-                            class="accordion-collapse collapse show"
-                            data-bs-parent="#accordionPanelsStayOpen"
-                        >
-                            <div class="accordion-body">
-                                <p
-                                    class="lead"
-                                    id="software_development_description"
-                                >
-                                    I am proficient in software development,
-                                    with a deep understanding of various
-                                    programming languages, including
-                                    <b> Python </b> and
-                                    <b> C/C++ </b>
-                                    . My expertise in multithreading and
-                                    multiprocessing enables me to design and
-                                    build efficient and high-performance
-                                    applications. Furthermore, I have experience
-                                    creating graphical user interfaces using the
-                                    Qt framework and working with data science
-                                    tools like pandas.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cloud Platforms -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseTwo"
-                                aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseTwo"
-                            >
-                                <i class="fa-solid fa-cloud me-4"></i>
-                                <span id="cloud_platforms_title"
-                                    >Cloud Platforms</span
-                                >
-                            </button>
-                        </h2>
-                        <div
-                            id="panelsStayOpen-collapseTwo"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#accordionPanelsStayOpen"
-                        >
-                            <div class="accordion-body">
-                                <p
-                                    class="lead"
-                                    id="cloud_platforms_description"
-                                >
-                                    As a skilled cloud professional, I hold
-                                    Azure certifications
-                                    <b>
-                                        AZ-900, AZ-104, and the AZ-400 Expert
-                                        DevOps </b
-                                    >, showcasing my expertise in cloud
-                                    platforms like Azure and AWS. I am adept at
-                                    managing cloud resources, ensuring optimal
-                                    utilization, and maximizing efficiency. My
-                                    experience in designing and implementing
-                                    cloud infrastructure and services, such as
-                                    virtual machines, storage, and databases,
-                                    enables me to create reliable, scalable, and
-                                    secure solutions for my clients.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- DevOps Engineering -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseThree"
-                                aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseThree"
-                            >
-                                <i
-                                    class="fa-solid fa-screwdriver-wrench me-4"
-                                ></i>
-                                <span id="devops_automation_title"
-                                    >DevOps & Automation</span
-                                >
-                            </button>
-                        </h2>
-                        <div
-                            id="panelsStayOpen-collapseThree"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#accordionPanelsStayOpen"
-                        >
-                            <div class="accordion-body">
-                                <p
-                                    class="lead"
-                                    id="devops_automation_description_1"
-                                ></p>
-                                <p
-                                    class="lead"
-                                    id="devops_automation_description_2"
-                                ></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Monitoring & Alerting -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseFour"
-                                aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseFour"
-                            >
-                                <i class="fa-solid fa-bell me-4"></i>
-                                <span id="monitoring_alerting_title"
-                                    >Monitoring & Alerting</span
-                                >
-                            </button>
-                        </h2>
-                        <div
-                            id="panelsStayOpen-collapseFour"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#accordionPanelsStayOpen"
-                        >
-                            <div class="accordion-body">
-                                <p
-                                    class="lead"
-                                    id="monitoring_alerting_description_1"
-                                ></p>
-                                <p
-                                    class="lead"
-                                    id="monitoring_alerting_description_2"
-                                ></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Web Development -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseFive"
-                                aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseFive"
-                            >
-                                <i class="fa-brands fa-chrome me-4"></i>
-                                <span id="web_development_title"
-                                    >Web Development</span
-                                >
-                            </button>
-                        </h2>
-                        <div
-                            id="panelsStayOpen-collapseFive"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#accordionPanelsStayOpen"
-                        >
-                            <div class="accordion-body">
-                                <p
-                                    class="lead"
-                                    id="web_development_description_1"
-                                ></p>
-                                <p
-                                    class="lead"
-                                    id="web_development_description_2"
-                                ></p>
-                                <p
-                                    class="lead"
-                                    id="web_development_description_3"
-                                ></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Testing & Integration -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseSix"
-                                aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseSix"
-                            >
-                                <i class="fa-solid fa-list-check me-4"></i>
-                                <span id="testing_integration_title"
-                                    >Testing & Integration</span
-                                >
-                            </button>
-                        </h2>
-                        <div
-                            id="panelsStayOpen-collapseSix"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#accordionPanelsStayOpen"
-                        >
-                            <div class="accordion-body">
-                                <p
-                                    class="lead"
-                                    id="testing_integration_description_1"
-                                ></p>
-                                <p
-                                    class="lead"
-                                    id="testing_integration_description_2"
-                                ></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Agile Methodologies -->
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button
-                                class="accordion-button collapsed"
-                                type="button"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#panelsStayOpen-collapseSeven"
-                                aria-expanded="false"
-                                aria-controls="panelsStayOpen-collapseSeven"
-                            >
-                                <i
-                                    class="fa-solid fa-arrow-rotate-left me-4"
-                                ></i>
-                                <span id="agile_methodologies_title"
-                                    >Agile Methodologies</span
-                                >
-                            </button>
-                        </h2>
-                        <div
-                            id="panelsStayOpen-collapseSeven"
-                            class="accordion-collapse collapse"
-                            data-bs-parent="#accordionPanelsStayOpen"
-                        >
-                            <div class="accordion-body">
-                                <p
-                                    class="lead"
-                                    id="agile_methodologies_description_1"
-                                ></p>
-                                <p
-                                    class="lead"
-                                    id="agile_methodologies_description_2"
-                                ></p>
-                                <p
-                                    class="lead"
-                                    id="agile_methodologies_description_3"
-                                ></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <p class="lead" id="aboutMeText2">
+                    I pride myself on continuously learning and adapting to
+                    new technologies, ensuring that I can provide the best
+                    solutions and services to meet your ever-evolving needs.
+                </p>
+                <p class="lead" id="aboutMeText3">
+                    With a proven track record in developing and optimizing
+                    continuous integration and delivery (CI/CD) pipelines,
+                    automating build and deployment processes, and working
+                    with microservices architectures, I am committed to
+                    making a positive impact and delivering results that
+                    exceed expectations.
+                </p>
             </div>
-
-            <!-- Education Section -->
-            <div class="row justify-content-center align-items-center mt-2">
-                <h2 class="mt-5" id="education_title">Education</h2>
-                <hr />
-
-                <!-- Ensea -->
-                <div class="row justify-content-start align-items-center mt-3">
-                    <p class="fs-4" id="ensea_degree">
-                        Master's Degree in Applied Mathematics and Computer
-                        Science
-                    </p>
-                    <div class="col">
-                        <img
-                            src="/static/images/ensea.png"
-                            alt="ENSEA"
-                            class="img-fluid"
-                            style="width: 85px"
-                        />
-                    </div>
-                    <div class="col-md-11">
-                        <p class="fs-4">ENSEA</p>
-                        <p class="fs-5">2016 - 2019</p>
-                        <p class="lead" id="ensea_description">
-                            I graduated from École Nationale Supérieure de
-                            l'Électronique et de ses Applications (ENSEA) in
-                            2019 with a degree in Applied Mathematics, Computer
-                            science and Electronic. My third-year studies
-                            concentrated on embedded systems and IT, while my
-                            second year explored automation and the Internet of
-                            Things. My participation in extracurricular
-                            activities at ENSEA contributed to the development
-                            of my leadership and organizational skills.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Classe preparatoire -->
-                <div class="row justify-content-start align-items-center mt-3">
-                    <p class="fs-4" id="preparatory_course_title">
-                        Intensive Preparatory Course for French Grandes Écoles
-                    </p>
-                    <div class="col">
-                        <img
-                            src="https://fetelemur.com/wp-content/uploads/2021/11/Logo-ville-de-Vannes-Patch-blanc.png"
-                            alt="ENSEA"
-                            class="img-fluid"
-                        />
-                    </div>
-                    <div class="col-md-11">
-                        <p class="fs-4">Lycée A.R-Lessage</p>
-                        <p class="fs-5">2013 - 2016</p>
-                        <p class="lead" id="lycee_description"></p>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <img src="/static/images/photo2.jpeg" alt="Paul BOURHIS"
+                    class="img-fluid rounded-circle" style="width: 80%" />
             </div>
+        </div>
 
-            <!-- Hobbies & Interests Section -->
-            <div class="row justify-content-center align-items-center mt-2">
-                <h2 class="mt-5" id="hobbies_interests_title">
-                    Hobbies & Interests
-                </h2>
-                <hr />
+        <!-- Skills & Expertise Section -->
+        <div class="row justify-content-center align-items-center mt-5">
+            <h2 class="mt-5" id="skills_expertise_title">
+                Skills & Expertise
+            </h2>
+            <hr />
 
-                <div
-                    class="row justify-content-center align-items-center m-2 g-2"
-                >
-                    <div class="col-md-10">
-                        <p class="lead" id="grappling_description"></p>
-                    </div>
-                    <div class="col">
-                        <img
-                            src="https://contents.mediadecathlon.com/b71403/k$1bd9420f24387634786c6b2b39f31f67/1800x0/600pt400/983xcr737/PHOTO_INT_BOXES_article_grappling.jpg?format=auto"
-                            alt="Grappling"
-                            class="img-fluid rounded-circle"
-                        />
+            <p class="lead" id="skills_expertise_description">
+                My skills and expertise encompass a broad range of technical
+                and managerial aspects, empowering me to excel in software
+                development and DevOps engineering roles.
+            </p>
+
+            <div class="accordion" id="accordionPanelsStayOpen">
+                <!-- Software Development -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            <i class="fa-solid fa-code me-4"></i>
+                            <span id="software_development_title">Software Development</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                        data-bs-parent="#accordionPanelsStayOpen">
+                        <div class="accordion-body">
+                            <p class="lead" id="software_development_description">
+                                I am proficient in software development,
+                                with a deep understanding of various
+                                programming languages, including
+                                <b> Python </b> and
+                                <b> C/C++ </b>
+                                . My expertise in multithreading and
+                                multiprocessing enables me to design and
+                                build efficient and high-performance
+                                applications. Furthermore, I have experience
+                                creating graphical user interfaces using the
+                                Qt framework and working with data science
+                                tools like pandas.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div
-                    class="row justify-content-center align-items-center m-3 g-2"
-                >
-                    <div class="col">
-                        <img
-                            src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_e0760a96c15fae1be3755e9fd95971f2/codingame-for-work.png"
-                            alt="Codingame"
-                            class="img-fluid rounded-circle"
-                            style="width: 300px"
-                        />
-                    </div>
-                    <div class="col-md-10">
-                        <p class="lead" id="codingame_description"></p>
-                        <a
-                            href="https://www.codingame.com/profile/4b5773cbdde094de9f6a53d1d6bf74688903853"
-                            >paul_bhs</a
-                        >
+                <!-- Cloud Platforms -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                            aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            <i class="fa-solid fa-cloud me-4"></i>
+                            <span id="cloud_platforms_title">Cloud Platforms</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionPanelsStayOpen">
+                        <div class="accordion-body">
+                            <p class="lead" id="cloud_platforms_description">
+                                As a skilled cloud professional, I hold
+                                Azure certifications
+                                <b>
+                                    AZ-900, AZ-104, and the AZ-400 Expert
+                                    DevOps </b>, showcasing my expertise in cloud
+                                platforms like Azure and AWS. I am adept at
+                                managing cloud resources, ensuring optimal
+                                utilization, and maximizing efficiency. My
+                                experience in designing and implementing
+                                cloud infrastructure and services, such as
+                                virtual machines, storage, and databases,
+                                enables me to create reliable, scalable, and
+                                secure solutions for my clients.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
-                <div
-                    class="row justify-content-center align-items-center m-3 g-2"
-                >
-                    <p class="lead" id="personal_development_description"></p>
-                    <a href="https://github.com/Pyodin">Pyodin</a>
+                <!-- DevOps Engineering -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                            aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            <i class="fa-solid fa-screwdriver-wrench me-4"></i>
+                            <span id="devops_automation_title">DevOps & Automation</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionPanelsStayOpen">
+                        <div class="accordion-body">
+                            <p class="lead" id="devops_automation_description_1"></p>
+                            <p class="lead" id="devops_automation_description_2"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monitoring & Alerting -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                            aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                            <i class="fa-solid fa-bell me-4"></i>
+                            <span id="monitoring_alerting_title">Monitoring & Alerting</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionPanelsStayOpen">
+                        <div class="accordion-body">
+                            <p class="lead" id="monitoring_alerting_description_1"></p>
+                            <p class="lead" id="monitoring_alerting_description_2"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                            aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                            <i class="fa-brands fa-chrome me-4"></i>
+                            <span id="web_development_title">Web Development</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionPanelsStayOpen">
+                        <div class="accordion-body">
+                            <p class="lead" id="web_development_description_1"></p>
+                            <p class="lead" id="web_development_description_2"></p>
+                            <p class="lead" id="web_development_description_3"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testing & Integration -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix"
+                            aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+                            <i class="fa-solid fa-list-check me-4"></i>
+                            <span id="testing_integration_title">Testing & Integration</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionPanelsStayOpen">
+                        <div class="accordion-body">
+                            <p class="lead" id="testing_integration_description_1"></p>
+                            <p class="lead" id="testing_integration_description_2"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agile Methodologies -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven"
+                            aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+                            <i class="fa-solid fa-arrow-rotate-left me-4"></i>
+                            <span id="agile_methodologies_title">Agile Methodologies</span>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionPanelsStayOpen">
+                        <div class="accordion-body">
+                            <p class="lead" id="agile_methodologies_description_1"></p>
+                            <p class="lead" id="agile_methodologies_description_2"></p>
+                            <p class="lead" id="agile_methodologies_description_3"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Footer -->
-        <footer class="bg-dark-subtle">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3>About me</h3>
-                        <p class="lead">
-                            I'm a DevOps engineer with a passion for leveraging
-                            technology to solve problems and deliver value.
-                        </p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Contact me</h3>
-                        <p>
-                            <i class="fas fa-envelope me-2"></i>
-                            paul_bourhis@yahoo.com
-                        </p>
-                        <p>
-                            <i class="fas fa-phone-alt me-2"></i>+33 6 99 29 45
-                            22
-                        </p>
-                        <p><i class="fas fa-map-marker-alt me-2"></i>Paris</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h3>Follow me</h3>
-                        <!-- LinkedIn -->
-                        <a
-                            class="btn text-white btn-floating m-1"
-                            style="background-color: #0082ca"
-                            href="https://www.linkedin.com/in/paul-bourhis-375557153/"
-                            role="button"
-                            ><i class="fab fa-linkedin-in"></i
-                        ></a>
+        <!-- Education Section -->
+        <div class="row justify-content-center align-items-center mt-2">
+            <h2 class="mt-5" id="education_title">Education</h2>
+            <hr />
 
-                        <!-- GitHub -->
-                        <a
-                            class="btn text-white btn-floating m-1"
-                            style="background-color: #333333"
-                            href="https://github.com/Pyodin"
-                            role="button"
-                            ><i class="fab fa-github"></i
-                        ></a>
-
-                        <!-- Instagram -->
-                        <a
-                            class="btn text-white btn-floating m-1"
-                            style="background-color: #af36af"
-                            href="https://www.instagram.com/paulbhs/"
-                            role="button"
-                            ><i class="fab fa-instagram"></i
-                        ></a>
-                    </div>
+            <!-- Ensea -->
+            <div class="row justify-content-start align-items-center mt-3">
+                <p class="fs-4" id="ensea_degree">
+                    Master's Degree in Applied Mathematics and Computer
+                    Science
+                </p>
+                <div class="col">
+                    <img src="/static/images/ensea.png" alt="ENSEA" class="img-fluid"
+                        style="width: 85px" />
+                </div>
+                <div class="col-md-11">
+                    <p class="fs-4">ENSEA</p>
+                    <p class="fs-5">2016 - 2019</p>
+                    <p class="lead" id="ensea_description">
+                        I graduated from École Nationale Supérieure de
+                        l'Électronique et de ses Applications (ENSEA) in
+                        2019 with a degree in Applied Mathematics, Computer
+                        science and Electronic. My third-year studies
+                        concentrated on embedded systems and IT, while my
+                        second year explored automation and the Internet of
+                        Things. My participation in extracurricular
+                        activities at ENSEA contributed to the development
+                        of my leadership and organizational skills.
+                    </p>
                 </div>
             </div>
-            <div class="lead text-center bg-secondary">
-                © Built on my own. Find the source code
-                <a
-                    class="text-white"
-                    href="https://github.com/Pyodin/website-portfolio"
-                    >here</a
-                >
+
+            <!-- Classe preparatoire -->
+            <div class="row justify-content-start align-items-center mt-3">
+                <p class="fs-4" id="preparatory_course_title">
+                    Intensive Preparatory Course for French Grandes Écoles
+                </p>
+                <div class="col">
+                    <img src="https://fetelemur.com/wp-content/uploads/2021/11/Logo-ville-de-Vannes-Patch-blanc.png"
+                        alt="ENSEA" class="img-fluid" />
+                </div>
+                <div class="col-md-11">
+                    <p class="fs-4">Lycée A.R-Lessage</p>
+                    <p class="fs-5">2013 - 2016</p>
+                    <p class="lead" id="lycee_description"></p>
+                </div>
             </div>
-        </footer>
-        <script src="/js/switchLanguage.js"></script>
-        <!-- Bootstrap Bundle with Popper -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+        </div>
+
+        <!-- Hobbies & Interests Section -->
+        <div class="row justify-content-center align-items-center mt-2">
+            <h2 class="mt-5" id="hobbies_interests_title">
+                Hobbies & Interests
+            </h2>
+            <hr />
+
+            <div class="row justify-content-center align-items-center m-2 g-2">
+                <div class="col-md-10">
+                    <p class="lead" id="grappling_description"></p>
+                </div>
+                <div class="col">
+                    <img src="https://contents.mediadecathlon.com/b71403/k$1bd9420f24387634786c6b2b39f31f67/1800x0/600pt400/983xcr737/PHOTO_INT_BOXES_article_grappling.jpg?format=auto"
+                        alt="Grappling" class="img-fluid rounded-circle" />
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center m-3 g-2">
+                <div class="col">
+                    <img src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_e0760a96c15fae1be3755e9fd95971f2/codingame-for-work.png"
+                        alt="Codingame" class="img-fluid rounded-circle" style="width: 300px" />
+                </div>
+                <div class="col-md-10">
+                    <p class="lead" id="codingame_description"></p>
+                    <a
+                        href="https://www.codingame.com/profile/4b5773cbdde094de9f6a53d1d6bf74688903853">paul_bhs</a>
+                </div>
+            </div>
+
+            <div class="row justify-content-center align-items-center m-3 g-2">
+                <p class="lead" id="personal_development_description"></p>
+                <a href="https://github.com/Pyodin">Pyodin</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark-subtle">
+        <div class="container lh-1">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>About me</h3>
+                    <p class="lead">
+                        I'm a DevOps engineer with a passion for leveraging
+                        technology to solve problems and deliver value.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contact me</h3>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Paris</p>
+                    <p>
+                        <i class="fas fa-envelope me-2"></i>
+                        paul_bourhis@yahoo.com
+                    </p>
+                    <p>
+                        <i class="fas fa-phone-alt me-2"></i>+33 6 99 29 45
+                        22
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Follow me</h3>
+                    <!-- LinkedIn -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #0082ca"
+                        href="https://www.linkedin.com/in/paul-bourhis-375557153/" role="button"><i
+                            class="fab fa-linkedin-in"></i></a>
+
+                    <!-- GitHub -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #333333"
+                        href="https://github.com/Pyodin" role="button"><i
+                            class="fab fa-github"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn text-white btn-floating m-1" style="background-color: #af36af"
+                        href="https://www.instagram.com/paulbhs/" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center bg-secondary">
+            © Built on my own. Find the source code
+            <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a>
+        </div>
+    </footer>
+    <script src="/js/switchLanguage.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

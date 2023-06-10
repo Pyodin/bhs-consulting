@@ -1,14 +1,3 @@
-.navbar {
-    background-color: transparent !important;
-    
-}
-
-/* transition smooth */
-.navbar-scrolled {
-    background: linear-gradient(90deg, #200c55 0%, #1b5bd3cb 100%);
-    transition: background-color 0.5s ease;
-}
-
 .carousel-item img{
     height: 48vh;
     min-height: 300px;
@@ -16,16 +5,17 @@
     background-size: cover;
     object-fit: cover;
     object-position: center;
+    filter: brightness(50%);
 }
 
 .carousel-caption h1 {
-    font-size: 4rem; /* Adjust as needed */
-    font-weight: bold; /* Adjust as needed */
+    font-size: 4rem; 
+    font-weight: bold; 
 }
 
 .carousel-caption .lead {
-    font-size: 2rem; /* Adjust as needed */
-    font-weight: normal; /* Adjust as needed */
+    font-size: 2rem; 
+    font-weight: normal; 
 }
 
 .skill-logo {
@@ -35,53 +25,7 @@
     object-fit: contain ;
 }
 
-
-.list-group-item:hover {
+.list-group-item:hover,
+.card:hover {
     box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
 }
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-
-}
-
-header i {
-    color: rgb(173, 18, 38);
-}
-
-header i:hover {
-    color: rgb(173, 132, 18);
-}
-
-/* For the switch language */
-
-.fade-from-right {
-    animation: fadeFromRight 0.5s ease-in-out forwards;
-}
-
-@keyframes fadeFromRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.fade-to-left {
-    animation: fadeToLeft 0.5s ease-in-out forwards;
-}
-
-@keyframes fadeToLeft {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-}
-

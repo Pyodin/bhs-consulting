@@ -1,24 +1,6 @@
-
 .navbar {
     background: linear-gradient(90deg, #200c55 0%, #1b5bd3cb 100%);
 }
-
-.fade-from-right {
-    animation: fadeFromRight 1s ease-in-out;
-}
-
-@keyframes fadeFromRight {
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* add shadow to accordion-item when hoovering*/
 
 .accordion-item:hover {
     box-shadow: 0 4px 8px 0 rgba(216, 150, 8, 0.2);
@@ -28,5 +10,3 @@
     background-color: #f1f1f1;
     border-radius: 5px;
 }
-
-/* add shadow to accordion-item when hoovering*/
