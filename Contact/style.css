@@ -1,0 +1,50 @@
+body:before {
+    z-index: -1;
+    position: absolute;
+    height: 50vh;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #8bbabb;
+}
+
+.content {
+    top: 10vh;
+    left: 25vh;
+    position: absolute;
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+    background: none; 
+}
+
+    .form-control:active, 
+    .form-control:focus {
+        outline: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border-color: #000; 
+    }
+
+.contact-info {
+    padding: 40px; 
+    color: rgba(245, 231, 231, 0.5); 
+    background: #3d518d;
+}
+
+.contact-info ul li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.5); 
+}
+
+.contact-info h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 30px; 
+}

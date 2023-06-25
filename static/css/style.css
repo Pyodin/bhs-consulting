@@ -29,3 +29,7 @@
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
 }
+
+body {
+    background: #f8f9fa;
+}
