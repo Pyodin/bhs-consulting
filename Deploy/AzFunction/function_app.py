@@ -2,6 +2,8 @@ import os
 import logging
 
 import azure.functions as func
+from azure.cosmosdb.table.tableservice import TableService
+from azure.cosmosdb.table.models import Entity
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 
@@ -73,3 +75,42 @@ def HttpTrigger(
             "Error sending email",
             status_code=500,
         )
+
+
+@app.route(route="HttpTriggerMail", methods=["POST"])
+def HttpTriggerMail(req: func.HttpRequest) -> func.HttpResponse:
+    global TABLE_SERVICE_CONNECTION_STRING
+    TABLE_SERVICE_CONNECTION_STRING = os.environ["TableServiceConnectionString"]
+
+    email = req.form.get("email")
+
+    if email:
+        # Check for duplicate entries
+        if email_exists(email):
+            logging.warning(f"Duplicate email address: {email}")
+            return func.HttpResponse("Email address already exists", status_code=400)
+
+        # Store the email address in Azure Table Storage
+        table_service = TableService(connection_string=TABLE_SERVICE_CONNECTION_STRING)
+        subscriber_entity = {
+            "PartitionKey": "Subscribers",
+            "RowKey": email,
+            "Email": email,
+        }
+        table_service.insert_entity("Subscribers", subscriber_entity)
+
+        logging.info(f"Successfully registered email: {email}")
+        return func.HttpResponse(
+            f"Successfully registered email: {email}", status_code=200
+        )
+    else:
+        logging.warning("No email address provided")
+        return func.HttpResponse("Please provide an email address", status_code=400)
+
+
+def email_exists(email):
+    # Check if the email address already exists in Azure Table Storage
+    table_service = TableService(connection_string=TABLE_SERVICE_CONNECTION_STRING)
+    filter_condition = f"Email eq '{email}'"
+    entities = table_service.query_entities("Subscribers", filter=filter_condition)
+    return any(entities)
