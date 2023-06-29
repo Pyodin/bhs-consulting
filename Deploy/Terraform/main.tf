@@ -14,5 +14,5 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "rg" {
   location = "West Europe"
-  name     = "swa-portfolio"
+  name     = "tf-portfolio"
 }

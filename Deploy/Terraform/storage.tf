@@ -20,7 +20,3 @@ resource "azurerm_storage_table" "mytable" {
   storage_account_name = azurerm_storage_account.mytable.name
 }
 
-# Output the connection string 
-output "table_connection_string" {
-  value = azurerm_storage_account.mytable.primary_connection_string
-}

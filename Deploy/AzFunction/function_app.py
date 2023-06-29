@@ -9,6 +9,8 @@ from sendgrid.helpers.mail import Mail
 
 
 SENDGRID_API_KEY = None
+TABLE_SERVICE_CONNECTION_STRING = None
+
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 
