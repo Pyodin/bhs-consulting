@@ -4,3 +4,4 @@
 
 azure-functions
 sendgrid
+azure-data-tables

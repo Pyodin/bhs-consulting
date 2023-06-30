@@ -1,5 +1,17 @@
+.navbar-brand {
+    padding-right: 50px;
+    /* font-size: 2rem; */
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.8px;
+}
+
+/* body {
+     background: #28282918; 
+} */
+
 .carousel-item img{
-    height: 48vh;
+    height: 60vh;
     min-height: 300px;
     background: no-repeat center center scroll;
     background-size: cover;
@@ -8,9 +20,17 @@
     filter: brightness(50%);
 }
 
+.carousel-caption {
+    transform: translateY(-20%);
+}
+
 .carousel-caption h1 {
     font-size: 4rem; 
     font-weight: bold; 
+}
+
+.carousel-caption h2 {
+    font-size: 3rem; 
 }
 
 .carousel-caption .lead {
@@ -25,11 +45,8 @@
     object-fit: contain ;
 }
 
-.list-group-item:hover,
-.card:hover {
+.card:hover ,
+.list-group-item:hover {
     box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
 }
 
-body {
-    background: #f8f9fa;
-}
