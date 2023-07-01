@@ -18,23 +18,19 @@ contactForm.addEventListener("submit", function (e) {
         }
     })
     .then(function (response) {
-        console.log(response.status);
-        return response.text();
-    })
-    .then(function (responseText) {
-        console.log(responseText);
+        console.log(response);
         if (response.status === 200) {
-            eventMessage.textContent = "Email saved successfully";
+            eventMessage.textContent = "Email saved successfully!";
         } 
         else if (response.status === 400) {
-            eventMessage.textContent = "Email already exists";
+            eventMessage.textContent = "Email already exists!";
         }
         else {
-            eventMessage.textContent = "Email failed to save";
+            eventMessage.textContent = "Email failed to save!";
         }
     })
     .catch(function (error) {
         console.log("Error:", error);
-        eventMessage.textContent = "An error occurred";
+        eventMessage.textContent = "An error occurred!";
     });
 });
