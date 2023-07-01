@@ -12,7 +12,10 @@ contactForm.addEventListener("submit", function (e) {
     
     fetch("https://bhstriggermail.azurewebsites.net/api/httptriggernewmail", {
         method: "POST",
-        body: data
+        body: data,
+        headers: {
+            "Access-Control-Allow-Origin": "*"
+        }
     })
     .then(function (response) {
         console.log(response.status);
