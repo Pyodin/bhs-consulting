@@ -29,8 +29,7 @@
 }
 
 #mainPhoto {
-    width: 350px; 
-    height: auto;
+    max-width: 325px;
     box-shadow: 4px 8px 16px 0 rgba(92, 70, 12, 0.712);
 }
 
