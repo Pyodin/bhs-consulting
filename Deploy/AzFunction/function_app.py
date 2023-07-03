@@ -138,6 +138,18 @@ def HttpTriggerNewMail(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse("Please provide an email address", status_code=400)
 
 
+@app.route(route="HelloWorld", methods=["GET", "POST"])
+def HelloWorld(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info("HelloWorld function processed a request.")
+    email = req.form.get("email")
+    logging.info(f"New email is: {email}")
+
+    return func.HttpResponse(
+        "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
+        status_code=200,
+    )
+
+ 
 def email_exists(table_client, email):
     # Check if the email address already exists in Azure Table Storage
     logging.info(f"Checking if email address exists: {email}")
@@ -153,5 +165,6 @@ def add_email_to_table(table_client, email):
         "PartitionKey": "Subscribers",
         "RowKey": email,
         "Email": email,
+        "SusbribedNewsletter": True,
     }
     table_client.create_entity(subscriber_entity)

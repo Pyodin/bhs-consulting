@@ -7,3 +7,7 @@
     border-radius: 5px;
 }
 
+.accordion-button:hover {
+    background-color: #f1f1f1;
+    color: #d89608;
+}

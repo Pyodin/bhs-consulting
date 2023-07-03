@@ -1,6 +1,6 @@
 .masthead {
     background-image: url('/static/images/banner-keyboard.webp');
-    height: 48vh; 
+    height: 50vh; 
     min-height: 300px;
     background-position: center;
     filter: brightness(80%);

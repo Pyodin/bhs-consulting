@@ -1,0 +1,50 @@
+.navbar-brand {
+    padding-right: 100px;
+    font-size: 2rem;
+    font-family: 'Ysabeau SC', sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.7px;
+}
+
+.lead {
+    line-height: 1.8;
+    /* font-weight: 350; */
+    /* letter-spacing: 0.6px;  */
+    /* font-size: 1.2rem; */
+    /* font-family: 'Lato', sans-serif; */
+
+    /* make bold  */
+    /* font-weight: bold; */
+    
+}
+
+li span, 
+ul b,
+h2, h3, h4, 
+.display-6,
+.fs-4,
+.fs-5 {
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+.skill-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    object-fit: contain ;
+}
+
+.card:hover ,
+.list-group-item:hover {
+    box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
+}
+
+body {
+    /* background-color: aliceblue; */
+    /* background-color: #5d819633; */
+    /* background gradient  */
+    /* background: rgb(255,255,255); */
+    background: linear-gradient(90deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
+    /* background: linear-gradient(90deg, rgba(71, 107, 139, 0.849) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%); */
+
+}

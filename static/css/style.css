@@ -1,14 +1,4 @@
-.navbar-brand {
-    padding-right: 50px;
-    /* font-size: 2rem; */
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    letter-spacing: -0.8px;
-}
 
-/* body {
-     background: #28282918; 
-} */
 
 .carousel-item img{
     height: 60vh;
@@ -38,15 +28,12 @@
     font-weight: normal; 
 }
 
-.skill-logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-    object-fit: contain ;
+#mainPhoto {
+    width: 350px; 
+    height: auto;
+    box-shadow: 4px 8px 16px 0 rgba(92, 70, 12, 0.712);
 }
 
-.card:hover ,
-.list-group-item:hover {
-    box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
+#mainPhoto:hover {
+    box-shadow: 0 8px 16px 0 rgba(92, 70, 12, 0.712);
 }
-

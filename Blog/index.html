@@ -22,10 +22,9 @@
 
 <body>
     <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
-        <div class="container">
-            <a id="navbarBrand" class="navbar-brand text-warning" href="/">My
-                portfolio</a>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container my-1">
+            <a id="navbarBrand" class="navbar-brand text-warning" href="/">BHS Consulting</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -61,6 +60,9 @@
                     <li class="nav-item">
                         <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
                     </li>
+                    <li class="nav-item">
+                        <a id="blogLink" class="nav-link" href="/Contact/">Contact</a>
+                    </li>
                 </ul>
 
                 <!-- english and franch flags as button -->
@@ -79,10 +81,49 @@
             <p class="lead">Your daily dose of development, cloud, AI, and more ! </p>
             <!-- button suscribe -->
             <div class="mt-4">
-                <a class="btn btn-outline-light btn-lg" href="#">Suscribe</a>
+                <button type="button" class="btn btn-outline-light btn-lg" data-bs-toggle="modal"
+                    data-bs-target="#subscribeModal">
+                    Suscribe to the newsletter
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- Modal for suscription-->
+    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="subscribeModalLabel">Get notified when a new article
+                        is published !
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="get-notified-form" class="mt-2">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="name@example.com">
+                            <label for="email">Email address</label>
+                            <div id="emailHelp" class="form-text">I'll never share your email with
+                                anyone else.</div>
+                        </div>
+                        <div class="row justify-content-center align-items-center g-2">
+                            <div class="col"><button type="submit" class="btn btn-primary">Get
+                                    notified!</button></div>
+                            <div class="col">
+                                <div id="event-message" class="visually-hidden">
+                                    <h5>Loading...</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Blog articles -->
     <div class="container my-5">
@@ -151,7 +192,7 @@
                     <p><i class="fas fa-map-marker-alt me-2"></i>Paris</p>
                     <p>
                         <i class="fas fa-envelope me-2"></i>
-                        paul_bourhis@yahoo.com
+                        paul.bourhis@bhsconsulting.fr
                     </p>
                     <p>
                         <i class="fas fa-phone-alt me-2"></i>+33 6 99 29 45
