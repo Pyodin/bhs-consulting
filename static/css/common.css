@@ -15,7 +15,6 @@
 
     /* make bold  */
     /* font-weight: bold; */
-    
 }
 
 li span, 
@@ -46,5 +45,8 @@ body {
     /* background: rgb(255,255,255); */
     background: linear-gradient(90deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
     /* background: linear-gradient(90deg, rgba(71, 107, 139, 0.849) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%); */
+}
 
+footer .lead {
+    line-height: 1.1;
 }
