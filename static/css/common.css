@@ -19,7 +19,7 @@
 
 li span, 
 ul b,
-h2, h3, h4, 
+h1, h2, h3, h4, 
 .display-6,
 .fs-4,
 .fs-5 {
@@ -44,7 +44,6 @@ body {
     /* background gradient  */
     /* background: rgb(255,255,255); */
     background: linear-gradient(90deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
-    /* background: linear-gradient(90deg, rgba(71, 107, 139, 0.849) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%); */
 }
 
 footer .lead {
@@ -53,4 +52,5 @@ footer .lead {
 
 /* .container:hover {
     box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
+    background-color: aliceblue 
 } */
