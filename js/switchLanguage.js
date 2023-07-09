@@ -48,6 +48,8 @@ function firstAppear(lang) {
   .then(translations => {
     // Apply the translations with fade animation
     for (let key in translations) {
+      // debug console.log(key);
+
       const element = document.getElementById(key);
       if (element) {
         element.classList.add('fade-from-right');
