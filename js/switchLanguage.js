@@ -15,6 +15,7 @@ function switchLanguage(lang) {
     .then(translations => {
       // Apply the translations with fade animations
       for (let key in translations) {
+        console.log(key);
         const element = document.getElementById(key);
         if (element) {
           // Add 'fade-to-left' animation
@@ -48,7 +49,8 @@ function firstAppear(lang) {
   .then(translations => {
     // Apply the translations with fade animation
     for (let key in translations) {
-      // debug console.log(key);
+      // add debug log
+      console.log(key);
 
       const element = document.getElementById(key);
       if (element) {
