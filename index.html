@@ -104,7 +104,7 @@
                 <img src="/static/images/slider-tl2.jpg" class="d-block w-100" alt="..." />
                 <div class="carousel-caption py-5">
                     <h2 id="carouselCaption2Availability">
-                        Available from september 2023
+                        Available from october 2023
                     </h2>
 
                     <div class="container my-5">
@@ -147,7 +147,7 @@
                         aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="get-notified-form" class="mt-2">
+                    <form id="get-notified-form" class="mt-2" action="https://bhstriggermail.azurewebsites.net/api/httptriggernewmail" method="POST">
                         <div class="form-floating mb-3">
                             <input type="email" class="form-control" id="email" name="email"
                                 placeholder="name@example.com">
@@ -277,6 +277,10 @@
                             <li class="list-group-item list-group-item-warning text-black">
                                 <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
                                     alt="Git" class="skill-logo" /><span id="gitSkill">Git</span>
+                            </li>
+                            <li class="list-group-item list-group-item-warning text-black">
+                                <img src="https://divamaggie.com/svg/uiux-design.svg"
+                                    alt="Git" class="skill-logo" /><span id="gitSkill">Ui/Ux design</span>
                             </li>
                         </ul>
                     </div>

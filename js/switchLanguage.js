@@ -9,7 +9,12 @@ btnFr.addEventListener('click', () => switchLanguage('fr'));
 
 // Function to switch the language with fade animation
 function switchLanguage(lang) {
-  var json_path = window.location.pathname + "/" + lang + '.json';
+  var json_path = window.location.pathname;
+  if (json_path.endsWith('/')) {
+    json_path = json_path + lang + '.json';
+  } else {
+    json_path = json_path + "/" + lang + '.json';
+  }
   console.log(json_path);
   // Load the language file
   fetch(json_path)
@@ -44,7 +49,12 @@ function switchLanguage(lang) {
 }
 
 function firstAppear(lang) {
-  var json_path = window.location.pathname + "/" + lang + '.json';
+  var json_path = window.location.pathname;
+  if (json_path.endsWith('/')) {
+    json_path = json_path + lang + '.json';
+  } else {
+    json_path = json_path + "/" + lang + '.json';
+  }
   console.log(json_path);
   // Load the language file
   fetch(json_path)
