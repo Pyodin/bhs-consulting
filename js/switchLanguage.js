@@ -9,13 +9,16 @@ btnFr.addEventListener('click', () => switchLanguage('fr'));
 
 // Function to switch the language with fade animation
 function switchLanguage(lang) {
+  var path = window.location.pathname;
+  console.log(path);
+  // Load the language file
+  fetch(path + lang + '.json')
   // Load the language file
   fetch(lang + '.json')
     .then(response => response.json())
     .then(translations => {
       // Apply the translations with fade animations
       for (let key in translations) {
-        console.log(key);
         const element = document.getElementById(key);
         if (element) {
           // Add 'fade-to-left' animation
@@ -43,15 +46,15 @@ function switchLanguage(lang) {
 }
 
 function firstAppear(lang) {
+  var path = window.location.pathname;
+  console.log(path);
+
   // Load the language file
-  fetch(lang + '.json')
+  fetch(path + lang + '.json')
   .then(response => response.json())
   .then(translations => {
     // Apply the translations with fade animation
-    for (let key in translations) {
-      // add debug log
-      console.log(key);
-
+    for (let key in translations) {     
       const element = document.getElementById(key);
       if (element) {
         element.classList.add('fade-from-right');
