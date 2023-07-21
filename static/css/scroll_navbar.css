@@ -4,7 +4,6 @@
 }
 
 .navbar-scrolled {
-    background: linear-gradient(90deg, #200c55 0%, #1b5bd3cb 100%);
-    transition: background-color 0.5s ease;
+    background: linear-gradient(90deg, rgb(11, 10, 36) 0%, rgb(54, 60, 146) 40%, rgb(22, 102, 177) 100%);
 }
 

@@ -9,8 +9,8 @@
         rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
         crossorigin="anonymous" />
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" />
+    <!-- <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" /> -->
     <link rel="stylesheet" href="/static/css/common.css" />
     <link rel="stylesheet" href="/static/css/style.css" />
     <link rel="stylesheet" href="/static/css/animation.css" />
@@ -20,10 +20,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
     <link rel="manifest" href="/static/favicon/site.webmanifest">
 
+    <!-- bootstrap icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
         rel="stylesheet">
     <title>Paul Bourhis</title>
 </head>
@@ -95,30 +101,52 @@
                 <img src="/static/images/slider2.jpg" class="d-block w-100" alt="..." />
                 <div class="carousel-caption d-none d-md-block text-start py-5">
                     <h1>Paul BOURHIS</h1>
-                    <p class="lead" id="carouselCaption1Title">
-                        Freelance DevOps Engineer
-                    </p>
+                    <p class="lead" id="carouselCaption1Title">Freelance DevOps Engineer</p>
                 </div>
             </div>
             <div class="carousel-item" data-bs-interval="7000">
                 <img src="/static/images/slider-tl2.jpg" class="d-block w-100" alt="..." />
-                <div class="carousel-caption py-5">
-                    <h2 id="carouselCaption2Availability">
-                        Available from october 2023
-                    </h2>
+                <div class="carousel-caption">
+                    <div class="display-4" id="carouselCaption2Availability">Available from october
+                        2023</div>
 
-                    <div class="container my-5">
-                        <div class="row justify-content-end align-items-center">
-                            <div class="col-4">
-                                <div class="display-6 ">Want to get notified ? </div>
-                            </div>
-                            <div class="col-4 text-start">
-                                <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                                    data-bs-target="#subscribeModal">
-                                    Click here!
-                                </button>
-                            </div>
+                    <!-- countdown -->
+                    <div id="countdown"
+                        class="d-flex justify-content-center align-items-center my-5"
+                        data-count="2023/10/16">
+                        <div class="border border border-warning rounded-3 p-2 mx-2">
+                            <h3>%d</h3>
+                            <h4>Days</h4>
                         </div>
+                        <div class="border border border-warning rounded-3 p-2 mx-2">
+                            <h3>%h</h3>
+                            <h4>Hours</h4>
+                        </div>
+                        <div class="border border border-warning rounded-3 p-2 mx-2">
+                            <h3>%m</h3>
+                            <h4>Minutes</h4>
+                        </div>
+                        <div class="border border border-warning rounded-3 p-2 mx-2">
+                            <h3>%s</h3>
+                            <h4>Seconds</h4>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-end">
+                        <h5 class="p-2">Want to get notified ?</h5>
+                        <form class="rounded-4 p-2 mx-2" id="get-notified-form"
+                            action="https://bhstriggermail.azurewebsites.net/api/httptriggernewmail"
+                            method="POST">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <input type="email" class="form-control rounded-5" id="email"
+                                    name="email" placeholder="name@example.com">
+                                <button type="submit" class="btn btn-sm btn-primary rounded-5">
+                                    <i class="bi bi-send"></i>
+                                </button>
+                                <div id="event-message" class="visually-hidden">
+                                    <h5>Loading...</h5>
+                                </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -135,48 +163,54 @@
         </button>
     </div>
 
-    <!-- Modal for suscription-->
-    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="subscribeModalLabel">Get notified when I'm available
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="get-notified-form" class="mt-2" action="https://bhstriggermail.azurewebsites.net/api/httptriggernewmail" method="POST">
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="name@example.com">
-                            <label for="email">Email address</label>
-                            <div id="emailHelp" class="form-text">I'll never share your email with
-                                anyone else.</div>
-                        </div>
-                        <div class="row justify-content-center align-items-center g-2">
-                            <div class="col"><button type="submit" class="btn btn-primary">Get
-                                    notified!</button></div>
-                            <div class="col">
-                                <div id="event-message" class="visually-hidden">
-                                    <h5>Loading...</h5>
-                                </div>
-                            </div>
-                        </div>
 
-                    </form>
-                </div>
+    <!-- Go to buttons -->
+    <div class="d-xxl-block d-none position-fixed m-3">
+        <div class="d-flex flex-column justify-content-center align-items-start">
+            <div class="d-flex align-items-center ">
+                <a href="#" class="btn btn-lg btn-warning rounded-circle m-1">
+                    <i class="bi bi-arrow-up"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center ">
+                <a href="#presentation" class="btn btn-lg btn-warning rounded-circle m-1">
+                    <i class="bi bi-person"></i>
+                </a>
+                <h4>Presentation</h4>
+            </div>
+            <div class="d-flex align-items-center">
+                <a href="#services" class="btn btn-lg btn-warning rounded-circle m-1">
+                    <i class="bi bi-tools"></i>
+                </a>
+                <h4>Services</h4>
+            </div>
+            <div class="d-flex align-items-center">
+                <a href="#skills" class="btn btn-lg btn-warning rounded-circle m-1">
+                    <i class="bi bi-award"></i>
+                </a>
+                <h4>Skills</h4>
+            </div>
+            <div class="d-flex align-items-center">
+                <a href="#experiences" class="btn btn-lg btn-warning rounded-circle m-1">
+                    <i class="bi bi-person-lines-fill"></i>
+                </a>
+                <h4>Experiences</h4>
+            </div>
+            <div class="d-flex align-items-center">
+                <a href="#projects" class="btn btn-lg btn-warning rounded-circle m-1">
+                    <i class="bi bi-diagram-3-fill"></i>
+                </a>
+                <h4>Projects</h4>
             </div>
         </div>
     </div>
 
     <!-- Main container -->
-    <div class="container-xxl my-3 p-5 shadow">
+    <div class="container-xxl my-3 p-5 shadow" id="presentation">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-4 text-center">
                 <img id="mainPhoto" src="/static/images/photo.jpeg" alt="Profile Picture"
-                    class="img-fluid rounded-circle  mb-3"/>
+                    class="img-fluid rounded-circle mb-3" />
             </div>
             <div class="col-lg-8 text-center">
                 <!-- <p id="welcomeHeader" class="fs-1">Welcome!</p> -->
@@ -197,14 +231,80 @@
                 <p class="lead fw-bold text-end">Paul BOURHIS</p>
                 <hr />
 
-                <a href="/static/doc/Resume_Paul_Bourhis.pdf" class="btn btn-primary btn-lg mt-3"
-                    target="_blank" id="resumeButton">Download my CV</a>
+
+                <div class="row justify-content-end align-items-center g-2 mt-4">
+                    <div class="col">
+                        <a href="/About/" class="btn btn-primary ">More about me
+                            <i class="bi bi-arrow-right-circle-fill mx-2"></i>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="/static/doc/Resume_Paul_Bourhis.pdf" class="btn btn-primary"
+                            target="_blank">Download my CV
+                            <i class="bi bi-arrow-down-circle-fill mx-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>
 
+    <!-- Services -->
+    <div class="container-xxl my-3 p-5 shadow" id="services">
+        <p class="display-6 text-center ">
+            <img src="https://zeevector.com/wp-content/uploads/Handshake-Vector-Art@ZEEVECTOR-387x258.png"
+                alt="Tool logo" class="skill-logo" /><span id="serviceHeader">Services</span>
+        </p>
+        <hr />
+        <div class="row justify-content-center align-items-start gy-5">
+            <div class="col-md-6">
+                <h3>Cloud Solutions and Architecture:</h3>
+                <ul>
+                    <li>Design and implement cloud-based architectures</li>
+                    <li>Migrating on-premises applications to the cloud</li>
+                    <li>Optimize cost efficiency (FinOps)</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h3>Source Code Management:</h3>
+                <ul>
+                    <li>Establish effective workflows for version control</li>
+                    <li>Facilitate pull requests and code reviews</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h3>Development of CI/CD Strategies:</h3>
+                <ul>
+                    <li>Design and implement continuous integration pipelines</li>
+                    <li>deployment strategies (blue/green, dark launching, canary)</li>
+                    <li>Implement code health pipelines on:
+                        <ul>
+                            <li>code quality</li>
+                            <li>security</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h3>Training and Knowledge Sharing:</h3>
+                <ul>
+                    <li>Conducting workshops on DevOps best practices</li>
+                    <li>Promote Agile methodologies</li>
+                    <li>Foster development best practices</li>
+                    <li>Provide guidance on effective test strategies</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
     <!-- Skills & Certifications -->
-    <div class="container-xxl my-5 pt-3 pb-5 shadow">
+    <div class="container-xxl my-5 pt-3 pb-5 shadow" id="skills">
         <div class="row justify-content-center align-items-start text-center gy-5">
             <!-- Mains skills -->
             <div class="col-xl-8">
@@ -279,8 +379,8 @@
                                     alt="Git" class="skill-logo" /><span id="gitSkill">Git</span>
                             </li>
                             <li class="list-group-item list-group-item-warning text-black">
-                                <img src="https://divamaggie.com/svg/uiux-design.svg"
-                                    alt="Git" class="skill-logo" /><span id="gitSkill">Ui/Ux design</span>
+                                <img src="https://divamaggie.com/svg/uiux-design.svg" alt="Git"
+                                    class="skill-logo" /><span id="gitSkill">Ui/Ux design</span>
                             </li>
                         </ul>
                     </div>
@@ -325,61 +425,110 @@
     </div>
 
     <!-- Experiences -->
-    <div class="container-xxl my-5 pt-3 pb-5 shadow">
-        <div class="row">
-            <div class="col-md-12">
-                <p class="display-6 text-center">
-                    <img src="static/images/experience.png" alt="Exp logo"
-                        class="skill-logo" /><span id="experiencesHeader">Experiences</span>
-                    <hr />
-                </p>
-                <div class="row g-5">
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="/static/images/murex.png" class="card-img-top"
-                                alt="Murex logo" />
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <span id="murexTitle">Murex</span>
-                                </h5>
-                                <p class="card-text">
-                                    <span id="murexDescription">As a DevOps
-                                        engineer at Murex, I
-                                        developed a Python microservice
-                                        application, ensuring continuous
-                                        integration, delivery, and robust
-                                        monitoring/alerting systems.</span>
-                                </p>
-                                <a href="/Experiences/Murex/" class="btn btn-primary"><span
-                                        id="readMoreBtn">Read
-                                        more</span></a>
-                            </div>
+    <div class="container-xxl my-5 pt-3 pb-5 shadow" id="experiences">
+        <p class="display-6 text-center">
+            <img src="static/images/experience.png" alt="Exp logo" class="skill-logo" /><span
+                id="experiencesHeader">Experiences</span>
+            <hr />
+
+        <div class="timeline p-4">
+            <div class="card my-2">
+                <div class="card-header fw-bold">Freelance Azure Devops</div>
+                <div class="row justify-content-center align-items-center g-0">
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">2023</h5>
+                            <p class="card-text">
+                                As of today, I will be working as a freelance Azure DevOps engineer.
+                            </p>
+                            <a href="/Experiences/Murex/" class="btn btn-sm btn-primary"><span
+                                    id="readMoreBtn">Read more</span></a>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="col-md-4">
-                        <div class="card h-100">
-                            <img src="https://new.afsin.org/wp-content/uploads/2009/07/Logo-Thales-Couleur.jpg"
-                                class="card-img-top" alt="Thales logo" />
-                            <div class="card-body">
-                                <h5 class="card-title">
-                                    <span id="thalesTitle">Thales</span>
-                                </h5>
-                                <p class="card-text">
-                                    <span id="thalesDescription">As a software
-                                        engineer at Thales, I
-                                        contributed to the SCORPION project,
-                                        modernizing the French army's
-                                        vehicle fleet. I worked on software
-                                        development, automation testing, and
-                                        seamless integration, connecting
-                                        development and operations
-                                        teams.</span>
-                                </p>
-                                <a href="/Experiences/Thales/" class="btn btn-primary"><span
-                                        id="readMoreBtn">Read
-                                        more</span></a>
-                            </div>
+            <div class="card my-2">
+                <div class="card-header fw-bold">DevOPS engineer at Murex</div>
+                <div class="row justify-content-center align-items-center g-0">
+                    <div class="col-md-3">
+                        <img src="/static/images/murex.png" class="card-img-top" alt="Murex logo" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">2021 - 2023</h5>
+                            <p class="card-text">
+                                <span id="murexDescription">As a DevOps
+                                    engineer at Murex, I
+                                    developed a Python microservice
+                                    application, ensuring continuous
+                                    integration, delivery, and robust
+                                    monitoring/alerting systems.</span>
+                            </p>
+                            <a href="/Experiences/Murex/" class="btn btn-sm btn-primary"><span
+                                    id="readMoreBtn">Read
+                                    more</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card ">
+                <div class="card-header fw-bold">C++ Developer at Thales</div>
+                <div class="row justify-content-center align-items-center g-0">
+                    <div class="col-md-3">
+                        <img src="https://new.afsin.org/wp-content/uploads/2009/07/Logo-Thales-Couleur.jpg"
+                            class="card-img-top" alt="Murex logo" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">2021 - 2023</h5>
+                            <p class="card-text">
+                                <span id="thalesDescription0">As a software
+                                    engineer at Thales, I
+                                    contributed to the SCORPION project,
+                                    modernizing the French army's
+                                    vehicle fleet.</span>
+                            </p>
+                            <a href="/Experiences/Thales/" class="btn btn-sm btn-primary"><span
+                                    id="readMoreBtn">Read
+                                    more</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header fw-bold">Python Developer at Thales</div>
+                <div class="row justify-content-center align-items-center g-0">
+                    <div class="col-md-3">
+                        <img src="https://new.afsin.org/wp-content/uploads/2009/07/Logo-Thales-Couleur.jpg"
+                            class="card-img-top" alt="Murex logo" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Internship</h5>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                dolores!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header fw-bold">C Developer at Polytechnic University of
+                    Valencia
+                </div>
+                <div class="row justify-content-center align-items-center g-0">
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">Internship</h5>
+                            <p class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
+                                dolores!
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -388,7 +537,7 @@
     </div>
 
     <!-- Projects -->
-    <div class="container-xxl my-5 pt-3 pb-5 shadow">
+    <div class="container-xxl my-5 pt-3 pb-5 shadow" id="projects">
         <div class="row -5">
             <div class="col-md-12">
                 <p class="display-6 text-center">
@@ -433,13 +582,13 @@
 
     <!-- Footer -->
     <footer class="bg-dark-subtle">
-        <div class="container lh-1">
+        <div class="container lh-1 text-center">
             <div class="row">
                 <div class="col-md-4">
                     <h3>About me</h3>
                     <p class="lead">
-                        I'm a DevOps engineer with a passion for leveraging
-                        technology to solve problems and deliver value.
+                        Thank you for visiting my personal portfolio website. Connect with me over
+                        socials.
                     </p>
                 </div>
                 <div class="col-md-4">
@@ -471,6 +620,9 @@
                         href="https://www.instagram.com/paulbhs/" role="button"><i
                             class="fab fa-instagram"></i></a>
                 </div>
+                <div class="col-md-4">
+
+                </div>
             </div>
         </div>
         <div class="text-center bg-secondary">
@@ -482,6 +634,7 @@
     <script src="/js/navbar.js"></script>
     <script src="/js/switchLanguage.js"></script>
     <script src="/js/notify.js"></script>
+    <script src="/js/countdown.js"></script>
     <!-- Bootstrap Bundle with Popper -->
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

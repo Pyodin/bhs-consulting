@@ -1,4 +1,5 @@
 
+/* carousel */
 
 .carousel-item img{
     height: 60vh;
@@ -19,15 +20,12 @@
     font-weight: bold; 
 }
 
-.carousel-caption h2 {
-    font-size: 3rem; 
-}
-
 .carousel-caption .lead {
     font-size: 2rem; 
     font-weight: normal; 
 }
 
+/* main part */
 #mainPhoto {
     max-width: 325px;
     box-shadow: 4px 8px 16px 0 rgba(92, 70, 12, 0.712);
@@ -36,3 +34,84 @@
 #mainPhoto:hover {
     box-shadow: 0 8px 16px 0 rgba(92, 70, 12, 0.712);
 }
+
+/* services */
+.col-md-6 li {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* common */
+h4, h3 {
+    letter-spacing: -1.5px;
+}
+
+/* timeline */
+
+.timeline {
+    position: relative;
+}
+
+.timeline:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    width: 8px;
+    background: linear-gradient(rgb(7, 48, 87), rgb(7, 142, 233) );
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.timeline .card {
+    position: relative;
+    width: calc( 50% - 40px );
+}
+
+.timeline .card:before {
+    /* content is the emoji suitcase */
+    content: "\1F4BC";
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: calc( 100% + 26px );
+    background: #ffffff;
+    width: 40px;
+    height: 40px;
+    border: 6px #ffc400 solid;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline .card:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #d6d4d4;
+    border-bottom: 20px solid transparent;
+}
+
+.timeline .card:nth-child(even) {
+    margin-left: calc( 50% + 48px );
+}
+
+.timeline .card:nth-child(even):before {
+    left: auto;
+    right: calc( 100% + 26px );
+}
+
+.timeline .card:nth-child(even):after {
+    left: auto;
+    right: 100%;
+    border-left: none;
+    border-right: 20px solid #d6d4d4;
+}
+

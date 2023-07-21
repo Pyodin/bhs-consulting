@@ -1,6 +1,6 @@
 .navbar-brand {
     padding-right: 100px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: 'Ysabeau SC', sans-serif;
     font-weight: bold;
     letter-spacing: -0.7px;
@@ -26,6 +26,12 @@ h2, h3, h4,
     font-family: 'Ysabeau SC', sans-serif;
 }
 
+.btn {
+    font-size: 1.2rem;
+    font-family: 'Ysabeau SC', sans-serif;
+    letter-spacing: -0.6px;
+}
+
 .skill-logo {
     width: 40px;
     height: 40px;
@@ -35,22 +41,21 @@ h2, h3, h4,
 
 .card:hover ,
 .list-group-item:hover {
-    box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
+    /* box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2); */
+    /* position: relative; */
+    top: -5px;
+    transition: all 0.9s ease;
 }
 
 body {
-    /* background-color: aliceblue; */
-    /* background-color: #5d819633; */
-    /* background gradient  */
-    /* background: rgb(255,255,255); */
+    /* background: url("/tmp/Maundy/assets/img/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; */
     background: linear-gradient(90deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
 }
 
 footer .lead {
     line-height: 1.1;
 }
-
-/* .container:hover {
-    box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2);
-    background-color: aliceblue 
-} */
