@@ -56,6 +56,11 @@ body {
     background: linear-gradient(90deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
 }
 
+
+.container-xxl {
+    background-color: aliceblue;
+}
+
 footer .lead {
     line-height: 1.1;
 }
