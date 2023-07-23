@@ -15,15 +15,16 @@
     transform: translateY(-20%);
 }
 
-.carousel-caption h1 {
-    font-size: 4rem; 
-    font-weight: bold; 
+.carousel-caption .display-5 {
+    letter-spacing: -1px;
 }
 
-.carousel-caption .lead {
-    font-size: 2rem; 
-    font-weight: normal; 
+
+/* form button closer to input */
+form .btn-sm {
+    margin-left: -2.2rem;
 }
+
 
 /* main part */
 #mainPhoto {
@@ -67,6 +68,8 @@ h4, h3 {
 .timeline .card {
     position: relative;
     width: calc( 50% - 40px );
+    /* background: linear-gradient(rgb(255, 255, 255), rgb(248, 237, 225) ); */
+    /* border-radius: 50px; */
 }
 
 .timeline .card:before {
@@ -74,7 +77,6 @@ h4, h3 {
     content: "\1F4BC";
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
-    
     display: block;
     position: absolute;
     top: 20px;

@@ -64,10 +64,10 @@ function firstAppear(lang) {
     for (let key in translations) {     
       const element = document.getElementById(key);
       if (element) {
-        element.classList.add('fade-from-right');
+        element.classList.add('fade-in');
         element.innerText = translations[key];
         element.addEventListener('animationend', () => {
-          element.classList.remove('fade-from-right');
+          element.classList.remove('fade-in');
         });
       }
     }

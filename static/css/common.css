@@ -41,10 +41,10 @@ h2, h3, h4,
 
 .card:hover ,
 .list-group-item:hover {
-    /* box-shadow: 0 8px 16px 0 rgba(139, 3, 3, 0.2); */
-    /* position: relative; */
-    top: -5px;
-    transition: all 0.9s ease;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 16px 0 rgba(204, 169, 11, 0.2);
+    transition: all 0.35s ease;
+    z-index: 2;
 }
 
 body {
@@ -56,11 +56,72 @@ body {
     background: linear-gradient(90deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
 }
 
-
 .container-xxl {
     background-color: aliceblue;
 }
 
 footer .lead {
     line-height: 1.1;
+}
+
+
+/* For the switch language */
+
+.fade-from-right {
+    animation: fadeFromRight 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-to-left {
+    animation: fadeToLeft 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeToLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Fade in animation */
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fade out animation */
+.fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

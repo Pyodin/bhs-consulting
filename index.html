@@ -9,11 +9,8 @@
         rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
         crossorigin="anonymous" />
-    <!-- <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" /> -->
     <link rel="stylesheet" href="/static/css/common.css" />
     <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="stylesheet" href="/static/css/animation.css" />
     <link rel="stylesheet" href="/static/css/scroll_navbar.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
@@ -97,13 +94,16 @@
                 aria-label="Slide 2"></button>
         </div>
         <div class="carousel-inner">
+            <!-- header 1 -->
             <div class="carousel-item active" data-bs-interval="7000">
                 <img src="/static/images/slider2.jpg" class="d-block w-100" alt="..." />
-                <div class="carousel-caption d-none d-md-block text-start py-5">
-                    <h1>Paul BOURHIS</h1>
-                    <p class="lead" id="carouselCaption1Title">Freelance DevOps Engineer</p>
+                <div class="carousel-caption d-none d-md-block text-start py-4">
+                    <div class="display-3 fw-bold">Paul BOURHIS</div>
+                    <p class="display-5" id="carouselCaption1Title">Freelance DevOps Engineer</p>
                 </div>
             </div>
+
+            <!-- header 2 -->
             <div class="carousel-item" data-bs-interval="7000">
                 <img src="/static/images/slider-tl2.jpg" class="d-block w-100" alt="..." />
                 <div class="carousel-caption">
@@ -133,8 +133,8 @@
                     </div>
 
                     <div class="d-flex justify-content-center align-items-end">
-                        <h5 class="p-2">Want to get notified ?</h5>
-                        <form class="rounded-4 p-2 mx-2" id="get-notified-form"
+                        <h5 id="carouselCaptionAskNotify" class="p-2">Want to get notified ?</h5>
+                        <form class="p-2 mx-2" id="get-notified-form"
                             action="https://bhstriggermail.azurewebsites.net/api/httptriggernewmail"
                             method="POST">
                             <div class="d-flex justify-content-center align-items-center">
@@ -143,9 +143,18 @@
                                 <button type="submit" class="btn btn-sm btn-primary rounded-5">
                                     <i class="bi bi-send"></i>
                                 </button>
-                                <div id="event-message" class="visually-hidden mx-4">
-                                    <h5>Loading...</h5>
+                                <!-- <div id="event-message" class="visually-hidden mx-4"> -->
+                                <div id="event-message" class="visually-hidden mx-3">
+                                    <div id="spinner" class="spinner-border text-primary "
+                                        role="status">
+                                        <span class="sr-only"></span>
+                                    </div>
+                                    <i id="checked"
+                                        class="bi bi-check-lg text-success visually-hidden"></i>
+                                    <i id="cross"
+                                        class="bi bi-x-lg text-danger visually-hidden"></i>
                                 </div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -175,37 +184,42 @@
                 <a href="#presentation" class="btn btn-lg btn-warning rounded-circle m-1">
                     <i class="bi bi-person"></i>
                 </a>
-                <h4>Presentation</h4>
+                <h4 id="presentationLink">Presentation</h4>
             </div>
+
             <div class="d-flex align-items-center">
                 <a href="#services" class="btn btn-lg btn-warning rounded-circle m-1">
                     <i class="bi bi-tools"></i>
                 </a>
-                <h4>Services</h4>
+                <h4 id="servicesLink">Services</h4>
             </div>
+
             <div class="d-flex align-items-center">
                 <a href="#skills" class="btn btn-lg btn-warning rounded-circle m-1">
                     <i class="bi bi-award"></i>
                 </a>
-                <h4>Skills</h4>
+                <h4 id="skillsLink">Skills</h4>
             </div>
+
             <div class="d-flex align-items-center">
                 <a href="#experiences" class="btn btn-lg btn-warning rounded-circle m-1">
                     <i class="bi bi-person-lines-fill"></i>
                 </a>
-                <h4>Experiences</h4>
+                <h4 id="goToExperiencesLink">Experiences</h4>
             </div>
+
             <div class="d-flex align-items-center">
                 <a href="#projects" class="btn btn-lg btn-warning rounded-circle m-1">
                     <i class="bi bi-diagram-3-fill"></i>
                 </a>
-                <h4>Projects</h4>
+                <h4 id="goToprojectsLink">Projects</h4>
             </div>
+
         </div>
     </div>
 
     <!-- Main container -->
-    <div class="container-xxl my-5 p-5 shadow rounded-5" id="presentation">
+    <div class="container-xxl my-5 p-5 shadow rounded-5 fade-in" id="presentation">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-4 text-center">
                 <img id="mainPhoto" src="/static/images/photo.jpeg" alt="Profile Picture"
@@ -233,13 +247,15 @@
 
                 <div class="row justify-content-end align-items-center g-2 mt-4">
                     <div class="col">
-                        <a href="/About/" class="btn btn-primary ">More about me
+                        <a href="/About/" class="btn btn-primary ">
+                            <span id="moreMeButton">More about me</span>
                             <i class="bi bi-arrow-right-circle-fill mx-2"></i>
                         </a>
                     </div>
                     <div class="col">
                         <a href="/static/doc/Resume_Paul_Bourhis.pdf" class="btn btn-primary"
-                            target="_blank">Download my CV
+                            target="_blank">
+                            <span id="resumeButton">Download my CV</span>
                             <i class="bi bi-arrow-down-circle-fill mx-2"></i>
                         </a>
                     </div>
@@ -251,52 +267,53 @@
     </div>
 
     <!-- Services -->
-    <div class="container-xxl my-5 shadow rounded-5" id="services">
+    <div class="container-xxl my-5 shadow rounded-5 fade-in" id="services">
         <p class="display-6 text-center ">
             <img src="https://zeevector.com/wp-content/uploads/Handshake-Vector-Art@ZEEVECTOR-387x258.png"
                 alt="Tool logo" class="skill-logo" /><span id="serviceHeader">Services</span>
         </p>
         <hr />
 
-        <div class="row justify-content-center align-items-start gy-5 p-4">
+        <div class="row justify-content-center align-items-start p-4">
             <div class="col-md-6">
-                <h3>Cloud Solutions and Architecture:</h3>
+                <h3 id="cloud_solutions_architecture">Cloud Solutions and Architecture:</h3>
                 <ul>
-                    <li>Design and implement cloud-based architectures</li>
-                    <li>Migrating on-premises applications to the cloud</li>
-                    <li>Optimize cost efficiency (FinOps)</li>
-                </ul>
-            </div>
-
-            <div class="col-md-6">
-                <h3>Source Code Management:</h3>
-                <ul>
-                    <li>Establish effective workflows for version control</li>
-                    <li>Facilitate pull requests and code reviews</li>
-                </ul>
-            </div>
-
-            <div class="col-md-6">
-                <h3>Development of CI/CD Strategies:</h3>
-                <ul>
-                    <li>Design and implement continuous integration pipelines</li>
-                    <li>deployment strategies (blue/green, dark launching, canary)</li>
-                    <li>Implement code health pipelines on:
-                        <ul>
-                            <li>code quality</li>
-                            <li>security</li>
-                        </ul>
+                    <li id="design_cloud_arch">Design and implement cloud-based architectures</li>
+                    <li id="migrate_on_premises">Migrating on-premises applications to the cloud
                     </li>
+                    <li id="optimize_cost_eff">Optimize cost efficiency (FinOps)</li>
                 </ul>
             </div>
 
             <div class="col-md-6">
-                <h3>Training and Knowledge Sharing:</h3>
+                <h3 id="source_code_management">Source Code Management:</h3>
                 <ul>
-                    <li>Conducting workshops on DevOps best practices</li>
-                    <li>Promote Agile methodologies</li>
-                    <li>Foster development best practices</li>
-                    <li>Provide guidance on effective test strategies</li>
+                    <li id="establish_workflows">Establish effective workflows for version control
+                    </li>
+                    <li id="facilitate_pull_requests">Facilitate pull requests and code reviews</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h3 id="development_cicd_strategies">Development of CI/CD Strategies:</h3>
+                <ul>
+                    <li id="design_continuous_integration">Design and implement continuous
+                        integration pipelines</li>
+                    <li id="deployment_strategies">Deployment strategies (blue/green, dark
+                        launching, canary)</li>
+                    <li id="implement_code_health_pipelines">Implement code health pipelines </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h3 id="training_knowledge_sharing">Training and Knowledge Sharing:</h3>
+                <ul>
+                    <li id="conduct_workshops_devops">Conducting workshops on DevOps best practices
+                    </li>
+                    <li id="promote_agile">Promote Agile methodologies</li>
+                    <li id="foster_development">Foster development best practices</li>
+                    <li id="provide_guidance_test_strategies">Provide guidance on effective test
+                        strategies</li>
                 </ul>
             </div>
 
@@ -304,7 +321,7 @@
     </div>
 
     <!-- Skills & Certifications -->
-    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5" id="skills">
+    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5 fade-in">
         <div class="row justify-content-center align-items-start text-center gy-5">
             <!-- Mains skills -->
             <div class="col-xl-8">
@@ -338,7 +355,7 @@
                             <li class="list-group-item list-group-item-warning text-black">
                                 <img src="https://logos-download.com/wp-content/uploads/2016/10/Ansible_logo.png"
                                     alt="Ansible" class="skill-logo" />
-                                <span id="monitoringSkill">Ansible</span>
+                                <span id="ansibleSkill">Ansible</span>
                             </li>
                         </ul>
                     </div>
@@ -380,7 +397,7 @@
                             </li>
                             <li class="list-group-item list-group-item-warning text-black">
                                 <img src="https://divamaggie.com/svg/uiux-design.svg" alt="Git"
-                                    class="skill-logo" /><span id="gitSkill">Ui/Ux design</span>
+                                    class="skill-logo" /><span id="uiSkill">Ui/Ux design</span>
                             </li>
                         </ul>
                     </div>
@@ -389,74 +406,71 @@
 
             <!-- Certifications -->
             <div class="col-xl-4">
-                <div class="row justify-content-center align-items-start">
-                    <p class="display-6">
-                        <img src="static/images/gbadge.png" alt="Badge logo"
-                            class="skill-logo" /><span
-                            id="certificationsHeader">Certifications</span>
-                    </p>
-                    <hr />
+                <p class="display-6">
+                    <img src="static/images/gbadge.png" alt="Badge logo" class="skill-logo" /><span
+                        id="certificationsHeader">Certifications</span>
+                </p>
+                <hr />
 
-                    <div class="col">
-                        <div class="list-group">
-                            <li class="list-group-item list-group-item-primary text-black mb-2">
-                                <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                                    alt="Azure" class="skill-logo" /><span id="az400Cert">AZ-400:
-                                    DevOps Engineer
-                                    Expert</span>
-                            </li>
-                            <li class="list-group-item list-group-item-primary text-black mb-2">
-                                <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                                    alt="Azure" class="skill-logo" /><span id="az104Cert">AZ-104:
-                                    Microsoft Azure
-                                    Administrator</span>
-                            </li>
-                            <li class="list-group-item list-group-item-primary text-black mb-2">
-                                <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                                    alt="Azure" class="skill-logo" /><span id="az900Cert">AZ-900:
-                                    Microsoft Azure
-                                    Fundamentals</span>
-                            </li>
-                        </div>
-                    </div>
+                <div class="list-group text-start">
+                    <li class="list-group-item list-group-item-primary text-black mb-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                            alt="Azure" class="skill-logo" />
+                        <span id="az400Cert">AZ-400: DevOps Engineer Expert</span>
+                    </li>
+                    <li class="list-group-item list-group-item-primary text-black mb-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                            alt="Azure" class="skill-logo" />
+                        <span id="az104Cert">AZ-104: Microsoft Azure Administrator</span>
+                    </li>
+                    <li class="list-group-item list-group-item-primary text-black mb-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                            alt="Azure" class="skill-logo" />
+                        <span id="az900Cert">AZ-900: Microsoft Azure Fundamentals</span>
+                    </li>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Experiences -->
-    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5" id="experiences">
+    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5 fade-in" id="experiences">
         <p class="display-6 text-center">
             <img src="static/images/experience.png" alt="Exp logo" class="skill-logo" /><span
                 id="experiencesHeader">Experiences</span>
             <hr />
 
         <div class="timeline p-4">
-            <div class="card my-2">
-                <div class="card-header fw-bold">Freelance Azure Devops</div>
-                <div class="row justify-content-center align-items-center g-0">
+            <div class="card my-3">
+                <div class="card-header fw-bold" id="freelanceAzureDevopsHeader">Freelance Azure
+                    DevOps</div>
+                <div class="row justify-content-center align-items-center">
                     <div class="col-md-9">
                         <div class="card-body">
-                            <h5 class="card-title">2023</h5>
-                            <p class="card-text">
+                            <h5 class="card-title text-danger" id="freelanceAzureDevopsYear">2023
+                            </h5>
+                            <p class="card-text" id="freelanceAzureDevopsDescription">
                                 As of today, I will be working as a freelance Azure DevOps engineer.
                             </p>
-                            <a href="/Experiences/Murex/" class="btn btn-sm btn-primary"><span
-                                    id="readMoreBtn">Read more</span></a>
                         </div>
+                    </div>
+                    <div class="col-3">
+                        <a href="#experiences" class="btn btn-sm btn-primary"><span
+                                id="readMoreBtn">Read more</span></a>
                     </div>
                 </div>
             </div>
 
-            <div class="card my-2">
-                <div class="card-header fw-bold">DevOPS engineer at Murex</div>
+            <div class="card my-3">
+                <div class="card-header fw-bold" id="murexDevopsHeader">DevOPS engineer at Murex
+                </div>
                 <div class="row justify-content-center align-items-center g-0">
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         <img src="/static/images/murex.png" class="card-img-top" alt="Murex logo" />
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-10">
                         <div class="card-body">
-                            <h5 class="card-title">2021 - 2023</h5>
+                            <h5 class="card-title text-danger" id="murexYear">2021 - 2023</h5>
                             <p class="card-text">
                                 <span id="murexDescription">As a DevOps
                                     engineer at Murex, I
@@ -465,16 +479,43 @@
                                     integration, delivery, and robust
                                     monitoring/alerting systems.</span>
                             </p>
-                            <a href="/Experiences/Murex/" class="btn btn-sm btn-primary"><span
-                                    id="readMoreBtn">Read
-                                    more</span></a>
+                            <a href="/Experiences/Murex/" class="btn btn-sm btn-primary">
+                                <span id="readMoreBtn1">Read more</span>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card ">
-                <div class="card-header fw-bold">C++ Developer at Thales</div>
+            <div class="card my-3">
+                <div class="card-header fw-bold" id="thalesCplusplusHeader">C++ Developer at Thales
+                </div>
+                <div class="row justify-content-center align-items-center g-0">
+                    <div class="col-md-2">
+                        <img src="https://new.afsin.org/wp-content/uploads/2009/07/Logo-Thales-Couleur.jpg"
+                            class="card-img-top" alt="Murex logo" />
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger" id="thalesCplusplusYear">2019 - 2021
+                            </h5>
+                            <p class="card-text" id="thalesCplusplusDescription">
+                                As a software
+                                engineer at Thales, I
+                                contributed to the SCORPION project,
+                                modernizing the French army's
+                                vehicle fleet.
+                            </p>
+                            <a href="/Experiences/Thales/" class="btn btn-sm btn-primary">
+                                <span id="readMoreBtn2">Read more</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-3">
+                <div class="card-header fw-bold" id="thalesPythonHeader">Python Developer at Thales
+                </div>
                 <div class="row justify-content-center align-items-center g-0">
                     <div class="col-md-3">
                         <img src="https://new.afsin.org/wp-content/uploads/2009/07/Logo-Thales-Couleur.jpg"
@@ -482,54 +523,32 @@
                     </div>
                     <div class="col-md-9">
                         <div class="card-body">
-                            <h5 class="card-title">2021 - 2023</h5>
-                            <p class="card-text">
-                                <span id="thalesDescription0">As a software
-                                    engineer at Thales, I
-                                    contributed to the SCORPION project,
-                                    modernizing the French army's
-                                    vehicle fleet.</span>
-                            </p>
-                            <a href="/Experiences/Thales/" class="btn btn-sm btn-primary"><span
-                                    id="readMoreBtn">Read
-                                    more</span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-header fw-bold">Python Developer at Thales</div>
-                <div class="row justify-content-center align-items-center g-0">
-                    <div class="col-md-3">
-                        <img src="https://new.afsin.org/wp-content/uploads/2009/07/Logo-Thales-Couleur.jpg"
-                            class="card-img-top" alt="Murex logo" />
-                    </div>
-                    <div class="col-md-9">
-                        <div class="card-body">
-                            <h5 class="card-title">Internship</h5>
-                            <p class="card-text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-                                dolores!
+                            <h5 class="card-title text-danger" id="thalesPythonYear">6 month
+                                internship</h5>
+                            <p class="card-text" id="thalesPythonDescription">
+                                During my internship on the CONTACT project, I developed a graphical
+                                user interface (GUI) to remotely control custom platforms simulating
+                                military radios.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-header fw-bold">C Developer at Polytechnic University of
+            <div class="card my-3">
+                <div class="card-header fw-bold" id="polytechnicCHeader">C Developer at Polytechnic
+                    University of
                     Valencia
                 </div>
                 <div class="row justify-content-center align-items-center g-0">
-                    <div class="col-md-9">
-                        <div class="card-body">
-                            <h5 class="card-title">Internship</h5>
-                            <p class="card-text">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor,
-                                dolores!
-                            </p>
-                        </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-danger" id="polytechnicCYear">4 month internship
+                        </h5>
+                        <p class="card-text" id="polytechnicCDescription">
+                            I provided technical support for a graduation thesis project focused
+                            on developing a robotic arm. I gained valuable experience in
+                            robotics, control systems, and research environments.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -537,7 +556,7 @@
     </div>
 
     <!-- Projects -->
-    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5" id="projects">
+    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5 fade-in" id="projects">
         <div class="row -5">
             <div class="col-md-12">
                 <p class="display-6 text-center">
@@ -565,7 +584,7 @@
                                         showcasing my expertise in DevOps
                                         and deployment.</span>
                                 </p>
-                                <a href="#" class="btn btn-primary"><span id="readMoreBtn">Read
+                                <a href="#" class="btn btn-primary"><span id="readMoreBtn3">Read
                                         more</span></a>
                                 <a class="btn text-white btn-floating m-1"
                                     style="background-color: #333333"
@@ -583,51 +602,52 @@
     <!-- Footer -->
     <footer class="bg-dark-subtle">
         <div class="container lh-1 text-center">
-            <div class="row">
-                <div class="col-md-4">
-                    <h3>About me</h3>
-                    <p class="lead">
-                        Thank you for visiting my personal portfolio website. Connect with me over
-                        socials.
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Contact me</h3>
-                    <p><i class="fas fa-map-marker-alt me-2"></i>Paris</p>
-                    <p>
-                        <i class="fas fa-envelope me-2"></i>
-                        paul.bourhis@bhsconsulting.fr
-                    </p>
-                    <p>
-                        <i class="fas fa-phone-alt me-2"></i>+33 6 99 29 45
-                        22
-                    </p>
-                </div>
-                <div class="col-md-4">
+            <div class="row justify-content-center align-items-center mb-2">
+                <div class="col-md-6">
                     <h3>Follow me</h3>
+                    <p id="aboutmeFooter" class="lead text-start mt-3">
+                        Thank you for visiting my portfolio website. Connect with me over socials.
+                    </p>
                     <!-- LinkedIn -->
-                    <a class="btn text-white btn-floating m-1" style="background-color: #0082ca"
-                        href="https://www.linkedin.com/in/paul-bourhis-375557153/" role="button"><i
-                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-floating m-1 bg-light rounded-5"
+                        href="https://www.linkedin.com/in/paul-bourhis-375557153/" role="button"
+                        aria-label="LinkedIn" target="_blank">
+                        <i class="bi bi-linkedin"></i>
+                    </a>
 
                     <!-- GitHub -->
-                    <a class="btn text-white btn-floating m-1" style="background-color: #333333"
-                        href="https://github.com/Pyodin" role="button"><i
-                            class="fab fa-github"></i></a>
+                    <a class="btn btn-floating m-1 bg-light rounded-5"
+                        href="https://github.com/Pyodin" role="button" aria-label="GitHub"
+                        target="_blank">
+                        <i class="bi bi-github"></i>
+                    </a>
 
                     <!-- Instagram -->
-                    <a class="btn text-white btn-floating m-1" style="background-color: #af36af"
-                        href="https://www.instagram.com/paulbhs/" role="button"><i
-                            class="fab fa-instagram"></i></a>
+                    <a class="btn btn-floating m-1 bg-light rounded-5"
+                        href="https://www.instagram.com/paulbhs/" role="button"
+                        aria-label="Instagram" target="_blank">
+                        <i class="bi bi-instagram"></i>
+                    </a>
                 </div>
-                <div class="col-md-4">
 
+                <div class="col-md-6">
+                    <h3>Contact me</h3>
+                    <div class="container">
+                        <p class="lead"><i class="bi bi-geo-alt-fill me-2"></i>Paris</p>
+                        <p class="lead">
+                            <i class="bi bi-envelope-fill me-2"></i>
+                            paul.bourhis@bhsconsulting.fr
+                        </p>
+                        <p class="lead">
+                            <i class="bi bi-telephone-fill me-2"></i>+33 6 99 29 45 22
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="text-center bg-secondary">
-            © Built on my own. Find the source code
-            <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a>
+            © Built on my own.
+            <!-- Find the source code <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a> -->
         </div>
     </footer>
 
