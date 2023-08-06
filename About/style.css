@@ -1,13 +1,66 @@
-.accordion-item:hover {
-    box-shadow: 0 4px 8px 0 rgba(216, 150, 8, 0.2);
-}
-
 .accordion-item{
     background-color: #f1f1f1;
     border-radius: 5px;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 4px 8px 0 rgba(216, 150, 8, 0.2);
 }
 
 .accordion-button:hover {
     background-color: #f1f1f1;
     color: #d89608;
 }
+
+
+/* timeline */
+.timeline {
+    position: relative;
+}
+
+    .timeline:after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        bottom: 20px;
+        left: 5%;
+        width: 8px;
+        background: linear-gradient(rgb(7, 48, 87), rgb(7, 142, 233) );
+        border-radius: 3px;
+        z-index: 1;
+    }
+
+    .timeline .card {
+        position: relative;
+        border-radius: 30px;
+        margin-left: calc( 5% + 48px );
+    }
+
+        .timeline .card:before {
+            /* content is the emoji suitcase */
+            content: "";
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            display: block;
+            position: absolute;
+            top: 20%;
+            right: calc( 102% + 26px );
+            background: #ffffff;
+            width: 40px;
+            height: 40px;
+            border: 6px #ffc400 solid;
+            border-radius: 50%;
+            z-index: 2;
+        }
+
+        .timeline .card:after {
+            content: "";
+            position: absolute;
+            top: 20%;
+            right: 100%;
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-right: 25px solid #d6d4d4;
+            border-bottom: 20px solid transparent;
+        }

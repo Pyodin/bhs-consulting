@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="/static/css/common.css" />
     <link rel="stylesheet" href="/static/css/style.css" />
     <link rel="stylesheet" href="/static/css/scroll_navbar.css" />
+    
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
@@ -106,7 +108,7 @@
             <!-- header 2 -->
             <div class="carousel-item" data-bs-interval="7000">
                 <img src="/static/images/slider-tl2.jpg" class="d-block w-100" alt="..." />
-                <div class="carousel-caption">
+                <div class="carousel-caption g-5 ">
                     <div class="display-4" id="carouselCaption2Availability">Available from october
                         2023</div>
 
@@ -133,8 +135,8 @@
                     </div>
 
                     <div class="d-flex justify-content-center align-items-end">
-                        <h5 id="carouselCaptionAskNotify" class="p-2">Want to get notified ?</h5>
-                        <form class="p-2 mx-2" id="get-notified-form"
+                        <h5 id="carouselCaptionAskNotify" class="">Want to get notified ?</h5>
+                        <form class="px-2" id="get-notified-form"
                             action="https://bhstriggermail.azurewebsites.net/api/httptriggernewmail"
                             method="POST">
                             <div class="d-flex justify-content-center align-items-center">
@@ -173,7 +175,7 @@
     </div>
 
     <!-- Go to buttons -->
-    <div class="d-xxl-block d-none position-fixed m-3">
+    <div class="d-xxl-block d-none position-fixed m-3 " id="goToButtons">
         <div class="d-flex flex-column justify-content-center align-items-start">
             <div class="d-flex align-items-center ">
                 <a href="#" class="btn btn-lg btn-warning rounded-circle m-1">
@@ -214,7 +216,6 @@
                 </a>
                 <h4 id="goToprojectsLink">Projects</h4>
             </div>
-
         </div>
     </div>
 
@@ -321,7 +322,7 @@
     </div>
 
     <!-- Skills & Certifications -->
-    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5 fade-in">
+    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5 fade-in" id="skills">
         <div class="row justify-content-center align-items-start text-center gy-5">
             <!-- Mains skills -->
             <div class="col-xl-8">
@@ -655,6 +656,7 @@
     <script src="/js/switchLanguage.js"></script>
     <script src="/js/notify.js"></script>
     <script src="/js/countdown.js"></script>
+    <script src="/js/main.js"></script>
     <!-- Bootstrap Bundle with Popper -->
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"

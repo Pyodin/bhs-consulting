@@ -17,6 +17,10 @@
     /* font-weight: bold; */
 }
 
+h4, h3 {
+    letter-spacing: -1.5px;
+}
+
 li span, 
 ul b,
 h2, h3, h4, 
@@ -42,7 +46,7 @@ h2, h3, h4,
 .card:hover ,
 .list-group-item:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 8px 16px 0 rgba(204, 169, 11, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(59, 58, 51, 0.2);
     transition: all 0.35s ease;
     z-index: 2;
 }

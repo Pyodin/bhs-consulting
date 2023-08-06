@@ -2,8 +2,8 @@
 /* carousel */
 
 .carousel-item img{
-    height: 60vh;
-    min-height: 300px;
+    height: 55vh;
+    min-height: 500px;
     background: no-repeat center center scroll;
     background-size: cover;
     object-fit: cover;
@@ -29,7 +29,7 @@ form .btn-sm {
 /* main part */
 #mainPhoto {
     max-width: 325px;
-    box-shadow: 4px 8px 16px 0 rgba(92, 70, 12, 0.712);
+    box-shadow: 4px 8px 16px 0 rgba(70, 65, 53, 0.712);
 }
 
 #mainPhoto:hover {
@@ -42,13 +42,7 @@ form .btn-sm {
     letter-spacing: 1px;
 }
 
-/* common */
-h4, h3 {
-    letter-spacing: -1.5px;
-}
-
 /* timeline */
-
 .timeline {
     position: relative;
 }
@@ -68,8 +62,18 @@ h4, h3 {
 .timeline .card {
     position: relative;
     width: calc( 50% - 40px );
-    /* background: linear-gradient(rgb(255, 255, 255), rgb(248, 237, 225) ); */
-    /* border-radius: 50px; */
+    border-radius: 30px;
+    /* background: rgba(162, 169, 229, 0.09); */
+}
+
+.timeline .card-header {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: linear-gradient(90deg,  rgb(255, 236, 215), rgb(255, 255, 255));
+}
+
+.timeline .card .card-title {
+    font-weight: bold;
 }
 
 .timeline .card:before {
