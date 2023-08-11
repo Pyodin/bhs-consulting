@@ -1,9 +1,14 @@
 .navbar-brand {
     padding-right: 100px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Ysabeau SC', sans-serif;
     font-weight: bold;
-    letter-spacing: -0.7px;
+    letter-spacing: -0.8px;
+    color: rgb(236, 174, 1);
+}
+
+.navbar-brand:hover {
+    color: rgb(3, 75, 143)
 }
 
 .lead {
@@ -12,8 +17,6 @@
     /* letter-spacing: 0.6px;  */
     /* font-size: 1.2rem; */
     /* font-family: 'Lato', sans-serif; */
-
-    /* make bold  */
     /* font-weight: bold; */
 }
 
@@ -30,11 +33,7 @@ h2, h3, h4,
     font-family: 'Ysabeau SC', sans-serif;
 }
 
-.btn {
-    font-size: 1.2rem;
-    font-family: 'Ysabeau SC', sans-serif;
-    letter-spacing: -0.6px;
-}
+
 
 .skill-logo {
     width: 40px;
@@ -43,8 +42,7 @@ h2, h3, h4,
     object-fit: contain ;
 }
 
-.card:hover ,
-.list-group-item:hover {
+.card:hover {
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 8px 16px 0 rgba(59, 58, 51, 0.2);
     transition: all 0.35s ease;
@@ -57,6 +55,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed; */
+    /* background: aliceblue; */
     background: linear-gradient(90deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
 }
 

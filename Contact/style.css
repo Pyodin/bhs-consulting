@@ -1,21 +1,6 @@
-body:before {
-    z-index: -1;
-    position: absolute;
-    height: 50vh;
-    content: "";
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #8bbabb;
-}
 
-.content {
-    top: 10vh;
-    left: 25vh;
-    position: absolute;
-}
 
-.form-control {
+/* .form-control {
     border: none;
     border-bottom: 1px solid #ccc;
     padding-left: 0;
@@ -36,15 +21,70 @@ body:before {
     padding: 40px; 
     color: rgba(245, 231, 231, 0.5); 
     background: #3d518d;
+} */
+
+
+body{
+    background: url("/tmp/Maundy/assets/img/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-.contact-info ul li {
-    margin-bottom: 15px;
-    color: rgba(255, 255, 255, 0.5); 
-}
+/*--------------------------------------------------------------
+# Contact Us
+--------------------------------------------------------------*/
 
-.contact-info h3 {
-    color: #fff;
+.info {
+    border-top: 3px solid #24b7a4;
+    border-bottom: 3px solid #24b7a4;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.06);
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+  
+.info i {
     font-size: 20px;
-    margin-bottom: 30px; 
+    color: #fff;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+.info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+ .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
 }
+
+.info .email:hover i,
+.info .address:hover i,
+.info .phone:hover i {
+    background: #24b7a4;
+    color: #fff;
+} 
+  
+.az-form {
+    width: 100%;
+    border-top: 3px solid #24b7a4;
+    border-bottom: 3px solid #24b7a4;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+  

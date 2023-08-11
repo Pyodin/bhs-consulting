@@ -1,0 +1,339 @@
+.display-6 {
+    color: #172281;
+}
+
+/* NARBAR */
+.navbar {
+    transition: all 200ms linear;
+}
+
+.nav-colored {
+    background-color: #ffffff !important;
+    box-shadow: 0 8px 16px 0 rgba(59, 58, 51, 0.2);
+}
+
+.nav-transparent {
+    background-color: transparent !important;
+}
+
+.nav-item a {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0 5px;
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    color: #172281;
+}
+
+.nav-item li:hover>a {
+    color: #000000;
+}
+
+.navbar .btn {
+    font-size: 1.2rem;
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+
+/* HERO */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 800px;
+    background: url(/tmp/FlexStart/assets/img/hero-bg.png) top center no-repeat;
+    background-size: cover;
+    
+}
+
+.hero .display-3 {
+    color: #172281;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+}
+
+.hero i {
+    font-size: 1.8rem;
+    margin: 5px;
+}
+
+.hero a {
+    border-radius: 50%;
+    background: white;
+    margin: 10px;
+    background-color: #000000;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero a:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(160, 150, 255);
+} 
+
+.hero span {
+    color: #ffc400;
+}
+
+.hero img {
+    transform: scale(1);    
+    transition: all 1s ease-in-out;
+}
+
+/* MAIN */
+
+#welcomeHeader {
+    color: #172281;
+} 
+
+#presentation .btn {
+    background-color: #172281;
+    color: white;
+    border-radius: 30px;
+    font-family: 'Ysabeau SC', sans-serif;
+    font-size: 1.2rem;
+}
+
+#presentation .btn:hover {
+    background-color: #3d4bc9;
+    color: white;
+}
+
+#mainPhoto {
+    max-width: 325px;
+    margin: auto;
+}
+
+/* SERVICES */
+
+.serviceRow .card {
+    /* min-height: 450px; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #59595a0e;
+}
+
+.serviceRow .card-title {
+    /* color: #172281; */
+    font-family: "Nunito", sans-serif;
+}
+
+.serviceRow i {
+    font-size: 4rem;
+    min-width: 100px;
+    min-height: 100px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+#cloudSolution {
+    border-top: 3px solid #2db6fa;
+    border-bottom: 3px solid #2db6fa;
+}
+
+#cloudSolution i {
+    color: #2db6fa;
+    background: #dbf3fe;
+}
+
+#sourceCode {
+    border-top: 3px solid #f68c09;
+    border-bottom: 3px solid #f68c09;
+}
+
+#sourceCode i {
+    color: #f68c09;
+    background: #fde3c4;
+}
+
+#devStrategie {
+    border-top: 3px solid #08da4e;
+    border-bottom: 3px solid #08da4e;
+}
+
+#devStrategie i {
+    color: #08da4e;
+    background: #cffddf;
+}
+
+#sharing {
+    border-top: 3px solid #b50edf;
+    border-bottom: 3px solid #b50edf;
+}
+
+#sharing i {
+    color: #b50edf;
+    background: #f8e4fd;
+}
+
+#cloudSolution:hover i {
+    color: #2db6fa;
+    background:  white;
+}
+
+#cloudSolution:hover {
+    background: #2db6fa;
+    color: white;
+}
+
+#sourceCode:hover i {
+    color: #f68c09;
+    background: white;
+}
+
+#sourceCode:hover {
+    background: #f68c09;
+    color: white;
+}
+
+#devStrategie:hover i {
+    color: #08da4e;
+    background: white;
+}
+
+#devStrategie:hover {
+    background: #08da4e;
+    color: white;
+}
+
+#sharing:hover i {
+    color: #b50edf;
+    background: white;
+}
+
+#sharing:hover {
+    background: #b50edf;
+    color: white;
+}
+
+/* CERTIFICATIONS */
+
+.certRow img {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.certRow img:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.certRow .azbadge img {
+    border: #085cda 3px solid;
+    padding: 5px;
+}
+
+
+/* SKILLS */
+.skillRow .card {
+    border-radius: 10px;
+    /* background: linear-gradient( rgb(255, 252, 215), rgb(255, 255, 255)); */
+}  
+
+.skillRow .card-title {
+    font-family: "Nunito", sans-serif;
+}
+
+.skillRow .card-body p {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-weight: 350;
+    letter-spacing: -0.6px;
+}
+
+.skillRow .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    margin: auto;
+}
+
+.skillRow .list-group-item {
+    border: none;
+    /* background: white; */
+}
+
+
+/* EXPERIENCES TIMELINE */
+.timeline {
+    position: relative;
+}
+
+.timeline:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    width: 8px;
+    background: linear-gradient(rgb(7, 48, 87), rgb(7, 142, 233) );
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.timeline .card {
+    position: relative;
+    width: calc( 50% - 40px );
+    border-radius: 30px;
+    /* background: rgba(162, 169, 229, 0.09); */
+}
+
+.timeline .card-header {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: linear-gradient(90deg,  rgb(255, 236, 215), rgb(255, 255, 255));
+}
+
+.timeline .card .card-title {
+    font-weight: bold;
+}
+
+.timeline .card:before {
+    /* content is the emoji suitcase */
+    content: "\1F4BC";
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: calc( 100% + 26px );
+    background: #ffffff;
+    width: 40px;
+    height: 40px;
+    border: 6px #ffc400 solid;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline .card:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #d6d4d4;
+    border-bottom: 20px solid transparent;
+}
+
+.timeline .card:nth-child(even) {
+    margin-left: calc( 50% + 48px );
+}
+
+.timeline .card:nth-child(even):before {
+    left: auto;
+    right: calc( 100% + 26px );
+}
+
+.timeline .card:nth-child(even):after {
+    left: auto;
+    right: 100%;
+    border-left: none;
+    border-right: 20px solid #d6d4d4;
+}
+

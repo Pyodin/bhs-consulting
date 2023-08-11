@@ -25,3 +25,38 @@ function onResize() {
 
 // trigger onResize on each resize event
 window.addEventListener('resize', onResize);
+
+const myNav = document.getElementById('navbar');
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 100) {
+      myNav.classList.add("nav-colored");
+      myNav.classList.remove("nav-transparent");
+  } 
+  else {
+      myNav.classList.add("nav-transparent");
+      myNav.classList.remove("nav-colored");
+  }
+});
+
+
+// const heroImg = document.getElementById('heroImg');
+// // periodically zoom in and out 
+// setInterval(function() {
+//   heroImg.style.transform = "scale(1.05)";
+//   setTimeout(function() {
+//     heroImg.style.transform = "scale(1)";
+//   }, 1000);
+// }, 2000);
+
+const typed = document.getElementById('typed')
+let typed_strings = typed.getAttribute('data-typed-items')
+typed_strings = typed_strings.split(',')
+new Typed('#typed', {
+  strings: typed_strings,
+  loop: true,
+  typeSpeed: 100,
+  backSpeed: 50,
+  backDelay: 2000
+});
+
+

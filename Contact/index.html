@@ -11,13 +11,27 @@
         crossorigin="anonymous" />
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" />
-    <link rel="stylesheet" href="/static/css/style.css" />
-    <link rel="stylesheet" href="/static/css/visible_navbar.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/visible_navbar.css" />
     <link rel="stylesheet" href="/Contact/style.css" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/static/favicon/site.webmanifest">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
+        rel="stylesheet">
     <title>Paul Bourhis: Contact</title>
 </head>
 
@@ -65,105 +79,91 @@
                         <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
                     </li>
                 </ul>
-
-                <!-- english and franch flags as button -->
-                <div class="d-flex align-items-center">
-                    <a class="btn btn-outline-light btn-sm me-2" id="btnEnglish">English</a>
-                    <a class="btn btn-outline-light btn-sm" id="btnFrench">Français</a>
-                </div>
             </div>
         </div>
     </nav>
 
 
-
-    <div class="content m-5 p-5">
-        <div class="container shadow-lg">
-            <div class="row align-items-stretch">
-                <!-- Contact part -->
-                <div class="col-md-8 bg-secondary-subtle">
-                    <h3>Contact me!</h3>
-
-                    <form class="mb-5" method="post" id="contactForm" name="contactForm"
-                        action="https://bhstriggermail.azurewebsites.net/api/httptrigger">
-                        <!-- name and mail -->
-                        <div class="row">
-                            <div class="col-md-6 mb-5">
-                                <label for="" class="col-form-label">Name *</label>
-                                <input type="text" class="form-control" name="name" id="name"
-                                    placeholder="Your name">
-                            </div>
-                            <div class="col-md-6 mb-5">
-                                <label for="" class="col-form-label">Email *</label>
-                                <input type="text" class="form-control" name="email" id="email"
-                                    placeholder="Your email">
-                            </div>
-                        </div>
-
-                        <!-- phone and company -->
-                        <div class="row">
-                            <div class="col-md-6 mb-5">
-                                <label for="" class="col-form-label">Phone</label>
-                                <input type="text" class="form-control" name="phone" id="phone"
-                                    placeholder="Phone #">
-                            </div>
-                            <div class="col-md-6 mb-5">
-                                <label for="" class="col-form-label">Company</label>
-                                <input type="text" class="form-control" name="company" id="company"
-                                    placeholder="Company  name">
-                            </div>
-                        </div>
-
-                        <!-- message -->
-                        <div class="row">
-                            <div class="col-md-12 mb-5">
-                                <label for="message" class="col-form-label">Message *</label>
-                                <textarea class="form-control" name="message" id="message" cols="30"
-                                    rows="4" placeholder="Write your message"></textarea>
-                            </div>
-                        </div>
-
-                        <!-- Send button -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <input type="submit" value="Send Message"
-                                    class="btn btn-primary rounded-0 py-2 px-4">
-                                <span class="submitting"></span>
-                            </div>
-                        </div>
-                    </form>
-
-                    <div id="form-message-warning mt-4"></div>
-                    <div id="form-message-success">
-                        Your message was sent, thank you!
+    <div class="m-5 p-5">
+        <div class="display-4 m-5 ">Contact me!</div>
+        <div class="row align-items-stretch m-5 px-5">
+            <div class="col-lg-5 d-flex align-items-stretch">
+                <div class="info p-5">
+                    <div class="address">
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Location:</h4>
+                        <p>Paris</p>
                     </div>
 
-                </div>
+                    <div class="email">
+                        <i class="bi bi-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>paul.bourhis@bhsconsulting.fr</p>
+                    </div>
 
-                <!-- Info part -->
-                <div class="col-md-4 bg-dark-subtle">
-                    <div class="contact-info h-100">
-                        <h3>Contact Information</h3>
-                        <p class="mb-5">I'm a DevOps engineer with a passion for leveraging
-                            technology to solve problems and deliver value.</p>
-                        <ul class="list-unstyled">
-                            <li class="d-flex">
-                                <span class="fas fa-map-marker-alt me-2"></span>
-                                <span class="text">Paris</span>
-                            </li>
-                            <li class="d-flex">
-                                <span class="fas fa-envelope me-2"></span>
-                                <span class="text">paul.bourhis@bhsconsulting.fr</span>
-                            </li>
-                            <li class="d-flex">
-                                <span class="fas fa-phone-alt me-2"></span>
-                                <span class="text">+33 6 99 29 45 22</span>
-                            </li>
-                        </ul>
+                    <div class="phone">
+                        <i class="bi bi-phone"></i>
+                        <h4>Call:</h4>
+                        <p>+33 99 29 45 22</p>
                     </div>
                 </div>
             </div>
+
+
+            <!-- Contact part -->
+            <div class="col-lg-7 ">
+                <form class="mb-5 az-form" method="post" id="contactForm" name="contactForm"
+                    action="https://bhstriggermail.azurewebsites.net/api/httptrigger">
+                    <!-- name and mail -->
+                    <div class="row">
+                        <div class="col-md-6 mb-5">
+                            <label for="" class="col-form-label">Name *</label>
+                            <input type="text" class="form-control" name="name" id="name"
+                                placeholder="Your name">
+                        </div>
+                        <div class="col-md-6 mb-5">
+                            <label for="" class="col-form-label">Email *</label>
+                            <input type="text" class="form-control" name="email" id="email"
+                                placeholder="Your email">
+                        </div>
+                    </div>
+
+                    <!-- phone and company -->
+                    <div class="row">
+                        <div class="col-md-6 mb-5">
+                            <label for="" class="col-form-label">Phone</label>
+                            <input type="text" class="form-control" name="phone" id="phone"
+                                placeholder="Phone #">
+                        </div>
+                        <div class="col-md-6 mb-5">
+                            <label for="" class="col-form-label">Company</label>
+                            <input type="text" class="form-control" name="company" id="company"
+                                placeholder="Company  name">
+                        </div>
+                    </div>
+
+                    <!-- message -->
+                    <div class="row">
+                        <div class="col-md-12 mb-5">
+                            <label for="message" class="col-form-label">Message *</label>
+                            <textarea class="form-control" name="message" id="message" cols="30"
+                                rows="4" placeholder="Write your message"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Send button -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="submit" value="Send Message"
+                                class="btn btn-primary rounded-0 py-2 px-4">
+                            <span class="submitting"></span>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
         </div>
+    </div>
     </div>
 
     <!-- Footer -->
@@ -174,8 +174,8 @@
         </div>
     </footer>
 
-    <script src="/js/navbar.js"></script>
-    <script src="/js/switchLanguage.js"></script>
+    <script src="/assets/js/navbar.js"></script>
+    <script src="/assets/js/switchLanguage.js"></script>
     <!-- Bootstrap Bundle with Popper -->
     <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
