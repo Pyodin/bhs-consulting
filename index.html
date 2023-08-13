@@ -28,6 +28,8 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
         rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -38,7 +40,7 @@
 <body>
 
     <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg  fixed-top " id="navbar">
+    <nav class="navbar navbar-expand-lg fixed-top " id="navbar">
         <div class="container">
 
             <a class="navbar-brand" href="/" id="navbarBrand">
@@ -96,12 +98,15 @@
     </nav>
 
     <!--  Hero Section -->
-    <div class="container-fluid  p-5 hero">
+    <div class="container-fluid p-5 hero">
         <div class="row justify-content-center align-items-center px-5 m-5">
-            <div class="col-lg-6 ">
-                <div class="display-3">Paul BOURHIS</div>
+            <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="2000">
+                <div class="display-3 my-4">Paul BOURHIS</div>
                 <div class="display-4" id="carouselCaption1Title">Freelance DevOps Engineer</div>
-
+                <div class="display-6">I can help you on
+                    <span id="typed"
+                        data-typed-items="Cloud, SRE, Development, Architecture "></span>
+                </div>
                 <div class="container my-5">
                     <!-- Linkedin -->
                     <a class="btn " href="https://www.linkedin.com/in/paul-bourhis-375557153/"
@@ -121,20 +126,16 @@
                         <i class="bi bi-instagram"></i>
                     </a>
                 </div>
-                <div class="display-6">I am a
-                    <span id="typed" data-typed-items="Devops, Developer"></span>
-                </div>
             </div>
-
-            <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-                <img src="/assets/images/Mon projet(3).png" class="img-fluid p-5" alt=""
-                    id="heroImg">
+            <div class="col-lg-6 d-lg-block d-none hero-img p-5" data-aos="zoom-out"
+                data-aos-delay="300" data-aos-duration="2000">
+                <img src="/assets/images/Mon projet(3).png" class="img-fluid" alt="" id="heroImg">
             </div>
         </div>
     </div>
 
     <!-- Go to buttons -->
-    <div class="d-xxl-block d-none position-fixed m-3 " id="goToButtons">
+    <div class="d-xxl-block d-none position-fixed m-3" id="goToButtons">
         <div class="d-flex flex-column justify-content-center align-items-start">
             <div class="d-flex align-items-center ">
                 <a href="#" class="btn btn-lg btn-warning rounded-circle m-1">
@@ -179,13 +180,13 @@
     </div>
 
     <!-- Main container -->
-    <div class="container-xxl my-5 py-5 shadow rounded-5 fade-in" id="presentation">
-        <div class="row justify-content-center align-items-center px-2">
+    <div class="container-xxl my-5 shadow rounded-5" data-aos="fade-up" id="presentation">
+        <div class="row justify-content-center align-items-center px-3">
             <div class="col-lg-4 text-center">
                 <img id="mainPhoto" src="/assets/images/Mon projet.png" alt="Profile Picture"
                     class="img-fluid rounded-circle mb-3 " />
             </div>
-            <div class="col-lg-8 text-center">
+            <div class="col-lg-8 py-5 text-center">
                 <!-- <p id="welcomeHeader" class="fs-1">Welcome!</p> -->
                 <h4 id="welcomeHeader" class="display-4 mb-5">Welcome!</h4>
                 <p id="introParagraph1" class="lead">
@@ -220,68 +221,110 @@
                         </a>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
 
     <!-- Services -->
-    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5 fade-in" id="services">
-        <p class="display-6 text-center ">
-            <img src="https://zeevector.com/wp-content/uploads/Handshake-Vector-Art@ZEEVECTOR-387x258.png"
-                alt="Tool logo" class="skill-logo" /><span id="serviceHeader">Services</span>
-        </p>
-        <hr />
-
-        <div class="row justify-content-center align-items-start p-4 serviceRow">
-            <div class="col-lg-3">
-                <div class="card text-center" id="cloudSolution">
-                    <h3 class="card-title mt-1" id="cloudSolutionTitle">Cloud Solutions and
-                        Architecture</h3>
-                    <i class="bi bi-clouds my-2"></i>
-                    <div class="card-body">
-                        <p class="lead card-text" id="cloudSolutionText">I can design and implement
-                            cloud-based architectures, migrate on-premises applications to the
-                            cloud, and optimize cost efficiency.</p>
-                    </div>
-                </div>
+    <div class="container-fluid my-5 p-5 pb-1" data-aos="fade-up" id="services">
+        <div class="row justify-content-center align-items-start g-2">
+            <div class="col-lg-4">
+                <p class="display-2 mx-5" id="serviceHeader">Services</p>
+                <img src="/assets/images/Mon projet(6).png" alt="Badge logo" class="img-fluid" />
             </div>
+            <div class="col-lg-8 pt-5">
+                <div class="row justify-content-center align-items-center serviceRow">
+                    <div class="col-lg-6">
+                        <div class="card text-center" id="cloudSolution">
+                            <div class="card-title mt-1 d-flex align-items-center">
+                                <i class="bi bi-clouds mx-2"></i>
+                                <h4 class="text-center me-5 flex-grow-1" id="cloudSolutionTitle">
+                                    Cloud Solutions and Architecture
+                                </h4>
+                            </div>
 
-            <div class="col-lg-3">
-                <div class="card text-center" id="sourceCode">
-                    <h3 class="card-title mt-1" id="sourceCodeTitle">Source Code Management</h3>
-                    <i class="bi bi-code-slash my-2"></i>
-                    <div class="card-body">
-                        <p class="lead card-text" id="sourceCodeText">I establish effective
-                            workflows for version control, facilitate pull requests and code
-                            reviews.</p>
+                            <div class="card-body">
+                                <ul class="lead text-start">
+                                    <li>Design and implement cloud-based architectures</li>
+                                    <li>Migrate on-premises applications to the cloud</li>
+                                    <li>Optimize cost efficiency</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card text-center" id="sharing">
+                            <div class="card-title mt-1 d-flex align-items-center">
+                                <i class="bi bi-people mx-2 "></i>
+                                <h4 class="text-center me-5 flex-grow-1">
+                                    Training and Knowledge Sharing
+                                </h4>
+                            </div>
+
+
+                            <div class="card-body">
+                                <ul class="lead text-start">
+                                    <li>Provide guidance on effective development practices</li>
+                                    <li>Train developers to cover their application with
+                                        automated
+                                        tests as much as possible</li>
+                                    <li>Conduct workshops on DevOps best practices</li>
+                                    <li>Promote Agile methodologies</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="col-lg-3">
-                <div class="card text-center" id="devStrategie">
-                    <h3 class="card-title mt-1" id="devStrategieTitle">Development of CI/CD
-                        Strategies</h3>
-                    <i class="bi bi-diagram-3 my-2"></i>
-                    <div class="card-body">
-                        <p class="lead card-text" id="devStrategieText">I design and implement
-                            continuous integration pipelines, code health solutions and deployment
-                            strategies.</p>
-                    </div>
-                </div>
-            </div>
+                    <div class="col-lg-6">
+                        <div class="card text-center" id="devStrategie">
+                            <div class="card-title mt-1 d-flex align-items-center">
+                                <i class="bi bi-diagram-3 mx-2"></i>
+                                <h4 class="text-center me-5 flex-grow-1">
+                                    Development of CI/CD Strategies
+                                </h4>
+                            </div>
 
-            <div class="col-lg-3">
-                <div class="card text-center" id="sharing">
-                    <h3 class="card-title mt-1" id="sharingTitle">Training and Knowledge Sharing
-                    </h3>
-                    <i class="bi bi-people my-2"></i>
-                    <div class="card-body">
-                        <p class="lead card-text" id="sharingText">I conduct workshops on DevOps
-                            best practices, promote Agile methodologies, and provide guidance on
-                            effective development best practices.</p>
+                            <div class="card-body">
+                                <ul class="lead text-start">
+                                    <li>Design and implement continuous integration pipelines
+                                    </li>
+                                    <li>Develop code health solutions</li>
+                                    <li>Set up continuous deployment strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card text-center h-100" id="sourceCode">
+                            <div class="card-title mt-1 d-flex align-items-center">
+                                <i class="bi bi-code-slash mx-2"></i>
+                                <h4 class="text-center me-5 flex-grow-1">
+                                    Source Code Management
+                                </h4>
+                            </div>
+
+                            <div class="card-body">
+                                <ul class="lead text-start">
+                                    <li>Establish effective workflows for version control</li>
+                                    <li>Facilitate pull requests and code reviews</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="card text-center" id="infrastructure">
+                            <div class="card-title mt-1 d-flex align-items-center">
+                                <i class="bi bi-people mx-2"></i>
+                                <h4 class="text-center me-5 flex-grow-1">
+                                    Infrastructure Services
+                                </h4>
+                            </div>
+                            <div class="card-body">
+                                <ul class="lead text-start">
+                                    <li>Provide Linux environment setup and configuration</li>
+                                    <li>Ensure developers have a development environment as
+                                        close as possible to the target platform</li>
+                                    <li>Implement infrastructure as code (IAC)</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -289,192 +332,184 @@
     </div>
 
     <!-- Certifications -->
-    <div class="container-xxl my-5 py-3 shadow rounded-5 fade-in" id="certifications">
-        <div class="row justify-content-start align-items-start text-center ">
-            <p class="display-6">
-                <img src="/assets/images/gbadge.png" alt="Badge logo" class="skill-logo" /><span
-                    id="certificationsHeader">Certifications</span>
-            </p>
-            <hr />
+    <div class="container-fluid text-center mb-5 py-3" data-aos="fade-up" id="certifications">
+        <p class="display-2  pb-3" id="certificationsHeader">Certifications</p>
 
-            <div class="row justify-content-center align-items-start certRow">
-                <div class="col-3 azbadge">
-                    <h3 class="card-title mt-1">AZ-400</h3>
-                    <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-400/">
-                        <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                            alt="Title">
-                    </a>
-                    <div class="lead" id="az400Cert">DevOps Engineer Expert</div>
-                </div>
-                <div class="col-3 azbadge">
-                    <h3 class="card-title mt-1">AZ-104</h3>
-                    <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-104/">
-                        <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                            alt="Title">
-                    </a>
-                    <div class="lead" id="az104Cert">Microsoft Azure Administrator</div>
-                </div>
-                <div class="col-3 azbadge">
-                    <h3 class="card-title mt-1">AZ-900</h3>
-                    <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900/">
-                        <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                            alt="Title">
-                    </a>
-                    <div class="lead" id="az900Cert">Microsoft Azure Fundamentals</div>
-                </div>
-                <div class="col-3 ">
-                    <h3 class="card-title mt-1">TOEIC</h3>
-                    <a href="">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-225px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"
-                            alt="Title">
-                    </a>
-                    <div class="lead">English test: 920/1000</div>
-                </div>
+        <div class="row justify-content-center align-items-start certRow">
+            <div class="col-2 azbadge ">
+                <h3 class="card-title mt-1">AZ-400</h3>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-400/">
+                    <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                        alt="Title">
+                </a>
+                <div class="lead" id="az400Cert">DevOps Engineer Expert</div>
+            </div>
+            <div class="col-2 azbadge">
+                <h3 class="card-title mt-1">AZ-104</h3>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-104/">
+                    <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                        alt="Title">
+                </a>
+                <div class="lead" id="az104Cert">Microsoft Azure Administrator</div>
+            </div>
+            <div class="col-2 azbadge">
+                <h3 class="card-title mt-1">AZ-900</h3>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900/">
+                    <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                        alt="Title">
+                </a>
+                <div class="lead" id="az900Cert">Microsoft Azure Fundamentals</div>
+            </div>
+            <div class="col-2 ">
+                <h3 class="card-title mt-1">TOEIC</h3>
+                <a href="">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-225px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"
+                        alt="Title">
+                </a>
+                <div class="lead">English test: 920/1000</div>
             </div>
         </div>
     </div>
 
-    <!-- Skills & Certifications -->
-    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5 fade-in" id="skills">
+    <!-- Main skills -->
+    <div class="container-fluid my-5 py-5" data-aos="fade-up" id="skills">
         <!-- Mains skills -->
-        <p class="display-6 text-center">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Tools_clipart.png"
-                alt="Tool logo" class="skill-logo" /><span id="mainSkillsHeader">Main
-                skills</span>
-        </p>
-        <hr />
+        <p class="display-2 text-end mx-5" id="mainSkillsHeader">Main skills</p>
 
-        <div class="row justify-content-center align-items-start skillRow p-4 ">
-            <div class="col-lg-4 my-3">
-                <div class="card text-center">
-                    <h3 class="card-title mt-1" id="devopsHeader">DevOPS</h3>
-                    <img class="card-img-top p-4" src="/assets/images/Mon projet(4).png"
-                        alt="Title">
-                    <div class="card-body">
-                        <div class="row justify-content-center align-items-center g-2">
-                            <div class="col">
-                                <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                                    alt="Azure" class="skill-logo" />
-                                <p class="lead">
-                                    Azure
-                                </p>
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-lg-6">
+                <div class="row justify-content-center align-items-start skillRow p-4">
+                    <div class="col-lg-6">
+                        <div class="card text-center">
+                            <h3 class="card-title mt-1" id="devopsHeader">DevOPS</h3>
+
+                            <div class="card-body">
+                                <div class="row justify-content-center align-items-center g-2">
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                                            alt="Azure" class="skill-logo" />
+                                        <p class="lead">
+                                            Azure
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
+                                            alt="Docker" class="skill-logo" />
+                                        <p class="lead">
+                                            Docker
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
+                                            alt="Grafana" class="skill-logo" />
+                                        <p class="lead">
+                                            Monitoring
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://logos-download.com/wp-content/uploads/2016/10/Ansible_logo.png"
+                                            alt="Ansible" class="skill-logo" />
+                                        <p class="lead">
+                                            Ansible
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg"
+                                            alt="Jenkins" class="skill-logo" />
+                                        <p class="lead">
+                                            Jenkins
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col">
-                                <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
-                                    alt="Docker" class="skill-logo" />
-                                <p class="lead">
-                                    Docker
-                                </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card text-center">
+                            <h3 class="card-title mt-1" id="developmentHeader">Development</h3>
+                            <div class="card-body">
+                                <div class="row justify-content-center align-items-center g-2">
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                                            alt="Python" class="skill-logo" />
+                                        <p class="lead">
+                                            Python
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+                                            alt="C++" class="skill-logo" />
+                                        <p class="lead">
+                                            C++
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Cmake.svg/1200px-Cmake.svg.png"
+                                            alt="Cmake" class="skill-logo" />
+                                        <p class="lead">
+                                            Cmake
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png"
+                                            alt="VSCode" class="skill-logo" />
+                                        <p class="lead">
+                                            VsCode
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
-                                    alt="Grafana" class="skill-logo" />
-                                <p class="lead">
-                                    Monitoring
-                                </p>
-                            </div>
-                            <div class="col">
-                                <img src="https://logos-download.com/wp-content/uploads/2016/10/Ansible_logo.png"
-                                    alt="Ansible" class="skill-logo" />
-                                <p class="lead">
-                                    Ansible
-                                </p>
-                            </div>
-                            <div class="col">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg"
-                                    alt="Jenkins" class="skill-logo" />
-                                <p class="lead">
-                                    Jenkins
-                                </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card text-center">
+                            <h4 class="card-title mt-1" id="otherSkillsHeader">Others</h4>
+
+                            <div class="card-body">
+                                <div class="row justify-content-center align-items-center g-2">
+                                    <div class="col"><img
+                                            src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png"
+                                            alt="Linux" class="skill-logo" />
+                                        <p class="lead">
+                                            linux
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+                                            alt="Git" class="skill-logo" />
+                                        <p class="lead">
+                                            git
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://divamaggie.com/svg/uiux-design.svg"
+                                            alt="UI/UX Design" class="skill-logo" />
+                                        <p class="lead">
+                                            Ui/Ux
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="col-lg-4 my-3">
-                <div class="card text-center">
-                    <h3 class="card-title mt-1" id="developmentHeader">Development</h3>
-                    <img class="card-img-top p-4" src="/assets/images/dev.png" alt="Title">
-                    <div class="card-body">
-                        <div class="row justify-content-center align-items-center g-2">
-                            <div class="col">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
-                                    alt="Python" class="skill-logo" />
-                                <p class="lead">
-                                    Python
-                                </p>
-                            </div>
-                            <div class="col">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
-                                    alt="C++" class="skill-logo" />
-                                <p class="lead">
-                                    C++
-                                </p>
-                            </div>
-                            <div class="col">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Cmake.svg/1200px-Cmake.svg.png"
-                                    alt="Cmake" class="skill-logo" />
-                                <p class="lead">
-                                    Cmake
-                                </p>
-                            </div>
-                            <div class="col">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png"
-                                    alt="VSCode" class="skill-logo" />
-                                <p class="lead">
-                                    VsCode
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 my-3">
-                <div class="card text-center">
-                    <h4 class="card-title mt-1" id="otherSkillsHeader">Others</h4>
-                    <img class="card-img-top p-4" src="/assets/images/share.png" alt="Title">
-                    <div class="card-body">
-                        <div class="row justify-content-center align-items-center g-2">
-                            <div class="col"><img
-                                    src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png"
-                                    alt="Linux" class="skill-logo" />
-                                <p class="lead">
-                                    linux
-                                </p>
-                            </div>
-                            <div class="col">
-                                <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
-                                    alt="Git" class="skill-logo" />
-                                <p class="lead">
-                                    git
-                                </p>
-                            </div>
-                            <div class="col">
-                                <img src="https://divamaggie.com/svg/uiux-design.svg"
-                                    alt="UI/UX Design" class="skill-logo" />
-                                <p class="lead">
-                                    Ui/Ux
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-lg-4">
+                <img src="/assets/images/share.png" alt="Badge logo" class="img-fluid" />
             </div>
         </div>
     </div>
 
     <!-- Experiences -->
-    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5 fade-in" id="experiences">
-        <p class="display-6 text-center">
-            <img src="/assets/images/experience.png" alt="Exp logo" class="skill-logo" /><span
-                id="experiencesHeader">Experiences</span>
-            <hr />
+    <div class="container-xxl my-5 pt-3 pb-5 rounded-5" data-aos="fade-up" id="experiences">
+        <p class="display-2 text-center" id="experiencesHeader">Experiences</p>
 
         <div class="timeline p-4">
-            <div class="card my-3">
-                <div class="card-header fw-bold" id="freelanceAzureDevopsHeader">Freelance Azure
+            <div class="card my-3" data-aos="fade-right" data-aos-delay="400">
+                <div class="card-header fw-bold" id="freelanceAzureDevopsHeader">Freelance
+                    Azure
                     DevOps</div>
                 <div class="row justify-content-center align-items-center">
                     <div class="col-md-9">
@@ -495,8 +530,9 @@
                 </div>
             </div>
 
-            <div class="card my-3">
-                <div class="card-header fw-bold" id="murexDevopsHeader">DevOPS engineer at Murex
+            <div class="card my-3" data-aos="fade-left" data-aos-delay="400">
+                <div class="card-header fw-bold" id="murexDevopsHeader">DevOPS engineer at
+                    Murex
                 </div>
                 <div class="row justify-content-center align-items-center g-0">
                     <div class="col-md-2">
@@ -504,7 +540,8 @@
                     </div>
                     <div class="col-md-10">
                         <div class="card-body">
-                            <h5 class="card-title text-danger" id="murexYear">2021 - 2023</h5>
+                            <h5 class="card-title text-danger" id="murexYear">2021 - 2023
+                            </h5>
                             <p class="card-text">
                                 <span id="murexDescription">As a DevOps
                                     engineer at Murex, I
@@ -521,7 +558,7 @@
                 </div>
             </div>
 
-            <div class="card my-3">
+            <div class="card my-3" data-aos="fade-right" data-aos-delay="400">
                 <div class="card-header fw-bold" id="thalesCplusplusHeader">C++ Developer at
                     Thales
                 </div>
@@ -532,7 +569,8 @@
                     </div>
                     <div class="col-md-10">
                         <div class="card-body">
-                            <h5 class="card-title text-danger" id="thalesCplusplusYear">2019 -
+                            <h5 class="card-title text-danger" id="thalesCplusplusYear">2019
+                                -
                                 2021
                             </h5>
                             <p class="card-text" id="thalesCplusplusDescription">
@@ -549,7 +587,7 @@
                 </div>
             </div>
 
-            <div class="card my-3">
+            <div class="card my-3" data-aos="fade-left" data-aos-delay="400">
                 <div class="card-header fw-bold" id="thalesPythonHeader">Python Developer at
                     Thales
                 </div>
@@ -574,7 +612,7 @@
                 </div>
             </div>
 
-            <div class="card my-3">
+            <div class="card my-3" data-aos="fade-right" data-aos-delay="400">
                 <div class="card-header fw-bold" id="polytechnicCHeader">C Developer at
                     Polytechnic
                     University of
@@ -586,7 +624,8 @@
                             internship
                         </h5>
                         <p class="card-text" id="polytechnicCDescription">
-                            I provided technical support for a graduation thesis project focused
+                            I provided technical support for a graduation thesis project
+                            focused
                             on developing a robotic arm. I gained valuable experience in
                             robotics, control systems, and research environments.
                         </p>
@@ -597,7 +636,7 @@
     </div>
 
     <!-- Projects -->
-    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5 fade-in" id="projects">
+    <div class="container-xxl my-5 pt-3 pb-5 shadow rounded-5" data-aos="fade-up" id="projects">
         <div class="row -5">
             <div class="col-md-12">
                 <p class="display-6 text-center">
@@ -693,6 +732,8 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="/assets/js/switchLanguage.js"></script>
     <script src="/assets/js/main.js"></script>
