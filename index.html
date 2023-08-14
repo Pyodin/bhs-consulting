@@ -28,12 +28,13 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
         rel="stylesheet">
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
     <title>Paul Bourhis</title>
 </head>
 
@@ -105,7 +106,7 @@
                 <div class="display-4" id="carouselCaption1Title">Freelance DevOps Engineer</div>
                 <div class="display-6">I can help you on
                     <span id="typed"
-                        data-typed-items="Cloud, SRE, Development, Architecture "></span>
+                        data-typed-items="Cloud, SRE, Monitoring, Development, Architecture, Integration"></span>
                 </div>
                 <div class="container my-5">
                     <!-- Linkedin -->
@@ -130,51 +131,6 @@
             <div class="col-lg-6 d-lg-block d-none hero-img p-5" data-aos="zoom-out"
                 data-aos-delay="300" data-aos-duration="2000">
                 <img src="/assets/images/Mon projet(3).png" class="img-fluid" alt="" id="heroImg">
-            </div>
-        </div>
-    </div>
-
-    <!-- Go to buttons -->
-    <div class="d-xxl-block d-none position-fixed m-3" id="goToButtons">
-        <div class="d-flex flex-column justify-content-center align-items-start">
-            <div class="d-flex align-items-center ">
-                <a href="#" class="btn btn-lg btn-warning rounded-circle m-1">
-                    <i class="bi bi-arrow-up"></i>
-                </a>
-            </div>
-            <div class="d-flex align-items-center ">
-                <a href="#presentation" class="btn btn-lg btn-warning rounded-circle m-1">
-                    <i class="bi bi-person"></i>
-                </a>
-                <h4 id="presentationLink">Presentation</h4>
-            </div>
-
-            <div class="d-flex align-items-center">
-                <a href="#services" class="btn btn-lg btn-warning rounded-circle m-1">
-                    <i class="bi bi-tools"></i>
-                </a>
-                <h4 id="servicesLink">Services</h4>
-            </div>
-
-            <div class="d-flex align-items-center">
-                <a href="#skills" class="btn btn-lg btn-warning rounded-circle m-1">
-                    <i class="bi bi-award"></i>
-                </a>
-                <h4 id="skillsLink">Skills</h4>
-            </div>
-
-            <div class="d-flex align-items-center">
-                <a href="#experiences" class="btn btn-lg btn-warning rounded-circle m-1">
-                    <i class="bi bi-person-lines-fill"></i>
-                </a>
-                <h4 id="goToExperiencesLink">Experiences</h4>
-            </div>
-
-            <div class="d-flex align-items-center">
-                <a href="#projects" class="btn btn-lg btn-warning rounded-circle m-1">
-                    <i class="bi bi-diagram-3-fill"></i>
-                </a>
-                <h4 id="goToprojectsLink">Projects</h4>
             </div>
         </div>
     </div>
@@ -227,102 +183,183 @@
 
     <!-- Services -->
     <div class="container-fluid my-5 p-5 pb-1" data-aos="fade-up" id="services">
-        <div class="row justify-content-center align-items-start g-2">
+        <div class="row justify-content-center align-items-center g-2">
             <div class="col-lg-4">
                 <p class="display-2 mx-5" id="serviceHeader">Services</p>
-                <img src="/assets/images/Mon projet(6).png" alt="Badge logo" class="img-fluid" />
+                <img src="/assets/images/share.png" alt="Badge logo" class="img-fluid" />
             </div>
             <div class="col-lg-8 pt-5">
                 <div class="row justify-content-center align-items-center serviceRow">
                     <div class="col-lg-6">
-                        <div class="card text-center" id="cloudSolution">
-                            <div class="card-title mt-1 d-flex align-items-center">
-                                <i class="bi bi-clouds mx-2"></i>
-                                <h4 class="text-center me-5 flex-grow-1" id="cloudSolutionTitle">
-                                    Cloud Solutions and Architecture
-                                </h4>
+                        <div class="accordion" id="solutionsAccordion">
+                            <div class="accordion-item ">
+                                <h2 class="accordion-header " id="cloudSolutionHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#cloudSolutionCollapse"
+                                        aria-expanded="false" aria-controls="cloudSolutionCollapse">
+                                        <i class="bi bi-clouds me-2"></i>
+                                        <span id="cloudSolutionHeaderText">Cloud Solutions and
+                                            Architecture</span>
+                                    </button>
+                                </h2>
+                                <div id="cloudSolutionCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="cloudSolutionHeader"
+                                    data-bs-parent="#solutionsAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="cloudSolutionDesc1">Design and implement
+                                                    cloud-based architectures</span></li>
+                                            <li><span id="cloudSolutionDesc2">Migrate on-premises
+                                                    applications to the cloud</span></li>
+                                            <li><span id="cloudSolutionDesc3">Optimize cost
+                                                    efficiency</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="card-body">
-                                <ul class="lead text-start">
-                                    <li>Design and implement cloud-based architectures</li>
-                                    <li>Migrate on-premises applications to the cloud</li>
-                                    <li>Optimize cost efficiency</li>
-                                </ul>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="devStrategieHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#devStrategieCollapse" aria-expanded="false"
+                                        aria-controls="devStrategieCollapse">
+                                        <i class="bi bi-diagram-3 me-2"></i>
+                                        <span id="devStrategieHeaderText">Development of CI/CD
+                                            Strategies</span>
+                                    </button>
+                                </h2>
+                                <div id="devStrategieCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="devStrategieHeader"
+                                    data-bs-parent="#solutionsAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="devStrategieDesc1">Design and implement
+                                                    continuous integration pipelines</span></li>
+                                            <li><span id="devStrategieDesc2">Develop code health
+                                                    solutions</span></li>
+                                            <li><span id="devStrategieDesc3">Set up continuous
+                                                    deployment strategies</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="card text-center" id="sharing">
-                            <div class="card-title mt-1 d-flex align-items-center">
-                                <i class="bi bi-people mx-2 "></i>
-                                <h4 class="text-center me-5 flex-grow-1">
-                                    Training and Knowledge Sharing
-                                </h4>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="sourceCodeHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#sourceCodeCollapse" aria-expanded="false"
+                                        aria-controls="sourceCodeCollapse">
+                                        <i class="bi bi-code-slash me-2"></i>
+                                        <span id="sourceCodeHeaderText">Source Code
+                                            Management</span>
+                                    </button>
+                                </h2>
+                                <div id="sourceCodeCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="sourceCodeHeader"
+                                    data-bs-parent="#solutionsAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="sourceCodeDesc1">Establish effective
+                                                    workflows for version control</span></li>
+                                            <li><span id="sourceCodeDesc2">Facilitate pull requests
+                                                    and code reviews</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
 
-
-                            <div class="card-body">
-                                <ul class="lead text-start">
-                                    <li>Provide guidance on effective development practices</li>
-                                    <li>Train developers to cover their application with
-                                        automated
-                                        tests as much as possible</li>
-                                    <li>Conduct workshops on DevOps best practices</li>
-                                    <li>Promote Agile methodologies</li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
 
                     <div class="col-lg-6">
-                        <div class="card text-center" id="devStrategie">
-                            <div class="card-title mt-1 d-flex align-items-center">
-                                <i class="bi bi-diagram-3 mx-2"></i>
-                                <h4 class="text-center me-5 flex-grow-1">
-                                    Development of CI/CD Strategies
-                                </h4>
+                        <div class="accordion" id="servicesAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="monitoringHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#monitoringCollapse" aria-expanded="false"
+                                        aria-controls="monitoringCollapse">
+                                        <i class="bi bi-graph-up me-2"></i>
+                                        <span id="monitoringHeaderText">Monitoring and
+                                            Alerting</span>
+                                    </button>
+                                </h2>
+                                <div id="monitoringCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="monitoringHeader"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="monitoringDesc1">Set up monitoring and
+                                                    alerting systems</span></li>
+                                            <li><span id="monitoringDesc2">Ensure high availability
+                                                    and reliability</span></li>
+                                            <li><span id="monitoringDesc3">Implement dashboards and
+                                                    reports</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="card-body">
-                                <ul class="lead text-start">
-                                    <li>Design and implement continuous integration pipelines
-                                    </li>
-                                    <li>Develop code health solutions</li>
-                                    <li>Set up continuous deployment strategies</li>
-                                </ul>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="trainingHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#securityCollapse"
+                                        aria-expanded="false" aria-controls="securityCollapse">
+                                        <i class="bi bi-people me-2"></i>
+                                        <span id="trainingHeaderText">Training and Knowledge
+                                            Sharing</span>
+                                    </button>
+                                </h2>
+                                <div id="securityCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="trainingHeader"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="trainingDesc1">Provide guidance on
+                                                    effective development practices</span></li>
+                                            <li><span id="trainingDesc2">Train developers to cover
+                                                    their application with automated tests as much
+                                                    as possible</span></li>
+                                            <li><span id="trainingDesc3">Conduct workshops on DevOps
+                                                    best practices</span></li>
+                                            <li><span id="trainingDesc4">Promote Agile
+                                                    methodologies</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="card text-center h-100" id="sourceCode">
-                            <div class="card-title mt-1 d-flex align-items-center">
-                                <i class="bi bi-code-slash mx-2"></i>
-                                <h4 class="text-center me-5 flex-grow-1">
-                                    Source Code Management
-                                </h4>
-                            </div>
-
-                            <div class="card-body">
-                                <ul class="lead text-start">
-                                    <li>Establish effective workflows for version control</li>
-                                    <li>Facilitate pull requests and code reviews</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="card text-center" id="infrastructure">
-                            <div class="card-title mt-1 d-flex align-items-center">
-                                <i class="bi bi-people mx-2"></i>
-                                <h4 class="text-center me-5 flex-grow-1">
-                                    Infrastructure Services
-                                </h4>
-                            </div>
-                            <div class="card-body">
-                                <ul class="lead text-start">
-                                    <li>Provide Linux environment setup and configuration</li>
-                                    <li>Ensure developers have a development environment as
-                                        close as possible to the target platform</li>
-                                    <li>Implement infrastructure as code (IAC)</li>
-                                </ul>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="automationHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#automationCollapse" aria-expanded="false"
+                                        aria-controls="automationCollapse">
+                                        <i class="bi bi-tools me-2"></i>
+                                        <span id="automationHeaderText">Automation and
+                                            Infrastructure</span>
+                                    </button>
+                                </h2>
+                                <div id="automationCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="automationHeader"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="automationDesc1">Automate repetitive
+                                                    tasks</span></li>
+                                            <li><span id="automationDesc2">Provide Linux environment
+                                                    setup and configuration</span></li>
+                                            <li><span id="automationDesc3">Ensure developers have a
+                                                    development environment as close as possible to
+                                                    the target platform</span></li>
+                                            <li><span id="automationDesc4">Implement infrastructure
+                                                    as code (IAC)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -336,31 +373,41 @@
         <p class="display-2  pb-3" id="certificationsHeader">Certifications</p>
 
         <div class="row justify-content-center align-items-start certRow">
-            <div class="col-2 azbadge ">
+            <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="700"
+                data-aos-duration="1000">
                 <h3 class="card-title mt-1">AZ-400</h3>
                 <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-400/">
                     <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
                         alt="Title">
                 </a>
                 <div class="lead" id="az400Cert">DevOps Engineer Expert</div>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-400/"
+                    class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_0">Read more</span></a>
             </div>
-            <div class="col-2 azbadge">
+            <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="500"
+                data-aos-duration="1000">
                 <h3 class="card-title mt-1">AZ-104</h3>
                 <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-104/">
                     <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
                         alt="Title">
                 </a>
                 <div class="lead" id="az104Cert">Microsoft Azure Administrator</div>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-104/"
+                    class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_1">Read more</span></a>
+
             </div>
-            <div class="col-2 azbadge">
+            <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="300"
+                data-aos-duration="1000">
                 <h3 class="card-title mt-1">AZ-900</h3>
                 <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900/">
                     <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
                         alt="Title">
                 </a>
                 <div class="lead" id="az900Cert">Microsoft Azure Fundamentals</div>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900"
+                    class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_2">Read more</span></a>
             </div>
-            <div class="col-2 ">
+            <div class="col-2" data-aos="fade-right" data-aos-duration="1000">
                 <h3 class="card-title mt-1">TOEIC</h3>
                 <a href="">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-225px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"
@@ -373,7 +420,6 @@
 
     <!-- Main skills -->
     <div class="container-fluid my-5 py-5" data-aos="fade-up" id="skills">
-        <!-- Mains skills -->
         <p class="display-2 text-end mx-5" id="mainSkillsHeader">Main skills</p>
 
         <div class="row justify-content-center align-items-center g-2">
@@ -386,39 +432,29 @@
                             <div class="card-body">
                                 <div class="row justify-content-center align-items-center g-2">
                                     <div class="col">
-                                        <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                                        <img src="https://www.sparks-formation.com/wp-content/uploads/2020/07/azure-devops.png"
                                             alt="Azure" class="skill-logo" />
-                                        <p class="lead">
-                                            Azure
-                                        </p>
+                                        <p class="lead">Azure</p>
                                     </div>
                                     <div class="col">
                                         <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
                                             alt="Docker" class="skill-logo" />
-                                        <p class="lead">
-                                            Docker
-                                        </p>
+                                        <p class="lead">Docker</p>
                                     </div>
                                     <div class="col">
                                         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
                                             alt="Grafana" class="skill-logo" />
-                                        <p class="lead">
-                                            Monitoring
-                                        </p>
+                                        <p class="lead">Monitoring</p>
                                     </div>
                                     <div class="col">
                                         <img src="https://logos-download.com/wp-content/uploads/2016/10/Ansible_logo.png"
                                             alt="Ansible" class="skill-logo" />
-                                        <p class="lead">
-                                            Ansible
-                                        </p>
+                                        <p class="lead">Ansible</p>
                                     </div>
                                     <div class="col">
                                         <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg"
                                             alt="Jenkins" class="skill-logo" />
-                                        <p class="lead">
-                                            Jenkins
-                                        </p>
+                                        <p class="lead">Jenkins</p>
                                     </div>
                                 </div>
                             </div>
@@ -472,23 +508,22 @@
                                     <div class="col"><img
                                             src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png"
                                             alt="Linux" class="skill-logo" />
-                                        <p class="lead">
-                                            linux
-                                        </p>
+                                        <p class="lead">Linux</p>
                                     </div>
                                     <div class="col">
                                         <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
                                             alt="Git" class="skill-logo" />
-                                        <p class="lead">
-                                            git
-                                        </p>
+                                        <p class="lead">Git</p>
                                     </div>
                                     <div class="col">
                                         <img src="https://divamaggie.com/svg/uiux-design.svg"
                                             alt="UI/UX Design" class="skill-logo" />
-                                        <p class="lead">
-                                            Ui/Ux
-                                        </p>
+                                        <p class="lead">Ui/Ux</p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://cdn.freebiesupply.com/logos/large/2x/amazon-database-logo-png-transparent.png"
+                                            alt="Data analysis" class="skill-logo" />
+                                        <p class="lead">DataAnalysis</p>
                                     </div>
                                 </div>
                             </div>
@@ -497,7 +532,7 @@
                 </div>
             </div>
             <div class="col-lg-4">
-                <img src="/assets/images/share.png" alt="Badge logo" class="img-fluid" />
+                <img src="/assets/images/Mon projet(6).png" alt="Badge logo" class="img-fluid" />
             </div>
         </div>
     </div>
@@ -507,7 +542,7 @@
         <p class="display-2 text-center" id="experiencesHeader">Experiences</p>
 
         <div class="timeline p-4">
-            <div class="card my-3" data-aos="fade-right" data-aos-delay="400">
+            <div class="card my-3" data-aos="fade-right" data-aos-delay="200">
                 <div class="card-header fw-bold" id="freelanceAzureDevopsHeader">Freelance
                     Azure
                     DevOps</div>
@@ -530,15 +565,15 @@
                 </div>
             </div>
 
-            <div class="card my-3" data-aos="fade-left" data-aos-delay="400">
+            <div class="card my-3" data-aos="fade-left" data-aos-delay="200">
                 <div class="card-header fw-bold" id="murexDevopsHeader">DevOPS engineer at
                     Murex
                 </div>
                 <div class="row justify-content-center align-items-center g-0">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <img src="/assets/images/murex.png" class="card-img-top" alt="Murex logo" />
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-md-9">
                         <div class="card-body">
                             <h5 class="card-title text-danger" id="murexYear">2021 - 2023
                             </h5>
@@ -558,16 +593,16 @@
                 </div>
             </div>
 
-            <div class="card my-3" data-aos="fade-right" data-aos-delay="400">
+            <div class="card my-3" data-aos="fade-right" data-aos-delay="200">
                 <div class="card-header fw-bold" id="thalesCplusplusHeader">C++ Developer at
                     Thales
                 </div>
                 <div class="row justify-content-center align-items-center g-0">
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <img src="https://new.afsin.org/wp-content/uploads/2009/07/Logo-Thales-Couleur.jpg"
                             class="card-img-top" alt="Murex logo" />
                     </div>
-                    <div class="col-md-10">
+                    <div class="col-md-9">
                         <div class="card-body">
                             <h5 class="card-title text-danger" id="thalesCplusplusYear">2019
                                 -
@@ -587,7 +622,7 @@
                 </div>
             </div>
 
-            <div class="card my-3" data-aos="fade-left" data-aos-delay="400">
+            <div class="card my-3" data-aos="fade-left" data-aos-delay="200">
                 <div class="card-header fw-bold" id="thalesPythonHeader">Python Developer at
                     Thales
                 </div>
@@ -612,7 +647,7 @@
                 </div>
             </div>
 
-            <div class="card my-3" data-aos="fade-right" data-aos-delay="400">
+            <div class="card my-3" data-aos="fade-right" data-aos-delay="200">
                 <div class="card-header fw-bold" id="polytechnicCHeader">C Developer at
                     Polytechnic
                     University of
@@ -732,11 +767,16 @@
         </div>
     </footer>
 
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="/assets/js/switchLanguage.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/common.js"></script>
 
     <!-- Bootstrap Bundle with Popper -->
     <script

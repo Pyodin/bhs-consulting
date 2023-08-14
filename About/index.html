@@ -13,7 +13,6 @@
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" />
     <link rel="stylesheet" href="/assets/css/common.css" />
     <link rel="stylesheet" href="/About/style.css" />
-    <link rel="stylesheet" href="/assets/css/visible_navbar.css" />
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
@@ -32,26 +31,34 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
     <title>Paul Bourhis: About me</title>
 </head>
 
 <body>
     <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container my-1">
-            <a id="navbarBrand" class="navbar-brand text-warning" href="/">BHS Consulting</a>
+    <nav class="navbar navbar-expand-lg fixed-top nav-colored" id="navbar">
+        <div class="container">
+
+            <a class="navbar-brand" href="/" id="navbarBrand">
+                <i class="bi bi-list"></i>
+                BHS Consulting
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a id="aboutMeLink" class="nav-link" href="/About">About
-                            me</a>
+                        <a id="aboutMeLink" class="nav-link" href="/About">About me</a>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a id="experiencesLink" class="nav-link dropdown-toggle" href="#"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -73,18 +80,19 @@
                         <a id="projectsLink" class="nav-link disabled" href="#">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
+                        <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
+                        <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
                     </li>
                 </ul>
 
-                <!-- english and franch flags as button -->
-                <div class="d-flex align-items-center">
-                    <a class="btn btn-outline-light btn-sm me-2" id="btnEnglish">English</a>
-                    <a class="btn btn-outline-light btn-sm" id="btnFrench">Français</a>
-                </div>
+            </div>
+
+            <!-- english and franch flags as button -->
+            <div class="d-flex align-items-center">
+                <a class="btn btn-outline-dark btn-sm me-2" id="btnEnglish">English</a>
+                <a class="btn btn-outline-dark btn-sm" id="btnFrench">Français</a>
             </div>
         </div>
     </nav>

@@ -5,46 +5,14 @@
     font-family: 'Ysabeau SC', sans-serif;
 }
 
-/* NARBAR */
-.navbar {
-    transition: all 200ms linear;
-}
-
-.nav-colored {
-    background-color: #ffffff !important;
-    box-shadow: 0 8px 16px 0 rgba(59, 58, 51, 0.2);
-}
-
-.nav-transparent {
-    background-color: transparent !important;
-}
-
-.nav-item a {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin: 0 5px;
-    text-align: center;
-    font-family: "Nunito", sans-serif;
-    color: #172281;
-}
-
-.nav-item li:hover>a {
-    color: #000000;
-}
-
-.navbar .btn {
-    font-size: 1.2rem;
-    font-family: 'Ysabeau SC', sans-serif;
-}
-
-
 /* HERO */
 
 .hero {
-    width: 100%;
+    /* width: 100%; */
     height: 100vh;
     background: url(/assets/images/hero-bg.png) top center no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .hero .display-3 {
@@ -106,139 +74,207 @@
 
 /* SERVICES */
 
-.serviceRow .card {
-    border-radius: 10px;
-    background-color: #ffffffb0;
-    margin-bottom: 10px;
+#services {
+    background: linear-gradient(rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
 }
 
-.serviceRow .card-title {
+.accordion-item {
+    border-radius: 50px;
+    margin: 20px;
+    background: none;
+    border: none;
+}
+
+.accordion-header {
+    border-radius: 50px;
+    border: none;
+    background: none;
+}
+
+.accordion-button {
+    border-radius: 50px;
+    border: none;
     font-family: "Nunito", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 350;
+    color: #010c74;
 }
 
-.serviceRow .lead {
-    letter-spacing: -0.6px;
-    margin-bottom: none;
+.accordion-item:hover {
+    border-radius: 50px;
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 16px 0 rgba(59, 58, 51, 0.2);
+    transition: all 0.35s ease;
 }
 
-.serviceRow i {
+.accordion-button i {
     font-size: 2rem;
     min-width: 50px;
     min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     border-radius: 50%;
 }
 
-.serviceRow .accordion-button {
-    background-color: #ffffff;
-    border: none;
+.accordion-body {
+    background-color: #dddcdcb0;
+    border-radius: 20px;
 }
 
-#cloudSolution {
-    border-top: 3px solid #2db6fa;
-    border-bottom: 3px solid #2db6fa;
+
+#cloudSolutionHeader .accordion-button {
+    border: 1px solid #2db6fab4;
+    border-radius: 50px;
 }
 
-#cloudSolution i {
+#cloudSolutionHeader i {
     color: #2db6fa;
     background: #dbf3fe;
 }
 
-#sourceCode {
-    border-top: 3px solid #f68c09;
-    border-bottom: 3px solid #f68c09;
-}
-
-#sourceCode i {
-    color: #f68c09;
-    background: #fde3c4;
-}
-
-#devStrategie {
-    border-top: 3px solid #08da4e;
-    border-bottom: 3px solid #08da4e;
-}
-
-#devStrategie i {
-    color: #08da4e;
-    background: #cffddf;
-}
-
-#sharing {
-    border-top: 3px solid #b50edf;
-    border-bottom: 3px solid #b50edf;
-}
-
-#sharing i {
-    color: #b50edf;
-    background: #f8e4fd;
-}
-
-#infrastructure:hover i {
-    color: #f60909;
-    background: white;
-}
-
-#infrastructure:hover {
-    background: #f60909;
-    color: white;
-}
-
-#cloudSolution:hover i {
+#cloudSolutionHeader .accordion-button:hover i {
     color: #2db6fa;
     background:  white;
 }
 
-#cloudSolution:hover {
+#cloudSolutionHeader .accordion-button:hover,
+#cloudSolutionHeader .accordion-button:focus, 
+#cloudSolutionHeader .accordion-button:active,
+#cloudSolutionHeader .accordion-button:not(.collapsed) {
+    color: white;
     background: #2db6fa;
+    box-shadow: none;
+}
+
+
+#automationHeader .accordion-button {
+    border: 1px solid #ffbb0075;
+    border-radius: 50px;
+}
+
+#automationHeader i {
+    color: #ffbb00;
+    background: #fff9db;
+}
+
+#automationHeader .accordion-button:hover i {
+    color: #ffbb00;
+    background:  white;
+}
+
+#automationHeader .accordion-button:hover,
+#automationHeader .accordion-button:focus,
+#automationHeader .accordion-button:active,
+#automationHeader .accordion-button:not(.collapsed) {
     color: white;
+    background: #ffbb00;
+    box-shadow: none;
 }
 
-#sourceCode:hover i {
-    color: #f68c09;
-    background: white;
+
+#monitoringHeader .accordion-button {
+    border: 1px solid #8c00ff79;
+    border-radius: 50px;
 }
 
-#sourceCode:hover {
-    background: #f68c09;
+#monitoringHeader i {
+    color: #8c00ff;
+    background: #f2e9ff;
+}
+
+#monitoringHeader .accordion-button:hover i {
+    color: #8c00ff;
+    background:  white;
+}
+
+#monitoringHeader .accordion-button:hover,
+#monitoringHeader .accordion-button:focus,
+#monitoringHeader .accordion-button:active,
+#monitoringHeader .accordion-button:not(.collapsed) {
     color: white;
+    background: #8c00ff;
+    box-shadow: none;
 }
 
-#devStrategie:hover i {
-    color: #08da4e;
-    background: white;
+
+#trainingHeader .accordion-button {
+    border: 1px solid #ff00007a;
+    border-radius: 50px;
 }
 
-#devStrategie:hover {
-    background: #08da4e;
+#trainingHeader i {
+    color: #ff0000;
+    background: #ffe6e6;
+}
+
+#trainingHeader .accordion-button:hover i {
+    color: #ff0000;
+    background:  white;
+}
+
+#trainingHeader .accordion-button:hover,
+#trainingHeader .accordion-button:focus,
+#trainingHeader .accordion-button:active,
+#trainingHeader .accordion-button:not(.collapsed) {
     color: white;
+    background: #ff0000;
+    box-shadow: none;
 }
 
-#sharing:hover i {
-    color: #b50edf;
-    background: white;
+
+#devStrategieHeader .accordion-button {
+    border: 1px solid #01ce0198;
+    border-radius: 50px;
 }
 
-#sharing:hover {
-    background: #b50edf;
+#devStrategieHeader i {
+    color: #01ce01;
+    background: #e6ffe6;
+}
+
+#devStrategieHeader .accordion-button:hover i {
+    color: #01ce01;
+    background:  white;
+}
+
+#devStrategieHeader .accordion-button:hover,
+#devStrategieHeader .accordion-button:focus,
+#devStrategieHeader .accordion-button:active,
+#devStrategieHeader .accordion-button:not(.collapsed) {
     color: white;
+    background: #01ce01;
+    box-shadow: none;
 }
 
-#infrastructure {
-    border-top: 3px solid #f60909;
-    border-bottom: 3px solid #f60909;
+
+#sourceCodeHeader .accordion-button {
+    border: 1px solid #ff00ff7a;
+    border-radius: 50px;
 }
 
-#infrastructure i {
-    color: #f60909;
-    background: #fde3c4;
+#sourceCodeHeader i {
+    color: #ff00ff;
+    background: #ffe6ff;
 }
+
+#sourceCodeHeader .accordion-button:hover i {
+    color: #ff00ff;
+    background:  white;
+}
+
+#sourceCodeHeader .accordion-button:hover,
+#sourceCodeHeader .accordion-button:focus,
+#sourceCodeHeader .accordion-button:active,
+#sourceCodeHeader .accordion-button:not(.collapsed) {
+    color: white;
+    background: #ff00ff;
+    box-shadow: none;
+}
+
 
 /* CERTIFICATIONS */
-
-#certifications {
-    background: none;
-}
 
 .certRow img {
     width: 120px;
@@ -261,10 +297,14 @@
 
 /* SKILLS */
 
+#skills {
+    background: linear-gradient(rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
+}
+
 .skillRow .card {
+    background-color: rgba(75, 132, 255, 0.062);
     border-radius: 10px;
-    margin: 15px;
-    background-color: #ffffffb0;
+    margin: 20px;
 }  
 
 .skillRow .card-title {
@@ -317,16 +357,16 @@
     position: relative;
     width: calc( 50% - 40px );
     border-radius: 30px;
-    /* background: rgba(162, 169, 229, 0.09); */
-    background: #ffffffb0;
+    background: #ffffff;
     z-index: 2;
 
 }
 
 .timeline .card-header {
+    border: #000000 1px solid;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    background: #ffbb00e0;
+    background: #ffbb00c7;
 }
 
 .timeline .card .card-title {
@@ -340,7 +380,7 @@
     font-family: 'Courier New', Courier, monospace;
     display: block;
     position: absolute;
-    top: 20px;
+    top: 40%;
     left: calc( 100% + 26px );
     background: #ffffff;
     width: 40px;
@@ -353,12 +393,12 @@
 .timeline .card:after {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 40%;
     left: 100%;
     width: 0;
     height: 0;
     border-top: 20px solid transparent;
-    border-left: 20px solid #d6d4d4;
+    border-left: 20px solid #616060cc;
     border-bottom: 20px solid transparent;
 }
 
@@ -375,6 +415,6 @@
     left: auto;
     right: 100%;
     border-left: none;
-    border-right: 20px solid #d6d4d4;
+    border-right: 20px solid #616060cc;
 }
 
