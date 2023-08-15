@@ -34,6 +34,7 @@
         position: relative;
         border-radius: 30px;
         margin-left: calc( 5% + 48px );
+        z-index: 2;
     }
 
         .timeline .card:before {

@@ -12,7 +12,6 @@
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" />
     <link rel="stylesheet" href="/assets/css/common.css" />
-    <link rel="stylesheet" href="/assets/css/visible_navbar.css" />
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
@@ -30,26 +29,36 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Paul Bourhis: Thales</title>
 </head>
 
 <body>
     <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container my-1">
-            <a id="navbarBrand" class="navbar-brand text-warning" href="/">BHS Consulting</a>
+    <nav class="navbar navbar-expand-lg fixed-top nav-colored" id="navbar">
+        <div class="container">
+
+            <a class="navbar-brand" href="/" id="navbarBrand">
+                <i class="bi bi-list"></i>
+                BHS Consulting
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a id="aboutMeLink" class="nav-link" href="/About">About
-                            me</a>
+                        <a id="aboutMeLink" class="nav-link" href="/About">About me</a>
                     </li>
-
                     <li class="nav-item dropdown">
                         <a id="experiencesLink" class="nav-link dropdown-toggle" href="#"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -71,25 +80,25 @@
                         <a id="projectsLink" class="nav-link disabled" href="#">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
+                        <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
+                        <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
                     </li>
                 </ul>
 
-                <!-- english and franch flags as button -->
-                <div class="d-flex align-items-center">
-                    <a class="btn btn-outline-light btn-sm me-2" id="btnEnglish">English</a>
-                    <a class="btn btn-outline-light btn-sm" id="btnFrench">Français</a>
-                </div>
+            </div>
+
+            <!-- english and franch flags as button -->
+            <div class="d-flex align-items-center">
+                <a class="btn btn-outline-dark btn-sm me-2" id="btnEnglish">English</a>
+                <a class="btn btn-outline-dark btn-sm" id="btnFrench">Français</a>
             </div>
         </div>
     </nav>
 
-
     <!-- image -->
-    <div class="container mt-5 text-end">
+    <div class="container mt-5 text-end" data-aos="fade-up">
         <div class="row justify-content-center align-items-center g-2">
             <img src="https://logos-marques.com/wp-content/uploads/2020/01/Thales-logo.png"
                 alt="murex logo" style="height: h100; width: 600px" />
@@ -98,7 +107,7 @@
     </div>
 
     <!-- Introduction -->
-    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 fade-in">
+    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 " data-aos="fade-up">
         <div class="row justify-content-center align-items-center">
             <div class="col-md">
                 <h2 class="mb-4" id="introduction_title">Introduction</h2>
@@ -122,7 +131,7 @@
     </div>
 
     <!-- Technologies and Tools -->
-    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 fade-in">
+    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 " data-aos="fade-up">
         <div class="row justify-content-center align-items-center">
             <div class="col-md">
                 <h2 class="mb-4" id="technologies_and_tools_title">
@@ -208,7 +217,7 @@
     </div>
 
     <!-- Project Overview -->
-    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 fade-in">
+    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 " data-aos="fade-up">
         <div class="row justify-content-center align-items-center">
             <div class="col-md">
                 <h2 class="mb-4" id="project_overview_title">
@@ -246,7 +255,7 @@
     </div>
 
     <!-- Responsabilities -->
-    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 fade-in">
+    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 " data-aos="fade-up">
         <div class="row justify-content-center align-items-center">
             <div class="col-md">
                 <h2 class="mb-4" id="responsibilities_title">
@@ -292,7 +301,7 @@
     </div>
 
     <!-- Key Achievements: -->
-    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 fade-in">
+    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 " data-aos="fade-up">
         <div class="row justify-content-center align-items-center">
             <div class="col-md">
                 <h2 class="mb-4" id="key_achievements_title">
@@ -337,7 +346,7 @@
     </div>
 
     <!-- Challenges -->
-    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 fade-in">
+    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 " data-aos="fade-up">
         <div class="row justify-content-center align-items-center mb-5">
             <div class="col-md">
                 <h2 class="mb-4" id="challenges_title">Challenges</h2>
@@ -414,7 +423,13 @@
         </div>
     </footer>
 
-    <script src="/assets/js/navbar.js"></script>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="/assets/js/common.js"></script>
     <script src="/assets/js/switchLanguage.js"></script>
     <!-- Bootstrap Bundle with Popper -->
     <script

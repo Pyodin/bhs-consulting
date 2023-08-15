@@ -11,10 +11,9 @@
         crossorigin="anonymous" />
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" />
-    <link rel="stylesheet" href="/assets/css/scroll_navbar.css" />
     <link rel="stylesheet" href="/assets/css/common.css" />
     <link rel="stylesheet" href="/Blog/style.css" />
-    <!-- Favicon -->
+    <link rel="stylesheet" href="/Blog/Freelancing/style.css" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -37,7 +36,8 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>DailyDevTalk</title>
+
+    <title>DailyDevTalk: Freelancing</title>
 </head>
 
 <body>
@@ -79,7 +79,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a id="projectsLink" class="nav-link disabled" href="#">Projects</a>
+                        <a id="projectsLink" class="nav-link " href="/Projects/">Projects</a>
                     </li>
                     <li class="nav-item">
                         <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
@@ -101,119 +101,102 @@
 
     <!-- Header -->
     <header class="masthead">
-        <div class="h-100  d-flex flex-column justify-content-center align-items-center">
-            <div class="display-2 mt-2 fw-bold">DailyDevTalk</div>
-            <div class="display-5 m-2 text-center">Your daily dose of development, cloud, AI, and
-                more ! </div>
-            <!-- button suscribe -->
-            <div class="mt-4">
-                <button type="button" class="btn btn-outline-light btn-lg" data-bs-toggle="modal"
-                    data-bs-target="#subscribeModal">
-                    Suscribe to the newsletter
-                </button>
+        <div class="h-100 d-flex flex-column justify-content-center align-items-center">
+            <div class="display-2 fw-bold my-4 fade-in">Why did I became independant ?</div>
+            <div class="display-5 fst-italic fade-in">
+                Embracing Freelancing: A Journey of Passion, Flexibility, and
+                Growth
             </div>
         </div>
     </header>
 
-    <!-- Modal for suscription-->
-    <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content ">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="subscribeModalLabel">Get notified when a new article
-                        is published !
-                    </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="get-notified-form" class="mt-2">
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="name@example.com">
-                            <label for="email">Email address</label>
-                            <div id="emailHelp" class="form-text">I'll never share your email with
-                                anyone else.</div>
-                        </div>
-                        <div class="row justify-content-center align-items-center g-2">
-                            <div class="col"><button type="submit" class="btn btn-primary">Get
-                                    notified!</button></div>
-                            <div class="col">
-                                <div id="event-message" class="visually-hidden">
-                                    <h5>Loading...</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+    <!-- Blog article -->
+    <div class="container-xxl rounded-5" data-aos="fade-up">
+        <div class="row justify-content-center align-items-center g-2 m-5">
+            <div class="display-5">Introduction</div>
+            <div class="lead paragraph">
+                As I sit down to write this, I find myself on the brink of a new chapter in my
+                career—one marked by the decision to leave behind the confines of a traditional
+                9-to-5 job and venture into the world of freelance DevOps. This leap into the
+                unknown isn't just about changing the trajectory of my professional life; it's about
+                embracing a passion-driven journey that promises flexibility, growth, and the
+                freedom to chart my own course.
+            </div>
+
+            <img src="https://www.planet-coworking.com/wp-content/uploads/2019/05/Portrait-dun-freelance.jpeg"
+                class="img-fluid rounded-5 mb-4" alt="Computer" />
+
+            <div class="display-5">Passion for Variety and Quick Switching:</div>
+            <div class="lead paragraph">
+                Leaving the comfort of a structured job was not a decision made lightly. It was
+                driven by an unquenchable passion for the DevOps domain—an arena where innovation
+                thrives and challenges are a canvas for creativity. With every project I envision
+                taking on, I'm fueled by the prospect of diving into varied industries and
+                technologies. The ability to swiftly switch between projects is an exciting
+                prospect—one that allows me to immerse myself in new experiences, adapt to changing
+                requirements, and maintain a fresh perspective.
+            </div>
+
+
+            <div class="display-5">Flexibility and Autonomy:</div>
+            <div class="lead paragraph">
+                As I transition into freelance DevOps, the allure of flexibility and autonomy is
+                magnetic. No longer bound by set office hours and fixed routines, I find myself
+                empowered to choose when and how I work. This newfound freedom not only offers a
+                chance to strike a harmonious work-life balance but also places the reins of my
+                career firmly in my hands. The autonomy to select projects that resonate with my
+                interests and aspirations injects a new level of enthusiasm into my work.
+            </div>
+
+            <div class="display-5">Personal Growth and Rapid Skill Enhancement:</div>
+            <div class="lead paragraph">
+                Freelancing is not just a career shift; it's a powerful catalyst for personal and
+                professional growth. The spectrum of projects awaiting me promises exposure to
+                diverse challenges, each contributing to my skillset and depth of knowledge. The
+                constant learning curve that freelancing demands is a treasure trove for rapid skill
+                enhancement, offering a journey of continuous improvement that traditional roles
+                often lack.
+            </div>
+
+            <div class="display-5">Earning Potential Through Dedication:</div>
+            <div class="lead paragraph">
+                One of the striking advantages of freelancing is the direct correlation between
+                effort and earning potential. With the ability to work hard and invest more time, I
+                have the opportunity to earn more substantial rewards. The energy and enthusiasm
+                that propel me forward also enable me to take on additional projects, ensuring that
+                my earning capacity aligns with my determination.
+            </div>
+
+            <div class="display-5">Challenges and Opportunities:</div>
+            <div class="lead paragraph">
+                As I embark on this journey, I'm aware that it won't be without its share of
+                challenges. The prospect of working independently, without the support of a
+                traditional organization, is daunting. However, I'm confident that the challenges
+                will be outweighed by the opportunities that await me. The chance to work with
+                diverse clients, the freedom to choose my projects, and the ability to chart my own
+                course are all opportunities that I'm eager to embrace.
+            </div>
+
+            <div class="display-5">Conclusion</div>
+            <div class="lead paragraph">
+
+                As I stand at the crossroads of my transition into freelance DevOps, I am met with a
+                mix of excitement and anticipation. This journey isn't merely about becoming an
+                independent force in the world of technology—it's about embracing a life imbued with
+                passion, adaptability, and the boundless potential of growth. With every step I
+                take, I'm reminded that embarking on this path is a testament to the belief that
+                opportunities flourish when we dare to venture beyond the familiar. As I embrace
+                this new chapter, I invite others who share my passion to consider the uncharted
+                territories that freelance DevOps presents.
+            </div>
+
+            <div class="lead paragraph">
+                As I write these words, I am humbled by the realization that this is not just an
+                article—it's a snapshot of my journey, a tribute to the audacity of taking chances,
+                and a reminder that our careers, much like DevOps itself, are a continuous cycle of
+                evolution.
             </div>
         </div>
-    </div>
-
-    <!-- Blog articles -->
-    <div class="container my-5" data-aos="fade-up">
-        <h2 class="text-center mt-5">Blog articles</h2>
-        <hr />
-
-        <!-- Post freelance -->
-        <div class="row justify-content-center align-items-center g-2">
-            <div class="col-1 d-none d-md-block">
-                <img id="toto"
-                    src="https://seeklogo.com/images/G/green-bird-logo-B0C45C520C-seeklogo.com.png"
-                    class="card-img-top" style="transform: rotateY(180deg);" alt="bird logo" />
-            </div>
-            <div class="col-10">
-                <a href="/Blog/Freelancing/">
-                    <h2>Why did I became independant ?</h2>
-                </a>
-                <p class="lead">
-                    Embracing Freelancing: A Journey of Passion, Flexibility, and Growth
-                </p>
-                <p class="post-meta">
-                    Posted on August 14, 2023
-                </p>
-            </div>
-        </div>
-        <hr class="my-4" />
-
-        <!-- Post azure-->
-        <div class="row justify-content-center align-items-center g-2">
-            <div class="col-1 d-none d-md-block">
-                <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                    class="card-img-top" alt="azure logo" />
-            </div>
-            <div class="col-10">
-                <a href="/Blog/Azure/">
-                    <h2>Microsoft Azure: Pioneering the Future for DevOps and Developers</h2>
-                </a>
-                <p class="lead">Why Microsoft will gain more and more market shares in the cloud
-                    industry ?</p>
-                <p class="post-meta">Posted on June 01, 2023</p>
-            </div>
-        </div>
-        <hr class="my-4" />
-
-        <!-- Post chatgpt -->
-        <div class="row justify-content-center align-items-center ">
-            <div class="col-1 d-none d-md-block">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnzx1ngnxz8biiKq_MVC5j6HBfa-6zAYS-_yfCqiTRkVq7AuAiaG2aGBy63Au3Adkeclo&usqp=CAU"
-                    class="card-img-top" alt="azure logo" />
-            </div>
-            <div class="col-10">
-                <a href="/Blog/Ai/">
-                    <h2>ChatGPT: Harnessing AI for Development and DevOps</h2>
-                </a>
-                <p class="lead">
-                    How AI can help developers and DevOps ?
-                    Why is it a tool that we cannot afford to ignore ?
-                </p>
-                <p class="post-meta">
-                    Posted on June 01, 2023
-                </p>
-            </div>
-        </div>
-        <hr class="my-4" />
     </div>
 
     <!-- Footer -->

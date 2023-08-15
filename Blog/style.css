@@ -1,7 +1,11 @@
+body {
+    background: linear-gradient(90deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
+}
+
 .masthead {
-    background-image: url('/static/images/banner-keyboard.webp');
-    height: 50vh; 
-    min-height: 300px;
+    background-image: url('/assets/images/banner-keyboard.webp');
+    background-attachment: fixed;
+    height: 60vh; 
     background-position: center;
     filter: brightness(80%);
     color: white;
@@ -16,3 +20,30 @@
 a {
     color: black;
 }
+
+.display-5 {
+    margin-top: 50px;
+}
+
+.paragraph {
+    margin-bottom: 50px;
+}
+
+footer .btn i {
+    font-size: 1.8rem;
+    margin: 5px;
+}
+
+footer .btn {
+    background: white;
+    margin: 20px;
+    background-color: #000000;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+footer .btn:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(160, 150, 255);
+} 

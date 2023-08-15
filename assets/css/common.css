@@ -47,7 +47,8 @@
     background-color: transparent !important;
 }
 
-/* Back to top */
+
+/* BACK TO TOP BUTTON */
 .back-to-top {
     position: fixed;
     visibility: hidden;
@@ -79,7 +80,7 @@
   }
   
 
-
+/* COMMOM */
 
 .lead {
     line-height: 1.8;
@@ -118,7 +119,7 @@ h2, h3, h4,
 }
 
 body {
-    background: linear-gradient(90deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
+    background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
 }
 
 .container-xxl {

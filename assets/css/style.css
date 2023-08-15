@@ -75,7 +75,8 @@
 /* SERVICES */
 
 #services {
-    background: linear-gradient(rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
+    background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
+    /* background: url(/assets/images/hero-bg.png) top center no-repeat; */
 }
 
 .accordion-item {
@@ -298,11 +299,11 @@
 /* SKILLS */
 
 #skills {
-    background: linear-gradient(rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
+    background: linear-gradient(45deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
 }
 
 .skillRow .card {
-    background-color: rgba(75, 132, 255, 0.062);
+    background-color: rgba(255, 243, 75, 0.062);
     border-radius: 10px;
     margin: 20px;
 }  

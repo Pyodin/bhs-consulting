@@ -1,90 +1,32 @@
+.contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+}
 
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
 
-/* .form-control {
+.contact-form .display-4{
+    text-align: center;
+    color: #0062cc;
+}
+
+.contact-form .form-control{
+    border-radius:1rem;
+    margin-bottom: 2%;
+}
+
+.contact-form .btnContact {
+    width: 50%;
     border: none;
-    border-bottom: 1px solid #ccc;
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 0;
-    background: none; 
-}
-
-    .form-control:active, 
-    .form-control:focus {
-        outline: none;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        border-color: #000; 
-    }
-
-.contact-info {
-    padding: 40px; 
-    color: rgba(245, 231, 231, 0.5); 
-    background: #3d518d;
-} */
-
-
-body{
-    background: url("/tmp/Maundy/assets/img/bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-/*--------------------------------------------------------------
-# Contact Us
---------------------------------------------------------------*/
-
-.info {
-    border-top: 3px solid #24b7a4;
-    border-bottom: 3px solid #24b7a4;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.06);
-    width: 100%;
-    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-}
-  
-.info i {
-    font-size: 20px;
-    color: #fff;
-    float: left;
-    width: 44px;
-    height: 44px;
-    background: rgba(255, 255, 255, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-.info h4 {
-    padding: 0 0 0 60px;
-    font-size: 22px;
+    border-radius: 1rem;
+    background: #dc3545;
     font-weight: 600;
-    margin-bottom: 5px;
-  }
-  
- .info p {
-    padding: 0 0 10px 60px;
-    margin-bottom: 20px;
-    font-size: 14px;
-}
-
-.info .email:hover i,
-.info .address:hover i,
-.info .phone:hover i {
-    background: #24b7a4;
     color: #fff;
-} 
-  
-.az-form {
-    width: 100%;
-    border-top: 3px solid #24b7a4;
-    border-bottom: 3px solid #24b7a4;
-    padding: 30px;
-    background: rgba(255, 255, 255, 0.06);
-    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
-  

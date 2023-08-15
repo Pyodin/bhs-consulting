@@ -34,6 +34,8 @@
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Paul Bourhis: About me</title>
 </head>
@@ -100,7 +102,7 @@
     <div class="row my-5"></div>
 
     <!-- About Me Section -->
-    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 fade-in">
+    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5" data-aos="fade-up">
         <div class="row justify-content-center align-items-center">
             <div class="col-md-8">
                 <h2 class="mb-4" id="aboutMeHeader">About Me</h2>
@@ -138,7 +140,7 @@
     </div>
 
     <!-- Skills & Expertise Section -->
-    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 fade-in">
+    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5" data-aos="fade-up">
         <h2 class="mb-4" id="skills_expertise_title">
             Skills & Expertise
         </h2>
@@ -313,12 +315,13 @@
     </div>
 
     <!-- Education Section -->
-    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 fade-in">
+    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5" data-aos="fade-up">
         <h2 class="mb-4" id="education_title">Education</h2>
         <hr />
 
         <div class="timeline p-4">
-            <div class="card my-3 p-5">
+            <div class="card my-3 p-5" data-aos="fade-left" data-aos-delay="500"
+                data-aos-duration="1000">
                 <div class="row justify-content-start align-items-center">
                     <div class="col-11">
                         <p class="fs-3" id="ensea_degree">
@@ -338,7 +341,8 @@
                 </div>
             </div>
 
-            <div class="card my-5 p-5">
+            <div class="card my-5 p-5" data-aos="fade-left" data-aos-delay="500"
+                data-aos-duration="1000">
                 <div class="row justify-content-start align-items-center">
                     <div class="col-11">
                         <p class="fs-3" id="preparatory_course_title">
@@ -364,7 +368,7 @@
     </div>
 
     <!-- Hobbies & Interests Section -->
-    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5 fade-in">
+    <div class="container-xxl my-5 px-5 py-3 shadow rounded-5" data-aos="fade-up">
         <div class="row justify-content-center align-items-center mt-2">
             <h2 class="mb-4" id="hobbies_interests_title">
                 Hobbies & Interests
@@ -454,7 +458,14 @@
             <!-- Find the source code <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a> -->
         </div>
     </footer>
+    
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+    <script src="/assets/js/common.js"></script>
     <script src="/assets/js/switchLanguage.js"></script>
     <!-- Bootstrap Bundle with Popper -->
     <script
