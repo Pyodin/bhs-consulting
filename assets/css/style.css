@@ -47,11 +47,8 @@
 }
 
 
-/* MAIN */
 
-#welcomeHeader {
-    color: #172281;
-} 
+/* MAIN */
 
 #presentation .btn {
     background-color: #172281;
@@ -75,34 +72,40 @@
 /* SERVICES */
 
 #services {
-    background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
+    /* background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%); */
     /* background: url(/assets/images/hero-bg.png) top center no-repeat; */
+    background-color: white;
+}
+
+.accordion-body .lead {
+    font-size: 0.9rem;
+    font-family: "Nunito", sans-serif;
+    /* font-weight: 350; */
 }
 
 .accordion-item {
-    border-radius: 50px;
+    /* border-radius: 10px; */
     margin: 20px;
     background: none;
     border: none;
 }
 
 .accordion-header {
-    border-radius: 50px;
+    border-radius: 10px;
     border: none;
     background: none;
 }
 
 .accordion-button {
-    border-radius: 50px;
+    border-radius: 10px;
     border: none;
     font-family: "Nunito", sans-serif;
     font-size: 1.2rem;
-    font-weight: 350;
-    color: #010c74;
+    color: #37517e;
 }
 
 .accordion-item:hover {
-    border-radius: 50px;
+    border-radius: 10px;
     transform: translateY(-10px) scale(1.02);
     box-shadow: 0 8px 16px 0 rgba(59, 58, 51, 0.2);
     transition: all 0.35s ease;
@@ -127,7 +130,7 @@
 
 #cloudSolutionHeader .accordion-button {
     border: 1px solid #2db6fab4;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 #cloudSolutionHeader i {
@@ -152,7 +155,7 @@
 
 #automationHeader .accordion-button {
     border: 1px solid #ffbb0075;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 #automationHeader i {
@@ -177,7 +180,7 @@
 
 #monitoringHeader .accordion-button {
     border: 1px solid #8c00ff79;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 #monitoringHeader i {
@@ -202,7 +205,7 @@
 
 #trainingHeader .accordion-button {
     border: 1px solid #ff00007a;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 #trainingHeader i {
@@ -227,7 +230,7 @@
 
 #devStrategieHeader .accordion-button {
     border: 1px solid #01ce0198;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 #devStrategieHeader i {
@@ -252,7 +255,7 @@
 
 #sourceCodeHeader .accordion-button {
     border: 1px solid #ff00ff7a;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 #sourceCodeHeader i {
@@ -298,8 +301,21 @@
 
 /* SKILLS */
 
-#skills {
-    background: linear-gradient(45deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%);
+#portfolio {
+    /* background: linear-gradient(45deg, rgb(186, 211, 235) 0%, rgba(255,255,255,1) 40%, rgba(155, 197, 236, 0.39) 100%); */
+    background-color: white;
+}
+
+.portfolio-item {
+    background-color: #7c7c7c3e;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
 }
 
 .skillRow .card {
@@ -419,3 +435,189 @@
     border-right: 20px solid #616060cc;
 }
 
+/* # TESTS */
+
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #37517e;
+  }
+  
+  .section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+  
+  .section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #47b2e4;
+    bottom: 0;
+    left: calc(50% - 20px);
+  }
+  
+  .section-title p {
+    margin-bottom: 0;
+  }
+
+
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact {
+    background-color: aliceblue;
+}
+
+.contact .info-box {
+    color: #444444;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    padding: 20px 0 30px 0;
+    background: #fff;
+  }
+  
+  .contact .info-box i {
+    font-size: 32px;
+    color: #47b2e4;
+    border-radius: 50%;
+    padding: 8px;
+  }
+  
+  .contact .info-box h3 {
+    font-size: 20px;
+    color: #2c4964;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  
+  .contact .info-box p {
+    padding: 0;
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .contact .php-email-form {
+    box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+    padding: 30px;
+    background: #fff;
+  }
+  
+  .contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  .contact .php-email-form .error-message br+br {
+    margin-top: 25px;
+  }
+  
+  .contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
+  
+  .contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .contact .php-email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    animation: animate-loading 1s linear infinite;
+  }
+  
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 14px;
+  }
+  
+  .contact .php-email-form input:focus,
+  .contact .php-email-form textarea:focus {
+    border-color: #5846f9;
+  }
+  
+  .contact .php-email-form input {
+    padding: 10px 15px;
+  }
+  
+  .contact .php-email-form textarea {
+    padding: 12px 15px;
+  }
+  
+  .contact .php-email-form button[type=submit] {
+    background: #5846f9;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 5px;
+  }
+  
+  .contact .php-email-form button[type=submit]:hover {
+    background: #7b27d8;
+  }
+
+  .portfolio #portfolio-flters {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  
+.portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 5px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1;
+    color: #444444;
+    transition: all 0.3s;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .portfolio #portfolio-flters li:hover,
+  .portfolio #portfolio-flters li.filter-active {
+    background: #47b2e4;
+    color: #fff;
+  }

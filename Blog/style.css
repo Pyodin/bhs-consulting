@@ -3,10 +3,11 @@ body {
 }
 
 .masthead {
-    background-image: url('/assets/images/banner-keyboard.webp');
-    background-attachment: fixed;
-    height: 60vh; 
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaEkLLsOTmOcgLhxJAD12JpNj3TYpiQTqQ6A&usqp=CAU') center top no-repeat;
     background-position: center;
+    background-attachment: fixed;
+    
+    height: 60vh; 
     filter: brightness(80%);
     color: white;
 }
@@ -46,4 +47,4 @@ footer .btn:hover {
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
     background-color: rgb(160, 150, 255);
-} 
+}

@@ -1,12 +1,13 @@
+
 const myNav = document.getElementById('navbar');
 window.addEventListener('scroll', function () {
   if (window.scrollY > 100) {
-      myNav.classList.add("nav-colored");
-      myNav.classList.remove("nav-transparent");
-  } 
+    myNav.classList.add("nav-colored");
+    myNav.classList.remove("nav-transparent");
+  }
   else {
-      myNav.classList.add("nav-transparent");
-      myNav.classList.remove("nav-colored");
+    myNav.classList.add("nav-transparent");
+    myNav.classList.remove("nav-colored");
   }
 });
 
@@ -37,3 +38,38 @@ new Typed('#typed', {
 });
 
 
+
+
+/**
+ * Porfolio isotope and filter
+ */
+window.addEventListener('load', () => {
+  // debug
+  console.log('window.addEventListener');
+  let portfolioContainer = select('.portfolio-container');
+  if (portfolioContainer) {
+    let portfolioIsotope = new Isotope(portfolioContainer, {
+      itemSelector: '.portfolio-item'
+    });
+
+    let portfolioFilters = select('#portfolio-flters li', true);
+
+    on('click', '#portfolio-flters li', function (e) {
+      console.log('window.addEventListener');
+
+      e.preventDefault();
+      portfolioFilters.forEach(function (el) {
+        el.classList.remove('filter-active');
+      });
+      this.classList.add('filter-active');
+
+      portfolioIsotope.arrange({
+        filter: this.getAttribute('data-filter')
+      });
+      portfolioIsotope.on('arrangeComplete', function () {
+        AOS.refresh()
+      });
+    }, true);
+  }
+
+});
