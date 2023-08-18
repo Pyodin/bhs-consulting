@@ -1,9 +1,9 @@
 /* NARBAR */
-.navbar {
+nav .navbar {
     transition: all 200ms linear;
 }
 
-.navbar-brand {
+nav .navbar-brand {
     padding-right: 100px;
     font-size: 2rem;
     font-family: 'Ysabeau SC', sans-serif;
@@ -12,11 +12,11 @@
     color: rgb(236, 174, 1);
 }
 
-.navbar-brand:hover {
+nav .navbar-brand:hover {
     color: rgb(3, 75, 143)
 }
 
-.nav-item a {
+nav .nav-item a {
     font-weight: bold;
     font-size: 1.2rem;
     margin: 0 5px;
@@ -25,15 +25,15 @@
     color: #172281;
 }
 
-.nav-item a:hover {
+nav .nav-item a:hover {
     color: rgb(236, 174, 1);
 }
 
-.nav-item li:hover>a {
+nav .nav-item li:hover>a {
     color: #000000;
 }
 
-.navbar .btn {
+nav .navbar .btn {
     font-size: 1.2rem;
     font-family: 'Ysabeau SC', sans-serif;
 }

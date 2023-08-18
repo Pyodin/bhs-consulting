@@ -48,12 +48,12 @@
 
 <body>
     <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg fixed-top nav-colored" id="navbar">
-        <div class="container">
 
-            <a class="navbar-brand" href="/Blog" id="navbarBrand">
+    <nav class="navbar navbar-expand-lg nav-colored  " id="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/" id="navbarBrand">
                 <i class="bi bi-list"></i>
-                CloudGrip
+                BHS Consulting
             </a>
 
             <button class="navbar-toggler" type="button"
@@ -66,11 +66,21 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a id="aboutMeLink" class="nav-link" href="/">About
+                        <a id="aboutMeLink" class="nav-link" href="/About">About
                             me</a>
                     </li>
+                    <li class="nav-item">
+                        <a id="projectsLink" class="nav-link disabled"
+                            href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="contactLink" class="nav-link"
+                            href="/Contact/">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
+                    </li>
                 </ul>
-
             </div>
 
             <!-- english and franch flags as button -->
@@ -84,12 +94,12 @@
     </nav>
 
     <!-- Page header with logo and tagline-->
-    <header class="mt-5 py-5 bg-light border-bottom mb-4">
+    <header class="py-5 bg-light border-bottom mb-4">
         <div class="container">
             <div class="text-center my-5">
-                <h1 class="fw-bolder">Welcome to Blog Home!</h1>
-                <p class="lead mb-0">A Bootstrap 5 starter layout for your next
-                    blog homepage</p>
+                <h1 class="fw-bolder">Welcome to CloudGrip!</h1>
+                <p class="lead mb-0">Your daily dose of development, cloud, AI,
+                    and more ! </p>
             </div>
         </div>
     </header>
@@ -211,6 +221,35 @@
             </div>
             <!-- Side widgets-->
             <div class="col-lg-4">
+                <!-- Side widget-->
+                <div class="card mb-4">
+                    <div class="card-header">Side Widget</div>
+                    <div class="card-body">
+                        <div
+                            class="row justify-content-center align-items-center">
+                            <div class="col-4">
+                                <img class="img-fluid rounded-circle"
+                                    src="/assets/images/Mon projet.png"
+                                    alt="..." />
+                            </div>
+                            <div class="col">
+                                Hey there! I'm Paul, a freelance DevOps
+                                engineer.
+                                With expertise in cloud solutions, CI/CD
+                                pipelines, and more.
+                                I help businesses achieve efficiency
+                                and reliability in their software projects.
+                            </div>
+                        </div>
+                        <!-- button -->
+                        <div class="text-center mt-4">
+                            <a class="btn btn-primary"
+                                href="https://paulbiberstein.me">Visit
+                                Website</a>
+
+                        </div>
+                    </div>
+                </div>
                 <!-- Search widget-->
                 <div class="card mb-4">
                     <div class="card-header">Search</div>
@@ -246,13 +285,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Side widget-->
-                <div class="card mb-4">
-                    <div class="card-header">Side Widget</div>
-                    <div class="card-body">You can put anything you want inside
-                        of these side widgets. They are easy to use, and feature
-                        the Bootstrap 5 card component!</div>
                 </div>
             </div>
         </div>

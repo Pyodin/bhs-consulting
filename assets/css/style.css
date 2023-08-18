@@ -5,6 +5,11 @@
     font-family: 'Ysabeau SC', sans-serif;
 }
 
+#navbar2 {
+    /* position fixed */
+    /* position: fixed; */
+}
+
 /* HERO */
 
 .hero {
