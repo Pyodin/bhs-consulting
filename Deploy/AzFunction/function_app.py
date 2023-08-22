@@ -74,18 +74,18 @@ def ContactForm(
     logging.info(f"SENDGRID_API_KEY: {SENDGRID_API_KEY}")
 
     logging.info(req.form)
-    name, mail, phone, message = (
+    name, mail, subject, message = (
         req.form.get("name"),
         req.form.get("email"),
-        req.form.get("phone"),
+        req.form.get("subject"),
         req.form.get("message"),
     )
 
     subject = f"You just received a message from {mail}"
     body = f"""
         Name: {name}\t
-        Mail: {mail}\t
-        Phone: {phone}\n\n
+        Mail: {mail}\n
+        Subject: {subject}\n
         Message: {message}
     """
 

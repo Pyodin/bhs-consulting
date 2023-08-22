@@ -72,7 +72,10 @@ contactForm.addEventListener("submit", function (e) {
     let loading = select('.loading');
     loading.classList.remove("visually-hidden");
 
-    var data = new FormData(contactForm);
+    let name = select('#name').value;
+    let email = select('#email').value;
+    let subject = select('#subject').value;
+    let message = select('#message').value;
 
     fetch("https://bhstriggermail.azurewebsites.net/api/ContactForm", {
         method: "POST",
@@ -80,7 +83,12 @@ contactForm.addEventListener("submit", function (e) {
             'Accept': 'application/json, text/plain, */*',
             'Content-type': 'application/json'
         },
-        body: data
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
+        })
     })
         .then(function (response) {
             console.log(response);
