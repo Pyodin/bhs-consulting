@@ -58,8 +58,8 @@ def add_email_to_table(table_client, email):
     table_client.create_entity(subscriber_entity)
 
 
-@app.route(route="contactForm", methods=["POST"])
-def HttpTrigger(
+@app.route(route="ContactForm", methods=["POST"])
+def ContactForm(
     req: func.HttpRequest,
 ) -> func.HttpResponse:
     logging.info("Python HTTP trigger function processed a request.")
@@ -90,7 +90,7 @@ def HttpTrigger(
     """
 
     res = send_email(subject, body)
-    
+
     if res:
         return func.HttpResponse(
             "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
