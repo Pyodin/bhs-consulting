@@ -73,7 +73,7 @@ def ContactForm(
 
     logging.info(f"SENDGRID_API_KEY: {SENDGRID_API_KEY}")
 
-    logging.info(req.form)
+    logging.info(f"Request form: {req.form}")
     name, mail, subject, message = (
         req.form.get("name"),
         req.form.get("email"),
@@ -90,6 +90,7 @@ def ContactForm(
     """
 
     res = send_email(subject, body)
+    # res = True
 
     if res:
         return func.HttpResponse(
