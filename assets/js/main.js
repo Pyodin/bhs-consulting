@@ -64,7 +64,7 @@ window.addEventListener('load', () => {
 });
 
 
-// Email form 
+// Email form
 let contactForm = select('.email-form')
 contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
