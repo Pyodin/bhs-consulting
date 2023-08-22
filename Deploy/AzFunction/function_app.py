@@ -65,7 +65,7 @@ def ContactForm(
     logging.info("Python HTTP trigger function processed a request.")
 
     global SENDGRID_API_KEY
-    SENDGRID_API_KEY = os.environ.get("CUSTOMCONNSTR_SendGridApiKey")
+    SENDGRID_API_KEY = os.environ.get("SendGridApiKey")
 
     if not SENDGRID_API_KEY:
         logging.warning("Missing environment variables")
@@ -109,7 +109,7 @@ def HttpTriggerNewMail(req: func.HttpRequest) -> func.HttpResponse:
     logging.info("Python HTTP trigger function processed a request.")
 
     global SENDGRID_API_KEY, TABLE_SERVICE_CONNECTION_STRING
-    SENDGRID_API_KEY = os.environ.get("CUSTOMCONNSTR_SendGridApiKey")
+    SENDGRID_API_KEY = os.environ.get("SendGridApiKey")
     TABLE_SERVICE_CONNECTION_STRING = os.environ.get(
         "CUSTOMCONNSTR_TableServiceConnectionString"
     )
