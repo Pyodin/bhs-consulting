@@ -29,5 +29,6 @@ jobs:
       api_location: "" # Api source code path - optional
       output_location: "" # Built app content directory - optional
       skip_app_build: true # Skip build - optional
+      skip_api_build: true # Skip api build - optional
 ###### End of Repository/Build Configurations ######
 
