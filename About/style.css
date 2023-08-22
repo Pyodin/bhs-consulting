@@ -13,6 +13,95 @@
 }
 
 
+
+/* EXPERIENCES TIMELINE */
+
+#experiences {
+    background: none;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    width: 8px;
+    background: linear-gradient(rgb(7, 48, 87), rgb(7, 142, 233) );
+    border-radius: 3px;
+    z-index: 1;
+}
+
+.timeline .card {
+    position: relative;
+    width: calc( 50% - 40px );
+    border-radius: 30px;
+    background: #ffffff;
+    z-index: 2;
+
+}
+
+.timeline .card-header {
+    border: #000000 1px solid;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background: #ffbb00c7;
+}
+
+.timeline .card .card-title {
+    font-weight: bold;
+}
+
+.timeline .card:before {
+    /* content is the emoji suitcase */
+    content: "\1F4BC";
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: calc( 100% + 26px );
+    background: #ffffff;
+    width: 40px;
+    height: 40px;
+    border: 6px #ffc400 solid;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.timeline .card:after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 20px solid #616060cc;
+    border-bottom: 20px solid transparent;
+}
+
+.timeline .card:nth-child(even) {
+    margin-left: calc( 50% + 48px );
+}
+
+.timeline .card:nth-child(even):before {
+    left: auto;
+    right: calc( 100% + 26px );
+}
+
+.timeline .card:nth-child(even):after {
+    left: auto;
+    right: 100%;
+    border-left: none;
+    border-right: 20px solid #616060cc;
+}
+
+
 /* timeline */
 .timeline {
     position: relative;

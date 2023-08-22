@@ -38,7 +38,27 @@ def send_email(subject, body):
         return True
 
 
-@app.route(route="HttpTrigger", methods=["POST"])
+def email_exists(table_client, email):
+    # Check if the email address already exists in Azure Table Storage
+    logging.info(f"Checking if email address exists: {email}")
+    filter_condition = f"Email eq '{email}'"
+    entities = table_client.query_entities(filter_condition)
+    return any(entities)
+
+
+def add_email_to_table(table_client, email):
+    logging.info(f"Adding {email} to Azure Table Storage")
+    # Create a new entity
+    subscriber_entity = {
+        "PartitionKey": "Subscribers",
+        "RowKey": email,
+        "Email": email,
+        "SusbribedNewsletter": True,
+    }
+    table_client.create_entity(subscriber_entity)
+
+
+@app.route(route="contactForm", methods=["POST"])
 def HttpTrigger(
     req: func.HttpRequest,
 ) -> func.HttpResponse:
@@ -50,30 +70,27 @@ def HttpTrigger(
     if not SENDGRID_API_KEY:
         logging.warning("Missing environment variables")
         return func.HttpResponse("Missing environment variables", status_code=500)
-    
-
-    logging.info(req.form)
-    name, mail, phone, company, message = (
-        req.form.get("name"),
-        req.form.get("email"),
-        req.form.get("phone"),
-        req.form.get("company"),
-        req.form.get("message"),
-    )
 
     logging.info(f"SENDGRID_API_KEY: {SENDGRID_API_KEY}")
 
-    subject = f"You just received a message from {mail} from bhsconsulting.fr"
+    logging.info(req.form)
+    name, mail, phone, message = (
+        req.form.get("name"),
+        req.form.get("email"),
+        req.form.get("phone"),
+        req.form.get("message"),
+    )
+
+    subject = f"You just received a message from {mail}"
     body = f"""
-        Name: {name}\n
-        Mail: {mail}\n
+        Name: {name}\t
+        Mail: {mail}\t
         Phone: {phone}\n\n
-        Company: {company}\n\n
-        Message: {message}\n
+        Message: {message}
     """
 
     res = send_email(subject, body)
-
+    
     if res:
         return func.HttpResponse(
             "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
@@ -92,7 +109,9 @@ def HttpTriggerNewMail(req: func.HttpRequest) -> func.HttpResponse:
 
     global SENDGRID_API_KEY, TABLE_SERVICE_CONNECTION_STRING
     SENDGRID_API_KEY = os.environ.get("CUSTOMCONNSTR_SendGridApiKey")
-    TABLE_SERVICE_CONNECTION_STRING = os.environ.get("CUSTOMCONNSTR_TableServiceConnectionString")
+    TABLE_SERVICE_CONNECTION_STRING = os.environ.get(
+        "CUSTOMCONNSTR_TableServiceConnectionString"
+    )
 
     if not all([SENDGRID_API_KEY, TABLE_SERVICE_CONNECTION_STRING]):
         logging.warning("Missing environment variables")
@@ -148,23 +167,3 @@ def HelloWorld(req: func.HttpRequest) -> func.HttpResponse:
         "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
         status_code=200,
     )
-
- 
-def email_exists(table_client, email):
-    # Check if the email address already exists in Azure Table Storage
-    logging.info(f"Checking if email address exists: {email}")
-    filter_condition = f"Email eq '{email}'"
-    entities = table_client.query_entities(filter_condition)
-    return any(entities)
-
-
-def add_email_to_table(table_client, email):
-    logging.info(f"Adding {email} to Azure Table Storage")
-    # Create a new entity
-    subscriber_entity = {
-        "PartitionKey": "Subscribers",
-        "RowKey": email,
-        "Email": email,
-        "SusbribedNewsletter": True,
-    }
-    table_client.create_entity(subscriber_entity)
