@@ -74,11 +74,11 @@ contactForm.addEventListener("submit", function (e) {
 
     var data = new FormData(contactForm);
 
-    fetch("https://bhstriggermail.azurewebsites.net/api/ContactForm", {
+    // fetch("https://bhstriggermail.azurewebsites.net/api/ContactForm", {
+    fetch("http://localhost:7071/api/ContactForm", {
         method: "POST",
         headers: {
-            'Accept': 'application/json, text/plain, */*',
-            'Content-type': 'application/json'
+            'Accept': 'application/json, text/plain, */*'
         },
         body: data
     })
