@@ -2,794 +2,682 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Stylesheet -->
-    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/common.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
+    <!-- bootstrap icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
     <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
         rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Paul Bourhis</title>
 </head>
 
 <body>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="header fixed-top">
-        <!-- Navigation bar -->
-        <nav class="navbar navbar-expand-lg" id="navbar">
-            <div class="container">
-                <a class="navbar-brand" href="/" id="navbarBrand">
-                    <i class="bi bi-list"></i>
-                    BHS Consulting
-                </a>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg fixed-top " id="navbar">
+        <div class="container">
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <a class="navbar-brand" href="/" id="navbarBrand">
+                <i class="bi bi-list"></i>
+                BHS Consulting
+            </a>
 
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a id="aboutMeLink" class="nav-link" href="/About">About
-                                me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="projectsLink" class="nav-link disabled" href="#">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
-                        </li>
-                    </ul>
-                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <!-- english and franch flags as button -->
-                <div class="d-flex align-items-center">
-                    <a class="btn btn-outline-dark btn-sm me-2" id="btnEnglish">English</a>
-                    <a class="btn btn-outline-dark btn-sm" id="btnFrench">Français</a>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a id="aboutMeLink" class="nav-link" href="/About">About me</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a id="experiencesLink" class="nav-link dropdown-toggle" href="#"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Experiences
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a id="murexLink" class="dropdown-item"
+                                    href="/Experiences/Murex/">Murex</a>
+                            </li>
+                            <li>
+                                <a id="thalesLink" class="dropdown-item"
+                                    href="/Experiences/Thales/">Thales</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a id="projectsLink" class="nav-link disabled" href="#">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
+                    </li>
+                </ul>
+
             </div>
-        </nav>
 
-    </header><!-- End Header -->
+            <!-- english and franch flags as button -->
+            <div class="d-flex align-items-center">
+                <a class="btn btn-outline-dark btn-sm me-2" id="btnEnglish">English</a>
+                <a class="btn btn-outline-dark btn-sm" id="btnFrench">Français</a>
+            </div>
+        </div>
+    </nav>
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="hero container-fluid p-5">
+    <!--  Hero Section -->
+    <div class="container-fluid p-5 hero">
         <div class="row justify-content-center align-items-center px-5 m-5">
-            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-out" data-aos-delay="300"
-                data-aos-duration="2000">
+            <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="2000">
                 <div class="display-3 my-4">Paul BOURHIS</div>
-                <div class="display-4" id="carouselCaption1Title">Freelance
-                    DevOps
-                    Engineer</div>
+                <div class="display-4" id="carouselCaption1Title">Freelance DevOps Engineer</div>
                 <div class="display-6">I can help you on
                     <span id="typed"
                         data-typed-items="Cloud, SRE, Monitoring, Development, Architecture, Integration"></span>
                 </div>
                 <div class="container my-5">
                     <!-- Linkedin -->
-                    <a class="btn btn-floating"
-                        href="https://www.linkedin.com/in/paul-bourhis-375557153/"
-                        aria-label="LinkedIn" target="_blank">
+                    <a class="btn btn-floating" href="https://www.linkedin.com/in/paul-bourhis-375557153/"
+                        role="button" aria-label="LinkedIn" target="_blank">
                         <i class="bi bi-linkedin"></i>
                     </a>
 
                     <!-- GitHub -->
-                    <a class="btn btn-floating" href="https://github.com/Pyodin" aria-label="GitHub"
-                        target="_blank">
+                    <a class="btn btn-floating" href="https://github.com/Pyodin" role="button"
+                        aria-label="GitHub" target="_blank">
                         <i class="bi bi-github"></i>
                     </a>
 
                     <!-- Instagram -->
                     <a class="btn btn-floating" href="https://www.instagram.com/paulbhs/"
-                        aria-label="Instagram" target="_blank">
+                        role="button" aria-label="Instagram" target="_blank">
                         <i class="bi bi-instagram"></i>
                     </a>
-
-                    <!-- Mail -->
-                    <a class="btn btn-floating" href="mailto:paul_bourhis@ahoo.com"
-                        aria-label="Mail">
-                        <i class="bi bi-envelope"></i>
-                    </a>
                 </div>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2 hero-img p-5" data-aos="zoom-out"
+            <div class="col-lg-6 d-lg-block d-none hero-img p-5" data-aos="zoom-out"
                 data-aos-delay="300" data-aos-duration="2000">
-                <img src="/assets/images/hero-img.png" class="img-fluid animated" alt=""
-                    id="heroImg">
+                <img src="/assets/images/Mon projet(3).png" class="img-fluid" alt="" id="heroImg">
             </div>
         </div>
-    </section><!-- End Hero -->
+    </div>
 
-    <main id="main">
-        <!-- ======= About Section ======= -->
-        <section id="presentation">
-            <div class="container-xxl my-5 shadow rounded-5" data-aos="fade-up">
-                <div class="row justify-content-center align-items-center px-3">
-                    <div class="col-lg-3 text-center">
-                        <img id="mainPhoto" src="/assets/images/profile.png" alt="Profile Picture"
-                            class="img-fluid rounded-circle mb-3" />
+    <!-- Main container -->
+    <div class="container-xxl my-5 shadow rounded-5" data-aos="fade-up" id="presentation">
+        <div class="row justify-content-center align-items-center px-3">
+            <div class="col-lg-4 text-center">
+                <img id="mainPhoto" src="/assets/images/Mon projet.png" alt="Profile Picture"
+                    class="img-fluid rounded-circle mb-3 " />
+            </div>
+            <div class="col-lg-8 py-5 text-center">
+                <!-- <p id="welcomeHeader" class="fs-1">Welcome!</p> -->
+                <h4 id="welcomeHeader" class="display-4 mb-5">Welcome!</h4>
+                <p id="introParagraph1" class="lead">
+                    As a Freelance DevOps engineer, I excel in software
+                    development across various industries, specializing in
+                    CI/CD pipelines for rapid software delivery. Skilled in
+                    automation, monitoring, and high-performance
+                    infrastructure, I have experience with microservices,
+                    Docker, and cloud platforms like Azure and AWS.
+                </p>
+                <p id="introParagraph2" class="lead">
+                    Driven by a passion for leveraging technology to solve
+                    problems and deliver value, I'm eager to make a positive
+                    impact in the software development industry.
+                </p>
+                <p class="lead fw-bold text-end">Paul BOURHIS</p>
+                <hr />
+
+
+                <div class="row justify-content-end align-items-center g-2 mt-4">
+                    <div class="col">
+                        <a href="/About/" class="btn btn-primary shadow">
+                            <span id="moreMeButton">More about me</span>
+                            <i class="bi bi-arrow-right-circle-fill mx-2"></i>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="/assets/doc/Resume_Paul_Bourhis.pdf" class="btn btn-primary shadow"
+                            target="_blank">
+                            <span id="resumeButton">Download my CV</span>
+                            <i class="bi bi-arrow-down-circle-fill mx-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div class="container-fluid my-5 p-5 pb-1" data-aos="fade-up" id="services">
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-lg-4">
+                <p class="display-2 mx-5" id="serviceHeader">Services</p>
+                <img src="/assets/images/share.png" alt="Badge logo" class="img-fluid" />
+            </div>
+            <div class="col-lg-8 pt-5">
+                <div class="row justify-content-center align-items-center serviceRow">
+                    <div class="col-lg-6">
+                        <div class="accordion" id="solutionsAccordion">
+                            <div class="accordion-item ">
+                                <h2 class="accordion-header " id="cloudSolutionHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#cloudSolutionCollapse"
+                                        aria-expanded="false" aria-controls="cloudSolutionCollapse">
+                                        <i class="bi bi-clouds me-2"></i>
+                                        <span id="cloudSolutionHeaderText">Cloud Solutions and
+                                            Architecture</span>
+                                    </button>
+                                </h2>
+                                <div id="cloudSolutionCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="cloudSolutionHeader"
+                                    data-bs-parent="#solutionsAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="cloudSolutionDesc1">Design and implement
+                                                    cloud-based architectures</span></li>
+                                            <li><span id="cloudSolutionDesc2">Migrate on-premises
+                                                    applications to the cloud</span></li>
+                                            <li><span id="cloudSolutionDesc3">Optimize cost
+                                                    efficiency</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="devStrategieHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#devStrategieCollapse" aria-expanded="false"
+                                        aria-controls="devStrategieCollapse">
+                                        <i class="bi bi-diagram-3 me-2"></i>
+                                        <span id="devStrategieHeaderText">Development of CI/CD
+                                            Strategies</span>
+                                    </button>
+                                </h2>
+                                <div id="devStrategieCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="devStrategieHeader"
+                                    data-bs-parent="#solutionsAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="devStrategieDesc1">Design and implement
+                                                    continuous integration pipelines</span></li>
+                                            <li><span id="devStrategieDesc2">Develop code health
+                                                    solutions</span></li>
+                                            <li><span id="devStrategieDesc3">Set up continuous
+                                                    deployment strategies</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="sourceCodeHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#sourceCodeCollapse" aria-expanded="false"
+                                        aria-controls="sourceCodeCollapse">
+                                        <i class="bi bi-code-slash me-2"></i>
+                                        <span id="sourceCodeHeaderText">Source Code
+                                            Management</span>
+                                    </button>
+                                </h2>
+                                <div id="sourceCodeCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="sourceCodeHeader"
+                                    data-bs-parent="#solutionsAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="sourceCodeDesc1">Establish effective
+                                                    workflows for version control</span></li>
+                                            <li><span id="sourceCodeDesc2">Facilitate pull requests
+                                                    and code reviews</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
-                    <div class="col-lg-8 py-5 text-center">
-                        <!-- <p id="welcomeHeader" class="fs-1">Welcome!</p> -->
-                        <div class="section-title">
-                            <h1 id="welcomeHeader"> Welcome!</h1>
+                    <div class="col-lg-6">
+                        <div class="accordion" id="servicesAccordion">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="monitoringHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#monitoringCollapse" aria-expanded="false"
+                                        aria-controls="monitoringCollapse">
+                                        <i class="bi bi-graph-up me-2"></i>
+                                        <span id="monitoringHeaderText">Monitoring and
+                                            Alerting</span>
+                                    </button>
+                                </h2>
+                                <div id="monitoringCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="monitoringHeader"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="monitoringDesc1">Set up monitoring and
+                                                    alerting systems</span></li>
+                                            <li><span id="monitoringDesc2">Ensure high availability
+                                                    and reliability</span></li>
+                                            <li><span id="monitoringDesc3">Implement dashboards and
+                                                    reports</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="trainingHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#securityCollapse"
+                                        aria-expanded="false" aria-controls="securityCollapse">
+                                        <i class="bi bi-people me-2"></i>
+                                        <span id="trainingHeaderText">Training and Knowledge
+                                            Sharing</span>
+                                    </button>
+                                </h2>
+                                <div id="securityCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="trainingHeader"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="trainingDesc1">Provide guidance on
+                                                    effective development practices</span></li>
+                                            <li><span id="trainingDesc2">Train developers to cover
+                                                    their application with automated tests as much
+                                                    as possible</span></li>
+                                            <li><span id="trainingDesc3">Conduct workshops on DevOps
+                                                    best practices</span></li>
+                                            <li><span id="trainingDesc4">Promote Agile
+                                                    methodologies</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="automationHeader">
+                                    <button class="accordion-button collapsed" type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#automationCollapse" aria-expanded="false"
+                                        aria-controls="automationCollapse">
+                                        <i class="bi bi-tools me-2"></i>
+                                        <span id="automationHeaderText">Automation and
+                                            Infrastructure</span>
+                                    </button>
+                                </h2>
+                                <div id="automationCollapse" class="accordion-collapse collapse"
+                                    aria-labelledby="automationHeader"
+                                    data-bs-parent="#servicesAccordion">
+                                    <div class="accordion-body">
+                                        <ul class="lead text-start">
+                                            <li><span id="automationDesc1">Automate repetitive
+                                                    tasks</span></li>
+                                            <li><span id="automationDesc2">Provide Linux environment
+                                                    setup and configuration</span></li>
+                                            <li><span id="automationDesc3">Ensure developers have a
+                                                    development environment as close as possible to
+                                                    the target platform</span></li>
+                                            <li><span id="automationDesc4">Implement infrastructure
+                                                    as code (IAC)</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p id="introParagraph1" class="lead">
-                            As a Freelance DevOps engineer, I excel in
-                            software
-                            development across various industries,
-                            specializing in
-                            CI/CD pipelines for rapid software delivery.
-                            Skilled in
-                            automation, monitoring, and high-performance
-                            infrastructure, I have experience with
-                            microservices,
-                            Docker, and cloud platforms like Azure and
-                            AWS.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="container-fluid my-5" data-aos="fade-up" id="certifications">
+        <p class="display-2 pb-3 text-center" id="certificationsHeader">Certifications</p>
+
+        <div class="row justify-content-center align-items-start certRow text-center">
+            <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="700"
+                data-aos-duration="1000">
+                <h3 class="card-title mt-1">AZ-400</h3>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-400/">
+                    <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                        alt="Title">
+                </a>
+                <div class="lead" id="az400Cert">DevOps Engineer Expert</div>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-400/"
+                    class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_0">Read more</span></a>
+            </div>
+            <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="500"
+                data-aos-duration="1000">
+                <h3 class="card-title mt-1">AZ-104</h3>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-104/">
+                    <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                        alt="Title">
+                </a>
+                <div class="lead" id="az104Cert">Microsoft Azure Administrator</div>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-104/"
+                    class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_1">Read more</span></a>
+
+            </div>
+            <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="300"
+                data-aos-duration="1000">
+                <h3 class="card-title mt-1">AZ-900</h3>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900/">
+                    <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
+                        alt="Title">
+                </a>
+                <div class="lead" id="az900Cert">Microsoft Azure Fundamentals</div>
+                <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900"
+                    class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_2">Read more</span></a>
+            </div>
+            <div class="col-2" data-aos="fade-right" data-aos-duration="1000">
+                <h3 class="card-title mt-1">TOEIC</h3>
+                <a href="">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-225px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"
+                        alt="Title">
+                </a>
+                <div class="lead">English test: 920/1000</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main skills -->
+    <div class="container-fluid my-5 py-5" data-aos="fade-up" id="skills">
+        <p class="display-2 text-end mxj-5" id="mainSkillsHeader">Main skills</p>
+
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-lg-7">
+                <div class="row justify-content-center align-items-start skillRow p-4">
+                    <div class="col-lg-6">
+                        <div class="card text-center">
+                            <h3 class="card-title mt-1" id="devopsHeader">DevOPS</h3>
+
+                            <div class="card-body">
+                                <div class="row justify-content-center align-items-center g-2">
+                                    <div class="col">
+                                        <img src="https://www.sparks-formation.com/wp-content/uploads/2020/07/azure-devops.png"
+                                            alt="Azure" class="skill-logo" />
+                                        <p class="lead">Azure</p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
+                                            alt="Docker" class="skill-logo" />
+                                        <p class="lead">Docker</p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
+                                            alt="Grafana" class="skill-logo" />
+                                        <p class="lead">Monitoring</p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://logos-download.com/wp-content/uploads/2016/10/Ansible_logo.png"
+                                            alt="Ansible" class="skill-logo" />
+                                        <p class="lead">Ansible</p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg"
+                                            alt="Jenkins" class="skill-logo" />
+                                        <p class="lead">Jenkins</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card text-center">
+                            <h3 class="card-title mt-1" id="developmentHeader">Development</h3>
+                            <div class="card-body">
+                                <div class="row justify-content-center align-items-center g-2">
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                                            alt="Python" class="skill-logo" />
+                                        <p class="lead">
+                                            Python
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
+                                            alt="C++" class="skill-logo" />
+                                        <p class="lead">
+                                            C++
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Cmake.svg/1200px-Cmake.svg.png"
+                                            alt="Cmake" class="skill-logo" />
+                                        <p class="lead">
+                                            Cmake
+                                        </p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png"
+                                            alt="VSCode" class="skill-logo" />
+                                        <p class="lead">
+                                            VsCode
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card text-center">
+                            <h4 class="card-title mt-1" id="otherSkillsHeader">Others</h4>
+
+                            <div class="card-body">
+                                <div class="row justify-content-center align-items-center g-2">
+                                    <div class="col"><img
+                                            src="https://1000logos.net/wp-content/uploads/2017/03/LINUX-LOGO.png"
+                                            alt="Linux" class="skill-logo" />
+                                        <p class="lead">Linux</p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+                                            alt="Git" class="skill-logo" />
+                                        <p class="lead">Git</p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://divamaggie.com/svg/uiux-design.svg"
+                                            alt="UI/UX Design" class="skill-logo" />
+                                        <p class="lead">Ui/Ux</p>
+                                    </div>
+                                    <div class="col">
+                                        <img src="https://cdn.freebiesupply.com/logos/large/2x/amazon-database-logo-png-transparent.png"
+                                            alt="Data analysis" class="skill-logo" />
+                                        <p class="lead">DataAnalysis</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <img src="/assets/images/Mon projet(6).png" alt="Badge logo" class="img-fluid" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Experiences -->
+    <div class="container-xxl my-5 pt-3 pb-5 rounded-5" data-aos="fade-up" id="experiences">
+        <p class="display-2 text-center" id="experiencesHeader">Experiences</p>
+
+        <div class="timeline p-4">
+            <div class="card my-3" data-aos="fade-right" data-aos-delay="200">
+                <div class="card-header fw-bold" id="freelanceAzureDevopsHeader">Freelance
+                    Azure
+                    DevOps</div>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger" id="freelanceAzureDevopsYear">
+                                2023
+                            </h5>
+                            <p class="card-text" id="freelanceAzureDevopsDescription">
+                                As of today, I will be working as a freelance Azure DevOps
+                                engineer.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <a href="#experiences" class="btn btn-sm btn-primary disabled"><span
+                                id="readMoreBtn">Read more</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-3" data-aos="fade-left" data-aos-delay="200">
+                <div class="card-header fw-bold" id="murexDevopsHeader">DevOPS engineer at
+                    Murex
+                </div>
+                <div class="row justify-content-center align-items-center g-0">
+                    <div class="col-md-3">
+                        <img src="/assets/images/murex.png" class="card-img-top" alt="Murex logo" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger" id="murexYear">2021 - 2023
+                            </h5>
+                            <p class="card-text">
+                                <span id="murexDescription">As a DevOps
+                                    engineer at Murex, I
+                                    developed a Python microservice
+                                    application, ensuring continuous
+                                    integration, delivery, and robust
+                                    monitoring/alerting systems.</span>
+                            </p>
+                            <a href="/Experiences/Murex/" class="btn btn-sm btn-primary">
+                                <span id="readMoreBtn1">Read more</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-3" data-aos="fade-right" data-aos-delay="200">
+                <div class="card-header fw-bold" id="thalesCplusplusHeader">C++ Developer at
+                    Thales
+                </div>
+                <div class="row justify-content-center align-items-center g-0">
+                    <div class="col-md-3">
+                        <img src="https://new.afsin.org/wp-content/uploads/2009/07/Logo-Thales-Couleur.jpg"
+                            class="card-img-top" alt="Murex logo" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger" id="thalesCplusplusYear">2019
+                                -
+                                2021
+                            </h5>
+                            <p class="card-text" id="thalesCplusplusDescription">
+                                As a software
+                                engineer at Thales, I
+                                contributed to the SCORPION project,
+                                modernizing the French army's
+                                vehicle fleet.
+                            </p>
+                            <a href="/Experiences/Thales/" class="btn btn-sm btn-primary">
+                                <span id="readMoreBtn2">Read more</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-3" data-aos="fade-left" data-aos-delay="200">
+                <div class="card-header fw-bold" id="thalesPythonHeader">Python Developer at
+                    Thales
+                </div>
+                <div class="row justify-content-center align-items-center g-0">
+                    <div class="col-md-3">
+                        <img src="https://new.afsin.org/wp-content/uploads/2009/07/Logo-Thales-Couleur.jpg"
+                            class="card-img-top" alt="Murex logo" />
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger" id="thalesPythonYear">6 month
+                                internship</h5>
+                            <p class="card-text" id="thalesPythonDescription">
+                                During my internship on the CONTACT project, I developed a
+                                graphical
+                                user interface (GUI) to remotely control custom platforms
+                                simulating
+                                military radios.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card my-3" data-aos="fade-right" data-aos-delay="200">
+                <div class="card-header fw-bold" id="polytechnicCHeader">C Developer at
+                    Polytechnic
+                    University of
+                    Valencia
+                </div>
+                <div class="row justify-content-center align-items-center g-0">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger" id="polytechnicCYear">4 month
+                            internship
+                        </h5>
+                        <p class="card-text" id="polytechnicCDescription">
+                            I provided technical support for a graduation thesis project
+                            focused
+                            on developing a robotic arm. I gained valuable experience in
+                            robotics, control systems, and research environments.
                         </p>
-                        <p id="introParagraph2" class="lead">
-                            Driven by a passion for leveraging
-                            technology to solve
-                            problems and deliver value, I'm eager to
-                            make a positive
-                            impact in the software development industry.
-                        </p>
-                        <p class="lead fw-bold text-end">Paul BOURHIS
-                        </p>
-                        <hr>
-
-
-
-                        <div class="row justify-content-end align-items-center g-2 mt-4">
-                            <div class="col">
-                                <a href="/About/" class="btn btn-primary shadow">
-                                    <span id="moreMeButton">More about
-                                        me</span>
-                                    <i class="bi bi-arrow-right-circle-fill mx-2"></i>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="/assets/doc/Resume_Paul_Bourhis.pdf"
-                                    class="btn btn-primary shadow" target="_blank">
-                                    <span id="resumeButton">Download my
-                                        CV</span>
-                                    <i class="bi bi-arrow-down-circle-fill mx-2"></i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-        </section><!-- End About Section -->
+        </div>
+    </div>
 
-        <!-- ======= Services Section ======= -->
-        <section id="services">
-            <div class="container-fluid p-5" data-aos="fade-up">
-                <div class="row justify-content-center align-items-center g-2">
-                    <div class="col-lg-4 ">
-                        <div class="section-title">
-                            <h1 id="serviceHeader">Services</h1>
-                        </div>
-                        <div class="lead text-center">
-                            I have several areas of expertise.
-                            I can help you on every steps of the the
-                            development cycle. From from
-                            the architecture to the deployment, and the
-                            monitoring.
-                            <br><br>
-                        </div>
 
-                    </div>
-
-                    <div class="col-lg-8 ">
-                        <div class="row justify-content-center align-items-center serviceRow">
-                            <div class="col-lg-6">
-                                <div class="accordion" id="solutionsAccordion">
-                                    <div class="accordion-item ">
-                                        <h2 class="accordion-header " id="cloudSolutionHeader">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#cloudSolutionCollapse"
-                                                aria-expanded="false"
-                                                aria-controls="cloudSolutionCollapse">
-                                                <i class="bi bi-clouds me-2"></i>
-                                                <span id="cloudSolutionHeaderText">Cloud
-                                                    Solutions and
-                                                    Architecture</span>
-                                            </button>
-                                        </h2>
-                                        <div id="cloudSolutionCollapse"
-                                            class="accordion-collapse collapse"
-                                            aria-labelledby="cloudSolutionHeader"
-                                            data-bs-parent="#solutionsAccordion">
-                                            <div class="accordion-body">
-                                                <ul class="lead text-start">
-                                                    <li><span id="cloudSolutionDesc1">Design
-                                                            and
-                                                            implement
-                                                            cloud-based
-                                                            architectures</span>
-                                                    </li>
-                                                    <li><span id="cloudSolutionDesc2">Migrate
-                                                            on-premises
-                                                            applications
-                                                            to the
-                                                            cloud</span>
-                                                    </li>
-                                                    <li><span id="cloudSolutionDesc3">Optimize
-                                                            cost
-                                                            efficiency</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="devStrategieHeader">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#devStrategieCollapse"
-                                                aria-expanded="false"
-                                                aria-controls="devStrategieCollapse">
-                                                <i class="bi bi-diagram-3 me-2"></i>
-                                                <span id="devStrategieHeaderText">Development
-                                                    of CI/CD
-                                                    Strategies</span>
-                                            </button>
-                                        </h2>
-                                        <div id="devStrategieCollapse"
-                                            class="accordion-collapse collapse"
-                                            aria-labelledby="devStrategieHeader"
-                                            data-bs-parent="#solutionsAccordion">
-                                            <div class="accordion-body">
-                                                <ul class="lead text-start">
-                                                    <li><span id="devStrategieDesc1">Design
-                                                            and
-                                                            implement
-                                                            continuous
-                                                            integration
-                                                            pipelines</span>
-                                                    </li>
-                                                    <li><span id="devStrategieDesc2">Develop
-                                                            code health
-                                                            solutions</span>
-                                                    </li>
-                                                    <li><span id="devStrategieDesc3">Set
-                                                            up
-                                                            continuous
-                                                            deployment
-                                                            strategies</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="sourceCodeHeader">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#sourceCodeCollapse"
-                                                aria-expanded="false"
-                                                aria-controls="sourceCodeCollapse">
-                                                <i class="bi bi-code-slash me-2"></i>
-                                                <span id="sourceCodeHeaderText">Source
-                                                    Code
-                                                    Management</span>
-                                            </button>
-                                        </h2>
-                                        <div id="sourceCodeCollapse"
-                                            class="accordion-collapse collapse"
-                                            aria-labelledby="sourceCodeHeader"
-                                            data-bs-parent="#solutionsAccordion">
-                                            <div class="accordion-body">
-                                                <ul class="lead text-start">
-                                                    <li><span id="sourceCodeDesc1">Establish
-                                                            effective
-                                                            workflows
-                                                            for version
-                                                            control</span>
-                                                    </li>
-                                                    <li><span id="sourceCodeDesc2">Facilitate
-                                                            pull
-                                                            requests
-                                                            and code
-                                                            reviews</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <div class="col-lg-6">
-                                <div class="accordion" id="servicesAccordion">
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="monitoringHeader">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#monitoringCollapse"
-                                                aria-expanded="false"
-                                                aria-controls="monitoringCollapse">
-                                                <i class="bi bi-graph-up me-2"></i>
-                                                <span id="monitoringHeaderText">Monitoring
-                                                    and
-                                                    Alerting</span>
-                                            </button>
-                                        </h2>
-                                        <div id="monitoringCollapse"
-                                            class="accordion-collapse collapse"
-                                            aria-labelledby="monitoringHeader"
-                                            data-bs-parent="#servicesAccordion">
-                                            <div class="accordion-body">
-                                                <ul class="lead text-start">
-                                                    <li><span id="monitoringDesc1">Set
-                                                            up
-                                                            monitoring
-                                                            and
-                                                            alerting
-                                                            systems</span>
-                                                    </li>
-                                                    <li><span id="monitoringDesc2">Ensure
-                                                            high
-                                                            availability
-                                                            and
-                                                            reliability</span>
-                                                    </li>
-                                                    <li><span id="monitoringDesc3">Implement
-                                                            dashboards
-                                                            and
-                                                            reports</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="trainingHeader">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#securityCollapse"
-                                                aria-expanded="false"
-                                                aria-controls="securityCollapse">
-                                                <i class="bi bi-people me-2"></i>
-                                                <span id="trainingHeaderText">Training
-                                                    and Knowledge
-                                                    Sharing</span>
-                                            </button>
-                                        </h2>
-                                        <div id="securityCollapse"
-                                            class="accordion-collapse collapse"
-                                            aria-labelledby="trainingHeader"
-                                            data-bs-parent="#servicesAccordion">
-                                            <div class="accordion-body">
-                                                <ul class="lead text-start">
-                                                    <li><span id="trainingDesc1">Provide
-                                                            guidance on
-                                                            effective
-                                                            development
-                                                            practices</span>
-                                                    </li>
-                                                    <li><span id="trainingDesc2">Train
-                                                            developers
-                                                            to cover
-                                                            their
-                                                            application
-                                                            with
-                                                            automated
-                                                            tests as
-                                                            much
-                                                            as
-                                                            possible</span>
-                                                    </li>
-                                                    <li><span id="trainingDesc3">Conduct
-                                                            workshops on
-                                                            DevOps
-                                                            best
-                                                            practices</span>
-                                                    </li>
-                                                    <li><span id="trainingDesc4">Promote
-                                                            Agile
-                                                            methodologies</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="automationHeader">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#automationCollapse"
-                                                aria-expanded="false"
-                                                aria-controls="automationCollapse">
-                                                <i class="bi bi-tools me-2"></i>
-                                                <span id="automationHeaderText">Automation
-                                                    and
-                                                    Infrastructure</span>
-                                            </button>
-                                        </h2>
-                                        <div id="automationCollapse"
-                                            class="accordion-collapse collapse"
-                                            aria-labelledby="automationHeader"
-                                            data-bs-parent="#servicesAccordion">
-                                            <div class="accordion-body">
-                                                <ul class="lead text-start">
-                                                    <li><span id="automationDesc1">Automate
-                                                            repetitive
-                                                            tasks</span>
-                                                    </li>
-                                                    <li><span id="automationDesc2">Provide
-                                                            Linux
-                                                            environment
-                                                            setup and
-                                                            configuration</span>
-                                                    </li>
-                                                    <li><span id="automationDesc3">Ensure
-                                                            developers
-                                                            have a
-                                                            development
-                                                            environment
-                                                            as close as
-                                                            possible to
-                                                            the target
-                                                            platform</span>
-                                                    </li>
-                                                    <li><span id="automationDesc4">Implement
-                                                            infrastructure
-                                                            as code
-                                                            (IAC)</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End Services Section -->
-
-        <!-- ======= Certifications Section ======= -->
-        <section id="certifications">
-            <div class="container-fluid p-5" data-aos="fade-up">
-                <div class="section-title">
-                    <h1 id="certificationsHeader">Certifications</h1>
-                </div>
-
-                <div class="row justify-content-center align-items-start text-center">
-                    <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="700"
-                        data-aos-duration="1000">
-                        <h3 class="card-title mt-1">AZ-400</h3>
-                        <a
-                            href="https://www.credly.com/badges/eb3ffac5-6a81-436f-9e91-af0d1a0e6494/public_url">
-                            <img src="https://training.cellenza.com/wp-content/uploads/2021/07/AZ400.png"
-                                alt="Title">
-                        </a>
-                        <div class="lead" id="az400Cert">DevOps Engineer
-                            Expert</div>
-                        <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-400/"
-                            class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_0">Read
-                                more</span></a>
-                    </div>
-                    <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="500"
-                        data-aos-duration="1000">
-                        <h3 class="card-title mt-1">AZ-104</h3>
-                        <a
-                            href="https://www.credly.com/badges/9e8fa508-7b5d-41c9-bca5-fd8c4b2c10c3/public_url">
-                            <img src="https://training.cellenza.com/wp-content/uploads/2021/07/AZ104.png"
-                                alt="Title">
-                        </a>
-                        <div class="lead" id="az104Cert">Microsoft Azure
-                            Administrator</div>
-                        <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-104/"
-                            class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_1">Read
-                                more</span></a>
-
-                    </div>
-                    <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="300"
-                        data-aos-duration="1000">
-                        <h3 class="card-title mt-1">AZ-900</h3>
-                        <a
-                            href="https://www.credly.com/badges/dfa25f32-b358-4ac8-8dee-95eb4c94977a/public_url">
-                            <img src="https://training.cellenza.com/wp-content/uploads/2021/08/AZ900.png"
-                                alt="Title">
-                        </a>
-                        <div class="lead" id="az900Cert">Microsoft Azure
-                            Fundamentals</div>
-                        <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900"
-                            class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_2">Read
-                                more</span></a>
-                    </div>
-                    <div class="col-2" data-aos="fade-right" data-aos-duration="1000">
-                        <h3 class="card-title mt-1">TOEIC</h3>
-                        <a href="">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-225px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"
-                                alt="Title">
-                        </a>
-                        <div class="lead">English test: 920/1000</div>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End Certifications Section -->
-
-        <!-- ======= Skills Section ======= -->
-        <section id="skills" class="skills">
-            <div class="container-fluid p-5" data-aos="fade-up">
-                <div class="row justify-content-center align-items-start">
-                    <div class="col-lg-9 order-2 order-xxl-1">
-                        <ul id="skills-filters" class="d-flex justify-content-center"
-                            data-aos="fade-up" data-aos-delay="100">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-devops">DevOps</li>
-                            <li data-filter=".filter-dev">Dev</li>
-                            <li data-filter=".filter-ops">Ops</li>
-                            <li data-filter=".filter-monitoring">Monitoring</li>
-                        </ul>
-
-                        <div class="justify-content-center align-items-center skills-container text-center"
-                            data-aos="fade-up" data-aos-delay="200">
-                            <div class="col-2 skill-item filter-devops">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png"
-                                    alt="AWS" class="skill-logo" />
-                                <h5>AWS</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-devops">
-                                <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
-                                    alt="Azure" class="skill-logo" />
-                                <h5>Azure</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-devops">
-                                <img src="https://www.sparks-formation.com/wp-content/uploads/2020/07/azure-devops.png"
-                                    alt="Azure" class="skill-logo" />
-                                <h5>Azure DevOps</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-ops">
-                                <img src="https://blogs.vmware.com/cloudprovider/files/2019/04/og-image-8b3e4f7d-blog-aspect-ratio.png"
-                                    alt="Terraform" class="skill-logo" />
-                                <h5>Terraform</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-devops">
-                                <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png"
-                                    alt="Docker" class="skill-logo" />
-                                <h5>Docker</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-ops">
-                                <img src="https://www.datocms-assets.com/58478/1638283616-packer.svg?auto=format&fit=max&w=1200"
-                                    alt="Packer" class="skill-logo" />
-                                <h5>Packer</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-monitoring">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Grafana_icon.svg"
-                                    alt="Grafana" class="skill-logo" />
-                                <h5>Grafana</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-ops">
-                                <img src="https://static-00.iconduck.com/assets.00/ansible-icon-2048x2048-mc4z634w.png"
-                                    alt="Ansible" class="skill-logo" />
-                                <h5>Ansible</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-devops">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Jenkins_logo.svg"
-                                    alt="Jenkins" class="skill-logo" />
-                                <h5>Jenkins</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
-                                    alt="Python" class="skill-logo" />
-                                <h5>Python</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg"
-                                    alt="C++" class="skill-logo" />
-                                <h5>C++</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Cmake.svg"
-                                    alt="Cmake" class="skill-logo" />
-                                <h5>Cmake</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Visual_Studio_Code_1.18_icon.svg"
-                                    alt="VsCode" class="skill-logo" />
-                                <h5>VsCode</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-ops">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg"
-                                    alt="Linux" class="skill-logo" />
-                                <h5>Linux</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png"
-                                    alt="Git" class="skill-logo" />
-                                <h5>Git</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-                                    alt="GitHub" class="skill-logo" />
-                                <h5>GitHub</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://www.micazook.com/img/ico/ico_UIUXDesign.png"
-                                    alt="UI/UX Design" class="skill-logo" />
-                                <h5>UI/UX Design</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://memoag0u3.blob.core.windows.net/img/2018/08/Azure-Data-Factory.png"
-                                    alt="DataAnalysis" class="skill-logo" />
-                                <h5>Data Analysis</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/2048px-Jupyter_logo.svg.png"
-                                    alt="Jupyter" class="skill-logo" />
-                                <h5>Jupyter</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-monitoring">
-                                <img src="https://humancoders-formations.s3.amazonaws.com/uploads/course/logo/38/thumb_bigger_formation-elasticsearch.png"
-                                    alt="Elasticsearch" class="skill-logo" />
-                                <h5>Elasticsearch</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-monitoring">
-                                <img src="https://grafikart.fr/uploads/icons/logstash.svg"
-                                    alt="Logstash" class="skill-logo" />
-                                <h5>Logstash</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://morettimelanie.com/wp-content/uploads/2020/12/perforce.png"
-                                    alt="Perforce" class="skill-logo" />
-                                <h5>Perforce</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-monitoring">
-                                <img src="https://repository-images.githubusercontent.com/240225315/e29ea180-9b83-11eb-88ef-542d53088cba"
-                                    alt="Prometheus" class="skill-logo" />
-                                <h5>Prometheus</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/flask_logo_icon_145276.png"
-                                    alt="Flask" class="skill-logo" />
-                                <h5>Flask</h5>
-                            </div>
-                            <div class="col-2 skill-item filter-dev">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Qt_logo_2016.svg/1280px-Qt_logo_2016.svg.png"
-                                    alt="Qt" class="skill-logo" />
-                                <h5>Qt</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 order-1 order-xxl-2">
-                        <div class="section-title">
-                            <h1 id="mainSkillsHeader">Main skills</h1>
-                        </div>
-                        <div class="lead text-center">
-                            Here is a small overview of the skills I am used to work with.
-                        </div>
-                        <img src="/assets/images/workingMan.png" alt="Working man"
-                            class="img-fluid"/>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End Skills Section -->
-
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact" >
-            <div class="container p-5">
-
-                <div class="section-title">
-                    <h1>Contact</h1>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-5 d-flex align-items-stretch">
-                        <div class="info">
-                            <div class="address">
-                                <i class="bi bi-geo-alt"></i>
-                                <h4>Location:</h4>
-                                <p>France, 49Bis rue de Paris, 92110 Clichy</p>
-                            </div>
-
-                            <div class="email">
-                                <i class="bi bi-envelope"></i>
-                                <h4>Email:</h4>
-                                <p>paul_bourhis@yahoo.com</p>
-                            </div>
-
-                            <div class="phone">
-                                <i class="bi bi-phone"></i>
-                                <h4>Call:</h4>
-                                <p>+33 6 99 29 45 22</p>
-                            </div>
-
-                            <iframe title="Google Maps Location"
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2622.865993115245!2d2.3031342769032226!3d48.898890997854856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66f0af60b65c3%3A0x4091789c3715176b!2s49%20bis%20Rue%20de%20Paris%2C%2092110%20Clichy%2C%20France!5e0!3m2!1sen!2sus!4v1692631404086!5m2!1sen!2sus"
-                                frameborder="0" style="border:0; width: 100%; height: 290px;"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form class="email-form">
-                            <div class="row ">
-                                <div class="form-group col-md-6">
-                                    <label for="name">Your Name</label>
-                                    <input type="text" name="name" class="form-control" id="name"
-                                        required>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="name">Your Email</label>
-                                    <input type="email" class="form-control" name="email" id="email"
-                                        required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Subject</label>
-                                <input type="text" class="form-control" name="subject" id="subject"
-                                    required>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Message</label>
-                                <textarea class="form-control" name="message" rows="10"
-                                    required></textarea>
-                            </div>
-                            <div class="my-3">
-                                <div class="loading visually-hidden">Loading</div>
-                                <div class="error-message visually-hidden">Something went wrong...
-                                </div>
-                                <div class="sent-message visually-hidden">Your message has been
-                                    sent. Thank you!
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End Contact Section -->
-
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
+    <!-- Footer -->
     <footer class="bg-dark-subtle">
         <div class="container lh-1 text-center">
             <div class="row justify-content-center align-items-center mb-2">
                 <div class="col-md-6">
                     <h3>Follow me</h3>
                     <p id="aboutmeFooter" class="lead text-start mt-3">
-                        Thank you for visiting my portfolio
-                        website. Connect with me over
+                        Thank you for visiting my portfolio website. Connect with me over
                         socials.
                     </p>
                     <!-- LinkedIn -->
@@ -817,15 +705,13 @@
                 <div class="col-md-6">
                     <h3>Contact me</h3>
                     <div class="container">
-                        <p class="lead"><i class="bi bi-geo-alt-fill me-2"></i>Paris
-                        </p>
+                        <p class="lead"><i class="bi bi-geo-alt-fill me-2"></i>Paris</p>
                         <p class="lead">
                             <i class="bi bi-envelope-fill me-2"></i>
                             paul.bourhis@bhsconsulting.fr
                         </p>
                         <p class="lead">
-                            <i class="bi bi-telephone-fill me-2"></i>+33
-                            6 99 29 45 22
+                            <i class="bi bi-telephone-fill me-2"></i>+33 6 99 29 45 22
                         </p>
                     </div>
                 </div>
@@ -835,23 +721,24 @@
             © Built on my own.
             <!-- Find the source code <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a> -->
         </div>
-    </footer><!-- End Footer -->
+    </footer>
 
-    <div id="preloader"></div>
-    <a href="#" 
-        class="back-to-top d-flex align-items-center justify-content-center">
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
         <i class="bi bi-arrow-up-short"></i>
     </a>
 
-    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="/assets/vendor/aos/aos.js"></script>
-    <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="/assets/vendor/typed.js/typed.umd.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
     <script src="/assets/js/common.js"></script>
     <script src="/assets/js/switchLanguage.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="/assets/js/main.js"></script>
 
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
