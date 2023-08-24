@@ -332,6 +332,55 @@
                             <div class="col-lg-6">
                                 <div class="accordion" id="servicesAccordion">
                                     <div class="accordion-item">
+                                        <h2 class="accordion-header" id="automationHeader">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#automationCollapse"
+                                                aria-expanded="false"
+                                                aria-controls="automationCollapse">
+                                                <i class="bi bi-tools me-2"></i>
+                                                <span id="automationHeaderText">Automation
+                                                    and
+                                                    Infrastructure</span>
+                                            </button>
+                                        </h2>
+                                        <div id="automationCollapse"
+                                            class="accordion-collapse collapse"
+                                            aria-labelledby="automationHeader"
+                                            data-bs-parent="#servicesAccordion">
+                                            <div class="accordion-body">
+                                                <ul class="lead text-start">
+                                                    <li><span id="automationDesc1">Automate
+                                                            repetitive
+                                                            tasks</span>
+                                                    </li>
+                                                    <li><span id="automationDesc2">Provide
+                                                            Linux
+                                                            environment
+                                                            setup and
+                                                            configuration</span>
+                                                    </li>
+                                                    <li><span id="automationDesc3">Ensure
+                                                            developers
+                                                            have a
+                                                            development
+                                                            environment
+                                                            as close as
+                                                            possible to
+                                                            the target
+                                                            platform</span>
+                                                    </li>
+                                                    <li><span id="automationDesc4">Implement
+                                                            infrastructure
+                                                            as code
+                                                            (IAC)</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="accordion-item">
                                         <h2 class="accordion-header" id="monitoringHeader">
                                             <button class="accordion-button collapsed" type="button"
                                                 data-bs-toggle="collapse"
@@ -425,54 +474,6 @@
                                         </div>
                                     </div>
 
-                                    <div class="accordion-item">
-                                        <h2 class="accordion-header" id="automationHeader">
-                                            <button class="accordion-button collapsed" type="button"
-                                                data-bs-toggle="collapse"
-                                                data-bs-target="#automationCollapse"
-                                                aria-expanded="false"
-                                                aria-controls="automationCollapse">
-                                                <i class="bi bi-tools me-2"></i>
-                                                <span id="automationHeaderText">Automation
-                                                    and
-                                                    Infrastructure</span>
-                                            </button>
-                                        </h2>
-                                        <div id="automationCollapse"
-                                            class="accordion-collapse collapse"
-                                            aria-labelledby="automationHeader"
-                                            data-bs-parent="#servicesAccordion">
-                                            <div class="accordion-body">
-                                                <ul class="lead text-start">
-                                                    <li><span id="automationDesc1">Automate
-                                                            repetitive
-                                                            tasks</span>
-                                                    </li>
-                                                    <li><span id="automationDesc2">Provide
-                                                            Linux
-                                                            environment
-                                                            setup and
-                                                            configuration</span>
-                                                    </li>
-                                                    <li><span id="automationDesc3">Ensure
-                                                            developers
-                                                            have a
-                                                            development
-                                                            environment
-                                                            as close as
-                                                            possible to
-                                                            the target
-                                                            platform</span>
-                                                    </li>
-                                                    <li><span id="automationDesc4">Implement
-                                                            infrastructure
-                                                            as code
-                                                            (IAC)</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -703,12 +704,11 @@
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
+            <!-- <div class="container p-5" data-aos="fade-up"> -->
             <div class="container p-5">
-
                 <div class="section-title">
                     <h1>Contact</h1>
                 </div>
-
                 <div class="row">
                     <div class="col-lg-5 d-flex align-items-stretch">
                         <div class="info">
@@ -776,59 +776,98 @@
                         </form>
                     </div>
                 </div>
-
             </div>
         </section><!-- End Contact Section -->
+
+
+        <!-- ======= Newsletter Section ======= -->
+        <section id="newsletter" class="newsletter">
+            <div class="footer-newsletter">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <div class="section-title">
+                                <h1>Join my Newsletter</h1>
+                            </div>
+                            <p>Subscribe to my newsletter to receive updates on my availabilities.
+                                I also write blog articles about my work and my hobbies.
+                            </p>
+                            <form class="notified-form" action="" method="post">
+
+                                <input type="email" class="form-control" name="email" required>
+                                <input class="nextBtn" id="suscribeBtn" type="submit" value="Subscribe">
+                                <div class="nextBtn visually-hidden" id="loading-notify">Loading</div>
+                                <div class="nextBtn visually-hidden" id="validated-notify">Thanks!</div>
+                                <div class="nextBtn visually-hidden" id="error-notify">Error</div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- End Newsletter Section -->
 
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
-    <footer class="bg-dark-subtle">
-        <div class="container lh-1 text-center">
-            <div class="row justify-content-center align-items-center mb-2">
-                <div class="col-md-6">
-                    <h3>Follow me</h3>
-                    <p id="aboutmeFooter" class="lead text-start mt-3">
-                        Thank you for visiting my portfolio
-                        website. Connect with me over
-                        socials.
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>BHS consulting</h3>
+                    <p>
+                        <strong>Paul Bourhis<br></strong>
+                        49 Bis rue de Paris<br>
+                        92110, Clichy<br>
+                        France<br><br>
+                        <!-- <i class="bi bi-telephone-fill"></i> -->
+                        <strong>Phone:</strong> +33 6 99 29 45 22<br>
+                        <!-- <i class="bi bi-envelope-fill"></i> -->
+                        <strong>Email:</strong> paul_bourhis@bhsconsulting.fr<br>
                     </p>
-                    <!-- LinkedIn -->
-                    <a class="btn btn-floating m-1 bg-light rounded-5"
-                        href="https://www.linkedin.com/in/paul-bourhis-375557153/"
-                        aria-label="LinkedIn" target="_blank">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-
-                    <!-- GitHub -->
-                    <a class="btn btn-floating m-1 bg-light rounded-5"
-                        href="https://github.com/Pyodin" aria-label="GitHub" target="_blank">
-                        <i class="bi bi-github"></i>
-                    </a>
-
-                    <!-- Instagram -->
-                    <a class="btn btn-floating m-1 bg-light rounded-5"
-                        href="https://www.instagram.com/paulbhs/" aria-label="Instagram"
-                        target="_blank">
-                        <i class="bi bi-instagram"></i>
-                    </a>
                 </div>
 
-                <div class="col-md-6">
-                    <h3>Contact me</h3>
-                    <div class="container">
-                        <p class="lead"><i class="bi bi-geo-alt-fill me-2"></i>Paris
-                        </p>
-                        <p class="lead">
-                            <i class="bi bi-envelope-fill me-2"></i>
-                            paul.bourhis@bhsconsulting.fr
-                        </p>
-                        <p class="lead">
-                            <i class="bi bi-telephone-fill me-2"></i>+33
-                            6 99 29 45 22
-                        </p>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a href="/About/">About me</a>
+                        </li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="/Projects/">Projects</a>
+                        </li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="/Contact/">Contact</a>
+                        </li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="/Blog/">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>On this page</h4>
+                    <ul>
+                        <li><i class="bi bi-chevron-right"></i> <a
+                                href="#presentation">Presentation</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#services">Services</a>
+                        </li>
+                        <li><i class="bi bi-chevron-right"></i> <a
+                                href="#certifications">Certifications</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#skills">Main
+                                skills</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>My Social Networks</h4>
+                    <p>Thanks for visiting my website. Follow me on my socials </p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.instagram.com/paulbhs/">
+                            <i class="b- bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/paul-bourhis-375557153/">
+                            <i class="b- bi-linkedin"></i></a>
+                        <a href="https://github.com/Pyodin">
+                            <i class="b- bi-github"></i></a>
                     </div>
                 </div>
+
             </div>
         </div>
         <div class="text-center bg-secondary">
@@ -836,6 +875,7 @@
             <!-- Find the source code <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a> -->
         </div>
     </footer><!-- End Footer -->
+
 
     <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"

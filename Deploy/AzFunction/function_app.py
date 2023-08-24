@@ -11,6 +11,7 @@ SENDGRID_API_KEY = None
 TABLE_SERVICE_CONNECTION_STRING = None
 SENDER_EMAIL = "no-replys@bhsconsulting.fr"
 RECIPIENT_MAIL = "paul.bourhis@bhsconsulting.fr"
+TABLE_NAME = "subscribersTable"
 
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
@@ -110,9 +111,7 @@ def HttpTriggerNewMail(req: func.HttpRequest) -> func.HttpResponse:
 
     global SENDGRID_API_KEY, TABLE_SERVICE_CONNECTION_STRING
     SENDGRID_API_KEY = os.environ.get("SendGridApiKey")
-    TABLE_SERVICE_CONNECTION_STRING = os.environ.get(
-        "CUSTOMCONNSTR_TableServiceConnectionString"
-    )
+    TABLE_SERVICE_CONNECTION_STRING = os.environ.get("TableServiceConnectionString")
 
     if not all([SENDGRID_API_KEY, TABLE_SERVICE_CONNECTION_STRING]):
         logging.warning("Missing environment variables")
@@ -126,7 +125,7 @@ def HttpTriggerNewMail(req: func.HttpRequest) -> func.HttpResponse:
             conn_str=TABLE_SERVICE_CONNECTION_STRING
         )
         table_client = table_service_client.get_table_client(
-            table_name="subscribersTable"
+            table_name=TABLE_NAME
         )
 
         # Check for duplicate entries
@@ -140,7 +139,7 @@ def HttpTriggerNewMail(req: func.HttpRequest) -> func.HttpResponse:
 
         res = send_email(
             subject=f"BHS Consulting - New subscriber",
-            body=f"{email} want's to get notified when you're free",
+            body=f"{email} want's to get notified",
         )
 
         if res:

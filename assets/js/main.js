@@ -97,3 +97,39 @@ contactForm.addEventListener("submit", function (e) {
             console.log("Error:", error);
         });
 });
+
+// Newsletter form
+let notifyForm = select('.notified-form')
+notifyForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let loading = select('#loading-notify');
+    loading.classList.remove("visually-hidden");
+    let suscribeBtn = select('#suscribeBtn');
+    suscribeBtn.classList.add("visually-hidden");
+
+    var data = new FormData(notifyForm);
+
+    fetch("/api/HttpTriggerNewMail", {
+    // fetch("http://localhost:7071/api/HttpTriggerNewMail", {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json, text/plain, */*'
+        },
+        body: data
+    })
+        .then(function (response) {
+            console.log(response);
+            loading.classList.add("visually-hidden");
+            if (response.status === 200) {
+                let success = select('#validated-notify');
+                success.classList.remove("visually-hidden");
+            } else {
+                let error = select('#error-notify');
+                error.classList.remove("visually-hidden");
+            }
+        })
+        .catch(function (error) {
+            console.log("Error:", error);
+        });
+});
