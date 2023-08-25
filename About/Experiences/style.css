@@ -1,0 +1,39 @@
+
+.technologies h3 {
+    font-size: 32px;
+    letter-spacing: -0.9px;
+    font-family: 'Ysabeau SC', sans-serif;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #193564;
+}
+
+.technologies li {
+    color: #575757;
+}
+
+.responsibilities ul,
+.achievements ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.responsibilities li,
+.achievements li {
+    margin-bottom: 10px;
+}
+
+.responsibilities li p,
+.achievements li p {
+    color: #575757;
+}
+
+.responsibilities li:before,
+.achievements li:before {
+    content: ">";
+    font-weight: 900;
+    display: inline-block;
+    margin-right: 10px;
+    color: #37517e;
+}
+

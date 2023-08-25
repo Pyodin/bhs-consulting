@@ -24,14 +24,12 @@ const on = (type, el, listener, all = false) => {
   }
 }
 
-
 /**
  * Easy on scroll event listener
  */
 const onscroll = (el, listener) => {
   el.addEventListener('scroll', listener)
 }
-
 
 /**
  * Scrolls to an element with header offset
@@ -46,6 +44,27 @@ const scrollto = (el) => {
     behavior: 'smooth'
   })
 }
+
+/**
+ * Scrool with ofset on links with a class name .scrollto
+ */
+on('click', '.scrollto', function (e) {
+  if (select(this.hash)) {
+    e.preventDefault()
+    scrollto(this.hash)
+  }
+}, true)
+
+/**
+ * Scroll with ofset on page load with hash links in the url
+ */
+window.addEventListener('load', () => {
+  if (window.location.hash) {
+    if (select(window.location.hash)) {
+      scrollto(window.location.hash)
+    }
+  }
+});
 
 /**
  * Back to top button
@@ -63,9 +82,9 @@ if (backtotop) {
   onscroll(document, toggleBacktotop)
 }
 
-  /**
-   * Preloader
-   */
+/**
+ * Preloader
+ */
 let preloader = select('#preloader');
 if (preloader) {
   window.addEventListener('load', () => {
@@ -73,14 +92,14 @@ if (preloader) {
   });
 }
 
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      mirror: false
-      // once: true
-    });
+/**
+ * Animation on scroll
+ */
+window.addEventListener('load', () => {
+  AOS.init({
+    duration: 1000,
+    easing: "ease-in-out",
+    mirror: false
+    // once: true
   });
+});

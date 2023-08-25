@@ -1,79 +1,216 @@
-.accordion-item{
+/*--------------------------------------------------------------
+# Common
+--------------------------------------------------------------*/
+body {
+    /* background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%); */
+    background: linear-gradient(90deg,
+            rgb(186, 211, 235) 0%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(155, 197, 236, 0.589) 100%);
+}
+
+.section-title {
+    /* text-align: center; */
+    /* margin-top: 10px; */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.section-title h1 {
+    font-family: 'Ysabeau SC', sans-serif;
+    color: #37517e;
+}
+
+.section-title h1::before,
+.section-title h1::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: #3498db;
+    display: inline-block;
+}
+
+.section-title h1::before {
+    margin: 0 15px 10px 0;
+}
+
+.section-title h1::after {
+    margin: 0 0 10px 15px;
+}
+
+
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+
+.breadcrumbs {
+    margin-top: 75px;
+    padding: 15px 0;
+    background: #012a70b2;
+    color: #fff;
+}
+
+.breadcrumbs h2 {
+    font-size: 32px;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0 0 10px 0;
+    margin: 0;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.breadcrumbs ol li+li {
+    padding-left: 10px;
+}
+
+.breadcrumbs ol li+li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #b9bdc4;
+    content: ">";
+}
+
+.breadcrumbs ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 14px;
+}
+
+.breadcrumbs ol li a,
+.breadcrumbs ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.breadcrumbs ol li a:hover,
+.breadcrumbs ul li a:hover {
+    color: #d89608;
+    text-decoration: underline;
+}
+
+.breadcrumbs ul li+li {
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.breadcrumbs ul li+li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #8894f6;
+    content: "/";
+}
+
+/* BOX */
+.box {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0 30px 30px 30px;
+    background-color: aliceblue;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+
+#skills .accordion-item {
     background-color: #f1f1f1;
     border-radius: 5px;
 }
 
-.accordion-item:hover {
-    box-shadow: 0 4px 8px 0 rgba(216, 150, 8, 0.2);
-}
-
-.accordion-button:hover {
+#skills .accordion-button:hover {
     background-color: #f1f1f1;
     color: #d89608;
 }
 
-
-
-/* EXPERIENCES TIMELINE */
-
-#experiences {
-    background: none;
+#skills .accordion-item i {
+    padding-right: 20px;
 }
 
-.timeline {
+
+/*--------------------------------------------------------------
+# EXPERIENCES TIMELINE
+--------------------------------------------------------------*/
+
+.experiences .timeline {
     position: relative;
 }
 
-.timeline:after {
+.experiences .timeline:after {
     content: "";
     position: absolute;
     top: 20px;
     bottom: 20px;
     left: 50%;
     width: 8px;
-    background: linear-gradient(rgb(7, 48, 87), rgb(7, 142, 233) );
+    background: linear-gradient(rgb(7, 48, 87), rgb(7, 142, 233));
     border-radius: 3px;
     z-index: 1;
 }
 
-.timeline .card {
+.experiences .timeline .card {
     position: relative;
-    width: calc( 50% - 40px );
-    border-radius: 30px;
+    width: calc(50% - 40px);
+    border-radius: 20px;
     background: #ffffff;
     z-index: 2;
-
+    margin-bottom: 20px;
 }
 
-.timeline .card-header {
-    border: #000000 1px solid;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    background: #ffbb00c7;
+.experiences .timeline .card .fs-4 {
+    color: #37517e;
 }
 
-.timeline .card .card-title {
-    font-weight: bold;
+.experiences .timeline .card .fs-5 {
+    color: #b90000;
+    margin-bottom: 1px;
 }
 
-.timeline .card:before {
+.experiences .timeline .card .lead {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #616060;
+}
+
+.experiences .timeline .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.04);
+    transition: transform 0.4s ease;
+}
+
+.experiences .timeline .card:before {
     /* content is the emoji suitcase */
-    content: "\1F4BC";
-    font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    display: block;
     position: absolute;
     top: 40%;
-    left: calc( 100% + 26px );
-    background: #ffffff;
+    left: calc(100% + 26px);
     width: 40px;
     height: 40px;
-    border: 6px #ffc400 solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
+    content: "\1F4BC";
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    background: #ffffff;
+    border: 5px #ffbb00 solid;
     z-index: 2;
 }
 
-.timeline .card:after {
+.experiences .timeline .card:after {
     content: "";
     position: absolute;
     top: 40%;
@@ -85,16 +222,16 @@
     border-bottom: 20px solid transparent;
 }
 
-.timeline .card:nth-child(even) {
-    margin-left: calc( 50% + 48px );
+.experiences .timeline .card:nth-child(even) {
+    margin-left: calc(50% + 48px);
 }
 
-.timeline .card:nth-child(even):before {
+.experiences .timeline .card:nth-child(even):before {
     left: auto;
-    right: calc( 100% + 26px );
+    right: calc(100% + 26px);
 }
 
-.timeline .card:nth-child(even):after {
+.experiences .timeline .card:nth-child(even):after {
     left: auto;
     right: 100%;
     border-left: none;
@@ -102,55 +239,72 @@
 }
 
 
-/* timeline */
-.timeline {
+/*--------------------------------------------------------------
+# Education TIMELINE
+--------------------------------------------------------------*/
+
+.education .timeline {
     position: relative;
 }
 
-    .timeline:after {
-        content: "";
-        position: absolute;
-        top: 20px;
-        bottom: 20px;
-        left: 5%;
-        width: 8px;
-        background: linear-gradient(rgb(7, 48, 87), rgb(7, 142, 233) );
-        border-radius: 3px;
-        z-index: 1;
-    }
+.education .timeline:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 100%;
+    width: 8px;
+    background: linear-gradient(rgb(7, 48, 87), rgb(7, 142, 233));
+    border-radius: 3px;
+    z-index: 1;
+}
 
-    .timeline .card {
-        position: relative;
-        border-radius: 30px;
-        margin-left: calc( 5% + 48px );
-        z-index: 2;
-    }
+.education .timeline .card {
+    margin-bottom: 32px;
+    border-radius: 30px;
+    padding: 25px;
+    width: 95%;
+    border-radius: 30px;
+    background: #ffffff;
+    z-index: 2;
+}
 
-        .timeline .card:before {
-            /* content is the emoji suitcase */
-            content: "";
-            font-size: 20px;
-            font-family: 'Courier New', Courier, monospace;
-            display: block;
-            position: absolute;
-            top: 20%;
-            right: calc( 102% + 26px );
-            background: #ffffff;
-            width: 40px;
-            height: 40px;
-            border: 6px #ffc400 solid;
-            border-radius: 50%;
-            z-index: 2;
-        }
+.education .timeline .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: transform 0.4s ease;
+}
 
-        .timeline .card:after {
-            content: "";
-            position: absolute;
-            top: 20%;
-            right: 100%;
-            width: 0;
-            height: 0;
-            border-top: 20px solid transparent;
-            border-right: 25px solid #d6d4d4;
-            border-bottom: 20px solid transparent;
-        }
+.education .timeline .card:before {
+    /* content is the emoji suitcase */
+    position: absolute;
+    top: 20%;
+    left: calc(100% + 48px);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 6px #ffc400 solid;
+    font-family: 'Courier New', Courier, monospace;
+    content: "";
+    font-size: 20px;
+    z-index: 2;
+}
+
+.education .timeline .card:after {
+    position: absolute;
+    top: 20%;
+    left: 100%;
+    content: "";
+    border-top: 20px solid transparent;
+    border-left: 25px solid #616060cc;
+    border-bottom: 20px solid transparent;
+}
+
+/*--------------------------------------------------------------
+# Hobbies & Interests
+--------------------------------------------------------------*/
+
+#hobbies .container-xxl {
+    background-color: aliceblue;
+}
