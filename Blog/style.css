@@ -3,19 +3,37 @@ body {
 }
 
 .masthead {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaEkLLsOTmOcgLhxJAD12JpNj3TYpiQTqQ6A&usqp=CAU') center top no-repeat;
-    background-position: center;
+    margin: 75px 0 50px 0;
+    height: 30vh;
+
+    background-image: url("/assets/images/blog_bg.png");
     background-attachment: fixed;
-    
-    height: 60vh; 
-    filter: brightness(80%);
+    background-size: cover;
+    background-position: bottom;
+    filter: brightness(90%);
     color: white;
 }
 
+.masthead .text {
+    text-align: center;
+    padding-top: 45px;
+}
+
+.masthead h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
 
 .masthead .lead {
     font-size: 2rem; 
     font-weight: normal; 
+}
+
+#freelaneImg {
+    width: 850px;
+    height: 350px;
+    object-fit: cover; 
+    object-position: 50% 60%;
 }
 
 a {
@@ -28,23 +46,4 @@ a {
 
 .paragraph {
     margin-bottom: 50px;
-}
-
-footer .btn i {
-    font-size: 1.8rem;
-    margin: 5px;
-}
-
-footer .btn {
-    background: white;
-    margin: 20px;
-    background-color: #000000;
-    color: white;
-    transition: all 0.3s ease-in-out;
-}
-
-footer .btn:hover {
-    transform: scale(1.2);
-    transition: all 0.3s ease-in-out;
-    background-color: rgb(160, 150, 255);
 }
