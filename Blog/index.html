@@ -53,9 +53,6 @@
                                 me</a>
                         </li>
                         <li class="nav-item">
-                            <a id="projectsLink" class="nav-link disabled" href="#">Projects</a>
-                        </li>
-                        <li class="nav-item">
                             <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
                         </li>
                         <li class="nav-item">
@@ -73,11 +70,9 @@
         </nav>
 
         <div class="container-fluid masthead">
-            <div class="text">
-                <h1>Welcome to BHS Blog!</h1>
-                <p class="lead">Your daily dose of development, cloud, AI,
-                    and more ! </p>
-            </div>
+            <h1>Welcome to BHS Blog!</h1>
+            <h2 class="display-6">Your daily dose of development, cloud, AI,
+                and more ! </h2>
         </div>
     </header><!-- End Header -->
 
@@ -87,12 +82,12 @@
             <!-- Blog entries-->
             <div class="col-lg-8">
                 <!-- Featured blog post-->
-                <div class="card mb-4">
+                <div class="card blogpost" id="freelancing">
                     <a href="/Blog/Freelancing/">
                         <img class="card-img-top" src="/assets/images/freelancing.png" alt="..."
                             id="freelaneImg" /></a>
                     <div class="card-body">
-                        <div class="small text-muted">January 1, 2023</div>
+                        <div class="small text-muted">June 29, 2023</div>
                         <h2 class="card-title">Why did I became independant ?</h2>
                         <p class="card-text">Embracing Freelancing: A Journey of Passion,
                             Flexibility,
@@ -104,14 +99,13 @@
                 <!-- Nested row for non-featured blog posts-->
                 <div class="row">
                     <div class="col-lg-6">
-
                         <!-- Azure post-->
-                        <div class="card mb-4">
+                        <div class="card blogpost">
                             <a href="/Blog/Azure/"><img class="card-img-top"
                                     src="https://community.connection.com/wp-content/uploads/2021/05/1324584-Benefits-of-Azure-BLOG.jpg"
                                     alt="..." /></a>
                             <div class="card-body">
-                                <div class="small text-muted">January 1, 2023
+                                <div class="small text-muted">April 22, 2023
                                 </div>
                                 <h2 class="card-title h4">Microsoft Azure: Pioneering the Future for
                                     DevOps and
@@ -133,7 +127,7 @@
                                     src="https://www.01net.com/app/uploads/2023/01/DeltaWorks-Pixabay.jpg"
                                     alt="..."></a>
                             <div class="card-body">
-                                <div class="small text-muted">January 1, 2023
+                                <div class="small text-muted">March 9, 2023
                                 </div>
                                 <h2 class="card-title h4">ChatGPT: Harnessing AI for Development and
                                     DevOps</h2>
@@ -167,27 +161,39 @@
             <div class="col-lg-4">
                 <!-- Side widget-->
                 <div class="card mb-4">
-                    <!-- <div class="card-header">Side Widget</div> -->
+                    <div class="card-header">Welcome to my blog</div>
                     <div class="card-body">
-                        <div class="row justify-content-center align-items-center">
-                            <div class="col-4">
-                                <img class="card-img-top rounded-circle"
-                                    src="/assets/images/profile_draw.png" alt="..." />
-                            </div>
-                            <div class="col">
-                                Hey there! I'm Paul, a freelance DevOps
-                                engineer.
-                                With expertise in cloud solutions, CI/CD
-                                pipelines, and more.
-                                I help businesses achieve efficiency
-                                and reliability in their software projects.
-                            </div>
-                        </div>
-                        <!-- button -->
-                        <div class="text-center mt-4">
-                            <a class="btn btn-primary" href="https://paulbiberstein.me">Visit
-                                Website</a>
+                        <img class="card-img-top" src="/assets/images/profile_draw.png" alt="..." />
+                        <p class="mt-2">
+                            Hey there! I'm Paul, a freelance DevOps engineer. With expertise in
+                            cloud solutions, CI/CD
+                            pipelines, and more.
+                            I help businesses achieve efficiency
+                            and reliability in their software projects, and sometimes I write about
+                            it.
+                        </p>
+                    </div>
+                </div>
 
+                <!-- Categories widget-->
+                <div class="card mb-4" id="categories">
+                    <div class="card-header">Categories</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#!">Freelancing</a></li>
+                                    <li><a href="#!">Cloud</a></li>
+                                    <li><a href="#!">Artificial intelligence</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="#!">JavaScript</a></li>
+                                    <li><a href="#!">CSS</a></li>
+                                    <li><a href="#!">Tutorials</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -205,33 +211,9 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Categories widget-->
-                <div class="card mb-4">
-                    <div class="card-header">Categories</div>
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li><a href="#!">Web Design</a></li>
-                                    <li><a href="#!">HTML</a></li>
-                                    <li><a href="#!">Freebies</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list-unstyled mb-0">
-                                    <li><a href="#!">JavaScript</a></li>
-                                    <li><a href="#!">CSS</a></li>
-                                    <li><a href="#!">Tutorials</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-
 
     <!-- ======= Footer ======= -->
     <footer id="footer">

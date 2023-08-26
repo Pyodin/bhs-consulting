@@ -5,213 +5,272 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-        crossorigin="anonymous" />
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- Stylesheet -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/common.css" />
     <link rel="stylesheet" href="/Blog/style.css" />
+
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
-    <title>DailyDevTalk: ChatGPT</title>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <title>BHS Blog: Azure</title>
 </head>
 
 <body>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
-        <div class="container">
-            <a id="navbarBrand" class="navbar-brand text-warning" href="/">My portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a id="aboutMeLink" class="nav-link" href="/About">About me</a>
-                    </li>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header ">
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg nav-colored fixed-top" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="/" id="navbarBrand">
+                    <i class="bi bi-list"></i>
+                    BHS Consulting
+                </a>
 
-                    <li class="nav-item dropdown">
-                        <a id="experiencesLink" class="nav-link dropdown-toggle" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Experiences
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a id="murexLink" class="dropdown-item"
-                                    href="/Experiences/Murex/">Murex</a>
-                            </li>
-                            <li>
-                                <a id="thalesLink" class="dropdown-item"
-                                    href="/Experiences/Thales/">Thales</a>
-                            </li>
-                        </ul>
-                    </li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                    <li class="nav-item">
-                        <a id="projectsLink" class="nav-link disabled" href="#">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="projectsLink" class="nav-link" href="/Blog/">Blog</a>
-                    </li>
-                </ul>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a id="aboutMeLink" class="nav-link" href="/About">About
+                                me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
+                        </li>
+                    </ul>
+                </div>
 
                 <!-- english and franch flags as button -->
                 <div class="d-flex align-items-center">
-                    <a class="btn btn-outline-light btn-sm me-2" id="btnEnglish">English</a>
-                    <a class="btn btn-outline-light btn-sm" id="btnFrench">Français</a>
+                    <a class="btn btn-outline-dark btn-sm me-2" id="btnEnglish">English</a>
+                    <a class="btn btn-outline-dark btn-sm" id="btnFrench">Français</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid masthead">
+            <h1>ChatGPT:
+                <br> Harnessing AI for Development and DevOps
+            </h1>
+            <h2 class="display-6">How AI can help developers and DevOps ? Why is it a tool that we
+                cannot afford to ignore ?</h2>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+        <!-- Heading Row-->
+        <div class="container my-5">
+            <!-- breadcrumb -->
+            
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8">
+                    <img class="img-fluid rounded" id="imgBlog"
+                        src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Advantages_and_Disadvantages_of_artificial_intelligence.jpg"
+                        alt="..." data-aos="fade-right" />
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="contentTable" data-aos="fade-up">
+                        <h2 class="display-6">Table of content</h2>
+                        <ol>
+                            <li><a class="scrollto" href="#understanding">Understanding ChatGPT</a>
+                            </li>
+                            <li><a class="scrollto" href="#embracing">The Need to Embrace AI</a>
+                            </li>
+                            <li><a class="scrollto" href="#devops">ChatGPT and DevOps</a></li>
+                            <li><a class="scrollto" href="#developers">ChatGPT in Software
+                                    Development</a></li>
+                            <li><a class="scrollto" href="#future">The Future with ChatGPT</a></li>
+                        </ol>
+                    </div>
                 </div>
             </div>
         </div>
-    </nav>
 
-    <header class="masthead">
-        <div class="h-100 d-flex flex-column justify-content-center align-items-center">
-            <h2> ChatGPT: Harnessing AI for Development and DevOps</h2>
-            <p class="lead fst-italic">Posted by Paul Bourhis on June 01, 2023</p>
-        </div>
-    </header>
-
-    <!-- Blog article -->
-    <main class="container">
-        <div class="row justify-content-center align-items-center g-2 m-5">
-            <div class="col-md-8">
-                <h2>Understanding ChatGPT</h2>
-                <p class="lead">
-                    Artificial Intelligence (AI) is revolutionizing our
-                    world, and OpenAI's ChatGPT sits at the forefront of
-                    this transformation. An advanced iteration of the
-                    transformer-based language model GPT, ChatGPT has shown
-                    remarkable abilities in understanding context,
-                    generating human-like text, and aiding in complex tasks.
-                    Today, it's becoming an indispensable tool in the realm
-                    of development and DevOps, serving as a comprehensive
-                    source of information and a tireless teacher.
-                </p>
-
-                <h2>The Need to Embrace AI</h2>
-                <p class="lead">
-                    In our digitally driven era, the importance of
-                    leveraging cutting-edge tools and methodologies cannot
-                    be overstated. AI technologies like ChatGPT provide
-                    substantial advantages. They automate mundane tasks,
-                    facilitate effective handling of enormous data volumes,
-                    and offer insightful decision-making metrics. By not
-                    adopting such AI technologies, organizations risk
-                    falling behind in an ever-advancing technological
-                    landscape.
-                </p>
-
-                <h2>ChatGPT and DevOps</h2>
-                <p class="lead">
-                    In the realm of DevOps, a field about bridging gaps and
-                    optimizing workflows, ChatGPT shines brightly. It can
-                    monitor system dialogues, manage incident reports, and
-                    even assist in root cause analysis, generating relevant
-                    information in real-time. The concept of "ChatOps" -
-                    integrating AI chatbots into communication platforms for
-                    conversation-driven operations - is redefining DevOps
-                    processes. Through ChatOps, ChatGPT significantly
-                    enhances team collaboration, incident management, and
-                    continuous delivery pipelines.
-                </p>
-
-                <h2>ChatGPT in Software Development</h2>
-                <p class="lead">
-                    The capabilities of ChatGPT extend into the domain of
-                    software development, where it acts as a coding
-                    companion. It can suggest code, spot bugs, and conduct
-                    insightful reviews, thereby speeding up and elevating
-                    the quality of the development process. In this context,
-                    ChatGPT can be likened to the new Stack Overflow,
-                    serving as a readily available, vast knowledge resource,
-                    and an insightful guide. But, far from 'cheating', using
-                    ChatGPT is about leveraging technology to enhance human
-                    productivity. Just as developers use Integrated
-                    Development Environments (IDEs) and other tools to
-                    augment their work, ChatGPT is a powerful addition to
-                    the developer's toolkit.
-                </p>
-
-                <h2>The Future with ChatGPT</h2>
-                <p class="lead">
-                    The rise of AI technologies like ChatGPT is reshaping
-                    the landscape of development and DevOps. Embracing such
-                    tools is not a shortcut, but a natural progression in a
-                    constantly evolving technology field. ChatGPT offers a
-                    platform to redefine boundaries, optimize processes, and
-                    deliver unparalleled value. With ChatGPT, the future
-                    looks promising - it represents an opportunity to grow,
-                    learn, and innovate in ways we could only have imagined
-                    a few years ago. The future with ChatGPT is not just on
-                    the horizon; it demands our attention today as we embark
-                    on this exciting new chapter in software development and
-                    operations.
-                </p>
+        <div class="container-xxl my-5 shadow rounded-5" id="blog">
+            <div class="section-title">
+                <h1>Understanding ChatGPT</h1>
             </div>
+            <p class="lead" id="understanding">
+                Artificial Intelligence (AI) is revolutionizing our
+                world, and OpenAI's ChatGPT sits at the forefront of
+                this transformation. An advanced iteration of the
+                transformer-based language model GPT, ChatGPT has shown
+                remarkable abilities in understanding context,
+                generating human-like text, and aiding in complex tasks.
+                Today, it's becoming an indispensable tool in the realm
+                of development and DevOps, serving as a comprehensive
+                source of information and a tireless teacher.
+            </p>
+
+            <div class="section-title">
+                <h1>The Need to Embrace AI</h1>
+            </div>
+            <p class="lead" id="embracing">
+                In our digitally driven era, the importance of
+                leveraging cutting-edge tools and methodologies cannot
+                be overstated. AI technologies like ChatGPT provide
+                substantial advantages. They automate mundane tasks,
+                facilitate effective handling of enormous data volumes,
+                and offer insightful decision-making metrics. By not
+                adopting such AI technologies, organizations risk
+                falling behind in an ever-advancing technological
+                landscape.
+            </p>
+
+            <div class="section-title">
+                <h1>ChatGPT and DevOps</h1>
+            </div>
+            <p class="lead" id="devops">
+                In the realm of DevOps, a field about bridging gaps and
+                optimizing workflows, ChatGPT shines brightly. It can
+                monitor system dialogues, manage incident reports, and
+                even assist in root cause analysis, generating relevant
+                information in real-time. The concept of "ChatOps" -
+                integrating AI chatbots into communication platforms for
+                conversation-driven operations - is redefining DevOps
+                processes. Through ChatOps, ChatGPT significantly
+                enhances team collaboration, incident management, and
+                continuous delivery pipelines.
+            </p>
+
+            <div class="section-title">
+                <h1>ChatGPT in Software Development</h1>
+            </div>
+            <p class="lead" id="developers">
+                The capabilities of ChatGPT extend into the domain of
+                software development, where it acts as a coding
+                companion. It can suggest code, spot bugs, and conduct
+                insightful reviews, thereby speeding up and elevating
+                the quality of the development process. In this context,
+                ChatGPT can be likened to the new Stack Overflow,
+                serving as a readily available, vast knowledge resource,
+                and an insightful guide. But, far from 'cheating', using
+                ChatGPT is about leveraging technology to enhance human
+                productivity. Just as developers use Integrated
+                Development Environments (IDEs) and other tools to
+                augment their work, ChatGPT is a powerful addition to
+                the developer's toolkit.
+            </p>
+
+            <div class="section-title">
+                <h1>The Future with ChatGPT</h1>
+            </div>
+            <p class="lead" id="future">
+                The rise of AI technologies like ChatGPT is reshaping
+                the landscape of development and DevOps. Embracing such
+                tools is not a shortcut, but a natural progression in a
+                constantly evolving technology field. ChatGPT offers a
+                platform to redefine boundaries, optimize processes, and
+                deliver unparalleled value. With ChatGPT, the future
+                looks promising - it represents an opportunity to grow,
+                learn, and innovate in ways we could only have imagined
+                a few years ago. The future with ChatGPT is not just on
+                the horizon; it demands our attention today as we embark
+                on this exciting new chapter in software development and
+                operations.
+            </p>
         </div>
     </main>
+    </div>
+    </main><!-- End #main -->
 
-    <!-- Footer -->
-    <footer class="bg-dark-subtle">
-        <div class="container lh-1">
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <h3>About me</h3>
-                    <p class="lead">
-                        I'm a DevOps engineer with a passion for leveraging
-                        technology to solve problems and deliver value.
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h3>Contact me</h3>
-                    <p><i class="fas fa-map-marker-alt me-2"></i>Paris</p>
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>BHS consulting</h3>
                     <p>
-                        <i class="fas fa-envelope me-2"></i>
-                        paul.bourhis@bhsconsulting.fr
-                    </p>
-                    <p>
-                        <i class="fas fa-phone-alt me-2"></i>+33 6 99 29 45
-                        22
+                        <strong>Paul Bourhis<br></strong>
+                        49 Bis rue de Paris<br>
+                        92110, Clichy<br>
+                        France<br><br>
+                        <!-- <i class="bi bi-telephone-fill"></i> -->
+                        <strong>Phone:</strong> +33 6 99 29 45 22<br>
+                        <!-- <i class="bi bi-envelope-fill"></i> -->
+                        <strong>Email:</strong> paul_bourhis@bhsconsulting.fr<br>
                     </p>
                 </div>
-                <div class="col-md-4">
-                    <h3>Follow me</h3>
-                    <!-- LinkedIn -->
-                    <a class="btn text-white btn-floating m-1" style="background-color: #0082ca"
-                        href="https://www.linkedin.com/in/paul-bourhis-375557153/" role="button"><i
-                            class="fab fa-linkedin-in"></i></a>
 
-                    <!-- GitHub -->
-                    <a class="btn text-white btn-floating m-1" style="background-color: #333333"
-                        href="https://github.com/Pyodin" role="button"><i
-                            class="fab fa-github"></i></a>
-
-                    <!-- Instagram -->
-                    <a class="btn text-white btn-floating m-1" style="background-color: #af36af"
-                        href="https://www.instagram.com/paulbhs/" role="button"><i
-                            class="fab fa-instagram"></i></a>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4 id="footerUsefulLinks">Useful Links</h4>
+                    <ul>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/About/" id="footerLinkAboutMe">About me</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/Projects/" id="footerLinkProjects">Projects</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/Contact/" id="footerLinkContact">Contact</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/Blog/" id="footerLinkBlog">Blog</a>
+                        </li>
+                    </ul>
                 </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4 id="footerMySocialNetworks">My Social Networks</h4>
+                    <p id="footerThanksForVisiting">Thanks for visiting my website. Follow me on my
+                        socials</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.instagram.com/paulbhs/">
+                            <i class="b- bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/paul-bourhis-375557153/">
+                            <i class="b- bi-linkedin"></i></a>
+                        <a href="https://github.com/Pyodin">
+                            <i class="b- bi-github"></i></a>
+                    </div>
+                </div>
+
+
             </div>
         </div>
         <div class="text-center bg-secondary">
-            © Built on my own. Find the source code
-            <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a>
+            © Built on my own.
+            <!-- Find the source code <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a> -->
         </div>
-    </footer>
-    <script src="/assets/js/navbar.js"></script>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+        aria-label="Back to top">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+
+    <script src="/assets/js/common.js"></script>
     <script src="/assets/js/switchLanguage.js"></script>
-    <!-- Bootstrap Bundle with Popper -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>

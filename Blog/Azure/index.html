@@ -5,162 +5,156 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-        crossorigin="anonymous" />
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.0/css/all.css" />
+
+    <!-- Stylesheet -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/common.css" />
     <link rel="stylesheet" href="/Blog/style.css" />
-    <link rel="stylesheet" href="/Blog/Freelancing/style.css" />
+
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
-    <!-- bootstrap icons -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
     <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap"
         rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>DailyDevTalk: Azure</title>
+    <title>BHS Blog: Azure</title>
 </head>
 
 <body>
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg fixed-top nav-colored" id="navbar">
-        <div class="container">
+    <!-- ======= Header ======= -->
+    <header id="header" class="header ">
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg nav-colored fixed-top" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="/" id="navbarBrand">
+                    <i class="bi bi-list"></i>
+                    BHS Consulting
+                </a>
 
-            <a class="navbar-brand" href="/" id="navbarBrand">
-                <i class="bi bi-list"></i>
-                BHS Consulting
-            </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a id="aboutMeLink" class="nav-link" href="/About">About
+                                me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
+                        </li>
+                    </ul>
+                </div>
 
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a id="aboutMeLink" class="nav-link" href="/About">About me</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a id="experiencesLink" class="nav-link dropdown-toggle" href="#"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Experiences
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a id="murexLink" class="dropdown-item"
-                                    href="/Experiences/Murex/">Murex</a>
-                            </li>
-                            <li>
-                                <a id="thalesLink" class="dropdown-item"
-                                    href="/Experiences/Thales/">Thales</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="nav-item">
-                        <a id="projectsLink" class="nav-link " href="/Projects/">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
-                    </li>
-                </ul>
-
+                <!-- english and franch flags as button -->
+                <div class="d-flex align-items-center">
+                    <a class="btn btn-outline-dark btn-sm me-2" id="btnEnglish">English</a>
+                    <a class="btn btn-outline-dark btn-sm" id="btnFrench">Français</a>
+                </div>
             </div>
+        </nav>
 
-            <!-- english and franch flags as button -->
-            <div class="d-flex align-items-center">
-                <a class="btn btn-outline-dark btn-sm me-2" id="btnEnglish">English</a>
-                <a class="btn btn-outline-dark btn-sm" id="btnFrench">Français</a>
+        <div class="container-fluid masthead">
+            <h1>Microsoft Azure:
+                <br> Pioneering the Future for DevOps and Developers</h1>
+            <h2 class="display-6">Why Microsoft will gain more and more market shares in the cloud industry ?</h2>
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+        <!-- Heading Row-->
+        <div class="container my-5">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8">
+                    <img class="img-fluid rounded" id="imgBlog"
+                        src="https://community.connection.com/wp-content/uploads/2021/05/1324584-Benefits-of-Azure-BLOG.jpg"
+                        alt="..." data-aos="fade-right" />
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="contentTable" data-aos="fade-up">
+                        <h2 class="display-6">Table of content</h2>
+                        <ol>
+                            <li><a class="scrollto" href="#introduction">Introduction</a></li>
+                            <li><a class="scrollto" href="#devanddevops">Azure for DevOps and
+                                    Developers</a></li>
+                            <li><a class="scrollto" href="#investments">Microsoft's Investment and
+                                    Azure's Future</a></li>
+                            <li><a class="scrollto" href="#conclusion">Conclusion</a></li>
+                        </ol>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
 
-    <!-- Header -->
-    <header class="masthead">
-        <div class="h-100 d-flex flex-column justify-content-center align-items-center">
-            <div class="display-2 fw-bold my-4 fade-in">Why did I became independant ?</div>
-            <div class="display-5 fst-italic fade-in">
-                Embracing Freelancing: A Journey of Passion, Flexibility, and
-                Growth
-            </div>
-        </div>
-    </header>
+        <div class="container-xxl my-5 shadow rounded-5" id="blog">
 
-    <!-- Blog article -->
-    <div class="container-xxl rounded-5" data-aos="fade-up">
-        <div class="row justify-content-center align-items-center g-2 m-5">
-            <div class="display-5">Introduction</div>
-            <div class="lead paragraph">
-                As a DevOps engineer and Python developer who has
-                navigated the intricate world of cloud computing, I've
-                had the opportunity to work with multiple cloud service
-                providers. Among them, Microsoft Azure stands out. Not
-                only have I chosen Azure as my cloud computing platform,
-                but I've also successfully passed the Azure DevOps
-                certifications. With its comprehensive suite of services
-                and Microsoft's continued heavy investment in
-                technology, I firmly believe that Azure is poised to
-                become the industry leader in the near future.
-            </div>
+            <div class="row justify-content-center align-items-center g-2 m-5">
+                <div class="section-title">
+                    <h1>Introduction</h1>
+                </div>
+                <div class="lead" id="introduction">
+                    As a DevOps engineer and Python developer who has
+                    navigated the intricate world of cloud computing, I've
+                    had the opportunity to work with multiple cloud service
+                    providers. Among them, Microsoft Azure stands out. Not
+                    only have I chosen Azure as my cloud computing platform,
+                    but I've also successfully passed the Azure DevOps
+                    certifications. With its comprehensive suite of services
+                    and Microsoft's continued heavy investment in
+                    technology, I firmly believe that Azure is poised to
+                    become the industry leader in the near future.
+                </div>
 
-            <img src="https://www.imagar.com/wp-content/uploads/2018/06/azure.png"
-                class="img-fluid rounded-5 mb-4" alt="Computer" />
+                <div class="section-title">
+                    <h1>Azure for DevOps and Developers</h1>
+                </div>
+                <div class="lead" id="devanddevops">
+                    Microsoft Azure, with its vast array of cloud services,
+                    caters effectively to the unique challenges faced by
+                    businesses globally. For DevOps engineers and
+                    developers, Azure presents an assortment of tools that
+                    streamline every phase of the software development
+                    lifecycle.
 
-            <div class="display-5">Azure for DevOps and Developers</div>
-            <div class="lead paragraph">
-                Microsoft Azure, with its vast array of cloud services,
-                caters effectively to the unique challenges faced by
-                businesses globally. For DevOps engineers and
-                developers, Azure presents an assortment of tools that
-                streamline every phase of the software development
-                lifecycle.
+                    As a certified Azure DevOps engineer, I've come to
+                    appreciate the service Azure DevOps for its holistic
+                    approach to the DevOps lifecycle. It offers a complete
+                    DevOps toolchain, including Azure Pipelines, a CI/CD
+                    platform compatible with any language, platform, or
+                    cloud. This suite of services makes it possible to
+                    automate deployments and receive continuous feedback,
+                    simplifying the management aspect of DevOps immensely.
 
-                As a certified Azure DevOps engineer, I've come to
-                appreciate the service Azure DevOps for its holistic
-                approach to the DevOps lifecycle. It offers a complete
-                DevOps toolchain, including Azure Pipelines, a CI/CD
-                platform compatible with any language, platform, or
-                cloud. This suite of services makes it possible to
-                automate deployments and receive continuous feedback,
-                simplifying the management aspect of DevOps immensely.
+                    Azure is equally beneficial for developers. Services
+                    like Azure Functions, which offer serverless computing
+                    capabilities, let developers concentrate on writing code
+                    without the distraction of managing the infrastructure.
+                    The seamless integration with Microsoft's extensive
+                    portfolio, including the widely-used GitHub, Visual
+                    Studio, and the Office Suite, further enhances Azure's
+                    appeal to developers.
+                </div>
 
-                Azure is equally beneficial for developers. Services
-                like Azure Functions, which offer serverless computing
-                capabilities, let developers concentrate on writing code
-                without the distraction of managing the infrastructure.
-                The seamless integration with Microsoft's extensive
-                portfolio, including the widely-used GitHub, Visual
-                Studio, and the Office Suite, further enhances Azure's
-                appeal to developers.
-            </div>
-
-
-            <div class="display-5">Microsoft's Investment and Azure's Future</div>
-            <div class="lead paragraph">
-                Microsoft's significant technological investments,
+                <div class="section-title">
+                    <h1>Microsoft's Investment and Azure's Future</h1>
+                </div>
+                <div class="lead" id="investments">
+                    Microsoft's significant technological investments,
                     strategic acquisitions, and partnerships provide Azure
                     with a clear edge for the future of cloud computing.
                     Companies like GitHub and organizations such as OpenAI
@@ -175,11 +169,13 @@
                     range, supported by my personal experience as a
                     certified Azure DevOps engineer, firmly place Azure at
                     the forefront of cloud technologies.
-            </div>
+                </div>
 
-            <div class="display-5">Conclusion</div>
-            <div class="lead paragraph">
-                In a world where cloud technology is no longer an option
+                <div class="section-title">
+                    <h1>Conclusion</h1>
+                </div>
+                <div class="lead" id="conclusion">
+                    In a world where cloud technology is no longer an option
                     but a necessity, choosing the right service provider is
                     a critical decision for any digital business. From the
                     perspective of a DevOps engineer and developer, Azure
@@ -189,49 +185,86 @@
                     resources and heavy investment in cutting-edge
                     technologies, I am confident that Azure is set to emerge
                     as the leading cloud provider in the years to come.
+                </div>
             </div>
         </div>
-    </div>
+    </main><!-- End #main -->
 
 
-    <!-- Footer -->
-    <footer class="bg-dark-subtle">
-        <div class="container text-center p-2">
-            <!-- <h3>Follow me</h3> -->
-            <div class="display-6">Follow me</div>
-            <!-- Linkedin -->
-            <a class="btn btn-floating m-2 rounded-5"
-                href="https://www.linkedin.com/in/paul-bourhis-375557153/" role="button"
-                aria-label="LinkedIn" target="_blank">
-                <i class="bi bi-linkedin"></i>
-            </a>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>BHS consulting</h3>
+                    <p>
+                        <strong>Paul Bourhis<br></strong>
+                        49 Bis rue de Paris<br>
+                        92110, Clichy<br>
+                        France<br><br>
+                        <!-- <i class="bi bi-telephone-fill"></i> -->
+                        <strong>Phone:</strong> +33 6 99 29 45 22<br>
+                        <!-- <i class="bi bi-envelope-fill"></i> -->
+                        <strong>Email:</strong> paul_bourhis@bhsconsulting.fr<br>
+                    </p>
+                </div>
 
-            <!-- GitHub -->
-            <a class="btn btn-floating m-2 rounded-5" href="https://github.com/Pyodin" role="button"
-                aria-label="GitHub" target="_blank">
-                <i class="bi bi-github"></i>
-            </a>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4 id="footerUsefulLinks">Useful Links</h4>
+                    <ul>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/About/" id="footerLinkAboutMe">About me</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/Projects/" id="footerLinkProjects">Projects</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/Contact/" id="footerLinkContact">Contact</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/Blog/" id="footerLinkBlog">Blog</a>
+                        </li>
+                    </ul>
+                </div>
 
-            <!-- Instagram -->
-            <a class="btn btn-floating m-2 rounded-5" href="https://www.instagram.com/paulbhs/"
-                role="button" aria-label="Instagram" target="_blank">
-                <i class="bi bi-instagram"></i>
-            </a>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4 id="footerMySocialNetworks">My Social Networks</h4>
+                    <p id="footerThanksForVisiting">Thanks for visiting my website. Follow me on my
+                        socials</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.instagram.com/paulbhs/">
+                            <i class="b- bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/paul-bourhis-375557153/">
+                            <i class="b- bi-linkedin"></i></a>
+                        <a href="https://github.com/Pyodin">
+                            <i class="b- bi-github"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-    </footer>
+        <div class="text-center bg-secondary">
+            © Built on my own.
+            <!-- Find the source code <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a> -->
+        </div>
+    </footer><!-- End Footer -->
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+        aria-label="Back to top">
         <i class="bi bi-arrow-up-short"></i>
     </a>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+
     <script src="/assets/js/common.js"></script>
-    <!-- Bootstrap Bundle with Popper -->
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+    <script src="/assets/js/switchLanguage.js"></script>
 </body>
 
 </html>
