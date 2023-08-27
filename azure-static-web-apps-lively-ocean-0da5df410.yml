@@ -23,8 +23,8 @@ jobs:
       - task: AzureStaticWebApp@0
         inputs:
           azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN_LIVELY_OCEAN_0DA5DF410)
-          app_location: "/" # App source code path
-          api_location: "/Deploy/AzFunction/" # Api source code path - optional
+          app_location: "/Website" # App source code path
+          api_location: "/Website/api" # Api source code path - optional
           skip_app_build: true # Skip build - optional
           # skip_api_build: true # Skip api build - optional
           # output_location: "" # Built app content directory - optional
