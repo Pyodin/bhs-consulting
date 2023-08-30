@@ -12,13 +12,12 @@
 
 .section-title h1 {
   font-family: 'Ysabeau SC', sans-serif;
-  font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 20px;
   padding-bottom: 20px;
-  position: relative;
   color: #37517e;
+  position: relative;
 }
 
 .section-title h1::before {
@@ -106,8 +105,12 @@
 /* PRESENTATION */
 
 #presentation {
-  background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%);
+  /* background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%); */
   padding: 15px;
+  /* background-color: aliceblue; */
+  background: linear-gradient(120deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%);
+
+
 }
 
 #presentation .container-xxl {
@@ -115,41 +118,58 @@
 }
 
 #presentation .btn {
-  background-color: #172281;
+  background-color: #3b4ad1;
   color: white;
-  border-radius: 30px;
+  border-radius: 10px;
   font-family: 'Ysabeau SC', sans-serif;
   font-size: 1.2rem;
 }
 
 #presentation .btn:hover {
-  background-color: #3d4bc9;
+  background-color: #1f2da3;
   color: white;
 }
 
-#mainPhoto {
-  max-width: 500px;
-  width: 100%;
-  /* margin: auto; */
-}
 
 /* SERVICES */
 
 #services {
-  background-color: white;
+  /* background-color: white; */
+  /* background: url("/assets/images/banner-keyboard.webp"); */
+  /* background: url("/tmp/images/slider-tl2.jpg"); */
+/* 
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 15px;
+  color: white; */
+  /* background-color: aliceblue; */
+  background: linear-gradient(45deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%);
+
 }
 
 #services .accordion-item {
   margin: 20px;
   border: none;
+  border-radius: 20px;
 }
 
-#services .accordion-button {
+#services .accordion-button,
+#services .accordion-header {
   font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   color: #263d66;
-  background-color: rgba(212, 212, 212, 0.11);
+  border: none;
+}
+
+#services .accordion-header {
+  border-radius: 20px;
+}
+
+#services .accordion-button {
+  border: none;
 }
 
 #services .accordion-button:focus {
@@ -182,7 +202,6 @@
   transform: translateY(-10px) scale(1.02);
   transition: all 0.5s ease;
 }
-
 
 
 #cloudSolutionHeader .accordion-button {
@@ -233,7 +252,7 @@
 #automationHeader .accordion-button:active,
 #automationHeader .accordion-button:not(.collapsed) {
   color: white;
-  background: #ffbb00c9;
+  background: #ffbb00;
 }
 
 
@@ -258,7 +277,7 @@
 #monitoringHeader .accordion-button:active,
 #monitoringHeader .accordion-button:not(.collapsed) {
   color: white;
-  background: #8c00ffb9;
+  background: #8c00ff;
 }
 
 
@@ -283,7 +302,7 @@
 #trainingHeader .accordion-button:active,
 #trainingHeader .accordion-button:not(.collapsed) {
   color: white;
-  background: #ff0000c7;
+  background: #ff0000;
 }
 
 
@@ -333,14 +352,15 @@
 #sourceCodeHeader .accordion-button:active,
 #sourceCodeHeader .accordion-button:not(.collapsed) {
   color: white;
-  background: #ff00ffbe;
+  background: #ff00ff;
 }
 
 
 /* CERTIFICATIONS */
 
 #certifications {
-  background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%);
+  /* background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%); */
+  background-color: #f3f5fa;
 }
 
 #certifications img {
@@ -357,6 +377,14 @@
 
 /* SKILLS */
 
+#skills {
+  background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%);
+}
+
+.skills .skills-container {
+  text-align: center;
+}
+
 .skills #skills-filters {
   list-style: none;
   margin-top: 50px;
@@ -370,7 +398,7 @@
   padding: 8px 20px;
   font-weight: 500;
   border-radius: 50px;
-  color: #444444;
+  color: #161515;
   transition: all 0.3s;
 }
 
@@ -381,7 +409,7 @@
 }
 
 .skill-item {
-  background-color: #7c7c7c3e;
+  background-color: #3a3a3a3e;
   padding: 5px;
   margin: 5px;
   border-radius: 10px;

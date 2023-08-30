@@ -23,7 +23,7 @@ body {
 .section-title h1::before,
 .section-title h1::after {
     content: "";
-    width: 50px;
+    width: 30px;
     height: 2px;
     background: #0a314b;
     display: inline-block;
@@ -163,8 +163,33 @@ body {
     color: #7498d6;
 }
 
+.contentTable ol ol li {
+    margin-bottom: 0;
+    list-style: outside;
+    padding-left: 0;
+}
+
+
+main h2 {
+    font-size: 1.6rem;
+    font-family: 'Ysabeau SC', sans-serif;
+    margin: 20px;
+}
+
 
 #blog {
     background-color: aliceblue;
     padding: 0 25px 55px 55px;
+}
+
+.blogImg{
+    width: 70%;
+    height: 400px;
+    object-fit: cover;
+    /* object-position: 50% 60%; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }

@@ -9,6 +9,5 @@
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter"
     },
-    "python.formatting.provider": "none",
     "liveServer.settings.port": 5501
 }
