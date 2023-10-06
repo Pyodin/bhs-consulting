@@ -20,26 +20,21 @@
   position: relative;
 }
 
+.section-title h1::before,
+.section-title h1::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background: #3498db;
+    display: inline-block;
+}
+
 .section-title h1::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 120px;
-  height: 1px;
-  background: #ddd;
-  bottom: 1px;
-  left: calc(50% - 60px);
+    margin: 0 15px 10px 0;
 }
 
 .section-title h1::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #4786e4;
-  bottom: 0;
-  left: calc(50% - 20px);
+    margin: 0 0 10px 15px;
 }
 
 
@@ -77,7 +72,8 @@
 .hero a:hover {
   transform: scale(1.2);
   transition: all 0.3s ease-in-out;
-  background-color: rgb(160, 150, 255);
+  background-color: #172281;
+  color: white;
 }
 
 .hero span {
@@ -109,8 +105,6 @@
   padding: 15px;
   /* background-color: aliceblue; */
   background: linear-gradient(120deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%);
-
-
 }
 
 #presentation .container-xxl {
@@ -144,36 +138,31 @@
   background-repeat: no-repeat;
   padding: 15px;
   color: white; */
-  /* background-color: aliceblue; */
-  background: linear-gradient(45deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%);
-
+  /* background-color: rgb(186, 211, 235); */
+  /* background: linear-gradient(45deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%); */
+  background: linear-gradient(
+    145deg, 
+    rgba(168, 213, 255, 0.678) 0%,
+    rgba(156, 93, 21, 0.103) 70%, 
+    rgba(155, 197, 236, 0.808) 100%
+  );
 }
 
 #services .accordion-item {
-  margin: 20px;
-  border: none;
-  border-radius: 20px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #0000004d;
 }
 
 #services .accordion-button,
 #services .accordion-header {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   font-family: "Nunito", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   color: #263d66;
-  border: none;
-}
-
-#services .accordion-header {
-  border-radius: 20px;
-}
-
-#services .accordion-button {
-  border: none;
-}
-
-#services .accordion-button:focus {
-  box-shadow: none;
 }
 
 #services .accordion-button i {
@@ -188,8 +177,6 @@
 
 #services .accordion-body {
   background-color: #dddcdcb0;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 #services .accordion-body .lead {
@@ -199,17 +186,16 @@
 }
 
 #services .accordion-item:hover {
-  transform: translateY(-10px) scale(1.02);
+  /* transform: translateY(-10px) scale(1.01); */
   transition: all 0.5s ease;
 }
 
-
-#cloudSolutionHeader .accordion-button {
-  border: 1px solid #2db6fab4;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  /* background-color: #328bff50; */
-
+#services .accordion-button:hover,
+#services .accordion-button:focus,
+#services .accordion-button:active,
+#services .accordion-button:not(.collapsed) {
+  background: #0084ff46;
+  box-shadow: none;
 }
 
 #cloudSolutionHeader i {
@@ -217,49 +203,9 @@
   background: #dbf3fe;
 }
 
-#cloudSolutionHeader .accordion-button:hover i {
-  color: #2db6fa;
-  background: white;
-}
-
-#cloudSolutionHeader .accordion-button:hover,
-#cloudSolutionHeader .accordion-button:focus,
-#cloudSolutionHeader .accordion-button:active,
-#cloudSolutionHeader .accordion-button:not(.collapsed) {
-  color: white;
-  background: #3eb9f7;
-}
-
-
-#automationHeader .accordion-button {
-  border: 1px solid #ffbb00;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
 #automationHeader i {
   color: #ffbb00;
   background: #fff9db;
-}
-
-#automationHeader .accordion-button:hover i {
-  color: #ffbb00;
-  background: white;
-}
-
-#automationHeader .accordion-button:hover,
-#automationHeader .accordion-button:focus,
-#automationHeader .accordion-button:active,
-#automationHeader .accordion-button:not(.collapsed) {
-  color: white;
-  background: #ffbb00;
-}
-
-
-#monitoringHeader .accordion-button {
-  border: 1px solid #8c00ff79;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 
 #monitoringHeader i {
@@ -267,49 +213,9 @@
   background: #f2e9ff;
 }
 
-#monitoringHeader .accordion-button:hover i {
-  color: #8c00ff;
-  background: white;
-}
-
-#monitoringHeader .accordion-button:hover,
-#monitoringHeader .accordion-button:focus,
-#monitoringHeader .accordion-button:active,
-#monitoringHeader .accordion-button:not(.collapsed) {
-  color: white;
-  background: #8c00ff;
-}
-
-
-#trainingHeader .accordion-button {
-  border: 1px solid #ff00007a;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
 #trainingHeader i {
   color: #ff0000;
   background: #ffe6e6;
-}
-
-#trainingHeader .accordion-button:hover i {
-  color: #ff0000;
-  background: white;
-}
-
-#trainingHeader .accordion-button:hover,
-#trainingHeader .accordion-button:focus,
-#trainingHeader .accordion-button:active,
-#trainingHeader .accordion-button:not(.collapsed) {
-  color: white;
-  background: #ff0000;
-}
-
-
-#devStrategieHeader .accordion-button {
-  border: 1px solid #01ce0198;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 
 #devStrategieHeader i {
@@ -317,42 +223,9 @@
   background: #e6ffe6;
 }
 
-#devStrategieHeader .accordion-button:hover i {
-  color: #01ce01;
-  background: white;
-}
-
-#devStrategieHeader .accordion-button:hover,
-#devStrategieHeader .accordion-button:focus,
-#devStrategieHeader .accordion-button:active,
-#devStrategieHeader .accordion-button:not(.collapsed) {
-  color: white;
-  background: #01ce01;
-}
-
-
-#sourceCodeHeader .accordion-button {
-  border: 1px solid #ff00ff7a;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
 #sourceCodeHeader i {
   color: #ff00ff;
   background: #ffe6ff;
-}
-
-#sourceCodeHeader .accordion-button:hover i {
-  color: #ff00ff;
-  background: white;
-}
-
-#sourceCodeHeader .accordion-button:hover,
-#sourceCodeHeader .accordion-button:focus,
-#sourceCodeHeader .accordion-button:active,
-#sourceCodeHeader .accordion-button:not(.collapsed) {
-  color: white;
-  background: #ff00ff;
 }
 
 
@@ -363,10 +236,14 @@
   background-color: #f3f5fa;
 }
 
+#certifications .badge {
+  color: black;
+}
+
 #certifications img {
   width: 160px;
   height: 160px;
-  border-radius: 50%;
+  margin: 10px;
 }
 
 #certifications img:hover {
@@ -378,7 +255,8 @@
 /* SKILLS */
 
 #skills {
-  background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%);
+  /* background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%); */
+  background: linear-gradient(120deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%);
 }
 
 .skills .skills-container {
@@ -409,7 +287,7 @@
 }
 
 .skill-item {
-  background-color: #3a3a3a3e;
+  background-color: #81818156;
   padding: 5px;
   margin: 5px;
   border-radius: 10px;
@@ -430,7 +308,13 @@
 # Contact
 --------------------------------------------------------------*/
 .contact {
-  background: linear-gradient(45deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%);
+  /* background: linear-gradient(45deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%); */
+  background: linear-gradient(
+    45deg, 
+    rgba(168, 213, 255, 0.678) 0%,
+    rgba(46, 21, 156, 0.103)  50%, 
+    rgba(155, 197, 236, 0.808) 100%
+  );
 }
 
 .contact .info {

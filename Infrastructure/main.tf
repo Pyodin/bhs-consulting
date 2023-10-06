@@ -4,7 +4,6 @@ provider "azurerm" {
 }
 
 # Azure resource group
-
 resource "azurerm_resource_group" "swa" {
   name     = var.website_name
   location = var.region
@@ -12,7 +11,6 @@ resource "azurerm_resource_group" "swa" {
 }
 
 # Azure static web app
-
 resource "azurerm_static_site" "swa" {
   name                = var.website_name
   resource_group_name = azurerm_resource_group.swa.name
@@ -29,7 +27,6 @@ resource "azurerm_static_site_custom_domain" "txt" {
 
 
 # Azure DNS
-
 resource "azurerm_dns_zone" "swa" {
   name                = var.custom_domain_name
   resource_group_name = azurerm_resource_group.swa.name

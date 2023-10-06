@@ -286,7 +286,7 @@ body {
     background: #ffffff;
     border: 6px #ffc400 solid;
     font-family: 'Courier New', Courier, monospace;
-    content: "";
+    content: "\1F393";
     font-size: 20px;
     z-index: 2;
 }

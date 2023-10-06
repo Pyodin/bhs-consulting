@@ -197,12 +197,12 @@
                     </div>
 
                     <div class="col-lg-8 ">
-                        <div class="row justify-content-center align-items-center serviceRow">
+                        <div class="row justify-content-center align-items-start serviceRow">
                             <div class="col-lg-6">
                                 <div class="accordion" id="solutionsAccordion">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header " id="cloudSolutionHeader">
-                                            <button class="accordion-button collapsed" type="button"
+                                            <button class="accordion-button " type="button"
                                                 data-bs-toggle="collapse"
                                                 data-bs-target="#cloudSolutionCollapse"
                                                 aria-expanded="false"
@@ -214,7 +214,7 @@
                                             </button>
                                         </h2>
                                         <div id="cloudSolutionCollapse"
-                                            class="accordion-collapse collapse"
+                                            class="accordion-collapse collapse show"
                                             aria-labelledby="cloudSolutionHeader"
                                             data-bs-parent="#solutionsAccordion">
                                             <div class="accordion-body">
@@ -324,7 +324,7 @@
                                 <div class="accordion" id="servicesAccordion">
                                     <div class="accordion-item">
                                         <h2 class="accordion-header" id="automationHeader">
-                                            <button class="accordion-button collapsed" type="button"
+                                            <button class="accordion-button" type="button"
                                                 data-bs-toggle="collapse"
                                                 data-bs-target="#automationCollapse"
                                                 aria-expanded="false"
@@ -336,7 +336,7 @@
                                             </button>
                                         </h2>
                                         <div id="automationCollapse"
-                                            class="accordion-collapse collapse"
+                                            class="accordion-collapse collapse show"
                                             aria-labelledby="automationHeader"
                                             data-bs-parent="#servicesAccordion">
                                             <div class="accordion-body">
@@ -480,58 +480,78 @@
                     <h1 id="certificationsHeader">Certifications</h1>
                 </div>
 
-                <div class="row justify-content-center align-items-start text-center">
-                    <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="700"
+                <div class="row justify-content-evenly align-items-start ">
+                    <div class="col-2 badge" data-aos="fade-right" data-aos-delay="900"
                         data-aos-duration="1000">
-                        <h3 class="card-title mt-1">AZ-400</h3>
+                        <h3 class="card-title">CKA</h3>
+                        <a href="https://www.credly.com/badges/dfa25f32-b358-4ac8-8dee-95eb4c94977a/public_url"
+                            target="_blank">
+                            <img src="https://images.credly.com/images/8b8ed108-e77d-4396-ac59-2504583b9d54/twitter_thumb_201604_cka_from_cncfsite__281_29.png"
+                                alt="Title">
+                        </a>
+                        <div class="lead">Certified Kubernetes Administrator</div>
+                        <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900"
+                            class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_2">Read
+                                more</span></a>
+                    </div>
+
+                    <div class="col-2 badge" data-aos="fade-right" data-aos-delay="700"
+                        data-aos-duration="1000">
+                        <h3 class="card-title">AZ-400</h3>
                         <a href="https://www.credly.com/badges/eb3ffac5-6a81-436f-9e91-af0d1a0e6494/public_url"
                             target="_blank">
                             <img src="https://training.cellenza.com/wp-content/uploads/2021/07/AZ400.png"
                                 alt="Title">
                         </a>
-                        <div class="lead" id="az400Cert">DevOps Engineer
-                            Expert</div>
+                        <div class="lead" id="az400Cert">DevOps Engineer Expert</div>
                         <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-400/"
                             class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_0">Read
                                 more</span></a>
                     </div>
-                    <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="500"
+
+                    <div class="col-2 badge" data-aos="fade-right" data-aos-delay="500"
                         data-aos-duration="1000">
-                        <h3 class="card-title mt-1">AZ-104</h3>
+                        <h3 class="card-title">AZ-104</h3>
                         <a href="https://www.credly.com/badges/9e8fa508-7b5d-41c9-bca5-fd8c4b2c10c3/public_url"
                             target="_blank">
                             <img src="https://training.cellenza.com/wp-content/uploads/2021/07/AZ104.png"
                                 alt="Title">
                         </a>
-                        <div class="lead" id="az104Cert">Microsoft Azure
-                            Administrator</div>
+                        <div class="lead" id="az104Cert">Microsoft Azure Administrator</div>
                         <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-104/"
                             class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_1">Read
                                 more</span></a>
-
                     </div>
-                    <div class="col-2 azbadge" data-aos="fade-right" data-aos-delay="300"
+
+                    <div class="col-2 badge" data-aos="fade-right" data-aos-delay="300"
                         data-aos-duration="1000">
-                        <h3 class="card-title mt-1">AZ-900</h3>
+                        <h3 class="card-title">AZ-900</h3>
                         <a href="https://www.credly.com/badges/dfa25f32-b358-4ac8-8dee-95eb4c94977a/public_url"
                             target="_blank">
                             <img src="https://training.cellenza.com/wp-content/uploads/2021/08/AZ900.png"
                                 alt="Title">
                         </a>
-                        <div class="lead" id="az900Cert">Microsoft Azure
-                            Fundamentals</div>
+                        <div class="lead" id="az900Cert">Microsoft Azure Fundamentals</div>
                         <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900"
                             class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_2">Read
                                 more</span></a>
                     </div>
-                    <div class="col-2" data-aos="fade-right" data-aos-duration="1000">
-                        <h3 class="card-title mt-1">TOEIC</h3>
-                        <a href="">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/langfr-225px-Flag_of_the_United_Kingdom_%283-5%29.svg.png"
+
+                    <div class="col-2 badge" data-aos="fade-right" 
+                        data-aos-duration="1000">
+                        <h3 class="card-title">HCTA0-003</h3>
+                        <a href="https://www.credly.com/badges/dfa25f32-b358-4ac8-8dee-95eb4c94977a/public_url"
+                            target="_blank">
+                            <img src="https://images.credly.com/size/680x680/images/85b9cfc4-257a-4742-878c-4f7ab4a2631b/image.png"
                                 alt="Title">
                         </a>
-                        <div class="lead">English test: 920/1000</div>
+                        <div class="lead">Terraform Associate (003)</div>
+                        <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900"
+                            class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_2">Read
+                                more</span></a>
                     </div>
+
+
                 </div>
             </div>
         </section><!-- End Certifications Section -->
@@ -551,7 +571,12 @@
                         </ul>
 
                         <div class="row justify-content-center align-items-center skills-container text-center"
-                        data-aos="fade-up" data-aos-delay="200">
+                            data-aos="fade-up" data-aos-delay="200">
+                            <div class="col-2 skill-item filter-devops filter-dev">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/2109px-Kubernetes_logo_without_workmark.svg.png"
+                                    alt="Kubernetes" class="skill-logo" />
+                                <h5>Kubernetes</h5>
+                            </div>
                             <div class="col-2 skill-item filter-devops">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png"
                                     alt="AWS" class="skill-logo" />
@@ -826,10 +851,6 @@
                         <li>
                             <i class="bi bi-chevron-right"></i>
                             <a href="/About/" id="footerLinkAboutMe">About me</a>
-                        </li>
-                        <li>
-                            <i class="bi bi-chevron-right"></i>
-                            <a href="/Projects/" id="footerLinkProjects">Projects</a>
                         </li>
                         <li>
                             <i class="bi bi-chevron-right"></i>
