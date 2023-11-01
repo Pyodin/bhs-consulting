@@ -75,7 +75,6 @@ contactForm.addEventListener("submit", function (e) {
     var data = new FormData(contactForm);
 
     fetch("/api/ContactForm", {
-    // fetch("http://localhost:7071/api/ContactForm", {
         method: "POST",
         headers: {
             'Accept': 'application/json, text/plain, */*'
@@ -111,7 +110,6 @@ notifyForm.addEventListener("submit", function (e) {
     var data = new FormData(notifyForm);
 
     fetch("/api/HttpTriggerNewMail", {
-    // fetch("http://localhost:7071/api/HttpTriggerNewMail", {
         method: "POST",
         headers: {
             'Accept': 'application/json, text/plain, */*'

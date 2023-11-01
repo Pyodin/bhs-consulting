@@ -2,42 +2,42 @@
 # Common
 --------------------------------------------------------------*/
 body {
-    /* background: linear-gradient(135deg, rgb(186, 211, 235) 0%, rgba(255, 255, 255, 1) 50%, rgba(155, 197, 236, 0.39) 100%); */
-    background: linear-gradient(90deg,
+    background: linear-gradient(
+            /* 135deg, */
+            90deg,
             rgb(186, 211, 235) 0%,
-            rgba(255, 255, 255, 1) 50%,
-            rgba(155, 197, 236, 0.589) 100%);
+            rgba(255, 255, 255) 50%,
+            rgb(186, 211, 235) 100%);
 }
 
-.section-title {
-    /* text-align: center; */
-    /* margin-top: 10px; */
-    padding-top: 30px;
-    padding-bottom: 30px;
+/*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+#sideHeader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9997;
+    transition: all 0.5s;
+    padding: 15px;
+    overflow-y: auto;
 }
 
-.section-title h1 {
-    font-family: 'Ysabeau SC', sans-serif;
-    color: #37517e;
+@media (max-width: 991px) {
+    #sideHeader {
+        width: 300px;
+        background: #fff;
+        border-right: 1px solid #e6e9ec;
+        left: -300px;
+    }
 }
 
-.section-title h1::before,
-.section-title h1::after {
-    content: "";
-    width: 50px;
-    height: 2px;
-    background: #3498db;
-    display: inline-block;
+@media (min-width: 991px) {
+    #main {
+        margin-left: 100px;
+    }
 }
-
-.section-title h1::before {
-    margin: 0 15px 10px 0;
-}
-
-.section-title h1::after {
-    margin: 0 0 10px 15px;
-}
-
 
 
 /*--------------------------------------------------------------
@@ -146,6 +146,8 @@ body {
 
 .experiences .timeline {
     position: relative;
+    padding: 15px;
+    margin-top: 50px;
 }
 
 .experiences .timeline:after {
@@ -161,16 +163,18 @@ body {
 }
 
 .experiences .timeline .card {
+    padding: 10px 20px;
     position: relative;
     width: calc(50% - 40px);
     border-radius: 20px;
     background: #ffffff;
     z-index: 2;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.experiences .timeline .card .fs-4 {
+.experiences .timeline .card h4 {
     color: #37517e;
+    font-weight: 550;
 }
 
 .experiences .timeline .card .fs-5 {
@@ -267,6 +271,16 @@ body {
     border-radius: 30px;
     background: #ffffff;
     z-index: 2;
+}
+
+.education .card h3 {
+    color: #37517e;
+    font-weight: 550;
+}
+
+.education .card h4 {
+    color: #b90000;
+    font-weight: 550;
 }
 
 .education .timeline .card:hover {

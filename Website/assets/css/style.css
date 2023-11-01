@@ -1,3 +1,4 @@
+/* COMMOM */
 .display-1,
 .display-2,
 .display-6 {
@@ -5,49 +6,14 @@
   font-family: 'Ysabeau SC', sans-serif;
 }
 
-.section-title {
-  text-align: center;
-  padding-bottom: 30px;
-}
-
-.section-title h1 {
-  font-family: 'Ysabeau SC', sans-serif;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  color: #37517e;
-  position: relative;
-}
-
-.section-title h1::before,
-.section-title h1::after {
-    content: "";
-    width: 50px;
-    height: 2px;
-    background: #3498db;
-    display: inline-block;
-}
-
-.section-title h1::before {
-    margin: 0 15px 10px 0;
-}
-
-.section-title h1::after {
-    margin: 0 0 10px 15px;
-}
-
-
 /* HERO */
-
 .hero {
   /* width: 100%; */
   height: 100vh;
-  background: url(/assets/images/hero-bg.png) top center no-repeat;
+  background: url("/assets/images/hero-bg.png") top center no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
-
 
 .hero .display-3 {
   color: #172281;
@@ -96,13 +62,40 @@
   }
 }
 
-#main {
+/* BODY */
+body {
     background: linear-gradient(
       /* 135deg, */
       90deg,
       rgb(186, 211, 235) 0%,
       rgba(255, 255, 255) 50%,
       rgb(186, 211, 235) 100%);
+}
+
+#sideHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9997;
+  transition: all 0.5s;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+@media (max-width: 991px) {
+  #sideHeader {
+    width: 300px;
+    background: #fff;
+    border-right: 1px solid #e6e9ec;
+    left: -300px;
+  }
+}
+
+@media (min-width: 991px) {
+  #main {
+    margin-left: 100px;
+  }
 }
 
 /* PRESENTATION */
@@ -119,7 +112,6 @@
   max-height: 50vh;
   background-color: white;
 }
-
 
 #presentation .btn {
   background-color: #3b4ad1;
@@ -238,7 +230,6 @@
   fill: #11dbcf;
 }
 
-
 /* CERTIFICATIONS */
 
 #certifications .badge {
@@ -256,7 +247,6 @@
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
 }
-
 
 /* SKILLS */
 
@@ -301,10 +291,7 @@
   background-color: #7c7c7c7c;
 }
 
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-
+/* CONTACT */
 
 .contact .info {
   width: 100%;

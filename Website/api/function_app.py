@@ -157,37 +157,3 @@ def HttpTriggerNewMail(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse("Please provide an email address", status_code=400)
 
 
-@app.route(route="HelloWorld", methods=["GET", "POST"])
-def HelloWorld(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info("HelloWorld function processed a request.")
-    email = req.form.get("email")
-    logging.info(f"New email is: {email}")
-
-    return func.HttpResponse(
-        "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
-        status_code=200,
-    )
-
-
-@app.route(route="HttpTrigger", auth_level=func.AuthLevel.FUNCTION)
-def HttpTrigger(req: func.HttpRequest) -> func.HttpResponse:
-    logging.info("Python HTTP trigger function processed a request.")
-
-    name = req.params.get("name")
-    if not name:
-        try:
-            req_body = req.get_json()
-        except ValueError:
-            pass
-        else:
-            name = req_body.get("name")
-
-    if name:
-        return func.HttpResponse(
-            f"Hello, {name}. This HTTP triggered function executed successfully."
-        )
-    else:
-        return func.HttpResponse(
-            "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
-            status_code=200,
-        )

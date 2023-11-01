@@ -41,6 +41,7 @@ function switchLanguage(lang) {
             }, { once: true }); // Remove the event listener after it has been called once
           }, { once: true }); // Remove the event listener after it has been called once
         }
+        localStorage.setItem('preferredLanguage', lang);
       }
     })
     .catch(error => {
@@ -77,4 +78,12 @@ function firstAppear(lang) {
   });
 }
 
-firstAppear("en");
+// Function to set the language based on the saved preference
+function setLanguageFromPreference() {
+  const savedLang = localStorage.getItem('preferredLanguage');
+  if (savedLang) {
+    firstAppear(savedLang);
+  }
+}
+
+setLanguageFromPreference()

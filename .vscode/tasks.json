@@ -9,7 +9,7 @@
 			"isBackground": true,
 			"dependsOn": "pip install (functions)",
 			"options": {
-				"cwd": "${workspaceFolder}/Deploy\\AzFunction"
+				"cwd": "${workspaceFolder}/Website\\api"
 			}
 		},
 		{
@@ -26,7 +26,7 @@
 			},
 			"problemMatcher": [],
 			"options": {
-				"cwd": "${workspaceFolder}/Deploy\\AzFunction"
+				"cwd": "${workspaceFolder}/Website/api"
 			}
 		}
 	]

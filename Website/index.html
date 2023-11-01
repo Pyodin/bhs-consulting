@@ -74,8 +74,12 @@
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="hero container-fluid p-5">
         <div class="row justify-content-center align-items-center px-5 m-5">
-            <div class="col-lg-6 order-2 order-lg-1" data-aos="zoom-out" data-aos-delay="300"
+            <div class="col-lg-6 p-5" data-aos="zoom-out" data-aos-delay="300"
                 data-aos-duration="2000">
+                <img src="/assets/images/hero-img.png" class="img-fluid animated" alt=""
+                    id="heroImg">
+            </div>
+            <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="2000">
                 <div class="display-3 my-4">Paul BOURHIS</div>
                 <div class="display-4" id="carouselCaption1Title">Freelance DevOps Engineer</div>
                 <div class="display-6">I can help you on
@@ -110,15 +114,30 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2 hero-img p-5" data-aos="zoom-out"
-                data-aos-delay="300" data-aos-duration="2000">
-                <img src="/assets/images/hero-img.png" class="img-fluid animated" alt=""
-                    id="heroImg">
-            </div>
         </div>
     </section><!-- End Hero -->
 
     <main id="main">
+        <div id="sideHeader" class="d-flex flex-column justify-content-center">
+            <nav id="sideNarbar" class="navbar nav-menu">
+                <ul>
+                    <li><a href="#hero" class="nav-link scrollto active">
+                            <i class="bi bi-house"></i><span>Top</span></a></li>
+                    <li><a href="#presentation" class="nav-link scrollto"><i
+                                class="bi bi-person"></i> <span>Presentation</span></a></li>
+                    <li><a href="#services" class="nav-link scrollto"><i
+                                class="bi bi-file-person"></i> <span>Services</span></a></li>
+                    <li><a href="#certifications" class="nav-link scrollto"><i
+                                class="bi bi-bookmark-check"></i> <span>Certifications</span></a>
+                    </li>
+                    <li><a href="#skills" class="nav-link scrollto"><i class="bi bi-tools"></i>
+                            <span>Skills</span></a></li>
+                    <li><a href="#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i>
+                            <span>Contact</span></a></li>
+                </ul>
+            </nav><!-- .nav-menu -->
+        </div><!-- End Header -->
+
         <!-- ======= About Section ======= -->
         <section id="presentation">
             <div class="container-xxl my-5 shadow rounded-1" data-aos="fade-up">
@@ -169,18 +188,19 @@
         <section id="services">
             <div class="container-xxl py-5" data-aos="fade-up">
                 <div class="section-title">
-                    <h1 id="serviceHeader">Services</h1>
+                    <h1 id="servicesHeader">Services</h1>
                 </div>
-                <div class="lead text-center">
+                <div class="lead text-center" id="servicesDescription">
                     Offering comprehensive DevOps services, I specialize in guiding businesses from
                     initial infrastructure design through to deployment and ongoing monitoring,
                     ensuring optimal performance at each stage.
                 </div>
 
                 <div class="row gy-4 py-5">
+                    <!-- Cloud Infrastructure Design & Architecture -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
                         data-aos-delay="100">
-                        <div class="icon-box iconbox-blue">
+                        <div class="icon-box iconbox-blue" id="serviceCloud">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -190,17 +210,20 @@
                                 </svg>
                                 <i class="bi bi-clouds"></i>
                             </div>
-                            <h4>Cloud Infrastructure Design & Architecture</h4>
-                            <p>Craft tailored cloud solutions that align with your business needs.
+                            <h4 id="serviceCloudTitle">Cloud Infrastructure Design & Architecture
+                            </h4>
+                            <p id="serviceCloudDesc">
+                                Craft tailored cloud solutions that align with your business needs.
                                 Benefit from scalable, resilient, and efficient cloud architectures
                                 that ensure optimal performance and cost-effectiveness.
                             </p>
                         </div>
                     </div>
 
+                    <!-- CI/CD Strategy Development & Implementation -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
                         data-aos-delay="200">
-                        <div class="icon-box iconbox-orange ">
+                        <div class="icon-box iconbox-orange" id="serviceCICD">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -211,16 +234,20 @@
                                 <i class="bi bi-diagram-3"></i>
 
                             </div>
-                            <h4>CI/CD Strategy Development & Implementation</h4>
-                            <p>Streamline your software development with continuous integration and
+                            <h4 id="serviceCICDTitle">CI/CD Strategy Development & Implementation
+                            </h4>
+                            <p id="serviceCICDDesc">
+                                Streamline your software development with continuous integration and
                                 continuous deployment. Enhance productivity, reduce time-to-market,
-                                and ensure consistent quality with bespoke CI/CD pipelines.</p>
+                                and ensure consistent quality with bespoke CI/CD pipelines.
+                            </p>
                         </div>
                     </div>
 
+                    <!-- Source Code Management & Version Control -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
                         data-aos-delay="300">
-                        <div class="icon-box iconbox-pink">
+                        <div class="icon-box iconbox-pink" id="serviceSCM">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -231,16 +258,19 @@
                                 <i class="bi bi-code-slash"></i>
 
                             </div>
-                            <h4>Source Code Management & Version Control</h4>
-                            <p>Protect and manage your codebase. Ensure smooth team collaboration,
+                            <h4 id="serviceSCMTitle">Source Code Management & Version Control</h4>
+                            <p id="serviceSCMDesc">
+                                Protect and manage your codebase. Ensure smooth team collaboration,
                                 version tracking, and seamless code merges. Say goodbye to code
-                                conflicts and hello to organized, efficient development.</p>
+                                conflicts and hello to organized, efficient development.
+                            </p>
                         </div>
                     </div>
 
+                    <!-- System Monitoring, Alerting, & Performance Optimization -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
                         data-aos-delay="100">
-                        <div class="icon-box iconbox-yellow">
+                        <div class="icon-box iconbox-yellow" id="serviceMonitoring">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -250,16 +280,21 @@
                                 </svg>
                                 <i class="bi bi-graph-up"></i>
                             </div>
-                            <h4>System Monitoring, Alerting, & Performance Optimization</h4>
-                            <p>Stay ahead of issues with real-time system monitoring. Receive timely
+                            <h4 id="serviceMonitoringTitle">System Monitoring, Alerting, &
+                                Performance Optimization</h4>
+                            <p id="serviceMonitoringDesc">
+                                Stay ahead of issues with real-time system monitoring. Receive
+                                timely
                                 alerts and employ proactive measures to ensure peak system
-                                performance, minimizing downtimes and enhancing user experience.</p>
+                                performance, minimizing downtimes and enhancing user experience.
+                            </p>
                         </div>
                     </div>
 
+                    <!-- Infrastructure Automation & Configuration Management -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
                         data-aos-delay="200">
-                        <div class="icon-box iconbox-teal">
+                        <div class="icon-box iconbox-teal" id="serviceAutomation">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -270,17 +305,21 @@
                                 <i class="bi bi-tools"></i>
 
                             </div>
-                            <h4>Infrastructure Automation & Configuration Management</h4>
-                            <p>Eliminate manual errors and repetitive tasks. Implement automation
+                            <h4 id="serviceAutomationTitle">Infrastructure Automation &
+                                Configuration Management</h4>
+                            <p id="serviceAutomationDesc">
+                                Eliminate manual errors and repetitive tasks. Implement automation
                                 solutions that ensure consistent, error-free deployments, and keep
                                 your infrastructure in the desired state with efficient
-                                configuration management.</p>
+                                configuration management.
+                            </p>
                         </div>
                     </div>
 
+                    <!-- Training and Knowledge Sharing -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in"
                         data-aos-delay="300">
-                        <div class="icon-box iconbox-red">
+                        <div class="icon-box iconbox-red" id="serviceTraining">
                             <div class="icon">
                                 <svg width="100" height="100" viewBox="0 0 600 600"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -290,14 +329,17 @@
                                 </svg>
                                 <i class="bi bi-people"></i>
                             </div>
-                            <h4>Training and knowledge sharing</h4>
-                            <p>Empower your team with the latest DevOps best practices. Through
+                            <h4 id="serviceTrainingTitle">Training and Knowledge Sharing</h4>
+                            <p id="serviceTrainingDesc">
+                                Empower your team with the latest DevOps best practices. Through
                                 hands-on training and knowledge sessions, bridge skill gaps and
-                                elevate your team's efficiency and output.</p>
+                                elevate your team's efficiency and output.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
+
         </section><!-- End Services Section -->
 
         <!-- ======= Certifications Section ======= -->
@@ -306,7 +348,7 @@
                 <div class="section-title">
                     <h1 id="certificationsHeader">Certifications</h1>
                 </div>
-                <div class="lead text-center">
+                <div class="lead text-center" id="certificationDescription">
                     My dedication to professional excellence in DevOps is demonstrated through the
                     following industry-recognized certifications, each symbolizing a commitment to
                     continual learning and excellence.
@@ -360,26 +402,26 @@
                     <div class="col-5 badge" data-aos="fade-right" data-aos-delay="300"
                         data-aos-duration="1000">
                         <h3>CKA</h3>
-                        <a href="https://www.credly.com/badges/dfa25f32-b358-4ac8-8dee-95eb4c94977a/public_url"
+                        <a href="https://www.credly.com/badges/a5abbab3-719c-4f7a-84fd-c42b86dfd3f1/public_url"
                             target="_blank">
                             <img src="https://images.credly.com/images/8b8ed108-e77d-4396-ac59-2504583b9d54/twitter_thumb_201604_cka_from_cncfsite__281_29.png"
                                 alt="Title">
                         </a>
                         <div class="lead">Certified Kubernetes Administrator</div>
-                        <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900"
+                        <a href="https://training.linuxfoundation.org/certification/certified-kubernetes-administrator-cka/"
                             class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_2">Read
                                 more</span></a>
                     </div>
 
                     <div class="col-5 badge" data-aos="fade-right" data-aos-delay="200">
                         <h3>HCTA0-003</h3>
-                        <a href="https://www.credly.com/badges/dfa25f32-b358-4ac8-8dee-95eb4c94977a/public_url"
+                        <a href="https://www.credly.com/badges/7ec4950e-077e-4634-8eaf-013370f8e560/public_url"
                             target="_blank">
                             <img src="https://images.credly.com/size/680x680/images/85b9cfc4-257a-4742-878c-4f7ab4a2631b/image.png"
                                 alt="Title">
                         </a>
                         <div class="lead">Terraform Associate (003)</div>
-                        <a href="https://learn.microsoft.com/fr-fr/certifications/exams/az-900"
+                        <a href="https://www.hashicorp.com/certification/terraform-associate"
                             class="btn btn-sm btn-primary m-2"><span id="readMoreBtn_2">Read
                                 more</span></a>
                     </div>
@@ -393,11 +435,11 @@
                 <div class="section-title">
                     <h1 id="mainSkillsHeader">Main skills</h1>
                 </div>
-                <div class="lead text-center">
+                <div class="lead text-center" id="mainSkillDescription">
                     With a strong command over the DevOps ecosystem, I bring to the table
                     expertise in a comprehensive suite of tools and technologies that are
                     instrumental in building, deploying, and maintaining scalable and
-                    efficient software systems
+                    efficient software systems.
                 </div>
                 <ul id="skills-filters" data-aos="fade-up" data-aos-delay="100">
                     <li data-filter="*" class="filter-active">All</li>
@@ -423,6 +465,12 @@
                             <img src="https://upload.wikimedia.org/wikipedia/fr/b/b6/Microsoft-Azure.png"
                                 alt="Azure" class="skill-logo" />
                             <h5>Azure</h5>
+                        </div>
+                        <!-- redhat -->
+                        <div class="col-2 skill-item filter-ops">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Red_Hat_logo.svg/2560px-Red_Hat_logo.svg.png"
+                                alt="RedHat" class="skill-logo" />
+                            <h5>RedHat</h5>
                         </div>
                         <div class="col-2 skill-item filter-devops">
                             <img src="https://www.sparks-formation.com/wp-content/uploads/2020/07/azure-devops.png"
@@ -546,11 +594,8 @@
 
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="contact">
-            <div class="container-xxl p-5" 
-            data-aos="fade-up"
-            data-aos-offset="-1500"
-            >
-            <!-- <div class="container-xxl py-5" > -->
+            <div class="container-xxl p-5" data-aos="fade-up" data-aos-offset="-1500">
+                <!-- <div class="container-xxl py-5" > -->
                 <div class="section-title">
                     <h1>Contact</h1>
                 </div>
@@ -624,36 +669,35 @@
             </div>
         </section><!-- End Contact Section -->
 
-        <!-- ======= Newsletter Section ======= -->
-        <section id="newsletter" class="newsletter">
-            <div class="footer-newsletter">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-6">
-                            <div class="section-title">
-                                <h1>Join my Newsletter</h1>
-                            </div>
-                            <p>Subscribe to my newsletter to receive updates on my availabilities.
-                                I also write blog articles about my work and my hobbies.
-                            </p>
-                            <form class="notified-form" action="" method="post">
+    </main><!-- End #main -->
 
-                                <input type="email" class="form-control" name="email" required>
-                                <input class="nextBtn" id="suscribeBtn" type="submit"
-                                    value="Subscribe">
-                                <div class="nextBtn visually-hidden" id="loading-notify">Loading
-                                </div>
-                                <div class="nextBtn visually-hidden" id="validated-notify">Thanks!
-                                </div>
-                                <div class="nextBtn visually-hidden" id="error-notify">Error</div>
-                            </form>
+    <!-- ======= Newsletter Section ======= -->
+    <section id="newsletter" class="newsletter">
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="section-title">
+                            <h1 id="newsletterTitle">Join my Newsletter</h1>
                         </div>
+                        <p id="newsletterDescription">
+                            Subscribe to my newsletter to receive updates on my availabilities.
+                            I also write blog articles about my work and my hobbies.
+                        </p>
+                        <form class="notified-form" action="" method="post">
+                            <input type="email" class="form-control" name="email" required>
+                            <input class="nextBtn" id="suscribeBtn" type="submit" value="Subscribe">
+                            <div class="nextBtn visually-hidden" id="loading-notify">Loading
+                            </div>
+                            <div class="nextBtn visually-hidden" id="validated-notify">Thanks!
+                            </div>
+                            <div class="nextBtn visually-hidden" id="error-notify">Error</div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </section><!-- End Newsletter Section -->
-
-    </main><!-- End #main -->
+        </div>
+    </section><!-- End Newsletter Section -->
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
