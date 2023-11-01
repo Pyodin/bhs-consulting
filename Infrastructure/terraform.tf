@@ -8,5 +8,6 @@ terraform {
 
   backend "azurerm" {
     key = "terraform.tfstate"
+    resource_group_name = "bhsitconsulting-tfdata"
   }
 }

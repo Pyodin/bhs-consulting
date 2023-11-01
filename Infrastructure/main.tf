@@ -17,6 +17,10 @@ resource "azurerm_static_site" "swa" {
   location            = azurerm_resource_group.swa.location
   sku_tier            = var.static_web_app_sku
   tags                = var.common_tags
+  app_settings = {
+    "TableServiceConnectionString" = module.storage.primary_connection_string
+    "SendGridApiKey"               = var.sendgrid_api_key
+  }
 }
 
 resource "azurerm_static_site_custom_domain" "txt" {
@@ -50,5 +54,16 @@ resource "azurerm_dns_a_record" "alias" {
   resource_group_name = azurerm_resource_group.swa.name
   ttl                 = 300
   target_resource_id  = azurerm_static_site.swa.id
+}
+
+# Storage module for the suscriber 
+module "storage" {
+  source = "./storage"
+
+  // Pass variables to the module
+  resource_group_name  = azurerm_resource_group.swa.name
+  location             = azurerm_resource_group.swa.location
+  storage_account_name = var.storage_account_name
+  table_name           = var.table_name
 }
 

@@ -2,8 +2,7 @@ tmp
 
 #terraform 
 .terraform
-
-
+.terraform.lock*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

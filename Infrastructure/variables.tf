@@ -36,3 +36,22 @@ variable "custom_domain_name" {
   type        = string
   description = "(Required) The domain you'll be using for the SWA"
 }
+
+
+# Custom name for azure storage account 
+variable "storage_account_name" {
+  description = "Name of the storage account"
+  type = string
+}
+
+# Custom name for azure table storage
+variable "table_name" {
+  description = "Name of the table storage"
+  type = string
+}
+
+# SendGrip api key
+variable "sendgrid_api_key" {
+  description = "The SendGrid API key to use for sending emails"
+  type        = string
+}
