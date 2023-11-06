@@ -1,3 +1,0 @@
-resource_group_name="bhsitconsulting-tfdata" 
-storage_account_name="bhsitconsultingtfdata" 
-container_name="tfdata" 

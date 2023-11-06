@@ -63,14 +63,7 @@
 }
 
 /* BODY */
-body {
-    background: linear-gradient(
-      /* 135deg, */
-      90deg,
-      rgb(186, 211, 235) 0%,
-      rgba(255, 255, 255) 50%,
-      rgb(186, 211, 235) 100%);
-}
+
 
 #sideHeader {
   position: fixed;

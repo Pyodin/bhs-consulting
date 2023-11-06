@@ -3,6 +3,7 @@ tmp
 #terraform 
 .terraform
 .terraform.lock*
+backend-config.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

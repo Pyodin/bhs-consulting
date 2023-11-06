@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Stylesheet -->
+    <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/common.css" />
+    <link rel="stylesheet" href="/Blog/style.css" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@500&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <title>BHS Blog: Freelancing</title>
+</head>
+
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="header ">
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg nav-colored fixed-top" id="navbar">
+            <div class="container">
+                <a class="navbar-brand" href="/" id="navbarBrand">
+                    <i class="bi bi-list"></i>
+                    BHS Consulting
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a id="aboutMeLink" class="nav-link" href="/About">About
+                                me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="contactLink" class="nav-link" href="/Contact/">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="blogLink" class="nav-link" href="/Blog/">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- english and franch flags as button -->
+                <div class="d-flex align-items-center">
+                    <a class="btn btn-outline-dark btn-sm me-2" id="btnEnglish">English</a>
+                    <a class="btn btn-outline-dark btn-sm" id="btnFrench">Français</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid masthead">
+            <h1>Building a DevOps-Engineered Website</h1>
+            <h2 class="display-6">A Step-by-Step Technical Guide (Part 2)</h1>
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <!-- Heading Row-->
+        <div class="container my-5">
+            <div class="text-muted fst-italic mb-3">Posted on November 01 2023 by Paul Bourhis</div>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-8">
+                    <img class="img-fluid rounded" id="imgBlog"
+                        src="https://rcdesign.com/wp-content/uploads/2017/11/how-long-build-professional-website.jpg"
+                        alt="..." data-aos="fade-right" />
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="contentTable" data-aos="fade-up">
+                        <h2 class="display-6">Table of content</h2>
+                        <ol>
+                            <li><a class="scrollto" href="#introduction">Introduction</a></li>
+                            <li><a class="scrollto" href="#part1">Part 1: Establishing Prerequisites</a></li>
+                            <li><a class="scrollto" href="#part2">Part 2: Infrastructure Setup with Terraform</a>
+                                <ol>
+                                    <li><a class="scrollto" href="#terraform-installation">Terraform Installation</a></li>
+                                    <li><a class="scrollto" href="#terraform-background">Terraform Background</a></li>
+                                    <li><a class="scrollto" href="#custom-domain-and-dns-configuration">Custom Domain and DNS Configuration</a></li>
+                                    <li><a class="scrollto" href="#outputs-configuration">Outputs Configuration</a></li>
+                                    <li><a class="scrollto" href="#azure-static-web-app-configuration">Azure Static Web App Configuration</a></li>
+                                </ol>
+                            </li>
+                            <li><a class="scrollto" href="#azure-devops-setup">Set up Azure DevOps</a>
+                            <ol>
+                                <li><a class="scrollto" href="#azure-repos">Azure Repos</a></li>
+                                <li><a class="scrollto" href="#azure-boards-for-planning">Azure Boards for Planning</a></li>
+                                <li><a class="scrollto" href="#ci-pipeline-for-continuous-delivery">CI Pipeline for Continuous Delivery</a></li>
+                            </ol>
+                        </li>
+                            <li><a class="scrollto" href="#conclusion">Conclusion</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-xxl my-5 shadow rounded-5" id="blog">
+            <article>
+                <section class="mb-5">
+                    <h1 id="introduction">Introduction</h1>
+                    <p>Welcome back to our journey of creating a DevOps-engineered website from
+                        scratch. In our last article, we laid out the strategy and the tools. Now,
+                        it's time to roll up our sleeves and delve into the technical setup. We'll
+                        be purchasing domain names, setting up cloud services, and configuring our
+                        CI/CD pipeline. Let's dive in!</p>
+                    <p>
+                        <strong>NOTE:</strong> This article is the second part of a series. If
+                        you haven't read the first part, you can find it
+                        <a href="/Blog/Articles/Web/1">here</a>.
+                    </p>
+                    <p>
+                        <strong>NOTE:</strong> The source code for this project is available on
+                        GitHub:
+                        <a href="https://github.com/Pyodin/website-portfolio" target="_blank"
+                            rel="noopener noreferrer"> here</a>
+                    </p>
+                </section>
+
+                <section class="mb-5">
+                    <h1 id="part1">Part 1: Establishing Prerequisites</h1>
+                    <p>Before we initiate the deployment process, it's essential to set up the
+                        foundational elements that our website's infrastructure will rely on. Each
+                        component plays a critical role in the seamless creation and operation of
+                        the website.</p>
+                    <ul>
+                        <li>
+                            <strong>Azure Subscription</strong>: A subscription is your gateway to
+                            accessing all Azure cloud services. It's a prerequisite for creating
+                            and managing Azure resources. If you don't have one already, you can
+                            sign up for a free subscription.
+                            <a href="https://azure.microsoft.com/en-us/free/" target="_blank"
+                                rel="noopener noreferrer">Get an Azure Subscription</a>.
+                        </li>
+                        <li>
+                            <strong>Domain Name</strong>: The domain name serves as your website's
+                            digital address, essential for branding and making the site accessible
+                            to visitors. OVH is one of the platforms where you can secure a domain
+                            name that fits your brand.
+                            <a href="https://www.ovh.com/world/domains/" target="_blank"
+                                rel="noopener noreferrer">Register a domain on OVH</a>.
+                        </li>
+                        <li>
+                            <strong>Terraform</strong>: This tool allows you to define, provision,
+                            and configure Azure infrastructure using easy-to-understand declarative
+                            code. It's an indispensable part of Infrastructure as Code (IaC), making
+                            your infrastructure management more efficient and scalable.
+                            <a href="https://www.terraform.io/downloads.html" target="_blank"
+                                rel="noopener noreferrer">Install Terraform</a>.
+                        </li>
+                        <li>
+                            <strong>SendGrid Account</strong>: Reliable email communication is a
+                            pillar of user engagement. SendGrid provides robust email services that
+                            can be integrated into your website for sending transactional and
+                            marketing emails.
+                            <a href="https://signup.sendgrid.com/" target="_blank"
+                                rel="noopener noreferrer">Sign up for SendGrid</a>.
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>NOTE:</strong> The SendGrid account is optional. If you don't want
+                        to use SendGrid, you can remove the SendGrid-related code from the
+                        Terraform configuration. It will be used to send emails to newsletter
+                        subscribers.
+                    </p>
+                </section>
+
+                <section class="mb-5">
+                    <h1 id="part2">Part 2: Infrastructure Setup with Terraform</h1>
+
+                    <h2 id="terraform-installation" >Terraform Installation</h2>
+                    <p>To manage our Azure resources effectively, we begin by installing Terraform.
+                        This powerful tool allows us to define our infrastructure as code, making it
+                        easier to deploy and version our web application infrastructure. Detailed
+                        instructions for installing Terraform can be found on the <a
+                            href="https://www.terraform.io/downloads.html" target="_blank"
+                            rel="noopener noreferrer">official Terraform website</a>.</p>
+
+                    <h2 id="terraform-background">Terraform Background</h2>
+                    <p>The foundation of Terraform usage is its ability to manage state. We set up a
+                        Terraform backend that stores the state of our resources, ensuring that we
+                        can track and collaborate on changes made to our infrastructure. Here is an
+                        example of how we might configure our Terraform backend using an Azure
+                        Storage Account:</p>
+                    <pre><code class="language-hcl">
+                terraform {
+                  backend "azurerm" {
+                    resource_group_name  = "your_resource_group"
+                    storage_account_name = "your_storage_account"
+                    container_name       = "your_container"
+                    key                  = "terraform.tfstate"
+                  }
+                }
+                    </code></pre>
+                    <p>
+                        For this configuration to work, we first need to create the resource group,
+                        the storage account and the storage container. We can do this manually wth
+                        the fowwowing script:
+                    </p>
+                    <p>
+                        <strong>NOTE:</strong> The backend configuration is stored in a file called
+                        `backend-config.txt`. This file is not included in the repository for
+                        security
+                        reasons.
+                    </p>
+                    <pre><code class="">
+                        set website_name=bhsitconsulting
+                        set region=westeurope
+
+                        ## Create an resource group
+                        az group create -n "%website_name%-tfdata" -l %region%
+
+                        ## Create a storage account
+                        az storage account create --name "%website_name%tfdata" --resource-group "%website_name%-tfdata"  --location %region% --sku Standard_LRS
+
+                        ## Create a storage account container
+                        az storage container create -n tfdata --account-name "%website_name%tfdata" --resource-group "%website_name%-tfdata"
+
+                        ## Set up backend config file
+                        echo resource_group_name="%website_name%-tfdata" > backend-config.txt
+                        echo storage_account_name="%website_name%tfdata" >> backend-config.txt
+                        echo container_name="tfdata" >> backend-config.txt
+                    </code></pre>
+
+                    <h2 id="custom-domain-and-dns-configuration">Custom Domain and DNS Configuration</h2>
+                    <p>To connect a custom domain to our Azure Static Web App, we need to configure
+                        DNS settings. This is handled by creating an Azure DNS zone and defining the
+                        necessary records. Here's how we set up the DNS resources in Terraform:</p>
+
+                    <p><strong>DNS Zone:</strong> This resource is where we define our DNS zone,
+                        which will contain all our DNS records.</p>
+                    <pre><code class="language-hcl">
+                    resource "azurerm_dns_zone" "swa" {
+                      name                = var.custom_domain_name
+                      resource_group_name = azurerm_resource_group.swa.name
+                      tags                = var.common_tags
+                    }
+                        </code></pre>
+
+                    <p><strong>TXT Record:</strong> A TXT record is used for various purposes,
+                        including domain ownership verification and email sender verification. We
+                        add a TXT record to our DNS zone with the necessary validation token.</p>
+                    <pre><code class="language-hcl">
+                    resource "azurerm_dns_txt_record" "txt" {
+                      name                = "@"
+                      zone_name           = azurerm_dns_zone.swa.name
+                      resource_group_name = azurerm_resource_group.swa.name
+                      ttl                 = 300
+                      record {
+                        value = azurerm_static_site_custom_domain.txt.validation_token == "" ? "validated" : azurerm_static_site_custom_domain.txt.validation_token
+                      }
+                    }
+                        </code></pre>
+                    <p>
+                        <strong>NOTE:</strong> The <code>validation_token</code> is used to
+                        verify domain ownership. It is generated by Azure Static Web App and
+                        stored in the <code>azurerm_static_site_custom_domain.txt</code> resource.
+                        The <code>validation_token</code> is only available after the domain has
+                        been validated. This is why we use a conditional statement to check if
+                        the token is available. If it is, we use it as the value for the TXT
+                        record. Otherwise, we use the string "validated".
+                    </p>
+
+                    <p><strong>A Record:</strong> The A record maps our domain name to the IP
+                        address of our static site. The "@" symbol represents the root domain.</p>
+                    <pre><code class="language-hcl">
+                    resource "azurerm_dns_a_record" "alias" {
+                      name                = "@"
+                      zone_name           = azurerm_dns_zone.swa.name
+                      resource_group_name = azurerm_resource_group.swa.name
+                      ttl                 = 300
+                      target_resource_id  = azurerm_static_site.swa.id
+                    }
+                        </code></pre>
+                    <p>
+                        
+                    </p>
+
+                    <h2 id="outputs-configuration">Outputs Configuration</h2>
+                    <p>After deploying our infrastructure with Terraform, we receive output that
+                        includes sensitive information such as the API token for our static site and
+                        the name servers for our DNS zone. These outputs are crucial for configuring
+                        our domain's settings in OVH and for managing our static site:</p>
+                    <pre><code class="language-hcl">
+                    output "api_token" {
+                      value     = azurerm_static_site.swa.api_key
+                      sensitive = true
+                    }
+                    
+                    output "name_servers" {
+                      value     = azurerm_dns_zone.swa.name_servers
+                      sensitive = false
+                    }
+                
+                        </code></pre>
+                    <p>Each output has a specific utility:</p>
+                    <ul>
+                        <li>
+                            <strong>API Token:</strong> This token is used to authenticate GitHub
+                            Actions or other CI/CD pipelines with Azure, allowing for automated
+                            deployment of our web application. It is marked as sensitive because it
+                            grants access to control your Azure resources.
+                        </li>
+                        <li>
+                            <strong>Name Servers:</strong> The list of name servers is crucial for
+                            configuring your domain name system (DNS) settings. You'll need to enter
+                            these servers at your domain registrar, like OVH, to point your domain
+                            to the Azure infrastructure we've established.
+                        </li>
+                        <li>
+                            <strong>Storage Connection String:</strong> This connection string
+                            provides necessary credentials to access the Azure Table Storage,
+                            enabling our application to store and retrieve data securely. It is
+                            vital for backend operations such as managing newsletter subscriptions.
+                        </li>
+                    </ul>
+                    <p>It's imperative to securely store the <code>api_token</code> and
+                        <code>storage_connection_string</code> as they contain sensitive information
+                        that can affect the integrity and security of your web application.
+                    </p>
+                    <p>The <code>api_token</code> will be used in our Azure DevOps deployment file
+                        (e.g., <code>azure-static-web-apps-deployment.yml</code>) to enable
+                        continuous deployment through Azure Pipelines.
+                    </p>
+
+                    <h2 id="azure-static-web-app-configuration">Azure Static Web App Configuration</h2>
+                    <p>The Azure Static Web App is a pivotal resource in our project, hosting the
+                        static content that makes up the frontend of our website. It's a scalable
+                        and cost-effective solution that integrates with Azure functions for backend
+                        services. Here's how we define it in Terraform:</p>
+                    <pre><code class="language-hcl">
+                resource "azurerm_static_site" "swa" {
+                  name                = var.website_name
+                  resource_group_name = azurerm_resource_group.swa.name
+                  location            = var.region
+                  sku_tier            = var.static_web_app_sku
+                  
+                  app_settings = {
+                    "TableServiceConnectionString" = module.storage.primary_connection_string
+                    "SendGridApiKey"               = var.sendgrid_api_key
+                  }
+                }
+                    </code></pre>
+                    <p>In this configuration:</p>
+                    <ul>
+                        <li><strong>TableServiceConnectionString</strong>: The connection string to
+                            Azure Table Storage, enabling the app to store and access data like
+                            email addresses for the newsletter.</li>
+                        <li><strong>SendGridApiKey</strong>: The API key for SendGrid, authorizing
+                            the app to send emails via SendGrid's email delivery service.</li>
+                    </ul>
+                    <p>This Terraform configuration ensures our web app has all it needs to operate
+                        smoothly, with connections to data storage and email services set up right
+                        from the start.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h1 id="azure-devops-setup">Set up Azure DevOps</h1>
+
+                    <h2 id="azure-repos">Azure Repos</h2>
+                    <p>Azure Repos provides Git repositories for source control of your code. It's a
+                        scalable, secure place that stores your code and branches, and supports
+                        collaborative pull requests and advanced file management. To start using
+                        Azure Repos, you first need to <a
+                            href="https://docs.microsoft.com/en-us/azure/devops/repos/git/create-new-repo?view=azure-devops"
+                            target="_blank" rel="noopener noreferrer">create a new repo</a> where
+                        you will store the code for your web application.</p>
+
+                    <h2 id="azure-boards-for-planning">Azure Boards for Planning</h2>
+                    <p>Azure Boards is a service for managing your development projects with agile
+                        tools, work item tracking, and Kanban boards. You can plan your work, track
+                        progress, and discuss issues directly from within the board. Check out <a
+                            href="https://docs.microsoft.com/en-us/azure/devops/boards/get-started/?view=azure-devops"
+                            target="_blank" rel="noopener noreferrer">Azure Boards documentation</a>
+                        for detailed instructions on setting up and using boards for planning your
+                        web app development.</p>
+
+                    <h2 id="ci-pipeline-for-continuous-delivery">CI Pipeline for Continuous Delivery</h2>
+                    <p>The Continuous Integration (CI) pipeline in Azure DevOps helps to automate
+                        the build and deployment of your application. The following YAML file
+                        defines a CI pipeline for an Azure Static Web App, specifying the build and
+                        deployment process triggered by changes in the main branch:</p>
+                    <pre><code class="language-yaml">
+                name: Azure Static Web Apps CI/CD
+                
+                pr:
+                    branches:
+                        include:
+                            - main
+                trigger:
+                    branches:
+                        include:
+                            - main
+                
+                jobs:
+                    - job: build_and_deploy_job
+                      displayName: Build and Deploy Job
+                      condition: or(eq(variables['Build.Reason'], 'Manual'), eq(variables['Build.Reason'], 'PullRequest'), eq(variables['Build.Reason'], 'IndividualCI'))
+                      pool:
+                          vmImage: ubuntu-latest
+                      variables:
+                          - group: bhs-it-consulting-variable-group
+                      steps:
+                          - checkout: self
+                            submodules: true
+                          - task: AzureStaticWebApp@0
+                            inputs:
+                                azure_static_web_apps_api_token: $(AZURE_STATIC_WEB_APPS_API_TOKEN)
+                                app_location: "/Website" # App source code path
+                                api_location: "/Website/api" # Api source code path - optional
+                                skip_app_build: true # Skip build - optional
+                                # output_location: "" # Built app content directory - optional
+                    </code></pre>
+                    <p>This pipeline uses Azure Static Web Apps task to deploy your web application,
+                        using the API token defined in the Azure DevOps variable group for
+                        authentication. The pipeline is configured to trigger on pull requests and
+                        commits to the main branch, ensuring that updates are continuously deployed
+                        to your static web app.</p>
+                </section>
+
+                <section class="mb-5">
+                    <h1 id="conclusion">Conclusion</h1>
+                    <p>This article has taken us through the foundational steps of setting up a
+                        robust DevOps infrastructure using Terraform, detailing the process of
+                        creating Azure resources, configuring custom domains, and setting up a CI/CD
+                        pipeline. By leveraging IaC, we've laid down a scalable and maintainable
+                        framework for our web application.</p>
+
+                    <p>The forthcoming article will shift focus from infrastructure to development,
+                        discussing the intricacies of building the website itself, from HTML
+                        construction to implementing essential web services like SendGrid. We'll
+                        also reflect on the learning process, the importance of SEO, and the
+                        revelations about the distinction between development and design.</p>
+                </section>
+
+
+
+
+            </article>
+    </main><!-- End #main -->
+
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>BHS consulting</h3>
+                    <p>
+                        <strong>Paul Bourhis<br></strong>
+                        49 Bis rue de Paris<br>
+                        92110, Clichy<br>
+                        France<br><br>
+                        <!-- <i class="bi bi-telephone-fill"></i> -->
+                        <strong>Phone:</strong> +33 7 69 61 50 27<br>
+                        <!-- <i class="bi bi-envelope-fill"></i> -->
+                        <strong>Email:</strong> paul_bourhis@bhsconsulting.fr<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4 id="footerUsefulLinks">Useful Links</h4>
+                    <ul>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/About/" id="footerLinkAboutMe">About me</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/Projects/" id="footerLinkProjects">Projects</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/Contact/" id="footerLinkContact">Contact</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="/Blog/" id="footerLinkBlog">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4 id="footerMySocialNetworks">My Social Networks</h4>
+                    <p id="footerThanksForVisiting">Thanks for visiting my website. Follow me on my
+                        socials</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.instagram.com/paulbhs/">
+                            <i class="b- bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/paul-bourhis-375557153/">
+                            <i class="b- bi-linkedin"></i></a>
+                        <a href="https://github.com/Pyodin">
+                            <i class="b- bi-github"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="text-center bg-secondary">
+            © Built on my own.
+            <!-- Find the source code <a class="text-white" href="https://github.com/Pyodin/website-portfolio">here</a> -->
+        </div>
+    </footer><!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"
+        aria-label="Back to top">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/aos/aos.js"></script>
+
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/switchLanguage.js"></script>
+</body>
+
+</html>
