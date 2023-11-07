@@ -41,7 +41,7 @@ resource "azurerm_dns_txt_record" "txt" {
   name                = "@"
   zone_name           = azurerm_dns_zone.swa.name
   resource_group_name = azurerm_resource_group.swa.name
-  ttl                 = 300
+  ttl                 = 3600
   record {
     # Conditional required due to issue https://github.com/hashicorp/terraform-provider-azurerm/issues/14750
     value = azurerm_static_site_custom_domain.txt.validation_token == "" ? "validated" : azurerm_static_site_custom_domain.txt.validation_token
@@ -52,7 +52,7 @@ resource "azurerm_dns_a_record" "alias" {
   name                = "@"
   zone_name           = azurerm_dns_zone.swa.name
   resource_group_name = azurerm_resource_group.swa.name
-  ttl                 = 300
+  ttl                 = 3600
   target_resource_id  = azurerm_static_site.swa.id
 }
 

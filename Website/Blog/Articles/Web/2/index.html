@@ -92,23 +92,36 @@
                         <h2 class="display-6">Table of content</h2>
                         <ol>
                             <li><a class="scrollto" href="#introduction">Introduction</a></li>
-                            <li><a class="scrollto" href="#part1">Part 1: Establishing Prerequisites</a></li>
-                            <li><a class="scrollto" href="#part2">Part 2: Infrastructure Setup with Terraform</a>
+                            <li><a class="scrollto" href="#part1">Part 1: Establishing
+                                    Prerequisites</a></li>
+                            <li><a class="scrollto" href="#part2">Part 2: Infrastructure Setup with
+                                    Terraform</a>
                                 <ol>
-                                    <li><a class="scrollto" href="#terraform-installation">Terraform Installation</a></li>
-                                    <li><a class="scrollto" href="#terraform-background">Terraform Background</a></li>
-                                    <li><a class="scrollto" href="#custom-domain-and-dns-configuration">Custom Domain and DNS Configuration</a></li>
-                                    <li><a class="scrollto" href="#outputs-configuration">Outputs Configuration</a></li>
-                                    <li><a class="scrollto" href="#azure-static-web-app-configuration">Azure Static Web App Configuration</a></li>
+                                    <li><a class="scrollto" href="#terraform-installation">Terraform
+                                            Installation</a></li>
+                                    <li><a class="scrollto" href="#terraform-background">Terraform
+                                            Background</a></li>
+                                    <li><a class="scrollto"
+                                            href="#custom-domain-and-dns-configuration">Custom
+                                            Domain and DNS Configuration</a></li>
+                                    <li><a class="scrollto" href="#outputs-configuration">Outputs
+                                            Configuration</a></li>
+                                    <li><a class="scrollto"
+                                            href="#azure-static-web-app-configuration">Azure Static
+                                            Web App Configuration</a></li>
                                 </ol>
                             </li>
-                            <li><a class="scrollto" href="#azure-devops-setup">Set up Azure DevOps</a>
-                            <ol>
-                                <li><a class="scrollto" href="#azure-repos">Azure Repos</a></li>
-                                <li><a class="scrollto" href="#azure-boards-for-planning">Azure Boards for Planning</a></li>
-                                <li><a class="scrollto" href="#ci-pipeline-for-continuous-delivery">CI Pipeline for Continuous Delivery</a></li>
-                            </ol>
-                        </li>
+                            <li><a class="scrollto" href="#azure-devops-setup">Set up Azure
+                                    DevOps</a>
+                                <ol>
+                                    <li><a class="scrollto" href="#azure-repos">Azure Repos</a></li>
+                                    <li><a class="scrollto" href="#azure-boards-for-planning">Azure
+                                            Boards for Planning</a></li>
+                                    <li><a class="scrollto"
+                                            href="#ci-pipeline-for-continuous-delivery">CI Pipeline
+                                            for Continuous Delivery</a></li>
+                                </ol>
+                            </li>
                             <li><a class="scrollto" href="#conclusion">Conclusion</a></li>
                         </ol>
                     </div>
@@ -189,7 +202,7 @@
                 <section class="mb-5">
                     <h1 id="part2">Part 2: Infrastructure Setup with Terraform</h1>
 
-                    <h2 id="terraform-installation" >Terraform Installation</h2>
+                    <h2 id="terraform-installation">Terraform Installation</h2>
                     <p>To manage our Azure resources effectively, we begin by installing Terraform.
                         This powerful tool allows us to define our infrastructure as code, making it
                         easier to deploy and version our web application infrastructure. Detailed
@@ -243,7 +256,8 @@
                         echo container_name="tfdata" >> backend-config.txt
                     </code></pre>
 
-                    <h2 id="custom-domain-and-dns-configuration">Custom Domain and DNS Configuration</h2>
+                    <h2 id="custom-domain-and-dns-configuration">Custom Domain and DNS Configuration
+                    </h2>
                     <p>To connect a custom domain to our Azure Static Web App, we need to configure
                         DNS settings. This is handled by creating an Azure DNS zone and defining the
                         necessary records. Here's how we set up the DNS resources in Terraform:</p>
@@ -294,7 +308,7 @@
                     }
                         </code></pre>
                     <p>
-                        
+
                     </p>
 
                     <h2 id="outputs-configuration">Outputs Configuration</h2>
@@ -344,7 +358,8 @@
                         continuous deployment through Azure Pipelines.
                     </p>
 
-                    <h2 id="azure-static-web-app-configuration">Azure Static Web App Configuration</h2>
+                    <h2 id="azure-static-web-app-configuration">Azure Static Web App Configuration
+                    </h2>
                     <p>The Azure Static Web App is a pivotal resource in our project, hosting the
                         static content that makes up the frontend of our website. It's a scalable
                         and cost-effective solution that integrates with Azure functions for backend
@@ -396,7 +411,8 @@
                         for detailed instructions on setting up and using boards for planning your
                         web app development.</p>
 
-                    <h2 id="ci-pipeline-for-continuous-delivery">CI Pipeline for Continuous Delivery</h2>
+                    <h2 id="ci-pipeline-for-continuous-delivery">CI Pipeline for Continuous Delivery
+                    </h2>
                     <p>The Continuous Integration (CI) pipeline in Azure DevOps helps to automate
                         the build and deployment of your application. The following YAML file
                         defines a CI pipeline for an Azure Static Web App, specifying the build and
@@ -475,7 +491,7 @@
                         <!-- <i class="bi bi-telephone-fill"></i> -->
                         <strong>Phone:</strong> +33 7 69 61 50 27<br>
                         <!-- <i class="bi bi-envelope-fill"></i> -->
-                        <strong>Email:</strong> paul_bourhis@bhsconsulting.fr<br>
+                        <strong>Email:</strong>paul.bourhis@bhs-consulting.com<br>
                     </p>
                 </div>
 

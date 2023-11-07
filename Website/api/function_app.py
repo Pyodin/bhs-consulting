@@ -9,8 +9,8 @@ from sendgrid.helpers.mail import Mail
 # Global variables
 SENDGRID_API_KEY = None
 TABLE_SERVICE_CONNECTION_STRING = None
-SENDER_EMAIL = "no-replys@bhsconsulting.fr"
-RECIPIENT_MAIL = "paul.bourhis@bhsconsulting.fr"
+SENDER_EMAIL = "no-replys@bhs-consulting.com"
+RECIPIENT_MAIL = "paul.bourhis@bhs-consulting.com"
 TABLE_NAME = "subscribersTable"
 
 
