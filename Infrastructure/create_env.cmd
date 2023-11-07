@@ -1,4 +1,4 @@
-set website_name=bhsitconsulting
+set website_name=bhsconsulting
 set region=westeurope
 
 ## Create an resource group

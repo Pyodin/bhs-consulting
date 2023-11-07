@@ -1,6 +1,6 @@
 region = "westeurope"
-website_name = "bhs-it-consulting"
-custom_domain_name = "bhs-it-consulting.com"
+website_name = "bhs-consulting"
+custom_domain_name = "bhs-consulting.com"
 
 # Module storage vars
 storage_account_name = "subsstoragebhs"
