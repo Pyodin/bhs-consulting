@@ -8,7 +8,6 @@ trigger:
     branches:
         include:
             - main
-
 jobs:
     - job: build_and_deploy_job
       displayName: Build and Deploy Job
