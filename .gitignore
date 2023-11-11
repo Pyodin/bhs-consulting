@@ -1,7 +1,8 @@
 tmp 
-
+terraform-provider-azurerm_v3.62.1_x5.exe
+terraform-provider-azurerm_v3.71.0_x5.exe
 #terraform 
-.terraform
+.terraform/
 .terraform.lock*
 backend-config.txt
 
